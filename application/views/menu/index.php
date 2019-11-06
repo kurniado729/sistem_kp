@@ -9,7 +9,10 @@
 
 			<?= $this->session->flashdata('message') ?>
 
-			<a href="<?= base_url('menu/addmenu'); ?>" class="btn btn-primary mb-3" >Add New Menu</a>
+			<a href="<?= base_url('menu/addmenu') ?>" class="btn btn-primary btn-icon-split mb-3">
+				<span class="icon text-white-50"><i class="fas fa-plus"></i></span>
+				<span class="text">Add New Menu</span>
+			</a>
 			<table class="table table-hover">
 				<thead>
 					<tr>
@@ -25,8 +28,12 @@
 						<th scope="row"><?= $i; ?></th>
 						<td><?= $m['menu'] ?></td>
 						<td>
-							<a href="<?= base_url('menu/editmenu/' . $m['id']); ?>" class="badge badge-success">edit</a>
-							<a href="<?= base_url('menu/deletemenu/' . $m['id']); ?>" class="badge badge-danger" onclick="return confirm('Yakin Hapus?')">delete</a>
+							<a href="<?= base_url('menu/editmenu/' . $m['id']); ?>" class="btn btn-success btn-circle">
+								<i class="fas fa-edit"></i>
+							</a>
+							<a href="<?= base_url('menu/deletemenu/' . $m['id']); ?>" class="btn btn-danger btn-circle" onclick="return confirm('Yakin Hapus?')">
+								<i class="fas fa-trash-alt"></i>
+							</a>
 						</td>
 					</tr>
 						<?php $i++; ?>

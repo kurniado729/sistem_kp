@@ -44,7 +44,19 @@
 									</label>
 								</div>
 							</div>
-							<button type="submit" class="btn btn-primary">Add</button>
+							<div class="row">
+								<div class="col-3">
+									<a href="<?= base_url('menu/submenu') ?>" class="btn btn-secondary btn-icon-split">
+										<span class="icon text-white-50"><i class="fas fa-chevron-left"></i></span>
+										<span class="text">Back</span>
+									</a>
+								</div>
+								<div class="col-3">
+									<button type="submit" class="btn btn-primary btn-icon-split">
+										<span class="icon text-white-50"><i class="fas fa-check"></i></span>
+										<span class="text">Add</span></button>
+								</div>
+							</div>
 						</form>
 					</blockquote>
 				</div>

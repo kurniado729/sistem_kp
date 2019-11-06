@@ -9,7 +9,10 @@
 
 			<?= $this->session->flashdata('message') ?>
 
-			<a href="<?= base_url('pegawai/addpegawaibkd'); ?>" class="btn btn-primary mb-3" >Add New Pegawai</a><br/>
+			<a href="<?= base_url('pegawai/addpegawaibkd'); ?>" class="btn btn-primary btn-icon-split mb-3">
+				<span class="icon text-white-50"><i class="fas fa-plus"></i></span>
+				<span class="text">Add New Pegawai</span>
+			</a>
 
 			<table class="table table-hover">
 				<thead>
@@ -26,8 +29,12 @@
 						<th scope="row"><?= $i; ?></th>
 						<td><?= $p['nama_pegawai'] ?></td>
 						<td>
-							<a href="<?= base_url('pegawai/editpegawaibkd/' . $p['id_pegawai']); ?>" class="badge badge-success">edit</a>
-							<a href="<?= base_url('pegawai/deletepegawaibkd/' . $p['id_pegawai']); ?>" class="badge badge-danger" onclick="return confirm('Yakin Hapus?')">delete</a>
+							<a href="<?= base_url('pegawai/editpegawaibkd/' . $p['id_pegawai']); ?>" class="btn btn-success btn-circle">
+								<i class="fas fa-edit"></i>
+							</a>
+							<a href="<?= base_url('pegawai/deletepegawaibkd/' . $p['id_pegawai']); ?>" class="btn btn-danger btn-circle" onclick="return confirm('Yakin Hapus?')">
+								<i class="fas fa-trash-alt"></i>
+							</a>
 						</td>
 					</tr>
 						<?php $i++; ?>

@@ -15,6 +15,18 @@
 					<blockquote class="blockquote mb-0">
 						<form method="post" action="addsf" >
 							<div class="form-group">
+								<input type="text" class="form-control" id="pengirim" name="pengirim" value="<?= $bkd['pengirim']?>" readonly>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="no_surat_masuk" name="no_surat_masuk" value="<?= $bkd['no_surat_masuk']?>" readonly>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="tgl_surat_masuk" name="tgl_surat_masuk" value="<?= $bkd['tgl_surat_masuk']?>" readonly>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="ringkasan" name="ringkasan" value="<?= $bkd['ringkasan']?>" readonly>
+							</div>
+							<div class="form-group">
 								<div class="row">
 									<div id="kolomCari" class="col-3">
 										<input type="text" class="form-control" id="search" name="search" placeholder="Cari Nama..." autocomplete="off">
@@ -27,10 +39,6 @@
 								</div>
 
 							</div>
-<!--							<div class="list-group " id="show-list">-->
-<!---->
-<!--							</div>-->
-
 							<div class="form-group" id="show-id">
 								<input type="text" class="form-control" id="id" name="id" placeholder="NIP" readonly>
 							</div>

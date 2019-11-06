@@ -9,7 +9,10 @@
 
 			<?= $this->session->flashdata('message') ?>
 
-			<a href="<?= base_url('surat_masuk/addmail'); ?>" class="btn btn-primary mb-3">Add New Mail</a><br/>
+			<a href="<?= base_url('surat_masuk/addmail'); ?>" class="btn btn-primary btn-icon-split mb-3">
+				<span class="icon text-white-50"><i class="fas fa-plus"></i></span>
+				<span class="text">Add New Mail</span>
+			</a>
 
 			<table class="table table-hover">
 				<thead>
@@ -36,23 +39,26 @@
 <!--						<td>--><?//= $sm['file_surat_masuk'] ?><!--</td>-->
 						<td>
 							<?php if ($sm['disposisi'] == '0'): ?>
-								<a href="<?= base_url('surat_masuk/disposisimail/' . $sm['id_surat_masuk']); ?>"
-								   class="badge badge-warning" onclick="return confirm('Yakin Buat Disposisi?')">buat disposisi</a><br/>
+								<a href="<?= base_url('surat_masuk/disposisimail/' . $sm['id_surat_masuk']); ?>" class="btn btn-primary btn-circle" onclick="return confirm('Yakin Buat Disposisi?')">
+									<i class="fas fa-paper-plane"></i>
+								</a>
 							<?php else: ?>
-<!--								<a class="badge badge-success" style="color: white;">disposisi terkirim</a>-->
 								<i class="fas fa-check"> disposisi terkirim</i>
-								<a href="<?= base_url('surat_masuk/viewmail/' . $sm['id_surat_masuk']); ?>"
-								   class="badge badge-info">lihat surat masuk
+								</a>
+								<a href="<?= base_url('surat_masuk/viewmail/' . $sm['id_surat_masuk']); ?>" class="btn btn-info btn-circle">
+									<i class="fas fa-envelope-open"></i>
 								</a>
 							<?php endif; ?>
 						</td>
 						<td>
 <!--							<a href="--><?//= base_url('surat_masuk/downloadmail/' . $sm['id_surat_masuk']); ?><!--"-->
 <!--							   class="badge badge-secondary">download</a>-->
-							<a href="<?= base_url('surat_masuk/editmail/' . $sm['id_surat_masuk']); ?>"
-							   class="badge badge-success">edit</a>
-							<a href="<?= base_url('surat_masuk/deletemail/' . $sm['id_surat_masuk']); ?>"
-							   class="badge badge-danger" onclick="return confirm('Yakin Hapus?')">delete</a>
+							<a href="<?= base_url('surat_masuk/editmail/' . $sm['id_surat_masuk']); ?>" class="btn btn-success btn-circle">
+								<i class="fas fa-edit"></i>
+							</a>
+							<a href="<?= base_url('surat_masuk/deletemail/' . $sm['id_surat_masuk']); ?>" class="btn btn-danger btn-circle" onclick="return confirm('Yakin Hapus?')">
+								<i class="fas fa-trash-alt"></i>
+							</a>
 						</td>
 					</tr>
 					<?php $i++; ?>

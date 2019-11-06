@@ -1,7 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="" />
+    <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/bkd/addsuratperintahjalan.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/bkd/addsuratperintahjalan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/menu/addmenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/menu/addmenu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/menu/addsubmenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/menu/addsubmenu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/menu/editmenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/menu/editmenu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/menu/editsubmenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/menu/editsubmenu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/menu/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/menu/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/menu/submenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/menu/submenu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/addpegawaibka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/addpegawaibka.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/addpegawaibkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/addpegawaibkd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/addpegawaitu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/addpegawaitu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/editpegawaibka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/editpegawaibka.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/editpegawaibkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/editpegawaibkd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/editpegawaitu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/editpegawaitu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/pegawaibka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/pegawaibka.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/pegawaibkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/pegawaibkd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/trash.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/trash.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/surat_masuk/addmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_masuk/addmail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/surat_masuk/editmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_masuk/editmail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/surat_masuk/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_masuk/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/surat_masuk/trash.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_masuk/trash.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +51,9 @@
     </option>
     <expand />
     <select />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -72,6 +99,7 @@
   </component>
   <component name="ProjectId" id="1Qxg1w85Le6HQYfU0oVZ2CwNXMv" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/application/views/bkd" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -172,10 +200,22 @@
       <workItem from="1572972281943" duration="2221000" />
       <workItem from="1573001985737" duration="941000" />
       <workItem from="1573025163878" duration="16300000" />
+      <workItem from="1573057091931" duration="8413000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

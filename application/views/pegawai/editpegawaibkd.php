@@ -16,13 +16,35 @@
 				<div class="card-body">
 					<blockquote class="blockquote mb-0">
 						<form method="post" action="<?= base_url('pegawai/editpegawaibkd/'. $pegawai['id_pegawai']); ?>">
-							<div class="form-group">
+							<div class="form-group row">
+								<label for="nama_pegawai" class="col-sm-2 col-form-label">Nama</label>
+								<div class="col-sm-10">
 								<input type="text" class="form-control" id="nama_pegawai" name="nama_pegawai" value="<?= $pegawai['nama_pegawai'] ?>">
+								</div>
 							</div>
-							<div class="form-group">
+							<div class="form-group row">
+								<label for="bagian" class="col-sm-2 col-form-label">Bagian</label>
+								<div class="col-sm-10">
 								<input type="text" class="form-control" id="bagian" name="bagian" value="<?= $pegawai['bagian'] ?>" readonly>
+								</div>
 							</div>
-							<button type="submit" class="btn btn-primary">Edit</button>
+							<div class="from-group row justify-content-end	">
+								<div class="col-sm-10">
+									<div class="row">
+										<div class="col-3">
+											<a href="<?= base_url('pegawai/pegawaibkd') ?>" class="btn btn-secondary btn-icon-split">
+												<span class="icon text-white-50"><i class="fas fa-chevron-left"></i></span>
+												<span class="text">Back</span>
+											</a>
+										</div>
+										<div class="col-3">
+											<button type="submit" class="btn btn-primary btn-icon-split">
+												<span class="icon text-white-50"><i class="fas fa-check"></i></span>
+												<span class="text">Edit</span></button>
+										</div>
+									</div>
+								</div>
+							</div>
 						</form>
 					</blockquote>
 				</div>

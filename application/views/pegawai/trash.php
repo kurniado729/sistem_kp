@@ -26,8 +26,13 @@
 						<td><?= $t['nama_pegawai'] ?></td>
 						<td><?= $t['bagian'] ?></td>
 						<td>
-							<a href="<?= base_url('pegawai/restorepegawai/' . $t['id_pegawai']); ?>" class="badge badge-warning">restore</a>
-							<a href="<?= base_url('pegawai/deletepermanentpegawai/' . $t['id_pegawai']); ?>" class="badge badge-danger" onclick="return confirm('Yakin Hapus?')">Delete Permanent</a>
+							<a href="<?= base_url('pegawai/restorepegawai/' . $t['id_pegawai']); ?>" class="btn btn-warning btn-circle">
+								<i class="fas fa-trash-restore"></i>
+							</a>
+							<a href="<?= base_url('pegawai/deletepermanentpegawai/' . $t['id_pegawai']); ?>" class="btn btn-danger btn-circle" onclick="return confirm('Yakin Hapus?')">
+								<i class="fas fa-trash"></i>
+							</a>
+						</td>
 					</tr>
 						<?php $i++; ?>
 					<?php endforeach; ?>
