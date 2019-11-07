@@ -19,6 +19,7 @@
 					<tr>
 						<th scope="col">#</th>
 						<th scope="col">Nama</th>
+						<th scope="col">Jabatan</th>
 						<th scope="col">Action</th>
 					</tr>
 				</thead>
@@ -28,11 +29,12 @@
 					<tr>
 						<th scope="row"><?= $i; ?></th>
 						<td><?= $p['nama_pegawai'] ?></td>
+						<td><?= $p['jabatan'] ?></td>
 						<td>
-							<a href="<?= base_url('pegawai/editpegawaibkd/' . $p['id_pegawai']); ?>" class="btn btn-success btn-circle">
+							<a href="<?= base_url('pegawai/editpegawaibkd/' . $p['id_pegawai']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Edit">
 								<i class="fas fa-edit"></i>
 							</a>
-							<a href="<?= base_url('pegawai/deletepegawaibkd/' . $p['id_pegawai']); ?>" class="btn btn-danger btn-circle" onclick="return confirm('Yakin Hapus?')">
+							<a href="<?= base_url('pegawai/deletepegawaibkd/' . $p['id_pegawai']); ?>" class="btn btn-danger btn-circle" data-toggle="tooltip" data-placement="top" title="Hapus" onclick="return confirm('Yakin Hapus?')">
 								<i class="fas fa-trash-alt"></i>
 							</a>
 						</td>

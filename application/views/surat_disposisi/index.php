@@ -31,15 +31,22 @@
 						<td><?= $sd['tgl_surat_masuk'] ?></td>
 						<td><?= $sd['ringkasan'] ?></td>
 						<td>
-							<a href="<?= base_url('surat_disposisi/viewdisposisimail/' . $sd['id_surat_disposisi']); ?>"
-							   class="badge badge-info">lihat disposisi</a>
+							<a href="<?= base_url('surat_disposisi/viewdisposisimail/' . $sd['id_surat_disposisi']); ?>" class="btn btn-info btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat Disposisi">
+								<i class="fas fa-envelope-open"></i>
+							</a>
 						</td>
 						<td>
 							<?php if ($sd['tujuan'] == NULL): ?>
-								<a href="<?= base_url('surat_disposisi/disposisimailbkd/' . $sd['id_surat_disposisi']); ?>"
-								   class="badge badge-warning" onclick="return confirm('Disposisi ke BKD?')">Disposisi ke BKD</a>
-								<a href="<?= base_url('surat_disposisi/disposisimailbka/' . $sd['id_surat_disposisi']); ?>"
-								   class="badge badge-warning" onclick="return confirm('Disposisi ke BKA?')">Disposisi ke BKA</a>
+<!--								<a href="--><?//= base_url('surat_disposisi/disposisimailbkd/' . $sd['id_surat_disposisi']); ?><!--"-->
+<!--								   class="badge badge-warning" onclick="return confirm('Disposisi ke BKD?')">Disposisi ke BKD</a>-->
+<!--								<a href="--><?//= base_url('surat_disposisi/disposisimailbka/' . $sd['id_surat_disposisi']); ?><!--"-->
+<!--								   class="badge badge-warning" onclick="return confirm('Disposisi ke BKA?')">Disposisi ke BKA</a>-->
+								<a href="<?= base_url('surat_disposisi/disposisimailbkd/' . $sd['id_surat_disposisi']); ?>" class="btn btn-warning btn-circle" data-toggle="tooltip" data-placement="top" title="Disposisi ke BKD">
+									<i class="fas fa-arrow-alt-circle-right"></i>
+								</a>
+								<a href="<?= base_url('surat_disposisi/disposisimailbka/' . $sd['id_surat_disposisi']); ?>" class="btn btn-warning btn-circle" data-toggle="tooltip" data-placement="top" title="Disposisi ke BKA">
+									<i class="fas fa-arrow-alt-circle-right"></i>
+								</a>
 							<?php else: ?>
 									<i class="fas fa-check"> sudah didisposisi</i>
 							<?php endif; ?>

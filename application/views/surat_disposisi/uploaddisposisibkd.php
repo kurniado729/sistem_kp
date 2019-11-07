@@ -20,7 +20,19 @@
 									<label class="custom-file-label" for="file_surat_disposisi">Pilih Surat Disposisi</label>
 								</div>
 							</div>
-							<button type="submit" class="btn btn-primary">Add</button>
+						<div class="row">
+							<div class="col-3">
+								<a href="<?= base_url('surat_disposisi/disposisibkd') ?>" class="btn btn-secondary btn-icon-split">
+									<span class="icon text-white-50"><i class="fas fa-chevron-left"></i></span>
+									<span class="text">Back</span>
+								</a>
+							</div>
+							<div class="col-3">
+								<button type="submit" class="btn btn-primary btn-icon-split">
+									<span class="icon text-white-50"><i class="fas fa-check"></i></span>
+									<span class="text">Upload</span></button>
+							</div>
+						</div>
 						<?php echo form_close() ?>
 					</blockquote>
 				</div>

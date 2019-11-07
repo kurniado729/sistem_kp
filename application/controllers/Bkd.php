@@ -60,7 +60,7 @@ class Bkd extends CI_Controller
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['bkd'] = $this->bkd->getdetailsuratdisposisi($id);
 
-		$this->form_validation->set_rules('pegawai', 'Pegawai', 'required');
+		$this->form_validation->set_rules('platform', 'Pegawai', 'required');
 
 		if ($this->form_validation->run() == false ){
 			$this->load->view('templates/header', $data);
@@ -69,6 +69,8 @@ class Bkd extends CI_Controller
 			$this->load->view('bkd/addsuratperintahjalan', $data);
 			$this->load->view('templates/footer');
 		}else{
+			var_dump('ya');
+			die;
 			$pegawai = $this->input->post('pegawai');
 
 			$this->db->set('title', $pegawai);

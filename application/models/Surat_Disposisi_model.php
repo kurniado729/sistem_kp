@@ -9,12 +9,12 @@ class Surat_Disposisi_model extends CI_Model
 	}
 
 	public function getsuratdisposisibkd(){
-		$query = "SELECT * FROM surat_disposisi WHERE tujuan = 'BKD' AND status is NULL ORDER BY file_disposisi_sudah_disetujui";
+		$query = "SELECT * FROM surat_disposisi WHERE tujuan = 'BKD' ORDER BY status";
 		return $this->db->query($query)->result_array();
 	}
 
 	public function getsuratdisposisibka(){
-		$query = "SELECT * FROM surat_disposisi WHERE tujuan = 'BKA' AND status is NULL ORDER BY file_disposisi_sudah_disetujui";
+		$query = "SELECT * FROM surat_disposisi WHERE tujuan = 'BKA' ORDER BY status";
 		return $this->db->query($query)->result_array();
 	}
 

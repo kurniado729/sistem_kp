@@ -40,17 +40,6 @@
 								<input type="text" class="form-control" id="ringkasan" name="ringkasan" value="<?= $surat_masuk['ringkasan'] ?>">
 								</div>
 							</div>
-							<?php if ($surat_masuk['disposisi'] == '1'): ?>
-								<div class="form-group row">
-									<label for="file_surat_masuk" class="col-sm-4 col-form-label">File</label>
-									<div class="col-sm-8">
-									<div class="custom-file">
-										<input type="file" class="custom-file-input" id="file_surat_masuk" name="file_surat_masuk" disabled>
-										<label class="custom-file-label" for="file_surat_masuk"><?= $surat_masuk['file_surat_masuk'] ?></label>
-									</div>
-									</div>
-								</div>
-							<?php else: ?>
 								<div class="form-group row">
 									<label for="file_surat_masuk" class="col-sm-4 col-form-label">File</label>
 									<div class="col-sm-8">
@@ -60,7 +49,6 @@
 									</div>
 									</div>
 								</div>
-							<?php endif; ?>
 							<div class="from-group row justify-content-end" style="margin-left: 105px;">
 								<div class="col-sm-10">
 									<div class="row">

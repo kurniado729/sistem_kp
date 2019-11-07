@@ -29,5 +29,18 @@ class Menu_model extends CI_Model
 				";
 		return $this->db->query($query)->row_array();
 	}
+	public function searchmenu($kategori, $keyword)
+	{
+		$this->db->SELECT('*');
+		$this->db->FROM('user_menu');
+		if ($kategori == 'menu') {
+			$this->db->LIKE('menu', $keyword);
+		}
+//		else{
+//			$this->db->LIKE('cari', $keyword);
+//		}
+		$data = $this->db->get();
+		return $data->result_array();
+	}
 
 }

@@ -32,7 +32,10 @@
 						<td><?= $sd['ringkasan'] ?></td>
 						<td>
 							<a href="<?= base_url('surat_disposisi/viewpersetujuandisposisi/' . $sd['id_surat_disposisi']); ?>"
-							   class="badge badge-success">lihat disposisi</a>
+							   class="badge badge-info">lihat disposisi</a>
+							<a href="<?= base_url('surat_disposisi/viewpersetujuandisposisi/' . $sd['id_surat_disposisi']); ?>	" class="btn btn-info btn-circle">
+								<i class="fas fa-envelope-open"></i>
+							</a>
 						</td>
 						<td>
 							<?php if ($sd['status'] == 0): ?>

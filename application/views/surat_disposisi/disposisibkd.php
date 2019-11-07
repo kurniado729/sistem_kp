@@ -31,14 +31,15 @@
 						<td><?= $sd['tgl_surat_masuk'] ?></td>
 						<td><?= $sd['ringkasan'] ?></td>
 						<td>
-							<a href="<?= base_url('surat_disposisi/viewdisposisimail/' . $sd['id_surat_disposisi']); ?>"
-							   class="badge badge-warning">lihat disposisi</a>
+							<a href="<?= base_url('surat_disposisi/viewdisposisimail/' . $sd['id_surat_disposisi']); ?>" class="btn btn-info btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat Disposisi">
+								<i class="fas fa-envelope-open"></i></a>
+							</a>
 							<?php if ($sd['file_disposisi_sudah_disetujui'] == NULL): ?>
-								<a href="<?= base_url('surat_disposisi/formuploaddisposisibkd/' . $sd['id_surat_disposisi']); ?>"
-								   class="badge badge-info">upload disposisi</a>
+							<a href="<?= base_url('surat_disposisi/formuploaddisposisibkd/' . $sd['id_surat_disposisi']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Upload Persetujuan Disposisi">
+								<i class="fas fa-arrow-alt-circle-up"></i></a>
 							<?php else: ?>
-								<a href="<?= base_url('surat_disposisi/viewpersetujuandisposisi/' . $sd['id_surat_disposisi']); ?>"
-								   class="badge badge-success">lihat persetujuan disposisi</a>
+								<a href="<?= base_url('surat_disposisi/viewpersetujuandisposisi/' . $sd['id_surat_disposisi']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat Persetujuan Disposisi">
+									<i class="fas fa-envelope"></i></a>
 							<?php endif; ?>
 						</td>
 						<td>
@@ -46,14 +47,16 @@
 								<p>upload disposisi <br/>agar aksi ini muncul</p>
 							<?php else: ?>
 								<?php if ($sd['status'] == NULL): ?>
-									<a href="<?= base_url('surat_disposisi/acceptbkd/' . $sd['id_surat_disposisi']); ?>"
-									   class="badge badge-success">setujui</a>
-									<a href="<?= base_url('surat_disposisi/rejectbkd/' . $sd['id_surat_disposisi']); ?>"
-									   class="badge badge-danger">tolak</a>
+							<a href="<?= base_url('surat_disposisi/acceptbkd/' . $sd['id_surat_disposisi']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Setuju">
+								<i class="fas fa-check"></i>
+							</a>
+								<a href="<?= base_url('surat_disposisi/rejectbkd/' . $sd['id_surat_disposisi']); ?>" class="btn btn-danger btn-circle" data-toggle="tooltip" data-placement="top" title="Tolak">
+									<i class="fas fa-times"></i>
+								</a>
 								<?php elseif($sd['status'] == 0) : ?>
-									<a class="badge badge-danger" style="color: white;">sudah ditolak</a>
+									<i class="fas fa-times"> ditolak</i>
 								<?php else: ?>
-									<a class="badge badge-success" style="color: white;">sudah disetujui</a>
+									<i class="fas fa-check"> disetujui</i>
 								<?php endif; ?>
 							<?php endif; ?>
 						</td>

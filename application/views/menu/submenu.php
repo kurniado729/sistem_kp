@@ -36,10 +36,10 @@
 						<td><?= $sm['icon'] ?></td>
 						<td><?= $sm['is_active'] ?></td>
 						<td>
-							<a href="<?= base_url('menu/editsubmenu/' . $sm['id'] ); ?>" class="btn btn-success btn-circle">
+							<a href="<?= base_url('menu/editsubmenu/' . $sm['id'] ); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Edit">
 								<i class="fas fa-edit"></i>
 							</a>
-							<a href="<?= base_url('menu/deletesubmenu/' . $sm['id']); ?>" class="btn btn-danger btn-circle" onclick="return confirm('Yakin Hapus?')">
+							<a href="<?= base_url('menu/deletesubmenu/' . $sm['id']); ?>" class="btn btn-danger btn-circle" data-toggle="tooltip" data-placement="top" title="Hapus" onclick="return confirm('Yakin Hapus?')">
 								<i class="fas fa-trash-alt"></i>
 							</a>
 						</td>

@@ -31,12 +31,12 @@
 						<td><?= $b['tgl_surat_masuk'] ?></td>
 						<td><?= $b['ringkasan'] ?></td>
 						<td>
-							<a href="<?= base_url('bkd/viewpersetujuandisposisi/' . $b['id_surat_disposisi']); ?>"
-							   class="badge badge-info">lihat disposisi</a>
+							<a href="<?= base_url('bkd/viewpersetujuandisposisi/' . $b['id_surat_disposisi']); ?>" class="btn btn-info btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat Disposisi">
+								<i class="fas fa-envelope-open"></i></a>
 						</td>
 						<td>
-							<a href="<?= base_url('bkd/addsuratperintahjalan/' . $b['id_surat_disposisi']); ?>"
-							   class="badge badge-success">buat surat perintah jalan</a>
+							<a href="<?= base_url('bkd/addsuratperintahjalan/' . $b['id_surat_disposisi']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Buat Surat Perintah Tugas">
+								<i class="fas fa-edit"></i></a>
 <!--							<a href="--><?//= base_url('bkd/makespk/' . $b['id_surat_disposisi']); ?><!--"-->
 <!--							   class="badge badge-success">Lihat surat perintah kerja</a>-->
 						</td>
