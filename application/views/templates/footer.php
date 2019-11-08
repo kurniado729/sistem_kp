@@ -106,6 +106,7 @@
                 data: {nama: nama},
 				async: 'false',
                 success: function (response) {
+                    $('#search').val('');
                     $('#id').val(response[0]['id_pegawai']);
                     $('#jabatan').val(response[0]['jabatan']);
 

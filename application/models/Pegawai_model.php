@@ -45,4 +45,75 @@ class Pegawai_model extends CI_Model
 		return $this->db->query($query)->row_array();
 	}
 
+	public function searchpegawaitu($kategori, $keyword)
+	{
+
+		$this->db->SELECT('*');
+		$this->db->FROM('pegawai');
+		$this->db->WHERE('bagian','TU');
+		$this->db->WHERE('hapus','0');
+
+		if ($kategori == 'nama_pegawai') {
+			$this->db->LIKE('nama_pegawai', $keyword);
+		}
+		else{
+			$this->db->LIKE('jabatan', $keyword);
+		}
+		$data = $this->db->get();
+		return $data->result_array();
+	}
+
+	public function searchpegawaibkd($kategori, $keyword)
+	{
+
+		$this->db->SELECT('*');
+		$this->db->FROM('pegawai');
+		$this->db->WHERE('bagian','BKD');
+		$this->db->WHERE('hapus','0');
+
+		if ($kategori == 'nama_pegawai') {
+			$this->db->LIKE('nama_pegawai', $keyword);
+		}
+		else{
+			$this->db->LIKE('jabatan', $keyword);
+		}
+		$data = $this->db->get();
+		return $data->result_array();
+	}
+
+	public function searchpegawaibka($kategori, $keyword)
+	{
+
+		$this->db->SELECT('*');
+		$this->db->FROM('pegawai');
+		$this->db->WHERE('bagian','BKA');
+		$this->db->WHERE('hapus','0');
+
+		if ($kategori == 'nama_pegawai') {
+			$this->db->LIKE('nama_pegawai', $keyword);
+		}
+		else{
+			$this->db->LIKE('jabatan', $keyword);
+		}
+		$data = $this->db->get();
+		return $data->result_array();
+	}
+
+	public function searchtrash($kategori, $keyword)
+	{
+
+		$this->db->SELECT('*');
+		$this->db->FROM('pegawai');
+		$this->db->WHERE('hapus','1');
+
+		if ($kategori == 'nama_pegawai') {
+			$this->db->LIKE('nama_pegawai', $keyword);
+		}
+		else{
+			$this->db->LIKE('jabatan', $keyword);
+		}
+		$data = $this->db->get();
+		return $data->result_array();
+	}
+
 }

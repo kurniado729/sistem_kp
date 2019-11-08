@@ -214,7 +214,7 @@ class Menu extends CI_Controller
 		} else {
 			$kategori = $this->input->post('kategori');
 			$keyword = htmlspecialchars($this->input->post('keyword'));
-			$data['title'] = 'SubMenu Management';
+			$data['title'] = 'Menu Management';
 			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 			$data['menu']= $this->menu->searchmenu($kategori, $keyword);
 
@@ -223,6 +223,34 @@ class Menu extends CI_Controller
 				$this->load->view('templates/sidebar', $data);
 				$this->load->view('templates/topbar', $data);
 				$this->load->view('menu/index', $data);
+				$this->load->view('templates/footer');
+			}else{
+				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Kata kunci dalam kategori tersebut tidak ditemukan</div>');
+				redirect('menu');
+			}
+		}
+	}
+
+	public function searchsubmenu()
+	{
+		$this->form_validation->set_rules('kategori', 'kategori', 'trim|required');
+		$this->form_validation->set_rules('keyword', 'keyword', 'trim|required');
+
+		if ($this->form_validation->run() == false) {
+			$this->session->set_flashdata('message', '<div class="alert alert-danger role="alert">Terjadi kesalahan mencari submenu</div>');
+			redirect('submenu');
+		} else {
+			$kategori = $this->input->post('kategori');
+			$keyword = htmlspecialchars($this->input->post('keyword'));
+			$data['title'] = 'SubMenu Management';
+			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+			$data['submenu']= $this->menu->searchsubmenu($kategori, $keyword);
+
+			if($data){
+				$this->load->view('templates/header', $data);
+				$this->load->view('templates/sidebar', $data);
+				$this->load->view('templates/topbar', $data);
+				$this->load->view('menu/submenu', $data);
 				$this->load->view('templates/footer');
 			}else{
 				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Kata kunci dalam kategori tersebut tidak ditemukan</div>');

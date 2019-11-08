@@ -9,6 +9,33 @@
 
 			<?= $this->session->flashdata('message') ?>
 
+			<div class="row">
+				<div class="col">
+					<div class="row mt-2">
+						<div class="col-7 ">
+							<form action="<?= base_url('surat_disposisi/searchdisposisibkd') ?>" method="post">
+								<div class="input-group">
+									<div class="input-group-prepend bg-light">
+										<label class="input-group-text bg-light font-weight-light small" for="kategori">Cari
+											Berdasarkan</label>
+									</div>
+									<select name="kategori" id="kategori" style="width: 150px;" class="custom-select">
+										<option value="pengirim">Pengirim</option>
+										<option value="no_surat_masuk">No Surat</option>
+										<!--										<option value="cari">Cari</option>-->
+									</select>
+									<input name="keyword" id="keyword" autocomplete="off" type="text" class="w-50 form-control"
+										   placeholder="Kata Kunci">
+									<div class="input-group-append">
+										<button class="btn btn-primary" type="submit" id="tombolCari">Cari</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+
 			<table class="table table-hover">
 				<thead>
 				<tr>
@@ -35,7 +62,7 @@
 								<i class="fas fa-envelope-open"></i></a>
 							</a>
 							<?php if ($sd['file_disposisi_sudah_disetujui'] == NULL): ?>
-							<a href="<?= base_url('surat_disposisi/formuploaddisposisibkd/' . $sd['id_surat_disposisi']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Upload Persetujuan Disposisi">
+							<a href="<?= base_url('surat_disposisi/formuploaddisposisibkd/' . $sd['id_surat_disposisi']); ?>" class="btn btn-primary btn-circle" data-toggle="tooltip" data-placement="top" title="Upload Persetujuan Disposisi">
 								<i class="fas fa-arrow-alt-circle-up"></i></a>
 							<?php else: ?>
 								<a href="<?= base_url('surat_disposisi/viewpersetujuandisposisi/' . $sd['id_surat_disposisi']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat Persetujuan Disposisi">

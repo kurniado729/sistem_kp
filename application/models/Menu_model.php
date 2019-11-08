@@ -43,4 +43,21 @@ class Menu_model extends CI_Model
 		return $data->result_array();
 	}
 
+	public function searchsubmenu($kategori, $keyword)
+	{
+
+		$this->db->SELECT('*');
+		$this->db->FROM('user_sub_menu');
+		$this->db->JOIN('user_menu', 'user_sub_menu.menu_id = user_menu.id');
+
+		if ($kategori == 'title') {
+			$this->db->LIKE('user_sub_menu.title', $keyword);
+		}
+		else{
+			$this->db->LIKE('user_menu.menu', $keyword);
+		}
+		$data = $this->db->get();
+		return $data->result_array();
+	}
+
 }

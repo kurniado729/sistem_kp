@@ -35,8 +35,12 @@
 								<i class="fas fa-envelope-open"></i></a>
 						</td>
 						<td>
+							<?php if ($b['status_spt'] == '0'): ?>
 							<a href="<?= base_url('bkd/addsuratperintahjalan/' . $b['id_surat_disposisi']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Buat Surat Perintah Tugas">
 								<i class="fas fa-edit"></i></a>
+							<?php else: ?>
+								<i class="fas fa-check"> spt sudah dibuat</i>
+							<?php endif; ?>
 <!--							<a href="--><?//= base_url('bkd/makespk/' . $b['id_surat_disposisi']); ?><!--"-->
 <!--							   class="badge badge-success">Lihat surat perintah kerja</a>-->
 						</td>

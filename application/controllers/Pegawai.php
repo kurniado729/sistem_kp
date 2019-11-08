@@ -426,5 +426,117 @@ class Pegawai extends CI_Controller
 
 	}
 
+	public function searchpegawaitu()
+	{
+		$this->form_validation->set_rules('kategori', 'kategori', 'trim|required');
+		$this->form_validation->set_rules('keyword', 'keyword', 'trim|required');
+
+		if ($this->form_validation->run() == false) {
+			$this->session->set_flashdata('message', '<div class="alert alert-danger role="alert">Terjadi kesalahan mencari pegawai</div>');
+			redirect('pegawai');
+		} else {
+			$kategori = $this->input->post('kategori');
+			$keyword = htmlspecialchars($this->input->post('keyword'));
+			$data['title'] = 'Pegawai TU';
+			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+			$data['pegawai']= $this->pegawai->searchpegawaitu($kategori, $keyword);
+
+			if($data){
+				$this->load->view('templates/header', $data);
+				$this->load->view('templates/sidebar', $data);
+				$this->load->view('templates/topbar', $data);
+				$this->load->view('pegawai/index', $data);
+				$this->load->view('templates/footer');
+			}else{
+				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Kata kunci dalam kategori tersebut tidak ditemukan</div>');
+				redirect('pegawai');
+			}
+		}
+	}
+
+	public function searchpegawaibkd()
+	{
+		$this->form_validation->set_rules('kategori', 'kategori', 'trim|required');
+		$this->form_validation->set_rules('keyword', 'keyword', 'trim|required');
+
+		if ($this->form_validation->run() == false) {
+			$this->session->set_flashdata('message', '<div class="alert alert-danger role="alert">Terjadi kesalahan mencari pegawai</div>');
+			redirect('pegawai');
+		} else {
+			$kategori = $this->input->post('kategori');
+			$keyword = htmlspecialchars($this->input->post('keyword'));
+			$data['title'] = 'Pegawai BKD';
+			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+			$data['pegawai']= $this->pegawai->searchpegawaibkd($kategori, $keyword);
+
+			if($data){
+				$this->load->view('templates/header', $data);
+				$this->load->view('templates/sidebar', $data);
+				$this->load->view('templates/topbar', $data);
+				$this->load->view('pegawai/pegawaibkd', $data);
+				$this->load->view('templates/footer');
+			}else{
+				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Kata kunci dalam kategori tersebut tidak ditemukan</div>');
+				redirect('pegawai/pegawaibkd');
+			}
+		}
+	}
+
+	public function searchpegawaibka()
+	{
+		$this->form_validation->set_rules('kategori', 'kategori', 'trim|required');
+		$this->form_validation->set_rules('keyword', 'keyword', 'trim|required');
+
+		if ($this->form_validation->run() == false) {
+			$this->session->set_flashdata('message', '<div class="alert alert-danger role="alert">Terjadi kesalahan mencari pegawai</div>');
+			redirect('pegawai');
+		} else {
+			$kategori = $this->input->post('kategori');
+			$keyword = htmlspecialchars($this->input->post('keyword'));
+			$data['title'] = 'Pegawai BKA';
+			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+			$data['pegawai']= $this->pegawai->searchpegawaibka($kategori, $keyword);
+
+			if($data){
+				$this->load->view('templates/header', $data);
+				$this->load->view('templates/sidebar', $data);
+				$this->load->view('templates/topbar', $data);
+				$this->load->view('pegawai/pegawaibka', $data);
+				$this->load->view('templates/footer');
+			}else{
+				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Kata kunci dalam kategori tersebut tidak ditemukan</div>');
+				redirect('pegawai/pegawaibka');
+			}
+		}
+	}
+
+	public function searchtrash()
+	{
+		$this->form_validation->set_rules('kategori', 'kategori', 'trim|required');
+		$this->form_validation->set_rules('keyword', 'keyword', 'trim|required');
+
+		if ($this->form_validation->run() == false) {
+			$this->session->set_flashdata('message', '<div class="alert alert-danger role="alert">Terjadi kesalahan mencari pegawai</div>');
+			redirect('pegawai');
+		} else {
+			$kategori = $this->input->post('kategori');
+			$keyword = htmlspecialchars($this->input->post('keyword'));
+			$data['title'] = 'Trash';
+			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+			$data['trash']= $this->pegawai->searchtrash($kategori, $keyword);
+
+			if($data){
+				$this->load->view('templates/header', $data);
+				$this->load->view('templates/sidebar', $data);
+				$this->load->view('templates/topbar', $data);
+				$this->load->view('pegawai/trash', $data);
+				$this->load->view('templates/footer');
+			}else{
+				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Kata kunci dalam kategori tersebut tidak ditemukan</div>');
+				redirect('pegawai/trash');
+			}
+		}
+	}
+
 
 }

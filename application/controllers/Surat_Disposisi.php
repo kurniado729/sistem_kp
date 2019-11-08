@@ -307,4 +307,88 @@ class Surat_Disposisi extends CI_Controller
 		header("Content-Length: " . filesize($filename));
 		readfile($filename);
 	}
+
+	public function searchdisposisi()
+	{
+		$this->form_validation->set_rules('kategori', 'kategori', 'trim|required');
+		$this->form_validation->set_rules('keyword', 'keyword', 'trim|required');
+
+		if ($this->form_validation->run() == false) {
+			$this->session->set_flashdata('message', '<div class="alert alert-danger role="alert">Terjadi kesalahan mencari surat disoisisi</div>');
+			redirect('surat_disposisi');
+		} else {
+			$kategori = $this->input->post('kategori');
+			$keyword = htmlspecialchars($this->input->post('keyword'));
+			$data['title'] = 'Persetujuan Disposisi';
+			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+			$data['surat_disposisi']= $this->surat_disposisi->searchdisposisi($kategori, $keyword);
+
+			if($data){
+				$this->load->view('templates/header', $data);
+				$this->load->view('templates/sidebar', $data);
+				$this->load->view('templates/topbar', $data);
+				$this->load->view('surat_disposisi/index', $data);
+				$this->load->view('templates/footer');
+			}else{
+				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Kata kunci dalam kategori tersebut tidak ditemukan</div>');
+				redirect('surat_disposisi');
+			}
+		}
+	}
+
+	public function searchdisposisibkd()
+	{
+		$this->form_validation->set_rules('kategori', 'kategori', 'trim|required');
+		$this->form_validation->set_rules('keyword', 'keyword', 'trim|required');
+
+		if ($this->form_validation->run() == false) {
+			$this->session->set_flashdata('message', '<div class="alert alert-danger role="alert">Terjadi kesalahan mencari surat disoisisi</div>');
+			redirect('surat_disposisi/disposisibkd');
+		} else {
+			$kategori = $this->input->post('kategori');
+			$keyword = htmlspecialchars($this->input->post('keyword'));
+			$data['title'] = 'Disposisi BKD';
+			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+			$data['surat_disposisi']= $this->surat_disposisi->searchdisposisibkd($kategori, $keyword);
+
+			if($data){
+				$this->load->view('templates/header', $data);
+				$this->load->view('templates/sidebar', $data);
+				$this->load->view('templates/topbar', $data);
+				$this->load->view('surat_disposisi/disposisibkd', $data);
+				$this->load->view('templates/footer');
+			}else{
+				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Kata kunci dalam kategori tersebut tidak ditemukan</div>');
+				redirect('surat_disposisi/disposisibkd');
+			}
+		}
+	}
+
+	public function searchdisposisibka()
+	{
+		$this->form_validation->set_rules('kategori', 'kategori', 'trim|required');
+		$this->form_validation->set_rules('keyword', 'keyword', 'trim|required');
+
+		if ($this->form_validation->run() == false) {
+			$this->session->set_flashdata('message', '<div class="alert alert-danger role="alert">Terjadi kesalahan mencari surat disoisisi</div>');
+			redirect('surat_disposisi/disposisibka');
+		} else {
+			$kategori = $this->input->post('kategori');
+			$keyword = htmlspecialchars($this->input->post('keyword'));
+			$data['title'] = 'Disposisi BKA';
+			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+			$data['surat_disposisi']= $this->surat_disposisi->searchdisposisibka($kategori, $keyword);
+
+			if($data){
+				$this->load->view('templates/header', $data);
+				$this->load->view('templates/sidebar', $data);
+				$this->load->view('templates/topbar', $data);
+				$this->load->view('surat_disposisi/disposisibka', $data);
+				$this->load->view('templates/footer');
+			}else{
+				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Kata kunci dalam kategori tersebut tidak ditemukan</div>');
+				redirect('surat_disposisi/disposisibka');
+			}
+		}
+	}
 }

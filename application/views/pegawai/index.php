@@ -9,10 +9,38 @@
 
 			<?= $this->session->flashdata('message') ?>
 
-			<a href="<?= base_url('pegawai/addpegawaitu'); ?>" class="btn btn-primary btn-icon-split mb-3">
-				<span class="icon text-white-50"><i class="fas fa-plus"></i></span>
-				<span class="text">Add New Pegawai</span>
-			</a>
+			<div class="row">
+				<div class="col-3">
+					<a href="<?= base_url('pegawai/addpegawaitu'); ?>" class="btn btn-primary btn-icon-split mb-3">
+						<span class="icon text-white-50"><i class="fas fa-plus"></i></span>
+						<span class="text">Add New Pegawai</span>
+					</a>
+				</div>
+				<div class="col">
+					<div class="row mt-2">
+						<div class="col">
+							<form action="<?= base_url('pegawai/searchpegawaitu') ?>" method="post">
+								<div class="input-group">
+									<div class="input-group-prepend bg-light">
+										<label class="input-group-text bg-light font-weight-light small" for="kategori">Cari
+											Berdasarkan</label>
+									</div>
+									<select name="kategori" id="kategori" style="width: 150px;" class="custom-select">
+										<option value="nama_pegawai">Nama</option>
+										<option value="jabatan">Jabatan</option>
+										<!--										<option value="cari">Cari</option>-->
+									</select>
+									<input name="keyword" id="keyword" autocomplete="off" type="text" class="w-50 form-control"
+										   placeholder="Kata Kunci">
+									<div class="input-group-append">
+										<button class="btn btn-primary" type="submit" id="tombolCari">Cari</button>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
 
 			<table class="table table-hover">
 				<thead>

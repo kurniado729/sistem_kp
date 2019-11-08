@@ -35,4 +35,38 @@ class Surat_Masuk_model extends CI_Model
 		return $this->db->query($query)->row_array();
 	}
 
+	public function searchsuratmasuk($kategori, $keyword)
+	{
+
+		$this->db->SELECT('*');
+		$this->db->FROM('surat_masuk');
+		$this->db->WHERE('hapus','0');
+
+		if ($kategori == 'pengirim') {
+			$this->db->LIKE('pengirim', $keyword);
+		}
+		else{
+			$this->db->LIKE('no_surat_masuk', $keyword);
+		}
+		$data = $this->db->get();
+		return $data->result_array();
+	}
+
+	public function searchtrash($kategori, $keyword)
+	{
+
+		$this->db->SELECT('*');
+		$this->db->FROM('surat_masuk');
+		$this->db->WHERE('hapus','1');
+
+		if ($kategori == 'pengirim') {
+			$this->db->LIKE('pengirim', $keyword);
+		}
+		else{
+			$this->db->LIKE('no_surat_masuk', $keyword);
+		}
+		$data = $this->db->get();
+		return $data->result_array();
+	}
+
 }

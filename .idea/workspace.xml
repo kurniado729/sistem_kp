@@ -2,15 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/views/templates/sidebar3.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/bkd/spt.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/bkd/viewspt.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Bkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Bkd.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Pegawai.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Pegawai.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Surat_Disposisi.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Surat_Disposisi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Surat_Masuk.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Surat_Masuk.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Bkd_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Bkd_model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/Menu_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Menu_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Pegawai_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Pegawai_model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/Surat_Disposisi_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Surat_Disposisi_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/bkd/addsuratperintahjalan.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/bkd/addsuratperintahjalan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Surat_Masuk_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Surat_Masuk_model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/bkd/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/bkd/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/menu/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/menu/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/menu/submenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/menu/submenu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/pegawai/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/pegawai/pegawaibka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/pegawaibka.php" afterDir="false" />
@@ -18,16 +23,10 @@
       <change beforePath="$PROJECT_DIR$/application/views/pegawai/trash.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/trash.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/surat_disposisi/disposisibka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_disposisi/disposisibka.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/surat_disposisi/disposisibkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_disposisi/disposisibkd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_disposisi/historydisposisibka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_disposisi/historydisposisibka.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_disposisi/historydisposisibkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_disposisi/historydisposisibkd.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/surat_disposisi/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_disposisi/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_disposisi/uploaddisposisibka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_disposisi/uploaddisposisibka.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_disposisi/uploaddisposisibkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_disposisi/uploaddisposisibkd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_masuk/editmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_masuk/editmail.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/surat_masuk/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_masuk/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/surat_masuk/trash.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_masuk/trash.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/templates/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/templates/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/templates/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/templates/sidebar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/templates/sidebar2.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -211,7 +210,8 @@
       <workItem from="1573057091931" duration="8705000" />
       <workItem from="1573098793434" duration="13000" />
       <workItem from="1573099935104" duration="3060000" />
-      <workItem from="1573133501415" duration="9319000" />
+      <workItem from="1573133501415" duration="14841000" />
+      <workItem from="1573212739191" duration="16740000" />
     </task>
     <task id="LOCAL-00001" summary="update view">
       <created>1573067332216</created>
@@ -220,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573067332216</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update view">
+      <created>1573142909160</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1573142909160</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

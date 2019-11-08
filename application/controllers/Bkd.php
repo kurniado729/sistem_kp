@@ -25,6 +25,20 @@ class Bkd extends CI_Controller
 		$this->load->view('templates/footer');
 	}
 
+	public function spt()
+	{
+		$data['title'] = 'Surat Perintah Tugas';
+		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+
+		$data['spt'] = $this->bkd->suratspt();
+
+		$this->load->view('templates/header', $data);
+		$this->load->view('templates/sidebar', $data);
+		$this->load->view('templates/topbar', $data);
+		$this->load->view('bkd/spt', $data);
+		$this->load->view('templates/footer');
+	}
+
 	public function viewdisposisimail($id)
 	{
 
@@ -69,13 +83,25 @@ class Bkd extends CI_Controller
 			$this->load->view('bkd/addsuratperintahjalan', $data);
 			$this->load->view('templates/footer');
 		}else{
-			var_dump('ya');
-			die;
-			$pegawai = $this->input->post('pegawai');
 
-			$this->db->set('title', $pegawai);
+			$data = [
+				'pengirim' => $this->input->post('pengirim'),
+				'no_surat_masuk' => $this->input->post('no_surat_masuk'),
+				'tgl_surat_masuk' => $this->input->post('tgl_surat_masuk'),
+				'ringkasan' => $this->input->post('ringkasan'),
+				'nama_pegawai' => $this->input->post('platform'),
+				'nip_pegawai' => $this->input->post('id'),
+				'jabatan' => $this->input->post('jabatan')
+			];
 
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your SPK has been created!</div>');
+
+			$this->db->insert('surat_spt', $data);
+
+			$this->db->set('status_spt', '1');
+			$this->db->where('id_surat_disposisi', $id);
+			$this->db->update('surat_disposisi');
+
+			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your SPT has been created!</div>');
 			redirect('bkd');
 		}
 
@@ -120,4 +146,17 @@ class Bkd extends CI_Controller
 
 		echo json_encode($data);
 	}
+
+	public function viewspt($id)
+	{
+		$data['spt'] = $this->bkd->getdetailspt($id);
+
+		$this->load->library('pdf');
+
+		$this->pdf->setPaper('A4', 'potrait');
+		$this->pdf->filename = $data['spt']['id_surat_spt'];
+		$this->pdf->load_view('bkd/viewspt', $data);
+
+	}
+
 }

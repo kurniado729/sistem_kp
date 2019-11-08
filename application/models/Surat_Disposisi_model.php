@@ -55,4 +55,54 @@ class Surat_Disposisi_model extends CI_Model
 		return $this->db->query($query)->result_array();
 	}
 
+	public function searchdisposisi($kategori, $keyword)
+	{
+
+		$this->db->SELECT('*');
+		$this->db->FROM('surat_disposisi');
+
+		if ($kategori == 'pengirim') {
+			$this->db->LIKE('pengirim', $keyword);
+		}
+		else{
+			$this->db->LIKE('no_surat_masuk', $keyword);
+		}
+		$data = $this->db->get();
+		return $data->result_array();
+	}
+
+	public function searchdisposisibkd($kategori, $keyword)
+	{
+
+		$this->db->SELECT('*');
+		$this->db->FROM('surat_disposisi');
+		$this->db->WHERE('tujuan', 'BKD');
+
+		if ($kategori == 'pengirim') {
+			$this->db->LIKE('pengirim', $keyword);
+		}
+		else{
+			$this->db->LIKE('no_surat_masuk', $keyword);
+		}
+		$data = $this->db->get();
+		return $data->result_array();
+	}
+
+	public function searchdisposisibka($kategori, $keyword)
+	{
+
+		$this->db->SELECT('*');
+		$this->db->FROM('surat_disposisi');
+		$this->db->WHERE('tujuan', 'BKA');
+
+		if ($kategori == 'pengirim') {
+			$this->db->LIKE('pengirim', $keyword);
+		}
+		else{
+			$this->db->LIKE('no_surat_masuk', $keyword);
+		}
+		$data = $this->db->get();
+		return $data->result_array();
+	}
+
 }
