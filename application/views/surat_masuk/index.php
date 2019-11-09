@@ -16,8 +16,8 @@
 						<span class="text">Add New Mail</span>
 					</a>
 				</div>
-				<div class="col">
-					<div class="row mt-2">
+				<div class="col-7">
+					<div class="row">
 						<div class="col">
 							<form action="<?= base_url('surat_masuk/searchsuratmasuk') ?>" method="post">
 								<div class="input-group">

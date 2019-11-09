@@ -170,4 +170,59 @@ class Bkd extends CI_Controller
 		redirect('bkd/spt');
 	}
 
+	public function searchbkd()
+	{
+		$this->form_validation->set_rules('kategori', 'kategori', 'trim|required');
+		$this->form_validation->set_rules('keyword', 'keyword', 'trim|required');
+
+		if ($this->form_validation->run() == false) {
+			$this->session->set_flashdata('message', '<div class="alert alert-danger role="alert">Terjadi kesalahan mencari surat disoisisi</div>');
+			redirect('bkd');
+		} else {
+			$kategori = $this->input->post('kategori');
+			$keyword = htmlspecialchars($this->input->post('keyword'));
+			$data['title'] = 'Surat BKD';
+			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+			$data['bkd']= $this->bkd->searchbkd($kategori, $keyword);
+
+			if($data){
+				$this->load->view('templates/header', $data);
+				$this->load->view('templates/sidebar', $data);
+				$this->load->view('templates/topbar', $data);
+				$this->load->view('bkd/index', $data);
+				$this->load->view('templates/footer');
+			}else{
+				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Kata kunci dalam kategori tersebut tidak ditemukan</div>');
+				redirect('bkd');
+			}
+		}
+	}
+
+	public function searchspt()
+	{
+		$this->form_validation->set_rules('kategori', 'kategori', 'trim|required');
+		$this->form_validation->set_rules('keyword', 'keyword', 'trim|required');
+
+		if ($this->form_validation->run() == false) {
+			$this->session->set_flashdata('message', '<div class="alert alert-danger role="alert">Terjadi kesalahan mencari surat disoisisi</div>');
+			redirect('bkd/spt');
+		} else {
+			$kategori = $this->input->post('kategori');
+			$keyword = htmlspecialchars($this->input->post('keyword'));
+			$data['title'] = 'Surat Perintah Tugas';
+			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+			$data['spt']= $this->bkd->searchspt($kategori, $keyword);
+
+			if($data){
+				$this->load->view('templates/header', $data);
+				$this->load->view('templates/sidebar', $data);
+				$this->load->view('templates/topbar', $data);
+				$this->load->view('bkd/spt', $data);
+				$this->load->view('templates/footer');
+			}else{
+				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Kata kunci dalam kategori tersebut tidak ditemukan</div>');
+				redirect('bkd/spt');
+			}
+		}
+	}
 }

@@ -10,8 +10,8 @@
 			<?= $this->session->flashdata('message') ?>
 
 			<div class="row">
-				<div class="col">
-					<div class="row mt-2">
+				<div class="col-7">
+					<div class="row mb-3">
 						<div class="col">
 							<form action="<?= base_url('surat_disposisi/searchdisposisi') ?>" method="post">
 								<div class="input-group">

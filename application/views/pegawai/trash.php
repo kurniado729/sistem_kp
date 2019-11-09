@@ -10,8 +10,8 @@
 			<?= $this->session->flashdata('message') ?>
 
 			<div class="row">
-				<div class="col-8">
-					<div class="row mt-2">
+				<div class="col-7">
+					<div class="row mb-3">
 						<div class="col">
 							<form action="<?= base_url('pegawai/searchtrash') ?>" method="post">
 								<div class="input-group">

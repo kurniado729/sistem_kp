@@ -16,8 +16,8 @@
 					<span class="text">Add New SubMenu</span>
 				</a>
 			</div>
-			<div class="col">
-				<div class="row mt-2">
+			<div class="col-7">
+				<div class="row">
 					<div class="col">
 						<form action="<?= base_url('menu/searchsubmenu') ?>" method="post">
 							<div class="input-group">

@@ -9,8 +9,8 @@
 
 			<?= $this->session->flashdata('message') ?>
 			<div class="row">
-				<div class="col">
-					<div class="row mt-2">
+				<div class="col-7">
+					<div class="row mb-3">
 						<div class="col">
 							<form action="<?= base_url('surat_masuk/searchtrash') ?>" method="post">
 								<div class="input-group">
@@ -39,7 +39,6 @@
 				<thead>
 					<tr>
 						<th scope="col">#</th>
-						<th scope="col">File Surat</th>
 						<th scope="col">Pengirim</th>
 						<th scope="col">No Surat</th>
 						<th scope="col">Tanggal Surat</th>
@@ -52,7 +51,6 @@
 					<?php foreach ($trash as $t) : ?>
 					<tr>
 						<th scope="row"><?= $i; ?></th>
-						<td><?= $t['file_surat_masuk'] ?></td>
 						<td><?= $t['pengirim'] ?></td>
 						<td><?= $t['no_surat_masuk'] ?></td>
 						<td><?= $t['tgl_surat_masuk'] ?></td>
