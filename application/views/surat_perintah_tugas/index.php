@@ -39,8 +39,18 @@
 						<td>
 							<a href="<?= base_url('surat_perintah_tugas/viewspt/' . $s['id_surat_spt']); ?>" class="btn btn-info btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat SPT">
 								<i class="fas fa-envelope-open"></i></a>
+							<?php if ($s['file_spt_sudah_disetujui'] == NULL): ?>
+								<a href="<?= base_url('surat_perintah_tugas/formuploadsptbkd/' . $s['id_surat_spt']); ?>" class="btn btn-primary btn-circle" data-toggle="tooltip" data-placement="top" title="Upload Persetujuan SPT">
+									<i class="fas fa-arrow-alt-circle-up"></i></a>
+							<?php else: ?>
+								<a href="<?= base_url('surat_perintah_tugas/viewpersetujuanspt/' . $s['id_surat_spt']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat Persetujuan SPT">
+									<i class="fas fa-envelope"></i></a>
+							<?php endif; ?>
 						</td>
 						<td>
+							<?php if ($s['file_spt_sudah_disetujui'] == NULL): ?>
+								<p>upload SPT <br/>agar aksi ini muncul</p>
+							<?php else: ?>
 							<?php if ($s['status'] == NULL): ?>
 								<a href="<?= base_url('surat_perintah_tugas/acceptbkd/' . $s['id_surat_spt']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Setuju">
 									<i class="fas fa-check"></i>
@@ -52,6 +62,7 @@
 								<i class="fas fa-times"> ditolak</i>
 							<?php else: ?>
 								<i class="fas fa-check"> disetujui</i>
+							<?php endif; ?>
 							<?php endif; ?>
 
 						</td>
