@@ -37,12 +37,12 @@
 						<td><?= $s['nip_pegawai'] ?></td>
 						<td><?= $s['jabatan'] ?></td>
 						<td>
-							<a href="<?= base_url('bkd/viewspt/' . $s['id_surat_spt']); ?>" class="btn btn-info btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat SPT">
+							<a href="<?= base_url('bka/viewspt/' . $s['id_surat_spt']); ?>" class="btn btn-info btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat SPT">
 								<i class="fas fa-envelope-open"></i></a>
 						</td>
 						<td>
 							<?php if ($s['status_pengajuan'] == '0'): ?>
-							<a href="<?= base_url('bkd/ajukanspt/' . $s['id_surat_spt']); ?>" class="btn btn-warning btn-circle" data-toggle="tooltip" data-placement="top" title="Ajukan SPT" onclick="return confirm('Yakin Ajukan SPT?')">
+							<a href="<?= base_url('bka/ajukanspt/' . $s['id_surat_spt']); ?>" class="btn btn-warning btn-circle" data-toggle="tooltip" data-placement="top" title="Ajukan SPT" onclick="return confirm('Yakin Ajukan SPT?')">
 								<i class="fas fa-paper-plane"></i>
 							</a>
 							<?php else: ?>

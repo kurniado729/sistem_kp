@@ -2,30 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/views/bkd/spt.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/bkd/viewspt.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/controllers/Bka.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/controllers/Surat_Perintah_Tugas.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/models/Bka_model.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/models/Spt_model.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/bka/addsuratperintahjalan.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/bka/disposisibka.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/bka/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/bka/spt.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/bka/viesuratperintahkerja.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/bka/viewspt.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/surat_perintah_tugas/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/surat_perintah_tugas/sptbka.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/views/surat_perintah_tugas/viewspt.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Bkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Bkd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Pegawai.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Pegawai.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Surat_Disposisi.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Surat_Disposisi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Surat_Masuk.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Surat_Masuk.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/Bkd_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Bkd_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Menu_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Menu_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Pegawai_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Pegawai_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Surat_Disposisi_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Surat_Disposisi_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Surat_Masuk_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Surat_Masuk_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/bkd/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/bkd/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/menu/submenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/menu/submenu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pegawai/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pegawai/pegawaibka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/pegawaibka.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pegawai/pegawaibkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/pegawaibkd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pegawai/trash.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/trash.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_disposisi/disposisibka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_disposisi/disposisibka.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_disposisi/disposisibkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_disposisi/disposisibkd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_disposisi/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_disposisi/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_masuk/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_masuk/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_masuk/trash.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_masuk/trash.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/bkd/addsuratperintahjalan.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/bkd/addsuratperintahjalan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/bkd/spt.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/bkd/spt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/bkd/viewspt.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/bkd/viewspt.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/templates/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/templates/footer.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -108,16 +103,16 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/views/bkd" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/views/surat_perintah_tugas" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\sistem_kp\application\views\bkd" />
-      <recent name="C:\xampp\htdocs\sistem_kp\application\views\admin" />
-      <recent name="C:\xampp\htdocs\sistem_kp\assets\upload\suratmasuk" />
-      <recent name="C:\xampp\htdocs\sistem_kp\application\views\suratbkd" />
+      <recent name="C:\xampp\htdocs\sistem_kp\application\views\surat_perintah_tugas" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\models" />
+      <recent name="C:\xampp\htdocs\sistem_kp\application\views\bka" />
+      <recent name="C:\xampp\htdocs\sistem_kp\application\views" />
+      <recent name="C:\xampp\htdocs\sistem_kp\application\controllers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -211,7 +206,8 @@
       <workItem from="1573098793434" duration="13000" />
       <workItem from="1573099935104" duration="3060000" />
       <workItem from="1573133501415" duration="14841000" />
-      <workItem from="1573212739191" duration="16740000" />
+      <workItem from="1573212739191" duration="16847000" />
+      <workItem from="1573276851444" duration="8298000" />
     </task>
     <task id="LOCAL-00001" summary="update view">
       <created>1573067332216</created>
@@ -227,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573142909160</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="spt">
+      <created>1573241860948</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1573241860948</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +251,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update view" />
-    <option name="LAST_COMMIT_MESSAGE" value="update view" />
+    <MESSAGE value="spt" />
+    <option name="LAST_COMMIT_MESSAGE" value="spt" />
   </component>
 </project>

@@ -13,32 +13,32 @@
 				</div>
 				<div class="card-body">
 					<blockquote class="blockquote mb-0">
-						<form method="post" action="<?= base_url('bkd/addsuratperintahjalan/'. $bkd['id_surat_disposisi']); ?>" >
+						<form method="post" action="<?= base_url('bka/addsuratperintahjalan/'. $bka['id_surat_disposisi']); ?>" >
 							<div class="row">
 								<div class="col">
 									<h4>Data Surat</h4>
 									<div class="form-group row">
 										<label for="pengirim" class="col-sm-4 col-form-label">Pengirim</label>
 										<div class="col-sm-8">
-										<input type="text" class="form-control" id="pengirim" name="pengirim" value="<?= $bkd['pengirim']?>" readonly>
+										<input type="text" class="form-control" id="pengirim" name="pengirim" value="<?= $bka['pengirim']?>" readonly>
 										</div>
 									</div>
 									<div class="form-group row">
 										<label for="no_surat_masuk" class="col-sm-4 col-form-label">No Surat</label>
 										<div class="col-sm-8">
-										<input type="text" class="form-control" id="no_surat_masuk" name="no_surat_masuk" value="<?= $bkd['no_surat_masuk']?>" readonly>
+										<input type="text" class="form-control" id="no_surat_masuk" name="no_surat_masuk" value="<?= $bka['no_surat_masuk']?>" readonly>
 										</div>
 									</div>
 									<div class="form-group row">
 										<label for="tgl_surat_masuk" class="col-sm-4 col-form-label">Tanggal Surat</label>
 										<div class="col-sm-8">
-										<input type="text" class="form-control" id="tgl_surat_masuk" name="tgl_surat_masuk" value="<?= $bkd['tgl_surat_masuk']?>" readonly>
+										<input type="text" class="form-control" id="tgl_surat_masuk" name="tgl_surat_masuk" value="<?= $bka['tgl_surat_masuk']?>" readonly>
 										</div>
 									</div>
 									<div class="form-group row">
 										<label for="ringkasan" class="col-sm-4 col-form-label">Ringkasan</label>
 										<div class="col-sm-8">
-										<input type="text" class="form-control" id="ringkasan" name="ringkasan" value="<?= $bkd['ringkasan']?>" readonly>
+										<input type="text" class="form-control" id="ringkasan" name="ringkasan" value="<?= $bka['ringkasan']?>" readonly>
 										</div>
 									</div>
 								</div>
@@ -47,7 +47,7 @@
 									<div class="form-group">
 										<div class="row">
 											<div id="kolomCari" class="col-3">
-												<input type="text" class="form-control" id="searchbkd" name="searchbkd" placeholder="Cari Nama..." autocomplete="off">
+												<input type="text" class="form-control" id="searchbka" name="searchbka" placeholder="Cari Nama..." autocomplete="off">
 											</div>
 											<div class="col">
 												<select class="form-control" name="platform" id="show-list">
@@ -67,7 +67,7 @@
 							</div>
 							<div class="row">
 								<div class="col-3">
-									<a href="<?= base_url('bkd') ?>" class="btn btn-secondary btn-icon-split">
+									<a href="<?= base_url('bka') ?>" class="btn btn-secondary btn-icon-split">
 										<span class="icon text-white-50"><i class="fas fa-chevron-left"></i></span>
 										<span class="text">Back</span>
 									</a>

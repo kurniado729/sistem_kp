@@ -1,27 +1,27 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Bkd extends CI_Controller
+class Bka extends CI_Controller
 {
 
 	public function __construct()
 	{
 		parent::__construct();
 		is_logged_in();
-		$this->load->model('Bkd_model', 'bkd');
+		$this->load->model('Bka_model', 'bka');
 	}
 
 	public function index()
 	{
-		$data['title'] = 'Surat BKD';
+		$data['title'] = 'Surat BKA';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-		$data['bkd'] = $this->bkd->suratbkd();
+		$data['bka'] = $this->bka->suratbka();
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/sidebar', $data);
 		$this->load->view('templates/topbar', $data);
-		$this->load->view('bkd/index', $data);
+		$this->load->view('bka/index', $data);
 		$this->load->view('templates/footer');
 	}
 
@@ -30,37 +30,37 @@ class Bkd extends CI_Controller
 		$data['title'] = 'Surat Perintah Tugas';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-		$data['spt'] = $this->bkd->suratspt();
+		$data['spt'] = $this->bka->suratspt();
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/sidebar', $data);
 		$this->load->view('templates/topbar', $data);
-		$this->load->view('bkd/spt', $data);
+		$this->load->view('bka/spt', $data);
 		$this->load->view('templates/footer');
 	}
 
 	public function viewdisposisimail($id)
 	{
 
-		$data['title'] = 'Surat BKD';
+		$data['title'] = 'Surat BKA';
 //		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-		$data['disposisi_bkd'] = $this->bkd->getdetailsuratdisposisi($id);
+		$data['disposisi_bka'] = $this->bka->getdetailsuratdisposisi($id);
 
 		$this->load->library('pdf');
 
 		$this->pdf->setPaper('A4', 'potrait');
-		$this->pdf->filename = $data['disposisi_bkd']['id_surat_disposisi'];
-		$this->pdf->load_view('bkd/disposisibkd', $data);
+		$this->pdf->filename = $data['disposisi_bka']['id_surat_disposisi'];
+		$this->pdf->load_view('bka/disposisibka', $data);
 
 	}
 
 	public function viewpersetujuandisposisi($id)
 	{
-		$data['bkd'] = $this->bkd->getdetailsuratdisposisi($id);
+		$data['bka'] = $this->bka->getdetailsuratdisposisi($id);
 
 
-		$file = $data['bkd']['file_disposisi_sudah_disetujui'];
+		$file = $data['bka']['file_disposisi_sudah_disetujui'];
 
 		$filename = "./assets/upload/disposisi/".$file;
 		header("Content-type: application/pdf");
@@ -70,9 +70,9 @@ class Bkd extends CI_Controller
 
 	public function addsuratperintahjalan($id)
 	{
-		$data['title'] = 'Surat BKD';
+		$data['title'] = 'Surat BKA';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-		$data['bkd'] = $this->bkd->getdetailsuratdisposisi($id);
+		$data['bka'] = $this->bka->getdetailsuratdisposisi($id);
 
 		$this->form_validation->set_rules('platform', 'Pegawai', 'required');
 
@@ -80,7 +80,7 @@ class Bkd extends CI_Controller
 			$this->load->view('templates/header', $data);
 			$this->load->view('templates/sidebar', $data);
 			$this->load->view('templates/topbar', $data);
-			$this->load->view('bkd/addsuratperintahjalan', $data);
+			$this->load->view('bka/addsuratperintahjalan', $data);
 			$this->load->view('templates/footer');
 		}else{
 
@@ -92,8 +92,9 @@ class Bkd extends CI_Controller
 				'nama_pegawai' => $this->input->post('platform'),
 				'nip_pegawai' => $this->input->post('id'),
 				'jabatan' => $this->input->post('jabatan'),
-				'bagian' => 'BKD'
+				'bagian' => 'BKA'
 			];
+
 
 			$this->db->insert('surat_spt', $data);
 
@@ -102,7 +103,7 @@ class Bkd extends CI_Controller
 			$this->db->update('surat_disposisi');
 
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your SPT has been created!</div>');
-			redirect('bkd');
+			redirect('bka');
 		}
 
 	}
@@ -113,19 +114,19 @@ class Bkd extends CI_Controller
 //		$data['title'] = BKD';
 //		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-		$data['spk'] = $this->bkd->getdetailsuratdisposisi($id);
+		$data['spk'] = $this->bka->getdetailsuratdisposisi($id);
 
 		$this->load->library('pdf');
 
 		$this->pdf->setPaper('A4', 'potrait');
 		$this->pdf->filename = $data['spk']['id_surat_disposisi'];
-		$this->pdf->load_view('bkd/viewsuratperintahkerja', $data);
+		$this->pdf->load_view('bka/viewsuratperintahkerja', $data);
 
 	}
 
 	public function action(){
 		$inpText = $this->input->post('query');
-		$query = "SELECT * FROM pegawai WHERE bagian = 'BKD' AND nama_pegawai LIKE '%$inpText%'";
+		$query = "SELECT * FROM pegawai WHERE bagian = 'BKA' AND nama_pegawai LIKE '%$inpText%'";
 		$result = $this->db->query($query);
 
 		if($result->num_rows() > 0){
@@ -142,32 +143,32 @@ class Bkd extends CI_Controller
 
 	public function action2(){
 		$nama = $this->input->post('nama');
-		$data= $this->bkd->getpegawai($nama);
+		$data= $this->bka->getpegawai($nama);
 
 		echo json_encode($data);
 	}
 
 	public function viewspt($id)
 	{
-		$data['spt'] = $this->bkd->getdetailspt($id);
+		$data['spt'] = $this->bka->getdetailspt($id);
 
 		$this->load->library('pdf');
 
 		$this->pdf->setPaper('A4', 'potrait');
 		$this->pdf->filename = $data['spt']['id_surat_spt'];
-		$this->pdf->load_view('bkd/viewspt', $data);
+		$this->pdf->load_view('bka/viewspt', $data);
 
 	}
 
 	public function ajukanspt($id){
-		$data['spt'] = $this->bkd->getdetailspt($id);
+		$data['spt'] = $this->bka->getdetailspt($id);
 
 		$this->db->set('status_pengajuan', '1');
 		$this->db->where('id_surat_spt', $id);
 		$this->db->update('surat_spt');
 
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your SPT has been diajukan!</div>');
-		redirect('bkd/spt');
+		redirect('bka/spt');
 	}
 
 }

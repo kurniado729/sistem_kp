@@ -37,16 +37,21 @@
 						<td><?= $s['nip_pegawai'] ?></td>
 						<td><?= $s['jabatan'] ?></td>
 						<td>
-							<a href="<?= base_url('bkd/viewspt/' . $s['id_surat_spt']); ?>" class="btn btn-info btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat SPT">
+							<a href="<?= base_url('surat_perintah_tugas/viewspt/' . $s['id_surat_spt']); ?>" class="btn btn-info btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat SPT">
 								<i class="fas fa-envelope-open"></i></a>
 						</td>
 						<td>
-							<?php if ($s['status_pengajuan'] == '0'): ?>
-							<a href="<?= base_url('bkd/ajukanspt/' . $s['id_surat_spt']); ?>" class="btn btn-warning btn-circle" data-toggle="tooltip" data-placement="top" title="Ajukan SPT" onclick="return confirm('Yakin Ajukan SPT?')">
-								<i class="fas fa-paper-plane"></i>
-							</a>
+							<?php if ($s['status'] == NULL): ?>
+								<a href="<?= base_url('surat_perintah_tugas/acceptbka/' . $s['id_surat_spt']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Setuju">
+									<i class="fas fa-check"></i>
+								</a>
+								<a href="<?= base_url('surat_perintah_tugas/rejectbka/' . $s['id_surat_spt']); ?>" class="btn btn-danger btn-circle" data-toggle="tooltip" data-placement="top" title="Tolak">
+									<i class="fas fa-times"></i>
+								</a>
+							<?php elseif($s['status'] == 0) : ?>
+								<i class="fas fa-times"> ditolak</i>
 							<?php else: ?>
-								<i class="fas fa-check"> sudah diajukan</i>
+								<i class="fas fa-check"> disetujui</i>
 							<?php endif; ?>
 
 						</td>

@@ -78,7 +78,7 @@
 
 <script type="text/javascript">
     $(document).ready(function () {
-        $("#search").keyup(function () {
+        $("#searchbkd").keyup(function () {
             var searchText = $(this).val();
             if (searchText != '') {
                 $.ajax({
@@ -106,7 +106,7 @@
                 data: {nama: nama},
 				async: 'false',
                 success: function (response) {
-                    $('#search').val('');
+                    $('#searchbkd').val('');
                     $('#id').val(response[0]['id_pegawai']);
                     $('#jabatan').val(response[0]['jabatan']);
 
@@ -117,7 +117,62 @@
         });
 
         $(document).on('click', 'a', function () {
-            $("#search").val($(this).text());
+            $("#searchbkd").val($(this).text());
+            $("#show-list").html('');
+        });
+    });
+</script>
+<script>
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+</script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#searchbka").keyup(function () {
+            var searchText = $(this).val();
+            if (searchText != '') {
+                $.ajax({
+                    url: "<?= base_url('bka/action'); ?>",
+                    method: 'post',
+                    data: {query: searchText},
+                    success: function (response) {
+                        $("#show-list").html(response);
+                    }
+                });
+            } else {
+                $("#show-list").html('');
+            }
+        });
+
+        $("#show-list").on('click', function () {
+            // var nama = $('#kontol').html();
+            var nama = $('#show-list option:selected').text();
+
+            $.ajax({
+                url: "<?= base_url('bka/action2'); ?>",
+                type: 'post',
+                method: 'post',
+                dataType: 'json',
+                data: {nama: nama},
+                async: 'false',
+                success: function (response) {
+                    $('#searchbka').val('');
+                    $('#id').val(response[0]['id_pegawai']);
+                    $('#jabatan').val(response[0]['jabatan']);
+
+                },
+            });
+
+            // $('#kolomCari').remove();
+        });
+
+        $(document).on('click', 'a', function () {
+            $("#searchbka").val($(this).text());
             $("#show-list").html('');
         });
     });
