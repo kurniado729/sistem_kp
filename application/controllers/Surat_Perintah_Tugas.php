@@ -202,7 +202,7 @@ class Surat_Perintah_Tugas extends CI_Controller
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
 		$config ['upload_path'] = './assets/upload/spt';
-		$config ['allowed_types'] = 'doc|docx|gif|jpeg|jpg|pdf';
+		$config ['allowed_types'] = 'pdf';
 		$config ['max_size'] = 0;
 
 		$this->load->library('upload', $config);
@@ -240,7 +240,7 @@ class Surat_Perintah_Tugas extends CI_Controller
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
 		$config ['upload_path'] = './assets/upload/spt';
-		$config ['allowed_types'] = 'doc|docx|gif|jpeg|jpg|pdf';
+		$config ['allowed_types'] = 'pdf';
 		$config ['max_size'] = 0;
 
 		$this->load->library('upload', $config);

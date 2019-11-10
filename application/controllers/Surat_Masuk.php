@@ -143,7 +143,7 @@ class Surat_Masuk extends CI_Controller
 			$this->load->view('templates/footer');
 		} else {
 			$config ['upload_path'] = './assets/upload/suratmasuk';
-			$config ['allowed_types'] = 'doc|docx|gif|jpeg|jpg|pdf';
+			$config ['allowed_types'] = 'pdf';
 			$config ['max_size'] = 0;
 
 			$this->load->library('upload', $config);

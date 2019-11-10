@@ -263,7 +263,7 @@ class Surat_Disposisi extends CI_Controller
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
 			$config ['upload_path'] = './assets/upload/disposisi';
-			$config ['allowed_types'] = 'doc|docx|gif|jpeg|jpg|pdf';
+			$config ['allowed_types'] = 'pdf';
 			$config ['max_size'] = 0;
 
 			$this->load->library('upload', $config);
@@ -351,7 +351,7 @@ class Surat_Disposisi extends CI_Controller
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
 		$config ['upload_path'] = './assets/upload/disposisi';
-		$config ['allowed_types'] = 'doc|docx|gif|jpeg|jpg|pdf';
+		$config ['allowed_types'] = 'pdf';
 		$config ['max_size'] = 0;
 
 		$this->load->library('upload', $config);
