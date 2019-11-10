@@ -3,6 +3,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Bka_model extends CI_Model
 {
+	public function pagsuratbka($limit, $start)
+	{
+		$this->db->order_by('status_spt', 'ASC');
+		$data = $this->db->get_where('surat_disposisi', ['tujuan' => 'BKA', 'status' => '1' ], $limit, $start);
+		return $data->result_array();
+	}
+
+	public function pagspt($limit, $start)
+	{
+		$this->db->order_by('status_pengajuan', 'ASC');
+		$data = $this->db->get_where('surat_spt', ['bagian' => 'BKA'], $limit, $start);
+		return $data->result_array();
+	}
+
 	public function suratbka(){
 		$query = "SELECT * FROM surat_disposisi WHERE tujuan = 'BKA' AND status = '1' ORDER BY status_spt";
 		return $this->db->query($query)->result_array();

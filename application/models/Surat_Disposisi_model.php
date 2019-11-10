@@ -3,6 +3,27 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Surat_Disposisi_model extends CI_Model
 {
+	public function pagpersetujuandisposisi($limit, $start)
+	{
+		$this->db->order_by('tujuan', 'ASC');
+		$data = $this->db->get('surat_disposisi', $limit, $start);
+		return $data->result_array();
+	}
+
+	public function pagdisposisibkd($limit, $start)
+	{
+		$this->db->order_by('file_disposisi_sudah_disetujui', 'ASC');
+		$data = $this->db->get_where('surat_disposisi', ['tujuan' => 'BKD'], $limit, $start);
+		return $data->result_array();
+	}
+
+	public function pagdisposisibka($limit, $start)
+	{
+		$this->db->order_by('file_disposisi_sudah_disetujui', 'ASC');
+		$data = $this->db->get_where('surat_disposisi', ['tujuan' => 'BKA'], $limit, $start);
+		return $data->result_array();
+	}
+
 	public function getsuratdisposisi(){
 		$query = "SELECT * FROM surat_disposisi ORDER BY tujuan";
 		return $this->db->query($query)->result_array();

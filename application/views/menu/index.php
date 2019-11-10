@@ -8,7 +8,6 @@
 		<div class="col-lg-12">
 
 			<?= $this->session->flashdata('message') ?>
-
 			<div class="row">
 				<div class="col-3">
 					<a href="<?= base_url('menu/addmenu') ?>" class="btn btn-primary btn-icon-split mb-3">
@@ -71,7 +70,20 @@
 
 		</div>
 	</div>
+	<?php
 
+	?>
+
+	<?php if($this->uri->segment(2) == 'searchmenu'): ?>
+
+	<?php else: ?>
+		<div class="row mt-3">
+			<div class="col">
+				<!--Tampilkan pagination-->
+				<?php echo $pagination; ?>
+			</div>
+		</div>
+	<?php endif; ?>
 </div>
 <!-- /.container-fluid -->
 

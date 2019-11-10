@@ -3,6 +3,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Pegawai_model extends CI_Model
 {
+	public function pagpegawaitu($limit, $start)
+	{
+		$this->db->order_by('id_pegawai', 'DESC');
+		$data = $this->db->get_where('pegawai', ['bagian' => 'TU', 'hapus' => '0'], $limit, $start);
+		return $data->result_array();
+	}
+	public function pagpegawaibkd($limit, $start)
+	{
+		$this->db->order_by('id_pegawai', 'DESC');
+		$data = $this->db->get_where('pegawai', ['bagian' => 'BKD', 'hapus' => '0'], $limit, $start);
+		return $data->result_array();
+	}
+	public function pagpegawaibka($limit, $start)
+	{
+		$this->db->order_by('id_pegawai', 'DESC');
+		$data = $this->db->get_where('pegawai', ['bagian' => 'BKA', 'hapus' => '0'], $limit, $start);
+		return $data->result_array();
+	}
+	public function pagtrash($limit, $start)
+	{
+		$this->db->order_by('id_pegawai', 'DESC');
+		$data = $this->db->get_where('pegawai', ['hapus' => '1'], $limit, $start);
+		return $data->result_array();
+	}
+
 	public function getTU(){
 		$query = "SELECT * FROM pegawai WHERE bagian = 'TU' AND hapus='0' ORDER BY id_pegawai DESC";
 		return $this->db->query($query)->result_array();

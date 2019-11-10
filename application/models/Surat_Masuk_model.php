@@ -3,6 +3,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Surat_Masuk_model extends CI_Model
 {
+	public function pagsuratmasuk($limit, $start)
+	{
+		$this->db->order_by('disposisi', 'ASC');
+		$data = $this->db->get_where('surat_masuk', ['hapus' => '0'], $limit, $start);
+		return $data->result_array();
+	}
+
+	public function pagtrash($limit, $start)
+	{
+		$this->db->order_by('id_surat_masuk', 'DESC');
+		$data = $this->db->get_where('surat_masuk', ['hapus' => '1'], $limit, $start);
+		return $data->result_array();
+	}
+
 	public function getsuratmasuk(){
 		$query = "SELECT * FROM surat_masuk WHERE hapus = '0' ORDER BY disposisi ";
 		return $this->db->query($query)->result_array();

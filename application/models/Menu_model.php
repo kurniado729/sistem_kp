@@ -3,6 +3,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Menu_model extends CI_Model
 {
+
+	public function pagmenu($limit, $start)
+	{
+		$this->db->order_by('id', 'DESC');
+		$data = $this->db->get('user_menu', $limit, $start);
+		return $data->result_array();
+	}
+
+	public function pagsubmenu($limit, $start)
+	{
+//		$this->db->order_by('id', 'DESC');
+//		$data = $this->db->get('user_sub_menu', $limit, $start);
+//		return $data->result_array();
+
+		$data = $this->db->select('*')
+			->from('user_sub_menu')
+			->join('user_menu', 'user_sub_menu.menu_id = user_menu.id', 'LEFT')
+			->limit($limit,$start)
+			->get();
+				return $data->result_array();
+	}
+
 	public function getmenu(){
 		$query = "SELECT * FROM user_menu ORDER BY id DESC";
 		return $this->db->query($query)->result_array();

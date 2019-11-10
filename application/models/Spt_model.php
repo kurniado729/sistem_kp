@@ -3,6 +3,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Spt_model extends CI_Model
 {
+	public function pagpersetujuansptbkd($limit, $start)
+	{
+		$this->db->order_by('file_spt_sudah_disetujui', 'ASC');
+		$data = $this->db->get_where('surat_spt', ['bagian' => 'BKD', 'status_pengajuan' => '1' ], $limit, $start);
+		return $data->result_array();
+	}
+
+	public function pagpersetujuansptbka($limit, $start)
+	{
+		$this->db->order_by('file_spt_sudah_disetujui', 'ASC');
+		$data = $this->db->get_where('surat_spt', ['bagian' => 'BKA', 'status_pengajuan' => '1' ], $limit, $start);
+		return $data->result_array();
+	}
+
+
 	public function suratsptbkd(){
 		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKD' AND status_pengajuan = '1' ORDER BY file_spt_sudah_disetujui";
 		return $this->db->query($query)->result_array();

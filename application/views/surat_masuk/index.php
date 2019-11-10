@@ -95,7 +95,16 @@
 
 		</div>
 	</div>
+	<?php if($this->uri->segment(2) == 'searchsuratmasuk'): ?>
 
+	<?php else: ?>
+		<div class="row mt-3">
+			<div class="col">
+				<!--Tampilkan pagination-->
+				<?php echo $pagination; ?>
+			</div>
+		</div>
+	<?php endif; ?>
 </div>
 <!-- /.container-fluid -->
 </div>
