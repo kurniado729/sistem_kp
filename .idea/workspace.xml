@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/views/admin/index_bka.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/admin/index_bkd.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/admin/index_kepala.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/views/admin/index_tu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/models/Admin_model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Auth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/templates/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/templates/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Spt_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Spt_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/index_bka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/index_bka.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/index_bkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/index_bkd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/index_kepala.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/index_kepala.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/index_tu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/index_tu.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -97,10 +97,10 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\sistem_kp\application\views\admin" />
+      <recent name="C:\xampp\htdocs\sistem_kp\application\models" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\views" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\controllers" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\views\surat_perintah_tugas" />
-      <recent name="C:\xampp\htdocs\sistem_kp\application\models" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -201,7 +201,8 @@
       <workItem from="1573314055025" duration="4391000" />
       <workItem from="1573368266474" duration="12714000" />
       <workItem from="1573386390011" duration="2850000" />
-      <workItem from="1573473686969" duration="5728000" />
+      <workItem from="1573473686969" duration="6041000" />
+      <workItem from="1573487826316" duration="5281000" />
     </task>
     <task id="LOCAL-00001" summary="update view">
       <created>1573067332216</created>
@@ -259,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573389213679</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="update dashboard">
+      <created>1573479681050</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1573479681050</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,6 +289,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update view" />
     <MESSAGE value="spt" />
-    <option name="LAST_COMMIT_MESSAGE" value="spt" />
+    <MESSAGE value="update dashboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="update dashboard" />
   </component>
 </project>

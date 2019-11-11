@@ -7,16 +7,58 @@ class Admin extends CI_Controller
 	{
 		parent::__construct();
 		is_logged_in();
+		$this->load->model('Admin_model', 'admin');
 	}
 
 	public function index()
 	{
 		$data['title'] = 'Dashboard';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-		$data['surat_masuk'] = $this->db->get_where('surat_masuk', ['hapus' => '0'])->result_array();
-		$data['pegawai_tu'] = $this->db->get_where('pegawai', ['hapus' => '0', 'bagian' => 'TU'])->result_array();
-		$data['pegawai_bkd'] = $this->db->get_where('pegawai', ['hapus' => '0', 'bagian' => 'BKD'])->result_array();
-		$data['pegawai_bka'] = $this->db->get_where('pegawai', ['hapus' => '0', 'bagian' => 'BKA'])->result_array();
+//		$data['surat_masuk'] = $this->db->get_where('surat_masuk', ['hapus' => '0'])->result_array();
+//		$data['pegawai_tu'] = $this->db->get_where('pegawai', ['hapus' => '0', 'bagian' => 'TU'])->result_array();
+//		$data['pegawai_bkd'] = $this->db->get_where('pegawai', ['hapus' => '0', 'bagian' => 'BKD'])->result_array();
+//		$data['pegawai_bka'] = $this->db->get_where('pegawai', ['hapus' => '0', 'bagian' => 'BKA'])->result_array();
+
+		$data['surat_masuk'] = $this->admin->getsuratmasuk();
+		$data['surat_masuk_sudah_disposisi'] = $this->admin->getsuratmasuksudahdisposisi();
+		$data['surat_masuk_belum_disposisi'] = $this->admin->getsuratmasukbelumdisposisi();
+		$data['trash'] = $this->admin->gettrash();
+
+		$data['surat_bkd'] = $this->admin->getsuratbkd();
+		$data['surat_sudah_spt_bkd'] = $this->admin->getsuratsudahsptbkd();
+		$data['surat_belum_spt_bkd'] = $this->admin->getsuratbelumsptbkd();
+		$data['surat_sudah_diajukan_spt_bkd'] = $this->admin->getsuratsudahdiajukansptbkd();
+		$data['surat_belum_diajukan_spt_bkd'] = $this->admin->getsuratbelumdiajukansptbkd();
+
+		$data['surat_bka'] = $this->admin->getsuratbka();
+		$data['surat_sudah_spt_bka'] = $this->admin->getsuratsudahsptbka();
+		$data['surat_belum_spt_bka'] = $this->admin->getsuratbelumsptbka();
+		$data['surat_sudah_diajukan_spt_bka'] = $this->admin->getsuratsudahdiajukansptbka();
+		$data['surat_belum_diajukan_spt_bka'] = $this->admin->getsuratbelumdiajukansptbka();
+
+		$data['surat_disposisi'] = $this->admin->getsuratdisposisi();
+		$data['surat_disposisi_bkd'] = $this->admin->getsuratdisposisibkd();
+		$data['surat_disposisi_bkd_belum_upload'] = $this->admin->getsuratdisposisibelumuploadbkd();
+		$data['surat_disposisi_bkd_sudah_upload'] = $this->admin->getsuratdisposisisudahuploadbkd();
+		$data['surat_disposisi_bkd_sudah_disetujui'] = $this->admin->getsuratdisposisisudahsetujuibkd();
+		$data['surat_disposisi_bkd_belum_disetujui'] = $this->admin->getsuratdisposisibelumsetujuibkd();
+		$data['surat_disposisi_bka'] = $this->admin->getsuratdisposisibkd();
+		$data['surat_disposisi_bka_belum_upload'] = $this->admin->getsuratdisposisibelumuploadbka();
+		$data['surat_disposisi_bka_sudah_upload'] = $this->admin->getsuratdisposisisudahuploadbka();
+		$data['surat_disposisi_bka_sudah_disetujui'] = $this->admin->getsuratdisposisisudahsetujuibka();
+		$data['surat_disposisi_bka_belum_disetujui'] = $this->admin->getsuratdisposisibelumsetujuibka();
+
+		$data['surat_spt'] = $this->admin->getsuratspt();
+		$data['surat_spt_bkd'] = $this->admin->getsuratsptbkd();
+		$data['surat_spt_bka'] = $this->admin->getsuratsptbka();
+		$data['surat_spt_bkd_sudah_upload'] = $this->admin->getsuratsptbkdsudahdiupload();
+		$data['surat_spt_bkd_belum_upload'] = $this->admin->getsuratsptbkdbelumdiupload();
+		$data['surat_spt_bkd_sudah_disetujui'] = $this->admin->getsuratsptbkdsudahdisetujui();
+		$data['surat_spt_bkd_belum_disetujui'] = $this->admin->getsuratsptbkdbelumdisetujui();
+		$data['surat_spt_bka_sudah_upload'] = $this->admin->getsuratsptbkasudahdiupload();
+		$data['surat_spt_bka_belum_upload'] = $this->admin->getsuratsptbkabelumdiupload();
+		$data['surat_spt_bka_sudah_disetujui'] = $this->admin->getsuratsptbkasudahdisetujui();
+		$data['surat_spt_bka_belum_disetujui'] = $this->admin->getsuratsptbkabelumdisetujui();
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/sidebar', $data);

@@ -11,11 +11,11 @@
 				<div class="card-body">
 					<div class="row no-gutters align-items-center">
 						<div class="col mr-2">
-							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Surat Masuk</div>
-<!--							<div class="h5 mb-0 font-weight-bold text-gray-800">--><?//= count($surat_masuk); ?><!--</div>-->
+							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Total Surat BKD</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800"><?= $surat_bkd; ?></div>
 						</div>
 						<div class="col-auto">
-							<a href="<?= base_url('surat_masuk'); ?>"><i class="fas fa-envelope-open-text fa-2x text-gray-300"></i></a>
+							<a href="<?= base_url('bkd'); ?>"><i class="fas fa-envelope-open-text fa-2x text-gray-300"></i></a>
 						</div>
 					</div>
 				</div>
@@ -29,11 +29,11 @@
 				<div class="card-body">
 					<div class="row no-gutters align-items-center">
 						<div class="col mr-2">
-							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pegawai TU</div>
-<!--							<div class="h5 mb-0 font-weight-bold text-gray-800">--><?//= count($pegawai_tu); ?><!--</div>-->
+							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Sudah Di SPT</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800"><?= $surat_sudah_spt_bkd; ?></div>
 						</div>
 						<div class="col-auto">
-							<a href="<?= base_url('pegawai'); ?>"><i class="fas fa-street-view fa-2x text-gray-300"></i></a>
+							<a href="<?= base_url('bkd'); ?>"><i class="fas fa-check fa-2x text-gray-300"></i></a>
 						</div>
 					</div>
 				</div>
@@ -44,11 +44,30 @@
 				<div class="card-body">
 					<div class="row no-gutters align-items-center">
 						<div class="col mr-2">
-							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pegawai BKD</div>
-<!--							<div class="h5 mb-0 font-weight-bold text-gray-800">--><?//= count($pegawai_bkd); ?><!--</div>-->
+							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Belum DI SPT</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800"><?= $surat_belum_spt_bkd; ?></div>
 						</div>
 						<div class="col-auto">
-							<a href="<?= base_url('pegawai/pegawaibkd'); ?>"><i class="fas fa-male fa-2x text-gray-300"></i></a>
+							<a href="<?= base_url('bkd'); ?>"><i class="fas fa-times fa-2x text-gray-300"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<!-- Pending Requests Card Example -->
+		<div class="col-xl-3 col-md-6 mb-4">
+			<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card-body">
+					<div class="row no-gutters align-items-center">
+						<div class="col mr-2">
+							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">SPT Sudah Diajukan</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800"><?= $surat_sudah_diajukan_spt_bkd; ?></div>
+						</div>
+						<div class="col-auto">
+							<a href="<?= base_url('bkd/spt'); ?>"><i class="fas fa-check fa-2x text-gray-300"></i></a>
 						</div>
 					</div>
 				</div>
@@ -59,11 +78,11 @@
 				<div class="card-body">
 					<div class="row no-gutters align-items-center">
 						<div class="col mr-2">
-							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pegawai BKA</div>
-<!--							<div class="h5 mb-0 font-weight-bold text-gray-800">--><?//= count($pegawai_bka); ?><!--</div>-->
+							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">SPT Belum Diajukan</div>
+							<div class="h5 mb-0 font-weight-bold text-gray-800"><?= $surat_belum_diajukan_spt_bkd; ?></div>
 						</div>
 						<div class="col-auto">
-							<a href="<?= base_url('pegawai/pegawaibka'); ?>"><i class="fas fa-child fa-2x text-gray-300"></i></a>
+							<a href="<?= base_url('bkd/spt'); ?>"><i class="fas fa-times fa-2x text-gray-300"></i></a>
 						</div>
 					</div>
 				</div>
