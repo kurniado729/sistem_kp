@@ -21,7 +21,20 @@ class Admin extends CI_Controller
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/sidebar', $data);
 		$this->load->view('templates/topbar', $data);
-		$this->load->view('admin/index', $data);
+
+		if ($data['user']['role_id'] == '1'){
+			$this->load->view('admin/index', $data);
+		} elseif ($data['user']['role_id'] == '3'){
+			$this->load->view('admin/index_tu', $data);
+		}elseif ($data['user']['role_id'] == '4'){
+			$this->load->view('admin/index_bkd', $data);
+		}elseif ($data['user']['role_id'] == '5'){
+			$this->load->view('admin/index_bka', $data);
+		}elseif ($data['user']['role_id'] == '6'){
+			$this->load->view('admin/index_kepala', $data);
+		}else{
+			var_dump('error');
+		}
 		$this->load->view('templates/footer');
 	}
 

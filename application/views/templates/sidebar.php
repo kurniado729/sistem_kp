@@ -40,6 +40,24 @@
 						AND user_sub_menu.is_active = 1
 					";
 		$subMenu = $this->db->query($querySubMenu)->result_array();
+		foreach ($subMenu as $sm):
+//		var_dump($user['role_id']);
+//		var_dump($sm['title']);
+		if($user['role_id'] == '1'){
+			if($sm['title'] == 'Role'){
+//				var_dump('ada role');
+			}
+		}else{
+//			var_dump('ga ada role');
+			$querySubMenu = " SELECT *
+						FROM user_sub_menu JOIN user_menu
+						ON user_sub_menu.menu_id = user_menu.id
+						WHERE user_sub_menu.menu_id = $menuId
+						AND user_sub_menu.is_active = 1 AND user_sub_menu.title != 'Role'
+					";
+			$subMenu = $this->db->query($querySubMenu)->result_array();
+		}
+		endforeach;
 		?>
 
 			<?php foreach ($subMenu as $sm): ?>
