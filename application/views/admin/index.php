@@ -12,7 +12,7 @@
 					<div class="row no-gutters align-items-center">
 						<div class="col mr-2">
 							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Surat Masuk</div>
-							<div class="h5 mb-0 font-weight-bold text-gray-800"><?= count($surat_masuk); ?></div>
+<!--							<div class="h5 mb-0 font-weight-bold text-gray-800">--><?//= count($surat_masuk); ?><!--</div>-->
 						</div>
 						<div class="col-auto">
 							<a href="<?= base_url('surat_masuk'); ?>"><i class="fas fa-envelope-open-text fa-2x text-gray-300"></i></a>
@@ -30,7 +30,7 @@
 					<div class="row no-gutters align-items-center">
 						<div class="col mr-2">
 							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pegawai TU</div>
-							<div class="h5 mb-0 font-weight-bold text-gray-800"><?= count($pegawai_tu); ?></div>
+<!--							<div class="h5 mb-0 font-weight-bold text-gray-800">--><?//= count($pegawai_tu); ?><!--</div>-->
 						</div>
 						<div class="col-auto">
 							<a href="<?= base_url('pegawai'); ?>"><i class="fas fa-street-view fa-2x text-gray-300"></i></a>
@@ -45,7 +45,7 @@
 					<div class="row no-gutters align-items-center">
 						<div class="col mr-2">
 							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pegawai BKD</div>
-							<div class="h5 mb-0 font-weight-bold text-gray-800"><?= count($pegawai_bkd); ?></div>
+<!--							<div class="h5 mb-0 font-weight-bold text-gray-800">--><?//= count($pegawai_bkd); ?><!--</div>-->
 						</div>
 						<div class="col-auto">
 							<a href="<?= base_url('pegawai/pegawaibkd'); ?>"><i class="fas fa-male fa-2x text-gray-300"></i></a>
@@ -60,7 +60,7 @@
 					<div class="row no-gutters align-items-center">
 						<div class="col mr-2">
 							<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pegawai BKA</div>
-							<div class="h5 mb-0 font-weight-bold text-gray-800"><?= count($pegawai_bka); ?></div>
+<!--							<div class="h5 mb-0 font-weight-bold text-gray-800">--><?//= count($pegawai_bka); ?><!--</div>-->
 						</div>
 						<div class="col-auto">
 							<a href="<?= base_url('pegawai/pegawaibka'); ?>"><i class="fas fa-child fa-2x text-gray-300"></i></a>

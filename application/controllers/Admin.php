@@ -107,7 +107,7 @@ class Admin extends CI_Controller
 			$this->load->view('admin/addrole', $data);
 			$this->load->view('templates/footer');
 		}else{
-			$this->db->insert('user_role', ['role' => $this->input->post('role')]);
+			$this->admin->addrole();
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> New role added!</div>');
 			redirect('admin/role');
 		}
@@ -132,22 +132,7 @@ class Admin extends CI_Controller
 
 	public function changeaccess()
 	{
-		$role_id = $this->input->post('roleId');
-		$menu_id = $this->input->post('menuId');
-
-		$data = [
-			'role_id' => $role_id,
-			'menu_id' => $menu_id
-		];
-
-		$result = $this->db->get_where('user_access_menu', $data);
-
-		if($result->num_rows() < 1){
-			$this->db->insert('user_access_menu', $data);
-		}else{
-			$this->db->delete('user_access_menu', $data);
-		}
-
+		$this->admin->changeaccess();
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Access changed!</div>');
 	}
 
@@ -166,12 +151,7 @@ class Admin extends CI_Controller
 			$this->load->view('admin/editrole', $data);
 			$this->load->view('templates/footer');
 		}else{
-			$role = $this->input->post('role');
-
-			$this->db->set('role', $role);
-			$this->db->where('id', $id);
-			$this->db->update('user_role');
-
+			$this->admin->editrole($id);
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your role has been updated!</div>');
 			redirect('admin/role');
 		}
@@ -184,19 +164,9 @@ class Admin extends CI_Controller
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['role'] = $this->db->get_where('user_role', ['id' => $id ])->row_array();
 
-//			$this->load->view('templates/header', $data);
-//			$this->load->view('templates/sidebar', $data);
-//			$this->load->view('templates/topbar', $data);
-//			$this->load->view('menu/editmenu', $data);
-//			$this->load->view('templates/footer');
-
-		$this->db->where('id', $id);
-		$this->db->delete('user_role');
-
+		$this->admin->deleterole($id);
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your role has been deleted!</div>');
 		redirect('admin/role');
-
-
 	}
 
 }

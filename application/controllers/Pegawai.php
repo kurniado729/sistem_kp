@@ -251,10 +251,7 @@ class Pegawai extends CI_Controller
 			$this->load->view('pegawai/addpegawaitu', $data);
 			$this->load->view('templates/footer');
 		}else{
-			$this->db->insert('pegawai', [
-				'nama_pegawai' => $this->input->post('nama_pegawai'),
-				'bagian' => $this->input->post('bagian')
-			]);
+			$this->pegawai->addpegawaitu();
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> New pegawai added!</div>');
 			redirect('pegawai');
 		}
@@ -275,10 +272,7 @@ class Pegawai extends CI_Controller
 			$this->load->view('pegawai/addpegawaibkd', $data);
 			$this->load->view('templates/footer');
 		}else{
-			$this->db->insert('pegawai', [
-				'nama_pegawai' => $this->input->post('nama_pegawai'),
-				'bagian' => $this->input->post('bagian')
-			]);
+			$this->pegawai->addpegawaibkd();
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> New pegawai added!</div>');
 			redirect('pegawai/pegawaibkd');
 		}
@@ -299,10 +293,7 @@ class Pegawai extends CI_Controller
 			$this->load->view('pegawai/addpegawaibka', $data);
 			$this->load->view('templates/footer');
 		}else{
-			$this->db->insert('pegawai', [
-				'nama_pegawai' => $this->input->post('nama_pegawai'),
-				'bagian' => $this->input->post('bagian')
-			]);
+			$this->pegawai->addpegawaibka();
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> New pegawai added!</div>');
 			redirect('pegawai/pegawaibka');
 		}
@@ -324,12 +315,8 @@ class Pegawai extends CI_Controller
 			$this->load->view('pegawai/editpegawaitu', $data);
 			$this->load->view('templates/footer');
 		}else{
-			$nama_pegawai = $this->input->post('nama_pegawai');
 
-			$this->db->set('nama_pegawai', $nama_pegawai);
-			$this->db->where('id_pegawai', $id);
-			$this->db->update('pegawai');
-
+			$this->pegawai->editpegawaitu($id);
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your pegawai has been updated!</div>');
 			redirect('pegawai');
 		}
@@ -351,12 +338,8 @@ class Pegawai extends CI_Controller
 			$this->load->view('pegawai/editpegawaibkd', $data);
 			$this->load->view('templates/footer');
 		}else{
-			$nama_pegawai = $this->input->post('nama_pegawai');
 
-			$this->db->set('nama_pegawai', $nama_pegawai);
-			$this->db->where('id_pegawai', $id);
-			$this->db->update('pegawai');
-
+			$this->pegawai->editpegawaibkd($id);
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your pegawai has been updated!</div>');
 			redirect('pegawai/pegawaibkd');
 		}
@@ -378,12 +361,8 @@ class Pegawai extends CI_Controller
 			$this->load->view('pegawai/editpegawaibka', $data);
 			$this->load->view('templates/footer');
 		}else{
-			$nama_pegawai = $this->input->post('nama_pegawai');
 
-			$this->db->set('nama_pegawai', $nama_pegawai);
-			$this->db->where('id_pegawai', $id);
-			$this->db->update('pegawai');
-
+			$this->pegawai->editpegawaibka($id);
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your pegawai has been updated!</div>');
 			redirect('pegawai/pegawaibka');
 		}
@@ -395,10 +374,7 @@ class Pegawai extends CI_Controller
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['pegawai'] = $this->pegawai->getdetailpegawai($id);
 
-			$this->db->set('hapus', '1');
-			$this->db->where('id_pegawai', $id);
-			$this->db->update('pegawai');
-
+			$this->pegawai->deletepegawaitu($id);
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your pegawai has been deleted!</div>');
 			redirect('pegawai');
 	}
@@ -409,10 +385,7 @@ class Pegawai extends CI_Controller
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['pegawai'] = $this->pegawai->getdetailpegawai($id);
 
-		$this->db->set('hapus', '1');
-		$this->db->where('id_pegawai', $id);
-		$this->db->update('pegawai');
-
+		$this->pegawai->deletepegawaibkd($id);
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your pegawai has been deleted!</div>');
 		redirect('pegawai/pegawaibkd');
 	}
@@ -423,10 +396,7 @@ class Pegawai extends CI_Controller
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['pegawai'] = $this->pegawai->getdetailpegawai($id);
 
-		$this->db->set('hapus', '1');
-		$this->db->where('id_pegawai', $id);
-		$this->db->update('pegawai');
-
+		$this->pegawai->deletepegawaibka($id);
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your pegawai has been deleted!</div>');
 		redirect('pegawai/pegawaibka');
 	}
@@ -437,10 +407,7 @@ class Pegawai extends CI_Controller
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['pegawai'] = $this->pegawai->getdetailpegawai($id);
 
-		$this->db->set('hapus', '0');
-		$this->db->where('id_pegawai', $id);
-		$this->db->update('pegawai');
-
+		$this->pegawai->restorepegawai($id);
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your pegawai has been restored!</div>');
 		redirect('pegawai/trash');
 	}
@@ -451,9 +418,7 @@ class Pegawai extends CI_Controller
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['pegawai'] = $this->pegawai->getdetailpegawai($id);
 
-		$this->db->where('id_pegawai', $id);
-		$this->db->delete('pegawai');
-
+		$this->pegawai->deletepermanentpegawai($id);
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your pegawai has been permanent deleted!</div>');
 		redirect('pegawai/trash');
 	}

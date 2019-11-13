@@ -141,4 +141,83 @@ class Pegawai_model extends CI_Model
 		return $data->result_array();
 	}
 
+	public function addpegawaitu(){
+		$this->db->insert('pegawai', [
+			'nama_pegawai' => $this->input->post('nama_pegawai'),
+			'bagian' => $this->input->post('bagian')
+		]);
+	}
+
+	public function addpegawaibkd(){
+		$this->db->insert('pegawai', [
+			'nama_pegawai' => $this->input->post('nama_pegawai'),
+			'bagian' => $this->input->post('bagian')
+		]);
+	}
+
+	public function addpegawaibka(){
+		$this->db->insert('pegawai', [
+			'nama_pegawai' => $this->input->post('nama_pegawai'),
+			'bagian' => $this->input->post('bagian')
+		]);
+	}
+
+	public function editpegawaitu($id){
+		$nama_pegawai = $this->input->post('nama_pegawai');
+
+		$this->db->set('nama_pegawai', $nama_pegawai);
+		$this->db->where('id_pegawai', $id);
+		$this->db->update('pegawai');
+
+	}
+
+	public function editpegawaibkd($id){
+		$nama_pegawai = $this->input->post('nama_pegawai');
+
+		$this->db->set('nama_pegawai', $nama_pegawai);
+		$this->db->where('id_pegawai', $id);
+		$this->db->update('pegawai');
+	}
+
+	public function editpegawaibka($id){
+		$nama_pegawai = $this->input->post('nama_pegawai');
+
+		$this->db->set('nama_pegawai', $nama_pegawai);
+		$this->db->where('id_pegawai', $id);
+		$this->db->update('pegawai');
+	}
+
+	public function deletepegawaitu($id){
+		$this->db->set('hapus', '1');
+		$this->db->where('id_pegawai', $id);
+		$this->db->update('pegawai');
+	}
+
+	public function deletepegawaibkd($id){
+		$this->db->set('hapus', '1');
+		$this->db->where('id_pegawai', $id);
+		$this->db->update('pegawai');
+	}
+
+	public function deletepegawaibka($id){
+		$this->db->set('hapus', '1');
+		$this->db->where('id_pegawai', $id);
+		$this->db->update('pegawai');
+	}
+
+	public function restorepegawai($id){
+		$this->db->set('hapus', '0');
+		$this->db->where('id_pegawai', $id);
+		$this->db->update('pegawai');
+	}
+
+	public function deletepermanentpegawai($id){
+		$this->db->where('id_pegawai', $id);
+		$this->db->delete('pegawai');
+
+	}
+
+
 }
+
+

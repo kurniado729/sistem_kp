@@ -2,14 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/models/Admin_model.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/models/User_model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Spt_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Spt_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/index_bka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/index_bka.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/index_bkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/index_bkd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/index_kepala.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/index_kepala.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/index_tu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/index_tu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Pegawai.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Pegawai.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Admin_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Admin_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Menu_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Menu_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Pegawai_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Pegawai_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/menu/submenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/menu/submenu.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -202,7 +206,10 @@
       <workItem from="1573368266474" duration="12714000" />
       <workItem from="1573386390011" duration="2850000" />
       <workItem from="1573473686969" duration="6041000" />
-      <workItem from="1573487826316" duration="5281000" />
+      <workItem from="1573487826316" duration="5473000" />
+      <workItem from="1573557807925" duration="74000" />
+      <workItem from="1573558135665" duration="366000" />
+      <workItem from="1573632056141" duration="6176000" />
     </task>
     <task id="LOCAL-00001" summary="update view">
       <created>1573067332216</created>
@@ -267,7 +274,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573479681050</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="update dashboard">
+      <created>1573497333338</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1573497333338</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

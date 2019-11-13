@@ -183,6 +183,42 @@ class Admin_model extends CI_Model
 		return count($this->db->query($query)->result_array());
 	}
 
+	public function addrole(){
+		$this->db->insert('user_role', ['role' => $this->input->post('role')]);
+	}
+
+	public function changeaccess()
+	{
+		$role_id = $this->input->post('roleId');
+		$menu_id = $this->input->post('menuId');
+
+		$data = [
+			'role_id' => $role_id,
+			'menu_id' => $menu_id
+		];
+
+		$result = $this->db->get_where('user_access_menu', $data);
+
+		if($result->num_rows() < 1){
+			$this->db->insert('user_access_menu', $data);
+		}else{
+			$this->db->delete('user_access_menu', $data);
+		}
+	}
+
+	public function editrole($id){
+		$role = $this->input->post('role');
+
+		$this->db->set('role', $role);
+		$this->db->where('id', $id);
+		$this->db->update('user_role');
+	}
+
+	public function deleterole($id){
+		$this->db->where('id', $id);
+		$this->db->delete('user_role');
+	}
+
 
 
 

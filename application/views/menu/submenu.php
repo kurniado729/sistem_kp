@@ -56,7 +56,8 @@
 				</thead>
 				<tbody>
 					<?php $i=1; ?>
-					<?php foreach ($submenu as $sm) : ?>
+					<?php foreach ($submenu as $sm) :?>
+
 					<tr>
 						<th scope="row"><?= $i; ?></th>
 						<td><?= $sm['title'] ?></td>
