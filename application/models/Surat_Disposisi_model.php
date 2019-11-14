@@ -3,6 +3,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Surat_Disposisi_model extends CI_Model
 {
+	public function getuser()
+	{
+		$data = $this->db->get_where('user', ['email' => $this->session->userdata('email')]);
+		return $data->row_array();
+	}
+
 	public function pagpersetujuandisposisi($limit, $start)
 	{
 		$this->db->order_by('tujuan', 'ASC');
@@ -126,4 +132,116 @@ class Surat_Disposisi_model extends CI_Model
 		return $data->result_array();
 	}
 
+	public function disposisimailbkd($id){
+		$data['surat_disposisi'] = $this->surat_disposisi->getdetailsuratdisposisi($id);
+
+		$this->db->set('tujuan', 'BKD');
+		$this->db->where('id_surat_disposisi', $id);
+		$this->db->update('surat_disposisi');
+	}
+
+	public function disposisimailbka($id){
+		$data['surat_disposisi'] = $this->surat_disposisi->getdetailsuratdisposisi($id);
+
+		$this->db->set('tujuan', 'BKA');
+		$this->db->where('id_surat_disposisi', $id);
+		$this->db->update('surat_disposisi');
+	}
+
+	public function viewdisposisimail($id){
+		$data['surat_disposisi'] = $this->surat_disposisi->getdetailsuratdisposisi($id);
+
+		$this->load->library('pdf');
+
+		$this->pdf->setPaper('A4', 'potrait');
+		$this->pdf->filename = $data['surat_disposisi']['id_surat_disposisi'];
+		$this->pdf->load_view('surat_disposisi/disposisi', $data);
+	}
+
+	public function uploaddisposisibkd($id){
+		$config ['upload_path'] = './assets/upload/disposisi';
+		$config ['allowed_types'] = 'pdf';
+		$config ['max_size'] = 0;
+
+		$this->load->library('upload', $config);
+
+		if (!$this->upload->do_upload('file_surat_disposisi')) {
+			echo $this->upload->display_errors();
+		} else {
+			$file = $this->upload->data('file_name');
+		}
+
+		$this->db->set('file_disposisi_sudah_disetujui', $file);
+		$this->db->where('id_surat_disposisi', $id);
+		$this->db->update('surat_disposisi');
+	}
+
+	public function acceptbkd($id){
+		$data['surat_disposisi'] = $this->surat_disposisi->getdetailsuratdisposisi($id);
+
+		$this->db->set('status', '1');
+		$this->db->where('id_surat_disposisi', $id);
+		$this->db->update('surat_disposisi');
+	}
+
+	public function rejectbkd($id){
+		$data['surat_disposisi'] = $this->surat_disposisi->getdetailsuratdisposisi($id);
+
+		$this->db->set('status', '0');
+		$this->db->where('id_surat_disposisi', $id);
+		$this->db->update('surat_disposisi');
+	}
+
+
+	public function uploaddisposisibka($id){
+		$config ['upload_path'] = './assets/upload/disposisi';
+		$config ['allowed_types'] = 'pdf';
+		$config ['max_size'] = 0;
+
+		$this->load->library('upload', $config);
+
+		if (!$this->upload->do_upload('file_surat_disposisi')) {
+			echo $this->upload->display_errors();
+		} else {
+			$file = $this->upload->data('file_name');
+		}
+
+		$this->db->set('file_disposisi_sudah_disetujui', $file);
+		$this->db->where('id_surat_disposisi', $id);
+		$this->db->update('surat_disposisi');
+	}
+
+	public function acceptbka($id){
+		$data['surat_disposisi'] = $this->surat_disposisi->getdetailsuratdisposisi($id);
+
+		$this->db->set('status', '1');
+		$this->db->where('id_surat_disposisi', $id);
+		$this->db->update('surat_disposisi');
+	}
+
+	public function rejectbka($id){
+		$data['surat_disposisi'] = $this->surat_disposisi->getdetailsuratdisposisi($id);
+
+		$this->db->set('status', '0');
+		$this->db->where('id_surat_disposisi', $id);
+		$this->db->update('surat_disposisi');
+	}
+
+	public function viewpersetujuandisposisi($id){
+		$data['surat_disposisi'] = $this->surat_disposisi->getdetailsuratdisposisi($id);
+
+		$file = $data['surat_disposisi']['file_disposisi_sudah_disetujui'];
+
+		$filename = "./assets/upload/disposisi/".$file;
+		header("Content-type: application/pdf");
+		header("Content-Length: " . filesize($filename));
+		readfile($filename);
+	}
+
 }
+
+//$data['user'] = $this->user->getuser();
+//$image_user = $data['user']['image'];
+//
+
+

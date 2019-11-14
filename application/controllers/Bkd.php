@@ -123,33 +123,25 @@ class Bkd extends CI_Controller
 		$this->load->view('templates/footer');
 	}
 
-	public function viewdisposisimail($id)
-	{
-
-		$data['title'] = 'Surat BKD';
-//		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-
-		$data['disposisi_bkd'] = $this->bkd->getdetailsuratdisposisi($id);
-
-		$this->load->library('pdf');
-
-		$this->pdf->setPaper('A4', 'potrait');
-		$this->pdf->filename = $data['disposisi_bkd']['id_surat_disposisi'];
-		$this->pdf->load_view('bkd/disposisibkd', $data);
-
-	}
+//	public function viewdisposisimail($id)
+//	{
+//
+//		$data['title'] = 'Surat BKD';
+////		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+//
+//		$data['disposisi_bkd'] = $this->bkd->getdetailsuratdisposisi($id);
+//
+//		$this->load->library('pdf');
+//
+//		$this->pdf->setPaper('A4', 'potrait');
+//		$this->pdf->filename = $data['disposisi_bkd']['id_surat_disposisi'];
+//		$this->pdf->load_view('bkd/disposisibkd', $data);
+//
+//	}
 
 	public function viewpersetujuandisposisi($id)
 	{
-		$data['bkd'] = $this->bkd->getdetailsuratdisposisi($id);
-
-
-		$file = $data['bkd']['file_disposisi_sudah_disetujui'];
-
-		$filename = "./assets/upload/disposisi/".$file;
-		header("Content-type: application/pdf");
-		header("Content-Length: " . filesize($filename));
-		readfile($filename);
+		$this->bkd->viewpersetujuandisposisi($id);
 	}
 
 	public function addsuratperintahjalan($id)
@@ -167,45 +159,28 @@ class Bkd extends CI_Controller
 			$this->load->view('bkd/addsuratperintahjalan', $data);
 			$this->load->view('templates/footer');
 		}else{
-
-			$data = [
-				'pengirim' => $this->input->post('pengirim'),
-				'no_surat_masuk' => $this->input->post('no_surat_masuk'),
-				'tgl_surat_masuk' => $this->input->post('tgl_surat_masuk'),
-				'ringkasan' => $this->input->post('ringkasan'),
-				'nama_pegawai' => $this->input->post('platform'),
-				'nip_pegawai' => $this->input->post('id'),
-				'jabatan' => $this->input->post('jabatan'),
-				'bagian' => 'BKD'
-			];
-
-			$this->db->insert('surat_spt', $data);
-
-			$this->db->set('status_spt', '1');
-			$this->db->where('id_surat_disposisi', $id);
-			$this->db->update('surat_disposisi');
-
+			$this->bkd->addsuratperintahjalan($id);
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your SPT has been created!</div>');
 			redirect('bkd');
 		}
 
 	}
 
-	public function viewsuratperintahkerja($id)
-	{
-
-//		$data['title'] = BKD';
-//		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-
-		$data['spk'] = $this->bkd->getdetailsuratdisposisi($id);
-
-		$this->load->library('pdf');
-
-		$this->pdf->setPaper('A4', 'potrait');
-		$this->pdf->filename = $data['spk']['id_surat_disposisi'];
-		$this->pdf->load_view('bkd/viewsuratperintahkerja', $data);
-
-	}
+//	public function viewsuratperintahkerja($id)
+//	{
+//
+////		$data['title'] = BKD';
+////		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+//
+//		$data['spk'] = $this->bkd->getdetailsuratdisposisi($id);
+//
+//		$this->load->library('pdf');
+//
+//		$this->pdf->setPaper('A4', 'potrait');
+//		$this->pdf->filename = $data['spk']['id_surat_disposisi'];
+//		$this->pdf->load_view('bkd/viewsuratperintahkerja', $data);
+//
+//	}
 
 	public function action(){
 		$inpText = $this->input->post('query');
@@ -233,23 +208,11 @@ class Bkd extends CI_Controller
 
 	public function viewspt($id)
 	{
-		$data['spt'] = $this->bkd->getdetailspt($id);
-
-		$this->load->library('pdf');
-
-		$this->pdf->setPaper('A4', 'potrait');
-		$this->pdf->filename = $data['spt']['id_surat_spt'];
-		$this->pdf->load_view('bkd/viewspt', $data);
-
+		$this->bkd->viewspt($id);
 	}
 
 	public function ajukanspt($id){
-		$data['spt'] = $this->bkd->getdetailspt($id);
-
-		$this->db->set('status_pengajuan', '1');
-		$this->db->where('id_surat_spt', $id);
-		$this->db->update('surat_spt');
-
+		$this->bkd->ajukanspt($id);
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your SPT has been diajukan!</div>');
 		redirect('bkd/spt');
 	}

@@ -23,10 +23,8 @@ class User_model extends CI_Model
 
 			$this->load->library('upload', $config);
 
-			$data = $this->db->get_where('user', ['name' => $name]);
-			foreach($data->result_array() AS $d) {
-				$image_user = $d['image'];
-			}
+			$data['user'] = $this->user->getuser();
+			$image_user = $data['user']['image'];
 
 			if($this->upload->do_upload('image')){
 //				$old_image = $this->session->userdata('image');

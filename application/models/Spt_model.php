@@ -6,27 +6,27 @@ class Spt_model extends CI_Model
 	public function pagpersetujuansptbkd($limit, $start)
 	{
 		$this->db->order_by('file_spt_sudah_disetujui', 'ASC');
-		$data = $this->db->get_where('surat_spt', ['bagian' => 'BKD', 'status_pengajuan' => '0' ], $limit, $start);
+		$data = $this->db->get_where('surat_spt', ['bagian' => 'BKD', 'status_pengajuan' => '1' ], $limit, $start);
 		return $data->result_array();
 	}
 
 	public function pagpersetujuansptbka($limit, $start)
 	{
 		$this->db->order_by('file_spt_sudah_disetujui', 'ASC');
-		$data = $this->db->get_where('surat_spt', ['bagian' => 'BKA', 'status_pengajuan' => '0' ], $limit, $start);
+		$data = $this->db->get_where('surat_spt', ['bagian' => 'BKA', 'status_pengajuan' => '1' ], $limit, $start);
 		return $data->result_array();
 	}
 
 
-	public function suratsptbkd(){
-		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKD' AND status_pengajuan = '0' ORDER BY file_spt_sudah_disetujui";
-		return $this->db->query($query)->result_array();
-	}
-
-	public function suratsptbka(){
-		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKA' AND status_pengajuan = '0' ORDER BY file_spt_sudah_disetujui";
-		return $this->db->query($query)->result_array();
-	}
+//	public function suratsptbkd(){
+//		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKD' AND status_pengajuan = '0' ORDER BY file_spt_sudah_disetujui";
+//		return $this->db->query($query)->result_array();
+//	}
+//
+//	public function suratsptbka(){
+//		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKA' AND status_pengajuan = '0' ORDER BY file_spt_sudah_disetujui";
+//		return $this->db->query($query)->result_array();
+//	}
 
 	public function getdetailspt($id){
 		$query = "SELECT * FROM surat_spt WHERE id_surat_spt = $id ";
@@ -39,7 +39,7 @@ class Spt_model extends CI_Model
 		$this->db->SELECT('*');
 		$this->db->FROM('surat_spt');
 		$this->db->WHERE('bagian', 'BKD');
-		$this->db->WHERE('status_pengajuan', '0');
+		$this->db->WHERE('status_pengajuan', '1');
 
 		if ($kategori == 'pengirim') {
 			$this->db->LIKE('pengirim', $keyword);
@@ -57,7 +57,7 @@ class Spt_model extends CI_Model
 		$this->db->SELECT('*');
 		$this->db->FROM('surat_spt');
 		$this->db->WHERE('bagian', 'BKA');
-		$this->db->WHERE('status_pengajuan', '0');
+		$this->db->WHERE('status_pengajuan', '1');
 
 		if ($kategori == 'pengirim') {
 			$this->db->LIKE('pengirim', $keyword);

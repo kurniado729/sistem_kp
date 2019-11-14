@@ -237,7 +237,7 @@ class Menu extends CI_Controller
 	{
 		$data['title'] = 'SubMenu Management';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-		$data['submenu'] = $this->menu->getdetailsubmenu($id);
+//		$data['submenu'] = $this->menu->getdetailsubmenu($id);
 
 //		$this->load->view('templates/header', $data);
 //		$this->load->view('templates/sidebar', $data);

@@ -77,5 +77,55 @@ class Bka_model extends CI_Model
 		return $data->result_array();
 	}
 
+	public function viewpersetujuandisposisi($id){
+
+		$data['bka'] = $this->bka->getdetailsuratdisposisi($id);
+
+		$file = $data['bka']['file_disposisi_sudah_disetujui'];
+
+		$filename = "./assets/upload/disposisi/".$file;
+		header("Content-type: application/pdf");
+		header("Content-Length: " . filesize($filename));
+		readfile($filename);
+	}
+
+	public function addsuratperintahjalan($id){
+		$data = [
+			'pengirim' => $this->input->post('pengirim'),
+			'no_surat_masuk' => $this->input->post('no_surat_masuk'),
+			'tgl_surat_masuk' => $this->input->post('tgl_surat_masuk'),
+			'ringkasan' => $this->input->post('ringkasan'),
+			'nama_pegawai' => $this->input->post('platform'),
+			'nip_pegawai' => $this->input->post('id'),
+			'jabatan' => $this->input->post('jabatan'),
+			'bagian' => 'BKA'
+		];
+
+
+		$this->db->insert('surat_spt', $data);
+
+		$this->db->set('status_spt', '1');
+		$this->db->where('id_surat_disposisi', $id);
+		$this->db->update('surat_disposisi');
+	}
+
+	public function viewspt($id){
+		$data['spt'] = $this->bka->getdetailspt($id);
+
+		$this->load->library('pdf');
+
+		$this->pdf->setPaper('A4', 'potrait');
+		$this->pdf->filename = $data['spt']['id_surat_spt'];
+		$this->pdf->load_view('bka/viewspt', $data);
+	}
+
+	public function ajukanspt($id){
+		$data['spt'] = $this->bka->getdetailspt($id);
+
+		$this->db->set('status_pengajuan', '1');
+		$this->db->where('id_surat_spt', $id);
+		$this->db->update('surat_spt');
+	}
+
 
 }

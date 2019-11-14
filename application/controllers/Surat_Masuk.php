@@ -142,27 +142,7 @@ class Surat_Masuk extends CI_Controller
 			$this->load->view('surat_masuk/addmail', $data);
 			$this->load->view('templates/footer');
 		} else {
-			$config ['upload_path'] = './assets/upload/suratmasuk';
-			$config ['allowed_types'] = 'pdf';
-			$config ['max_size'] = 0;
-
-			$this->load->library('upload', $config);
-
-			if (!$this->upload->do_upload('file_surat_masuk')) {
-				echo $this->upload->display_errors();
-			} else {
-				$file = $this->upload->data('file_name');
-			}
-
-			$this->db->insert('surat_masuk', [
-				'file_surat_masuk' => $file,
-				'pengirim' => $this->input->post('pengirim'),
-				'no_surat_masuk' => $this->input->post('no_surat_masuk'),
-				'tgl_surat_masuk' => $this->input->post('tgl_surat_masuk'),
-				'ringkasan' => $this->input->post('ringkasan'),
-				'disposisi' => '0',
-				'hapus' => '0'
-			]);
+			$this->surat_masuk->addmail();
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> New Mail added!</div>');
 			redirect('surat_masuk');
 		}
@@ -187,38 +167,7 @@ class Surat_Masuk extends CI_Controller
 			$this->load->view('surat_masuk/editmail', $data);
 			$this->load->view('templates/footer');
 		} else {
-
-			$config ['allowed_types'] = 'doc|docx|gif|jpeg|jpg|pdf|';
-			$config ['max_size'] = '2048';
-			$config ['upload_path'] = './assets/upload/suratmasuk/';
-
-			$this->load->library('upload', $config);
-
-			if ($this->upload->do_upload('file_surat_masuk')) {
-				$surat_lama = $data['surat_masuk']['file_surat_masuk'];
-				if ($surat_lama) {
-					unlink(FCPATH . 'assets/upload/suratmasuk/' . $surat_lama);
-				}
-
-				$file_surat_masuk = $this->upload->data('file_name');
-				$this->db->set('file_surat_masuk', $file_surat_masuk);
-
-			} else {
-				echo $this->upload->display_errors();
-			}
-
-			$pengirim = $this->input->post('pengirim');
-			$no_surat_masuk = $this->input->post('no_surat_masuk');
-			$tgl_surat_masuk = $this->input->post('tgl_surat_masuk');
-			$ringkasan = $this->input->post('ringkasan');
-
-			$this->db->set('pengirim', $pengirim);
-			$this->db->set('no_surat_masuk', $no_surat_masuk);
-			$this->db->set('tgl_surat_masuk', $tgl_surat_masuk);
-			$this->db->set('ringkasan', $ringkasan);
-			$this->db->where('id_surat_masuk', $id);
-			$this->db->update('surat_masuk');
-
+			$this->surat_masuk->editmail($id);
 			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your mail has been updated!</div>');
 			redirect('surat_masuk');
 		}
@@ -231,10 +180,7 @@ class Surat_Masuk extends CI_Controller
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['surat_masuk'] = $this->surat_masuk->getdetailsuratmasuk($id);
 
-		$this->db->set('hapus', '1');
-		$this->db->where('id_surat_masuk', $id);
-		$this->db->update('surat_masuk');
-
+		$this->surat_masuk->deletemail($id);
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your mail has been deleted!</div>');
 		redirect('surat_masuk');
 	}
@@ -245,10 +191,7 @@ class Surat_Masuk extends CI_Controller
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['surat_masuk'] = $this->surat_masuk->getdetailsuratmasuk($id);
 
-		$this->db->set('hapus', '0');
-		$this->db->where('id_surat_masuk', $id);
-		$this->db->update('surat_masuk');
-
+		$this->surat_masuk->restoremail($id);
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your mail has been restored!</div>');
 		redirect('surat_masuk/trash');
 	}
@@ -259,9 +202,7 @@ class Surat_Masuk extends CI_Controller
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['surat_masuk'] = $this->surat_masuk->getdetailsuratmasuk($id);
 
-		$this->db->where('id_surat_masuk', $id);
-		$this->db->delete('surat_masuk');
-
+		$this->surat_masuk->deletepermanentmail($id);
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your mail has been permanent deleted!</div>');
 		redirect('surat_masuk/trash');
 	}
@@ -392,26 +333,7 @@ class Surat_Masuk extends CI_Controller
 
 	public function disposisimail($id)
 	{
-		$data['surat_masuk'] = $this->surat_masuk->getdetailsuratmasuk($id);
-
-		$pengirim = $data['surat_masuk']['pengirim'];
-		$no_surat_masuk = $data['surat_masuk']['no_surat_masuk'];
-		$tgl_surat_masuk = $data['surat_masuk']['tgl_surat_masuk'];
-		$ringkasan = $data['surat_masuk']['ringkasan'];
-
-		$this->db->insert('surat_disposisi', [
-			'pengirim' => $pengirim,
-			'no_surat_masuk' => $no_surat_masuk,
-			'tgl_surat_masuk' => $tgl_surat_masuk,
-			'ringkasan' => $ringkasan,
-			'tujuan' => NULL
-
-		]);
-
-		$this->db->set('disposisi', '1');
-		$this->db->where('id_surat_masuk', $id);
-		$this->db->update('surat_masuk');
-
+		$this->surat_masuk->disposisimail($id);
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your mail disposisi has been created!</div>');
 		redirect('surat_masuk');
 	}
@@ -419,19 +341,8 @@ class Surat_Masuk extends CI_Controller
 	public function viewmail($id)
 	{
 		$data['title'] = 'Surat Masuk';
-//		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-		$data['surat_masuk'] = $this->surat_masuk->getdetailsuratmasuk($id);
-
-
-		$file = $data['surat_masuk']['file_surat_masuk'];
-
-		$filename = "./assets/upload/suratmasuk/".$file;
-		header("Content-type: application/pdf");
-		header("Content-Length: " . filesize($filename));
-		readfile($filename);
-
-
+		$this->surat_masuk->viewmail($id);
 	}
 
 	public function searchsuratmasuk()
