@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Bka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Bka.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Bkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Bkd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Surat_Disposisi.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Surat_Disposisi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Surat_Masuk.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Surat_Masuk.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Bka_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Bka_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Bkd_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Bkd_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Spt_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Spt_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Surat_Disposisi_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Surat_Disposisi_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Surat_Masuk_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Surat_Masuk_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/User_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/User_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_masuk/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_masuk/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +197,7 @@
       <workItem from="1573557807925" duration="74000" />
       <workItem from="1573558135665" duration="366000" />
       <workItem from="1573632056141" duration="6888000" />
-      <workItem from="1573714028376" duration="5485000" />
+      <workItem from="1573714028376" duration="5831000" />
     </task>
     <task id="LOCAL-00001" summary="update view">
       <created>1573067332216</created>
@@ -290,7 +276,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573638391923</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="update model">
+      <created>1573719679140</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1573719679140</updated>
+    </task>
+    <task id="LOCAL-00013" summary="update model">
+      <created>1573719752448</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1573719752448</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
