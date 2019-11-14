@@ -125,60 +125,33 @@ class Surat_Perintah_Tugas extends CI_Controller
 
 	public function viewspt($id)
 	{
-		$data['spt'] = $this->spt->getdetailspt($id);
-
-		$this->load->library('pdf');
-
-		$this->pdf->setPaper('A4', 'potrait');
-		$this->pdf->filename = $data['spt']['id_surat_spt'];
-		$this->pdf->load_view('surat_perintah_tugas/viewspt', $data);
-
+		$this->spt->viewspt($id);
 	}
 
 	public function acceptbkd($id)
 	{
-		$data['spt'] = $this->spt->getdetailspt($id);
-
-		$this->db->set('status', '1');
-		$this->db->where('id_surat_spt', $id);
-		$this->db->update('surat_spt');
-
+		$this->spt->acceptbkd($id);
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your SPT has been accepted!</div>');
 		redirect('surat_perintah_tugas');
 	}
 
 	public function rejectbkd($id)
 	{
-		$data['spt'] = $this->spt->getdetailspt($id);
-
-		$this->db->set('status', '0');
-		$this->db->where('id_surat_spt', $id);
-		$this->db->update('surat_spt');
-
+		$this->spt->rejectbkd($id);
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your SPT has been rejected!</div>');
 		redirect('surat_perintah_tugas');
 	}
 
 	public function acceptbka($id)
 	{
-		$data['spt'] = $this->spt->getdetailspt($id);
-
-		$this->db->set('status', '1');
-		$this->db->where('id_surat_spt', $id);
-		$this->db->update('surat_spt');
-
+		$this->spt->acceptbka($id);
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your SPT has been accepted!</div>');
 		redirect('surat_perintah_tugas/sptbka');
 	}
 
 	public function rejectbka($id)
 	{
-		$data['spt'] = $this->spt->getdetailspt($id);
-
-		$this->db->set('status', '0');
-		$this->db->where('id_surat_spt', $id);
-		$this->db->update('surat_spt');
-
+		$this->spt->rejectbka($id);
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your SPT has been rejected!</div>');
 		redirect('surat_perintah_tugas/sptbka');
 	}
@@ -201,22 +174,8 @@ class Surat_Perintah_Tugas extends CI_Controller
 		$data['title'] = 'Persetujuan SPT BKD';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-		$config ['upload_path'] = './assets/upload/spt';
-		$config ['allowed_types'] = 'pdf';
-		$config ['max_size'] = 0;
 
-		$this->load->library('upload', $config);
-
-		if (!$this->upload->do_upload('file_surat_spt')) {
-			echo $this->upload->display_errors();
-		} else {
-			$file = $this->upload->data('file_name');
-		}
-
-		$this->db->set('file_spt_sudah_disetujui', $file);
-		$this->db->where('id_surat_spt', $id);
-		$this->db->update('surat_spt');
-
+		$this->spt->uploadsptbkd($id);
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> New SPT has uploaded!</div>');
 		redirect('surat_perintah_tugas');
 	}
@@ -239,37 +198,14 @@ class Surat_Perintah_Tugas extends CI_Controller
 		$data['title'] = 'Persetujuan SPT BKA';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
-		$config ['upload_path'] = './assets/upload/spt';
-		$config ['allowed_types'] = 'pdf';
-		$config ['max_size'] = 0;
-
-		$this->load->library('upload', $config);
-
-		if (!$this->upload->do_upload('file_surat_spt')) {
-			echo $this->upload->display_errors();
-		} else {
-			$file = $this->upload->data('file_name');
-		}
-
-		$this->db->set('file_spt_sudah_disetujui', $file);
-		$this->db->where('id_surat_spt', $id);
-		$this->db->update('surat_spt');
-
+		$this->spt->uploadsptbka($id);
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> New SPT has uploaded!</div>');
 		redirect('surat_perintah_tugas/sptbka');
 	}
 
 	public function viewpersetujuanspt($id)
 	{
-		$data['spt'] = $this->spt->getdetailspt($id);
-
-
-		$file = $data['spt']['file_spt_sudah_disetujui'];
-
-		$filename = "./assets/upload/spt/".$file;
-		header("Content-type: application/pdf");
-		header("Content-Length: " . filesize($filename));
-		readfile($filename);
+		$this->spt->viewpersetujuanspt($id);
 	}
 
 	public function searchpersetujuansptbkd()

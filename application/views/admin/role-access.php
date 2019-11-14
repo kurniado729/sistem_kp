@@ -36,7 +36,14 @@
 				<?php endforeach; ?>
 				</tbody>
 			</table>
-
+			<div class="row">
+				<div class="col-3">
+					<a href="<?= base_url('admin/role') ?>" class="btn btn-secondary btn-icon-split">
+						<span class="icon text-white-50"><i class="fas fa-chevron-left"></i></span>
+						<span class="text">Back</span>
+					</a>
+				</div>
+			</div>
 		</div>
 	</div>
 

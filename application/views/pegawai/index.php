@@ -84,6 +84,7 @@
 			</div>
 		</div>
 	<?php endif; ?>
+
 </div>
 <!-- /.container-fluid -->
 

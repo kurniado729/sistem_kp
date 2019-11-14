@@ -68,6 +68,94 @@ class Spt_model extends CI_Model
 		$data = $this->db->get();
 		return $data->result_array();
 	}
+	public function viewspt($id){
+		$data['spt'] = $this->spt->getdetailspt($id);
+
+		$this->load->library('pdf');
+
+		$this->pdf->setPaper('A4', 'potrait');
+		$this->pdf->filename = $data['spt']['id_surat_spt'];
+		$this->pdf->load_view('surat_perintah_tugas/viewspt', $data);
+	}
+
+	public function acceptbkd($id){
+		$data['spt'] = $this->spt->getdetailspt($id);
+
+		$this->db->set('status', '1');
+		$this->db->where('id_surat_spt', $id);
+		$this->db->update('surat_spt');
+	}
+
+	public function rejectbkd($id){
+		$data['spt'] = $this->spt->getdetailspt($id);
+
+		$this->db->set('status', '0');
+		$this->db->where('id_surat_spt', $id);
+		$this->db->update('surat_spt');
+	}
+
+	public function acceptbka($id){
+		$data['spt'] = $this->spt->getdetailspt($id);
+
+		$this->db->set('status', '1');
+		$this->db->where('id_surat_spt', $id);
+		$this->db->update('surat_spt');
+	}
+
+	public function rejectbka($id){
+		$data['spt'] = $this->spt->getdetailspt($id);
+
+		$this->db->set('status', '0');
+		$this->db->where('id_surat_spt', $id);
+		$this->db->update('surat_spt');
+
+	}
+
+	public function uploadsptbkd($id){
+		$config ['upload_path'] = './assets/upload/spt';
+		$config ['allowed_types'] = 'pdf';
+		$config ['max_size'] = 0;
+
+		$this->load->library('upload', $config);
+
+		if (!$this->upload->do_upload('file_surat_spt')) {
+			echo $this->upload->display_errors();
+		} else {
+			$file = $this->upload->data('file_name');
+		}
+
+		$this->db->set('file_spt_sudah_disetujui', $file);
+		$this->db->where('id_surat_spt', $id);
+		$this->db->update('surat_spt');
+	}
+
+	public function uploadsptbka($id){
+		$config ['upload_path'] = './assets/upload/spt';
+		$config ['allowed_types'] = 'pdf';
+		$config ['max_size'] = 0;
+
+		$this->load->library('upload', $config);
+
+		if (!$this->upload->do_upload('file_surat_spt')) {
+			echo $this->upload->display_errors();
+		} else {
+			$file = $this->upload->data('file_name');
+		}
+
+		$this->db->set('file_spt_sudah_disetujui', $file);
+		$this->db->where('id_surat_spt', $id);
+		$this->db->update('surat_spt');
+	}
+	public function viewpersetujuanspt($id){
+		$data['spt'] = $this->spt->getdetailspt($id);
+
+		$file = $data['spt']['file_spt_sudah_disetujui'];
+
+		$filename = "./assets/upload/spt/".$file;
+		header("Content-type: application/pdf");
+		header("Content-Length: " . filesize($filename));
+		readfile($filename);
+	}
 
 
 

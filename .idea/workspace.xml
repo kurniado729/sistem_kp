@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="" />
+    <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Surat_Perintah_Tugas.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Surat_Perintah_Tugas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Spt_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Spt_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/addrole.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/addrole.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/editrole.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/editrole.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/role-access.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/role-access.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/role.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/role.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/templates/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/templates/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/templates/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/templates/header.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,16 +94,16 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/views/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\sistem_kp\assets" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\views\admin" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\models" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\views" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\controllers" />
-      <recent name="C:\xampp\htdocs\sistem_kp\application\views\surat_perintah_tugas" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -197,7 +209,7 @@
       <workItem from="1573557807925" duration="74000" />
       <workItem from="1573558135665" duration="366000" />
       <workItem from="1573632056141" duration="6888000" />
-      <workItem from="1573714028376" duration="5831000" />
+      <workItem from="1573714028376" duration="10378000" />
     </task>
     <task id="LOCAL-00001" summary="update view">
       <created>1573067332216</created>
@@ -290,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573719752448</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="update model">
+      <created>1573719930632</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1573719930632</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
