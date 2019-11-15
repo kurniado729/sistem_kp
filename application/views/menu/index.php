@@ -6,8 +6,7 @@
 
 	<div class="row">
 		<div class="col-lg-12">
-
-			<?= $this->session->flashdata('message') ?>
+			<div class="flash-data" data-flashdata="<?= $this->session->flashdata('message'); ?>"></div>
 			<div class="row">
 				<div class="col-3">
 					<a href="<?= base_url('menu/addmenu') ?>" class="btn btn-primary btn-icon-split mb-3">

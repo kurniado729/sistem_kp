@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/gulpfile.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/js/js-sweetalert/myscript.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Surat_Perintah_Tugas.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Surat_Perintah_Tugas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Spt_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Spt_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/addrole.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/addrole.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/editrole.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/editrole.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/role-access.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/role-access.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/role.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/role.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pegawai/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/menu/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/menu/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/surat_masuk/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_masuk/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/templates/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/templates/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/templates/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/templates/header.php" afterDir="false" />
     </list>
@@ -209,7 +205,11 @@
       <workItem from="1573557807925" duration="74000" />
       <workItem from="1573558135665" duration="366000" />
       <workItem from="1573632056141" duration="6888000" />
-      <workItem from="1573714028376" duration="10378000" />
+      <workItem from="1573714028376" duration="10814000" />
+      <workItem from="1573745824125" duration="3669000" />
+      <workItem from="1573759606014" duration="1877000" />
+      <workItem from="1573805387540" duration="87000" />
+      <workItem from="1573806825946" duration="3035000" />
     </task>
     <task id="LOCAL-00001" summary="update view">
       <created>1573067332216</created>
@@ -309,7 +309,21 @@
       <option name="project" value="LOCAL" />
       <updated>1573719930632</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="sweet alert">
+      <created>1573728424655</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1573728424655</updated>
+    </task>
+    <task id="LOCAL-00016" summary="sweet alert">
+      <created>1573728489639</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1573728489639</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,6 +347,7 @@
     <MESSAGE value="spt" />
     <MESSAGE value="update dashboard" />
     <MESSAGE value="update model" />
-    <option name="LAST_COMMIT_MESSAGE" value="update model" />
+    <MESSAGE value="sweet alert" />
+    <option name="LAST_COMMIT_MESSAGE" value="sweet alert" />
   </component>
 </project>

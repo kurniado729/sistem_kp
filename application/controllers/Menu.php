@@ -85,7 +85,7 @@ class Menu extends CI_Controller
 			$this->load->view('templates/footer');
 		}else{
 			$this->menu->addmenu();
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> New menu added!</div>');
+			$this->session->set_flashdata('message', 'ditambah');
 			redirect('menu');
 		}
 

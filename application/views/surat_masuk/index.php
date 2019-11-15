@@ -84,7 +84,7 @@
 							<a href="<?= base_url('surat_masuk/editmail/' . $sm['id_surat_masuk']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Edit">
 								<i class="fas fa-edit"></i>
 							</a>
-							<a href="<?= base_url('surat_masuk/deletemail/' . $sm['id_surat_masuk']); ?>" class="btn btn-danger btn-circle" data-toggle="tooltip" data-placement="top" title="Hapus" onclick="return confirm('Yakin Hapus?')">
+							<a href="<?= base_url('surat_masuk/deletemail/' . $sm['id_surat_masuk']); ?>" class="btn btn-danger btn-circle" data-toggle="tooltip" data-placement="top" title="Hapus"">
 								<i class="fas fa-trash-alt"></i>
 							</a>
 						</td>
@@ -93,7 +93,6 @@
 				<?php endforeach; ?>
 				</tbody>
 			</table>
-
 		</div>
 	</div>
 	<?php if($this->uri->segment(2) == 'searchsuratmasuk'): ?>
