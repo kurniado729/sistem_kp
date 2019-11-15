@@ -108,7 +108,7 @@ class Admin extends CI_Controller
 			$this->load->view('templates/footer');
 		}else{
 			$this->admin->addrole();
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> New role added!</div>');
+			$this->session->set_flashdata('message', 'role berhasil ditambah');
 			redirect('admin/role');
 		}
 	}
@@ -133,7 +133,7 @@ class Admin extends CI_Controller
 	public function changeaccess()
 	{
 		$this->admin->changeaccess();
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Access changed!</div>');
+		$this->session->set_flashdata('message', 'access berhasil diedit');
 	}
 
 	public function editrole($id)
@@ -152,7 +152,7 @@ class Admin extends CI_Controller
 			$this->load->view('templates/footer');
 		}else{
 			$this->admin->editrole($id);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your role has been updated!</div>');
+			$this->session->set_flashdata('message', 'role berhasil diedit');
 			redirect('admin/role');
 		}
 
@@ -165,7 +165,7 @@ class Admin extends CI_Controller
 		$data['role'] = $this->db->get_where('user_role', ['id' => $id ])->row_array();
 
 		$this->admin->deleterole($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your role has been deleted!</div>');
+		$this->session->set_flashdata('message', 'role berhasil dihapus');
 		redirect('admin/role');
 	}
 

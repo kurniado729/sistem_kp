@@ -208,7 +208,7 @@ class Surat_Disposisi extends CI_Controller
 	{
 
 		$this->surat_disposisi->disposisimailbkd($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your mail disposisi has been created!</div>');
+		$this->session->set_flashdata('message', 'surat masuk berhasil didisposisi ke bkd');
 		redirect('surat_disposisi');
 	}
 
@@ -216,7 +216,7 @@ class Surat_Disposisi extends CI_Controller
 	{
 
 		$this->surat_disposisi->disposisimailbka($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your mail disposisi has been created!</div>');
+		$this->session->set_flashdata('message', 'surat masuk berhasil didisposisi ke bka');
 		redirect('surat_disposisi');
 	}
 
@@ -245,7 +245,7 @@ class Surat_Disposisi extends CI_Controller
 
 
 		$this->surat_disposisi->uploaddisposisibkd($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> New Disposisi has uploaded!</div>');
+		$this->session->set_flashdata('message', 'persetujuan disposisi berhasil di upload');
 		redirect('surat_disposisi/disposisibkd');
 	}
 
@@ -264,14 +264,14 @@ class Surat_Disposisi extends CI_Controller
 	public function acceptbkd($id)
 	{
 		$this->surat_disposisi->acceptbkd($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your mail disposisi has been accepted!</div>');
+		$this->session->set_flashdata('message', 'disposisi berhasil disetujui');
 		redirect('surat_disposisi/disposisibkd');
 	}
 
 	public function rejectbkd($id)
 	{
 		$this->surat_disposisi->rejectbkd($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your mail disposisi has been rejected!</div>');
+		$this->session->set_flashdata('message', 'disposisi berhasil ditolak');
 		redirect('surat_disposisi/disposisibkd');
 	}
 
@@ -308,7 +308,7 @@ class Surat_Disposisi extends CI_Controller
 //		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
 		$this->surat_disposisi->uploaddisposisibka($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> New Disposisi has uploaded!</div>');
+		$this->session->set_flashdata('message', 'persetujuan disposisi berhasil di upload');
 		redirect('surat_disposisi/disposisibka');
 	}
 
@@ -328,7 +328,7 @@ class Surat_Disposisi extends CI_Controller
 	public function acceptbka($id)
 	{
 		$this->surat_disposisi->acceptbka($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your mail disposisi has been accepted!</div>');
+		$this->session->set_flashdata('message', 'disposisi berhasil disetujui');
 		redirect('surat_disposisi/disposisibka');
 	}
 
@@ -336,7 +336,7 @@ class Surat_Disposisi extends CI_Controller
 	{
 
 		$this->surat_disposisi->rejectbka($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your mail disposisi has been rejected!</div>');
+		$this->session->set_flashdata('message', 'disposisi berhasil ditolak');
 		redirect('surat_disposisi/disposisibka');
 	}
 

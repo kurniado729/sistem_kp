@@ -7,7 +7,7 @@
 	<div class="row">
 		<div class="col-lg-12">
 
-			<?= $this->session->flashdata('message') ?>
+			<div class="flash-data" data-flashdata="<?= $this->session->flashdata('message'); ?>"></div>
 			<div class="row">
 				<div class="col-7">
 					<div class="row mb-3">
@@ -59,7 +59,7 @@
 							<a href="<?= base_url('surat_masuk/restoremail/' . $t['id_surat_masuk']); ?>" class="btn btn-warning btn-circle">
 								<i class="fas fa-trash-restore"></i>
 							</a>
-							<a href="<?= base_url('surat_masuk/deletepermanentmail/' . $t['id_surat_masuk']); ?>" class="btn btn-danger btn-circle" onclick="return confirm('Yakin Hapus?')">
+							<a href="<?= base_url('surat_masuk/deletepermanentmail/' . $t['id_surat_masuk']); ?>" class="btn btn-danger btn-circle tombol-hapus ">
 								<i class="fas fa-trash"></i>
 							</a>
 						</td>

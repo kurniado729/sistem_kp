@@ -37,7 +37,7 @@ class User extends CI_Controller
 			$this->load->view('templates/footer');
 		}else{
 			$this->user->edit();
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your profile has been updated!</div>');
+			$this->session->set_flashdata('message', 'user berhasil diedit');
 			redirect('user');
 		}
 

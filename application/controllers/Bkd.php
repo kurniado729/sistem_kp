@@ -160,7 +160,7 @@ class Bkd extends CI_Controller
 			$this->load->view('templates/footer');
 		}else{
 			$this->bkd->addsuratperintahjalan($id);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your SPT has been created!</div>');
+			$this->session->set_flashdata('message', 'SPT berhasil ditambahkan');
 			redirect('bkd');
 		}
 
@@ -213,7 +213,7 @@ class Bkd extends CI_Controller
 
 	public function ajukanspt($id){
 		$this->bkd->ajukanspt($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your SPT has been diajukan!</div>');
+		$this->session->set_flashdata('message', 'SPT berhasil diajukan');
 		redirect('bkd/spt');
 	}
 

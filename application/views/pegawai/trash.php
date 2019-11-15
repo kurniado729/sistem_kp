@@ -7,7 +7,7 @@
 	<div class="row">
 		<div class="col-lg-12">
 
-			<?= $this->session->flashdata('message') ?>
+			<div class="flash-data" data-flashdata="<?= $this->session->flashdata('message'); ?>"></div>
 
 			<div class="row">
 				<div class="col-7">
@@ -58,7 +58,7 @@
 							<a href="<?= base_url('pegawai/restorepegawai/' . $t['id_pegawai']); ?>" class="btn btn-warning btn-circle" data-toggle="tooltip" data-placement="top" title="Restore">
 								<i class="fas fa-trash-restore"></i>
 							</a>
-							<a href="<?= base_url('pegawai/deletepermanentpegawai/' . $t['id_pegawai']); ?>" class="btn btn-danger btn-circle" data-toggle="tooltip" data-placement="top" title="Hapus Permanen" onclick="return confirm('Yakin Hapus?')">
+							<a href="<?= base_url('pegawai/deletepermanentpegawai/' . $t['id_pegawai']); ?>" class="btn btn-danger btn-circle tombol-hapus" data-toggle="tooltip" data-placement="top" title="Hapus Permanen">
 								<i class="fas fa-trash"></i>
 							</a>
 						</td>

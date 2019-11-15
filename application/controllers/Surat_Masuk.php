@@ -143,7 +143,7 @@ class Surat_Masuk extends CI_Controller
 			$this->load->view('templates/footer');
 		} else {
 			$this->surat_masuk->addmail();
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> New Mail added!</div>');
+			$this->session->set_flashdata('message', 'data surat masuk berhasil ditambahkan');
 			redirect('surat_masuk');
 		}
 
@@ -168,7 +168,7 @@ class Surat_Masuk extends CI_Controller
 			$this->load->view('templates/footer');
 		} else {
 			$this->surat_masuk->editmail($id);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your mail has been updated!</div>');
+			$this->session->set_flashdata('message', 'data surat masuk berhasil diedit');
 			redirect('surat_masuk');
 		}
 
@@ -181,7 +181,7 @@ class Surat_Masuk extends CI_Controller
 		$data['surat_masuk'] = $this->surat_masuk->getdetailsuratmasuk($id);
 
 		$this->surat_masuk->deletemail($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your mail has been deleted!</div>');
+		$this->session->set_flashdata('message', 'data surat masuk berhasil dihapus');
 		redirect('surat_masuk');
 	}
 
@@ -192,7 +192,7 @@ class Surat_Masuk extends CI_Controller
 		$data['surat_masuk'] = $this->surat_masuk->getdetailsuratmasuk($id);
 
 		$this->surat_masuk->restoremail($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your mail has been restored!</div>');
+		$this->session->set_flashdata('message', 'data surat masuk berhasil direstore');
 		redirect('surat_masuk/trash');
 	}
 
@@ -203,7 +203,7 @@ class Surat_Masuk extends CI_Controller
 		$data['surat_masuk'] = $this->surat_masuk->getdetailsuratmasuk($id);
 
 		$this->surat_masuk->deletepermanentmail($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your mail has been permanent deleted!</div>');
+		$this->session->set_flashdata('message', 'data surat masuk berhasil dihapus permanen');
 		redirect('surat_masuk/trash');
 	}
 
@@ -334,7 +334,7 @@ class Surat_Masuk extends CI_Controller
 	public function disposisimail($id)
 	{
 		$this->surat_masuk->disposisimail($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your mail disposisi has been created!</div>');
+		$this->session->set_flashdata('message', 'surat masuk berhasil didisposisi');
 		redirect('surat_masuk');
 	}
 

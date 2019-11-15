@@ -252,7 +252,7 @@ class Pegawai extends CI_Controller
 			$this->load->view('templates/footer');
 		}else{
 			$this->pegawai->addpegawaitu();
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> New pegawai added!</div>');
+			$this->session->set_flashdata('message', 'data pegawai berhasil ditambahkan');
 			redirect('pegawai');
 		}
 
@@ -273,7 +273,7 @@ class Pegawai extends CI_Controller
 			$this->load->view('templates/footer');
 		}else{
 			$this->pegawai->addpegawaibkd();
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> New pegawai added!</div>');
+			$this->session->set_flashdata('message', 'data pegawai berhasil ditambahkan');
 			redirect('pegawai/pegawaibkd');
 		}
 
@@ -294,7 +294,7 @@ class Pegawai extends CI_Controller
 			$this->load->view('templates/footer');
 		}else{
 			$this->pegawai->addpegawaibka();
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> New pegawai added!</div>');
+			$this->session->set_flashdata('message', 'data pegawai berhasil ditambahkan');
 			redirect('pegawai/pegawaibka');
 		}
 
@@ -317,7 +317,7 @@ class Pegawai extends CI_Controller
 		}else{
 
 			$this->pegawai->editpegawaitu($id);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your pegawai has been updated!</div>');
+			$this->session->set_flashdata('message', 'data pegawai berhasil diedit');
 			redirect('pegawai');
 		}
 
@@ -340,7 +340,7 @@ class Pegawai extends CI_Controller
 		}else{
 
 			$this->pegawai->editpegawaibkd($id);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your pegawai has been updated!</div>');
+			$this->session->set_flashdata('message', 'data pegawai berhasil diedit');
 			redirect('pegawai/pegawaibkd');
 		}
 
@@ -363,7 +363,7 @@ class Pegawai extends CI_Controller
 		}else{
 
 			$this->pegawai->editpegawaibka($id);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your pegawai has been updated!</div>');
+			$this->session->set_flashdata('message', 'data pegawai berhasil diedit');
 			redirect('pegawai/pegawaibka');
 		}
 
@@ -375,7 +375,7 @@ class Pegawai extends CI_Controller
 		$data['pegawai'] = $this->pegawai->getdetailpegawai($id);
 
 			$this->pegawai->deletepegawaitu($id);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your pegawai has been deleted!</div>');
+			$this->session->set_flashdata('message', 'data pegawai berhasil dihapus');
 			redirect('pegawai');
 	}
 
@@ -386,7 +386,7 @@ class Pegawai extends CI_Controller
 		$data['pegawai'] = $this->pegawai->getdetailpegawai($id);
 
 		$this->pegawai->deletepegawaibkd($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your pegawai has been deleted!</div>');
+		$this->session->set_flashdata('message', 'data pegawai berhasil dihapus');
 		redirect('pegawai/pegawaibkd');
 	}
 
@@ -397,7 +397,7 @@ class Pegawai extends CI_Controller
 		$data['pegawai'] = $this->pegawai->getdetailpegawai($id);
 
 		$this->pegawai->deletepegawaibka($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your pegawai has been deleted!</div>');
+		$this->session->set_flashdata('message', 'data pegawai berhasil dihapus');
 		redirect('pegawai/pegawaibka');
 	}
 
@@ -408,7 +408,7 @@ class Pegawai extends CI_Controller
 		$data['pegawai'] = $this->pegawai->getdetailpegawai($id);
 
 		$this->pegawai->restorepegawai($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your pegawai has been restored!</div>');
+		$this->session->set_flashdata('message', 'data pegawai berhasil direstore');
 		redirect('pegawai/trash');
 	}
 
@@ -419,7 +419,7 @@ class Pegawai extends CI_Controller
 		$data['pegawai'] = $this->pegawai->getdetailpegawai($id);
 
 		$this->pegawai->deletepermanentpegawai($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your pegawai has been permanent deleted!</div>');
+		$this->session->set_flashdata('message', 'data pegawai berhasil dihapus permanen');
 		redirect('pegawai/trash');
 	}
 

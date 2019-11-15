@@ -131,28 +131,28 @@ class Surat_Perintah_Tugas extends CI_Controller
 	public function acceptbkd($id)
 	{
 		$this->spt->acceptbkd($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your SPT has been accepted!</div>');
+		$this->session->set_flashdata('message', 'SPT berhasil disetujui');
 		redirect('surat_perintah_tugas');
 	}
 
 	public function rejectbkd($id)
 	{
 		$this->spt->rejectbkd($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your SPT has been rejected!</div>');
+		$this->session->set_flashdata('message', 'SPT berhasil ditolak');
 		redirect('surat_perintah_tugas');
 	}
 
 	public function acceptbka($id)
 	{
 		$this->spt->acceptbka($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your SPT has been accepted!</div>');
+		$this->session->set_flashdata('message', 'SPT berhasil disetujui');
 		redirect('surat_perintah_tugas/sptbka');
 	}
 
 	public function rejectbka($id)
 	{
 		$this->spt->rejectbka($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your SPT has been rejected!</div>');
+		$this->session->set_flashdata('message', 'SPT berhasil diajukanditolak');
 		redirect('surat_perintah_tugas/sptbka');
 	}
 
@@ -176,7 +176,7 @@ class Surat_Perintah_Tugas extends CI_Controller
 
 
 		$this->spt->uploadsptbkd($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> New SPT has uploaded!</div>');
+		$this->session->set_flashdata('message', 'persetujuan SPT berhasil diupload');
 		redirect('surat_perintah_tugas');
 	}
 
@@ -199,7 +199,7 @@ class Surat_Perintah_Tugas extends CI_Controller
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
 		$this->spt->uploadsptbka($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> New SPT has uploaded!</div>');
+		$this->session->set_flashdata('message', 'persetujuan SPT berhasil diupload');
 		redirect('surat_perintah_tugas/sptbka');
 	}
 

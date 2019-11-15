@@ -7,7 +7,7 @@
 	<div class="row">
 		<div class="col-lg-12">
 
-			<?= $this->session->flashdata('message') ?>
+			<div class="flash-data" data-flashdata="<?= $this->session->flashdata('message'); ?>"></div>
 
 			<div class="row">
 				<div class="col-7">
@@ -68,10 +68,10 @@
 <!--								   class="badge badge-warning" onclick="return confirm('Disposisi ke BKD?')">Disposisi ke BKD</a>-->
 <!--								<a href="--><?//= base_url('surat_disposisi/disposisimailbka/' . $sd['id_surat_disposisi']); ?><!--"-->
 <!--								   class="badge badge-warning" onclick="return confirm('Disposisi ke BKA?')">Disposisi ke BKA</a>-->
-								<a href="<?= base_url('surat_disposisi/disposisimailbkd/' . $sd['id_surat_disposisi']); ?>" class="btn btn-warning btn-circle" data-toggle="tooltip" data-placement="top" title="Disposisi ke BKD">
+								<a href="<?= base_url('surat_disposisi/disposisimailbkd/' . $sd['id_surat_disposisi']); ?>" class="btn btn-warning btn-circle tombol-disposisi-bkd" data-toggle="tooltip" data-placement="top" title="Disposisi ke BKD">
 									<i class="fas fa-arrow-alt-circle-right"></i>
 								</a>
-								<a href="<?= base_url('surat_disposisi/disposisimailbka/' . $sd['id_surat_disposisi']); ?>" class="btn btn-warning btn-circle" data-toggle="tooltip" data-placement="top" title="Disposisi ke BKA">
+								<a href="<?= base_url('surat_disposisi/disposisimailbka/' . $sd['id_surat_disposisi']); ?>" class="btn btn-warning btn-circle tombol-disposisi-bka" data-toggle="tooltip" data-placement="top" title="Disposisi ke BKA">
 									<i class="fas fa-arrow-alt-circle-right"></i>
 								</a>
 							<?php else: ?>

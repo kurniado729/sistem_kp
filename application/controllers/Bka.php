@@ -163,7 +163,7 @@ class Bka extends CI_Controller
 		}else{
 
 			$this->bka->addsuratperintahjalan($id);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your SPT has been created!</div>');
+			$this->session->set_flashdata('message', 'SPT berhasil ditambahkan');
 			redirect('bka');
 		}
 
@@ -217,7 +217,7 @@ class Bka extends CI_Controller
 	public function ajukanspt($id)
 	{
 		$this->bka->ajukanspt($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your SPT has been diajukan!</div>');
+		$this->session->set_flashdata('message', 'SPT berhasil diajukan');
 		redirect('bka/spt');
 	}
 
