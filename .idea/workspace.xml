@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/menu/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/menu/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/menu/submenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/menu/submenu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/js/js-sweetalert/myscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/js-sweetalert/myscript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/js-sweetalert/sweetalert2.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/js-sweetalert/sweetalert2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/js-sweetalert/sweetalert2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/js-sweetalert/sweetalert2.min.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -203,7 +209,7 @@
       <workItem from="1573745824125" duration="3669000" />
       <workItem from="1573759606014" duration="1877000" />
       <workItem from="1573805387540" duration="87000" />
-      <workItem from="1573806825946" duration="3281000" />
+      <workItem from="1573806825946" duration="8872000" />
     </task>
     <task id="LOCAL-00001" summary="update view">
       <created>1573067332216</created>
@@ -324,7 +330,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573810025987</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="sweet alert">
+      <created>1573810158840</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1573810158840</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

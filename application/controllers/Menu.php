@@ -85,7 +85,7 @@ class Menu extends CI_Controller
 			$this->load->view('templates/footer');
 		}else{
 			$this->menu->addmenu();
-			$this->session->set_flashdata('message', 'ditambah');
+			$this->session->set_flashdata('message', 'data menu berhasil ditambahkan');
 			redirect('menu');
 		}
 
@@ -107,7 +107,7 @@ class Menu extends CI_Controller
 			$this->load->view('templates/footer');
 		}else{
 			$this->menu->editmenu($id);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your menu has been updated!</div>');
+			$this->session->set_flashdata('message', 'data menu berhasil diedit');
 			redirect('menu');
 		}
 
@@ -120,7 +120,7 @@ class Menu extends CI_Controller
 		$data['menu'] = $this->menu->getdetailmenu($id);
 
 		$this->menu->deletemenu($id);
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your menu has been deleted!</div>');
+		$this->session->set_flashdata('message', 'data menu berhasil dihapus');
 		redirect('menu');
 	}
 
@@ -201,7 +201,7 @@ class Menu extends CI_Controller
 			$this->load->view('templates/footer');
 		}else{
 			$this->menu->addsubmenu();
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> New sub menu added!</div>');
+			$this->session->set_flashdata('message', 'data submenu berhasil ditambah');
 			redirect('menu/submenu');
 		}
 
@@ -227,7 +227,7 @@ class Menu extends CI_Controller
 			$this->load->view('templates/footer');
 		}else{
 			$this->menu->editsubmenu($id);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your submenu has been updated!</div>');
+			$this->session->set_flashdata('message', 'data submenu berhasil diedit');
 			redirect('menu/submenu');
 		}
 
@@ -247,7 +247,7 @@ class Menu extends CI_Controller
 
 		$this->menu->deletesubmenu($id);
 
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your menu has been deleted!</div>');
+		$this->session->set_flashdata('message', 'data submenu berhasil dihapus');
 		redirect('menu/submenu');
 	}
 
