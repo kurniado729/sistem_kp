@@ -3,33 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Bka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Bka.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Bkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Bkd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Pegawai.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Pegawai.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Surat_Disposisi.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Surat_Disposisi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Surat_Masuk.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Surat_Masuk.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Surat_Perintah_Tugas.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Surat_Perintah_Tugas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/role-access.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/role-access.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/role.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/role.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/bka/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/bka/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/bka/spt.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/bka/spt.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/bkd/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/bkd/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/bkd/spt.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/bkd/spt.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pegawai/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pegawai/pegawaibka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/pegawaibka.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pegawai/pegawaibkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/pegawaibkd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pegawai/trash.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/trash.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/surat_disposisi/disposisibka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_disposisi/disposisibka.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/surat_disposisi/disposisibkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_disposisi/disposisibkd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_disposisi/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_disposisi/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_masuk/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_masuk/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_masuk/trash.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_masuk/trash.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_perintah_tugas/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_perintah_tugas/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_perintah_tugas/sptbka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_perintah_tugas/sptbka.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/user/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/js/js-sweetalert/myscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/js-sweetalert/myscript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/surat_disposisi/uploaddisposisibka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_disposisi/uploaddisposisibka.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/surat_disposisi/uploaddisposisibkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_disposisi/uploaddisposisibkd.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -231,7 +209,9 @@
       <workItem from="1573759606014" duration="1877000" />
       <workItem from="1573805387540" duration="87000" />
       <workItem from="1573806825946" duration="8925000" />
-      <workItem from="1573829623843" duration="4295000" />
+      <workItem from="1573829623843" duration="4826000" />
+      <workItem from="1573870699704" duration="2022000" />
+      <workItem from="1573920127152" duration="3186000" />
     </task>
     <task id="LOCAL-00001" summary="update view">
       <created>1573067332216</created>
@@ -366,7 +346,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573823649225</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="sweet alert">
+      <created>1573835720592</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1573835720592</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -28,7 +28,7 @@
 								</a>
 							</div>
 							<div class="col-3">
-								<button type="submit" class="btn btn-primary btn-icon-split">
+								<button name="submit" type="submit" class="btn btn-primary btn-icon-split">
 									<span class="icon text-white-50"><i class="fas fa-check"></i></span>
 									<span class="text">Upload</span></button>
 							</div>

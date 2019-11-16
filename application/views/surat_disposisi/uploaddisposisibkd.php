@@ -16,7 +16,7 @@
 							<?php echo form_open_multipart(base_url('surat_disposisi/uploaddisposisibkd/'. $surat_disposisi['id_surat_disposisi'])) ?>
 							<div class="form-group">
 								<div class="custom-file">
-									<input type="file" class="custom-file-input" id="file_surat_disposisi" name="file_surat_disposisi">
+									<input type="file" class="custom-file-input" id="file_surat_disposisi" name="file_surat_disposisi" required>
 									<label class="custom-file-label" for="file_surat_disposisi">Pilih Surat Disposisi</label>
 								</div>
 							</div>
@@ -28,7 +28,7 @@
 								</a>
 							</div>
 							<div class="col-3">
-								<button type="submit" class="btn btn-primary btn-icon-split">
+								<button name="submit" type="submit" class="btn btn-primary btn-icon-split">
 									<span class="icon text-white-50"><i class="fas fa-check"></i></span>
 									<span class="text">Upload</span></button>
 							</div>
