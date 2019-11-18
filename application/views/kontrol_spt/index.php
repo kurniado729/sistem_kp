@@ -13,7 +13,7 @@
 				<div class="col-7">
 					<div class="row mb-3">
 						<div class="col">
-							<form action="<?= base_url('surat_perintah_tugas/searchpersetujuansptbkd') ?>" method="post">
+							<form action="<?= base_url('kontrol_spt/searchkontrolsptbkd') ?>" method="post">
 								<div class="input-group">
 									<div class="input-group-prepend bg-light">
 										<label class="input-group-text bg-light font-weight-light small" for="kategori">Cari
@@ -38,7 +38,7 @@
 
 			<table class="table table-hover">
 				<thead>
-				<tr>
+				<tr">
 					<th scope="col">#</th>
 					<th scope="col">Pengirim</th>
 					<th scope="col">No Surat</th>
@@ -55,7 +55,11 @@
 				<tbody>
 				<?php $i = 1; ?>
 				<?php foreach ($spt as $s) : ?>
-					<tr>
+				<?php if ($s['tgl_akhir_spt'] == date ('Y-m-d') ): ?>
+						<tr class="alert alert-danger">
+				<?php else: ?>
+						<tr>
+				<?php endif; ?>
 						<th scope="row"><?= $i; ?></th>
 						<td><?= $s['pengirim'] ?></td>
 						<td><?= $s['no_surat_masuk'] ?></td>
@@ -66,34 +70,22 @@
 						<td><?= $s['nip_pegawai'] ?></td>
 						<td><?= $s['jabatan'] ?></td>
 						<td>
-							<a href="<?= base_url('surat_perintah_tugas/viewspt/' . $s['id_surat_spt']); ?>" class="btn btn-info btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat SPT">
+							<a href="<?= base_url('kontrol_spt/viewspt/' . $s['id_surat_spt']); ?>" class="btn btn-info btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat SPT">
 								<i class="fas fa-envelope-open"></i></a>
 							<?php if ($s['file_spt_sudah_disetujui'] == NULL): ?>
 								<a href="<?= base_url('surat_perintah_tugas/formuploadsptbkd/' . $s['id_surat_spt']); ?>" class="btn btn-primary btn-circle" data-toggle="tooltip" data-placement="top" title="Upload Persetujuan SPT">
 									<i class="fas fa-arrow-alt-circle-up"></i></a>
 							<?php else: ?>
-								<a href="<?= base_url('surat_perintah_tugas/viewpersetujuanspt/' . $s['id_surat_spt']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat Persetujuan SPT">
+								<a href="<?= base_url('kontrol_spt/viewpersetujuanspt/' . $s['id_surat_spt']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat Persetujuan SPT">
 									<i class="fas fa-envelope"></i></a>
 							<?php endif; ?>
 						</td>
 						<td>
-							<?php if ($s['file_spt_sudah_disetujui'] == NULL): ?>
-								<p>upload SPT <br/>agar aksi ini muncul</p>
+							<?php if ($s['tgl_akhir_spt'] == date ('Y-m-d') ): ?>
+								TELAT
 							<?php else: ?>
-							<?php if ($s['status'] == NULL): ?>
-								<a href="<?= base_url('surat_perintah_tugas/acceptbkd/' . $s['id_surat_spt']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Setuju">
-									<i class="fas fa-check"></i>
-								</a>
-								<a href="<?= base_url('surat_perintah_tugas/rejectbkd/' . $s['id_surat_spt']); ?>" class="btn btn-danger btn-circle" data-toggle="tooltip" data-placement="top" title="Tolak">
-									<i class="fas fa-times"></i>
-								</a>
-							<?php elseif($s['status'] == 0) : ?>
-								<i class="fas fa-times"> ditolak</i>
-							<?php else: ?>
-								<i class="fas fa-check"> disetujui</i>
+								PROSES
 							<?php endif; ?>
-							<?php endif; ?>
-
 						</td>
 					</tr>
 					<?php $i++; ?>
@@ -103,7 +95,7 @@
 
 		</div>
 	</div>
-	<?php if($this->uri->segment(2) == 'searchpersetujuansptbkd'): ?>
+	<?php if($this->uri->segment(2) == 'searchkontrolsptbkd'): ?>
 
 	<?php else: ?>
 		<div class="row mt-3">

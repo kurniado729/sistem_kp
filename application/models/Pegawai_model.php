@@ -144,6 +144,7 @@ class Pegawai_model extends CI_Model
 	public function addpegawaitu(){
 		$this->db->insert('pegawai', [
 			'nama_pegawai' => $this->input->post('nama_pegawai'),
+			'jabatan' => $this->input->post('jabatan'),
 			'bagian' => $this->input->post('bagian')
 		]);
 	}
@@ -151,6 +152,7 @@ class Pegawai_model extends CI_Model
 	public function addpegawaibkd(){
 		$this->db->insert('pegawai', [
 			'nama_pegawai' => $this->input->post('nama_pegawai'),
+			'jabatan' => $this->input->post('jabatan'),
 			'bagian' => $this->input->post('bagian')
 		]);
 	}
@@ -158,6 +160,7 @@ class Pegawai_model extends CI_Model
 	public function addpegawaibka(){
 		$this->db->insert('pegawai', [
 			'nama_pegawai' => $this->input->post('nama_pegawai'),
+			'jabatan' => $this->input->post('jabatan'),
 			'bagian' => $this->input->post('bagian')
 		]);
 	}

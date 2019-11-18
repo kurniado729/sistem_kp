@@ -187,7 +187,6 @@ class Surat_Masuk_model extends CI_Model
 	public function viewmail($id){
 		$data['surat_masuk'] = $this->surat_masuk->getdetailsuratmasuk($id);
 
-
 		$file = $data['surat_masuk']['file_surat_masuk'];
 
 		$filename = "./assets/upload/suratmasuk/".$file;

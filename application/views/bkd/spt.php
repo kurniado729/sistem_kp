@@ -43,6 +43,7 @@
 					<th scope="col">Pengirim</th>
 					<th scope="col">No Surat</th>
 					<th scope="col">Tanggal Surat</th>
+					<th scope="col">Tanggal Akhir SPT</th>
 					<th scope="col">Ringkasan</th>
 					<th scope="col">Nama Pegawai</th>
 					<th scope="col">NIP</th>
@@ -59,6 +60,7 @@
 						<td><?= $s['pengirim'] ?></td>
 						<td><?= $s['no_surat_masuk'] ?></td>
 						<td><?= $s['tgl_surat_masuk'] ?></td>
+						<td><?= $s['tgl_akhir_spt'] ?></td>
 						<td><?= $s['ringkasan'] ?></td>
 						<td><?= $s['nama_pegawai'] ?></td>
 						<td><?= $s['nip_pegawai'] ?></td>

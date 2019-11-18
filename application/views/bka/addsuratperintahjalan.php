@@ -41,6 +41,12 @@
 										<input type="text" class="form-control" id="ringkasan" name="ringkasan" value="<?= $bka['ringkasan']?>" readonly>
 										</div>
 									</div>
+									<div class="form-group row">
+										<label for="tgl_akhir_spt" class="col-sm-4 col-form-label">Tanggal Akhir SPT</label>
+										<div class="col-sm-8">
+											<input type="text" class="form-control" id="tgl_akhir_spt" name="tgl_akhir_spt" value="<?= date('Y-m-d', strtotime("+3 day", strtotime(date("Y-m-d")))); ?>" readonly>
+										</div>
+									</div>
 								</div>
 								<div class="col">
 									<h4>Data Pegawai</>

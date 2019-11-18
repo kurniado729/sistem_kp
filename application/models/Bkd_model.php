@@ -93,6 +93,7 @@ class Bkd_model extends CI_Model
 			'pengirim' => $this->input->post('pengirim'),
 			'no_surat_masuk' => $this->input->post('no_surat_masuk'),
 			'tgl_surat_masuk' => $this->input->post('tgl_surat_masuk'),
+			'tgl_akhir_spt' => $this->input->post('tgl_akhir_spt'),
 			'ringkasan' => $this->input->post('ringkasan'),
 			'nama_pegawai' => $this->input->post('platform'),
 			'nip_pegawai' => $this->input->post('id'),

@@ -6,46 +6,34 @@
 
 	<div class="row">
 		<div class="col-lg-6">
-
-			<?= form_error ('nama_pegawai', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
-
 			<div class="card">
 				<div class="card-header">
-					Add menu
+					Add mail
 				</div>
 				<div class="card-body">
 					<blockquote class="blockquote mb-0">
-						<form method="post" action="<?= base_url('pegawai/addpegawaibka'); ?>">
+<!--						<form method="post" action="--><?//= base_url('surat_masuk/addmail')?><!--" enctype="multipart/form-data">-->
+							<?php echo form_open_multipart(base_url('surat_perintah_tugas/uploadsptbka/'. $spt['id_surat_spt'])) ?>
 							<div class="form-group">
-								<input type="text" class="form-control" id="nama_pegawai" name="nama_pegawai" placeholder="Nama">
-							</div>
-							<div class="form-group">
-								<!--								<label for="exampleFormControlSelect1">Jabatan</label>-->
-								<select class="form-control" id="jabatan" name="jabatan">
-									<option value="jabatan1">jabatan1</option>
-									<option value="jabatan2">jabatan2</option>
-									<option value="jabatan3">jabatan3</option>
-									<option value="jabatan4">jabatan4</option>
-									<option value="jabatan5">jabatan5</option>
-								</select>
-							</div>
-							<div class="form-group">
-								<input type="text" class="form-control" id="bagian" name="bagian" value="BKA" readonly>
-							</div>
-							<div class="row">
-								<div class="col-3">
-									<a href="<?= base_url('pegawai/pegawaibka') ?>" class="btn btn-secondary btn-icon-split">
-										<span class="icon text-white-50"><i class="fas fa-chevron-left"></i></span>
-										<span class="text">Back</span>
-									</a>
-								</div>
-								<div class="col-3">
-									<button type="submit" class="btn btn-primary btn-icon-split">
-										<span class="icon text-white-50"><i class="fas fa-check"></i></span>
-										<span class="text">Add</span></button>
+								<div class="custom-file">
+									<input type="file" class="custom-file-input" id="file_surat_spt" name="file_surat_spt">
+									<label class="custom-file-label" for="file_surat_spt">Pilih Surat SPT</label>
 								</div>
 							</div>
-						</form>
+						<div class="row">
+							<div class="col-3">
+								<a href="<?= base_url('surat_perintah_tugas') ?>" class="btn btn-secondary btn-icon-split">
+									<span class="icon text-white-50"><i class="fas fa-chevron-left"></i></span>
+									<span class="text">Back</span>
+								</a>
+							</div>
+							<div class="col-3">
+								<button type="submit" class="btn btn-primary btn-icon-split">
+									<span class="icon text-white-50"><i class="fas fa-check"></i></span>
+									<span class="text">Upload</span></button>
+							</div>
+						</div>
+						<?php echo form_close() ?>
 					</blockquote>
 				</div>
 			</div>
