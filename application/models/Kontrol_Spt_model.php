@@ -5,7 +5,7 @@ class Kontrol_Spt_model extends CI_Model
 {
 	public function pagkontrolsptbkd($limit, $start)
 	{
-		$this->db->order_by('file_spt_sudah_disetujui', 'ASC');
+		$this->db->order_by('status_telat', 'ASC');
 		$data = $this->db->get_where('surat_spt', ['bagian' => 'BKD', 'status_pengajuan' => '1', 'status' => '1' ], $limit, $start);
 		return $data->result_array();
 	}
@@ -116,17 +116,49 @@ class Kontrol_Spt_model extends CI_Model
 		$this->db->where('id_surat_spt', $id);
 		$this->db->update('surat_spt');
 	}
-	public function viewpersetujuanspt($id){
+	public function viewsptlengkap($id){
 		$data['spt'] = $this->kontrol->getdetailspt($id);
 
-		$file = $data['spt']['file_spt_sudah_disetujui'];
+		$file = $data['spt']['file_spt_lengkap'];
 
-		$filename = "./assets/upload/spt/".$file;
+		$filename = "./assets/upload/sptlengkap/".$file;
 		header("Content-type: application/pdf");
 		header("Content-Length: " . filesize($filename));
 		readfile($filename);
 	}
 
+
+	public function telat($id){
+		$this->db->set('status_telat', '1');
+		$this->db->where('id_surat_spt', $id);
+		$this->db->update('surat_spt');
+	}
+
+	public function uploadsptlengkap($id){
+		$config ['upload_path'] = './assets/upload/sptlengkap';
+		$config ['allowed_types'] = 'pdf';
+		$config ['max_size'] = 0;
+
+		$this->load->library('upload', $config);
+
+		if (!$this->upload->do_upload('file_spt_lengkap')) {
+			echo $this->upload->display_errors();
+		} else {
+			$file = $this->upload->data('file_name');
+		}
+
+		$this->db->set('file_spt_lengkap', $file);
+		$this->db->where('id_surat_spt', $id);
+		$this->db->update('surat_spt');
+	}
+
+	public function acceptsptbkdlengkap($id){
+			$this->kontrol->getdetailspt($id);
+
+			$this->db->set('status_telat', '0');
+			$this->db->where('id_surat_spt', $id);
+			$this->db->update('surat_spt');
+	}
 
 
 }

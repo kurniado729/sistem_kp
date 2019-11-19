@@ -60,6 +60,14 @@ class Kontrol_Spt extends CI_Controller
 		$data['spt'] = $this->kontrol->pagkontrolsptbkd($config['per_page'], $data['page'] );
 		$data['pagination'] = $this->pagination->create_links();
 
+		foreach ($data['spt'] as $s) {
+			if ($s['status_telat'] == NULL) {
+				if ($s['tgl_akhir_spt'] == date('Y-m-d')) {
+					$this->kontrol->telat($s['id_surat_spt']);
+				}
+			}
+		}
+
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/sidebar', $data);
 		$this->load->view('templates/topbar', $data);
@@ -116,6 +124,14 @@ class Kontrol_Spt extends CI_Controller
 		$data['spt'] = $this->kontrol->pagkontrolsptbka($config['per_page'], $data['page'] );
 		$data['pagination'] = $this->pagination->create_links();
 
+		foreach ($data['spt'] as $s) {
+			if ($s['status_telat'] == NULL) {
+				if ($s['tgl_akhir_spt'] == date('Y-m-d')) {
+					$this->kontrol->telat($s['id_surat_spt']);
+				}
+			}
+		}
+
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/sidebar', $data);
 		$this->load->view('templates/topbar', $data);
@@ -131,6 +147,67 @@ class Kontrol_Spt extends CI_Controller
 	public function viewpersetujuanspt($id)
 	{
 		$this->kontrol->viewpersetujuanspt($id);
+	}
+
+	public function uploadsptbkdlengkap($id)
+	{
+		$data['title'] = 'SPT BKD';
+		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['spt'] = $this->kontrol->getdetailspt($id);
+
+		$submit = $this->input->post('submit');
+
+		if (!isset($submit)){
+			$this->load->view('templates/header', $data);
+			$this->load->view('templates/sidebar', $data);
+			$this->load->view('templates/topbar', $data);
+			$this->load->view('kontrol_spt/uploadsptlengkapbkd', $data);
+			$this->load->view('templates/footer');
+		} else {
+			$this->kontrol->uploadsptlengkap($id);
+			$this->session->set_flashdata('message', 'spt lengkap berhasil di upload');
+			redirect('kontrol_spt');
+		}
+	}
+
+	public function uploadsptbkalengkap($id)
+	{
+		$data['title'] = 'SPT BKA';
+		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['spt'] = $this->kontrol->getdetailspt($id);
+
+		$submit = $this->input->post('submit');
+
+		if (!isset($submit)){
+			$this->load->view('templates/header', $data);
+			$this->load->view('templates/sidebar', $data);
+			$this->load->view('templates/topbar', $data);
+			$this->load->view('kontrol_spt/uploadsptlengkapbka', $data);
+			$this->load->view('templates/footer');
+		} else {
+			$this->kontrol->uploadsptlengkap($id);
+			$this->session->set_flashdata('message', 'spt lengkap berhasil di upload');
+			redirect('kontrol_spt/kontrolsptbka');
+		}
+	}
+
+	public function viewsptlengkap($id)
+	{
+		$this->kontrol->viewsptlengkap($id);
+	}
+
+	public function acceptsptbkdlengkap($id)
+	{
+		$this->kontrol->acceptsptbkdlengkap($id);
+		$this->session->set_flashdata('message', 'spt tidak telat');
+		redirect('kontrol_spt');
+	}
+
+	public function acceptsptbkalengkap($id)
+	{
+		$this->kontrol->acceptsptbkdlengkap($id);
+		$this->session->set_flashdata('message', 'spt tidak telat');
+		redirect('kontrol_spt/kontrolsptbka');
 	}
 
 	public function searchkontrolsptbkd()
@@ -188,5 +265,4 @@ class Kontrol_Spt extends CI_Controller
 			}
 		}
 	}
-
 }

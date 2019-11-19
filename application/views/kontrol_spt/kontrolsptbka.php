@@ -55,7 +55,7 @@
 				<tbody>
 				<?php $i = 1; ?>
 				<?php foreach ($spt as $s) : ?>
-					<?php if ($s['tgl_akhir_spt'] == date ('Y-m-d') ): ?>
+					<?php if ($s['status_telat'] == '1' ): ?>
 						<tr class="alert alert-danger">
 					<?php else: ?>
 						<tr>
@@ -70,37 +70,25 @@
 						<td><?= $s['nip_pegawai'] ?></td>
 						<td><?= $s['jabatan'] ?></td>
 						<td>
-							<a href="<?= base_url('surat_perintah_tugas/viewspt/' . $s['id_surat_spt']); ?>" class="btn btn-info btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat SPT">
+							<a href="<?= base_url('kontrol_spt/viewspt/' . $s['id_surat_spt']); ?>" class="btn btn-info btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat SPT">
 								<i class="fas fa-envelope-open"></i></a>
-							<?php if ($s['file_spt_sudah_disetujui'] == NULL): ?>
-								<a href="<?= base_url('surat_perintah_tugas/formuploadsptbka/' . $s['id_surat_spt']); ?>" class="btn btn-primary btn-circle" data-toggle="tooltip" data-placement="top" title="Upload Persetujuan SPT">
+							<?php if ($s['file_spt_lengkap'] == NULL): ?>
+								<a href="<?= base_url('kontrol_spt/uploadsptbkalengkap/' . $s['id_surat_spt']); ?>" class="btn btn-primary btn-circle" data-toggle="tooltip" data-placement="top" title="Upload SPT Lengkap">
 									<i class="fas fa-arrow-alt-circle-up"></i></a>
 							<?php else: ?>
-								<a href="<?= base_url('surat_perintah_tugas/viewpersetujuanspt/' . $s['id_surat_spt']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat Persetujuan SPT">
+								<a href="<?= base_url('kontrol_spt/viewsptlengkap/' . $s['id_surat_spt']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat SPT Lengkap">
 									<i class="fas fa-envelope"></i></a>
 							<?php endif; ?>
 						</td>
 						<td>
-<!--							--><?php //if ($s['file_spt_sudah_disetujui'] == NULL): ?>
-<!--								<p>upload SPT <br/>agar aksi ini muncul</p>-->
-<!--							--><?php //else: ?>
-<!--							--><?php //if ($s['status'] == NULL): ?>
-<!--								<a href="--><?//= base_url('surat_perintah_tugas/acceptbka/' . $s['id_surat_spt']); ?><!--" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Setuju">-->
-<!--									<i class="fas fa-check"></i>-->
-<!--								</a>-->
-<!--								<a href="--><?//= base_url('surat_perintah_tugas/rejectbka/' . $s['id_surat_spt']); ?><!--" class="btn btn-danger btn-circle" data-toggle="tooltip" data-placement="top" title="Tolak">-->
-<!--									<i class="fas fa-times"></i>-->
-<!--								</a>-->
-<!--							--><?php //elseif($s['status'] == 0) : ?>
-<!--								<i class="fas fa-times"> ditolak</i>-->
-<!--							--><?php //else: ?>
-<!--								<i class="fas fa-check"> disetujui</i>-->
-<!--							--><?php //endif; ?>
-<!--							--><?php //endif; ?>
-							<?php if ($s['tgl_akhir_spt'] == date ('Y-m-d') ): ?>
-								TELAT
+							<?php if ($s['status_telat'] == NULL): ?>
+								<a href="<?= base_url('kontrol_spt/acceptsptbkalengkap/' . $s['id_surat_spt']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Tidak Telat">
+									<i class="fas fa-check"></i>
+								</a>
+							<?php elseif($s['status_telat'] == 1) : ?>
+								<i class="fas fa-times"> telat</i>
 							<?php else: ?>
-								proses
+								<i class="fas fa-check"> tidak telat</i>
 							<?php endif; ?>
 						</td>
 					</tr>

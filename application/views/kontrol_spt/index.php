@@ -55,7 +55,8 @@
 				<tbody>
 				<?php $i = 1; ?>
 				<?php foreach ($spt as $s) : ?>
-				<?php if ($s['tgl_akhir_spt'] == date ('Y-m-d') ): ?>
+
+				<?php if ($s['status_telat'] == '1' ): ?>
 						<tr class="alert alert-danger">
 				<?php else: ?>
 						<tr>
@@ -72,19 +73,23 @@
 						<td>
 							<a href="<?= base_url('kontrol_spt/viewspt/' . $s['id_surat_spt']); ?>" class="btn btn-info btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat SPT">
 								<i class="fas fa-envelope-open"></i></a>
-							<?php if ($s['file_spt_sudah_disetujui'] == NULL): ?>
-								<a href="<?= base_url('surat_perintah_tugas/formuploadsptbkd/' . $s['id_surat_spt']); ?>" class="btn btn-primary btn-circle" data-toggle="tooltip" data-placement="top" title="Upload Persetujuan SPT">
+							<?php if ($s['file_spt_lengkap'] == NULL): ?>
+								<a href="<?= base_url('kontrol_spt/uploadsptbkdlengkap/' . $s['id_surat_spt']); ?>" class="btn btn-primary btn-circle" data-toggle="tooltip" data-placement="top" title="Upload SPT Lengkap">
 									<i class="fas fa-arrow-alt-circle-up"></i></a>
 							<?php else: ?>
-								<a href="<?= base_url('kontrol_spt/viewpersetujuanspt/' . $s['id_surat_spt']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat Persetujuan SPT">
+								<a href="<?= base_url('kontrol_spt/viewsptlengkap/' . $s['id_surat_spt']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat SPT Lengkap">
 									<i class="fas fa-envelope"></i></a>
 							<?php endif; ?>
 						</td>
 						<td>
-							<?php if ($s['tgl_akhir_spt'] == date ('Y-m-d') ): ?>
-								TELAT
+							<?php if ($s['status_telat'] == NULL): ?>
+							<a href="<?= base_url('kontrol_spt/acceptsptbkdlengkap/' . $s['id_surat_spt']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Tidak Telat">
+								<i class="fas fa-check"></i>
+							</a>
+							<?php elseif($s['status_telat'] == 1) : ?>
+								<i class="fas fa-times"> telat</i>
 							<?php else: ?>
-								PROSES
+								<i class="fas fa-check"> tidak telat</i>
 							<?php endif; ?>
 						</td>
 					</tr>
@@ -105,6 +110,7 @@
 			</div>
 		</div>
 	<?php endif; ?>
+
 </div>
 <!-- /.container-fluid -->
 </div>
