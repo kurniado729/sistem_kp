@@ -126,12 +126,11 @@
         });
     });
 </script>
-<script>
 
+<script>
     $(function () {
         $('[data-toggle="tooltip"]').tooltip();
     });
-
 </script>
 
 
@@ -187,6 +186,24 @@
         $('[data-toggle="tooltip"]').tooltip();
     });
 
+</script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+<script>
+    $(document).ready(function(){
+        var date_input=$('input[name="tgl_surat_masuk"]'); //our date input has the name "date"
+        var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+        date_input.datepicker({
+            format: 'dd-mm-yyyy',
+            container: container,
+            todayHighlight: true,
+            autoclose: true,
+        })
+    })
 </script>
 </body>
 

@@ -27,6 +27,19 @@ class Bkd_model extends CI_Model
 		return $this->db->query($query)->result_array();
 	}
 
+	//sini
+	public function getbelumspt(){
+		$query = "SELECT * FROM surat_disposisi WHERE tujuan = 'BKD' AND status_spt = '0' AND status = '1'";
+		return $this->db->query($query)->result_array();
+	}
+
+	public function hitungbelumspt(){
+		$query = "SELECT * FROM surat_disposisi WHERE tujuan = 'BKD' AND status_spt = '0'  AND status = '1'";
+		return count($this->db->query($query)->result_array());
+	}
+	//sini
+
+
 	public function getdetailsuratdisposisi($id){
 		$query = "SELECT * FROM surat_disposisi WHERE id_surat_disposisi = $id ";
 		return $this->db->query($query)->row_array();

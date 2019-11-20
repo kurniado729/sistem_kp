@@ -17,6 +17,15 @@ class Spt_model extends CI_Model
 		return $data->result_array();
 	}
 
+	public function getsptbelumdisetujui(){
+		$query = "SELECT * FROM surat_spt WHERE  file_spt_sudah_disetujui IS NULL";
+		return $this->db->query($query)->result_array();
+	}
+
+	public function hitungsptbelumdisetujui(){
+		$query = "SELECT * FROM surat_spt WHERE file_spt_sudah_disetujui IS NULL";
+		return count($this->db->query($query)->result_array());
+	}
 
 //	public function suratsptbkd(){
 //		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKD' AND status_pengajuan = '0' ORDER BY file_spt_sudah_disetujui";

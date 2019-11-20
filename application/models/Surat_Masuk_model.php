@@ -22,6 +22,19 @@ class Surat_Masuk_model extends CI_Model
 		return $this->db->query($query)->result_array();
 	}
 
+	//untuk pesan topbar
+	public function getsuratmasukbelumdisposisi(){
+		$query = "SELECT * FROM surat_masuk WHERE hapus = '0' AND disposisi = '0' ";
+		return $this->db->query($query)->result_array();
+	}
+
+	public function hitungsuratmasukbelumdisposisi(){
+		$query = "SELECT * FROM surat_masuk WHERE hapus = '0' AND disposisi = '0'";
+		return count($this->db->query($query)->result_array());
+	}
+
+	//smpe sini
+
 	public function gettrash(){
 		$query = "SELECT * FROM surat_masuk WHERE hapus = '1' ORDER BY id_surat_masuk DESC";
 		return $this->db->query($query)->result_array();
@@ -95,6 +108,9 @@ class Surat_Masuk_model extends CI_Model
 		} else {
 			$file = $this->upload->data('file_name');
 		}
+
+//		var_dump( $this->input->post('tgl_surat_masuk'));
+//		die;
 
 		$this->db->insert('surat_masuk', [
 			'file_surat_masuk' => $file,

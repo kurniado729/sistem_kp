@@ -58,6 +58,8 @@ class Bka extends CI_Controller
 		$data['title'] = 'Surat BKA';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['bka'] = $this->bka->pagsuratbka($config['per_page'], $data['page'] );
+		$data['surat_disposisi_belum_spt'] = $this->bka->getbelumspt();
+		$data['hitung_surat_disposisi_belum_spt'] = $this->bka->hitungbelumspt();
 		$data['pagination'] = $this->pagination->create_links();
 
 		$this->load->view('templates/header', $data);
@@ -114,6 +116,8 @@ class Bka extends CI_Controller
 		$data['title'] = 'Surat Perintah Tugas';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['spt'] = $this->bka->pagspt($config['per_page'], $data['page'] );
+		$data['surat_disposisi_belum_spt'] = $this->bka->getbelumspt();
+		$data['hitung_surat_disposisi_belum_spt'] = $this->bka->hitungbelumspt();
 		$data['pagination'] = $this->pagination->create_links();
 
 		$this->load->view('templates/header', $data);
@@ -235,6 +239,8 @@ class Bka extends CI_Controller
 			$data['title'] = 'Surat BKD';
 			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 			$data['bka']= $this->bka->searchbka($kategori, $keyword);
+			$data['surat_disposisi_belum_spt'] = $this->bka->getbelumspt();
+			$data['hitung_surat_disposisi_belum_spt'] = $this->bka->hitungbelumspt();
 
 			if($data){
 				$this->load->view('templates/header', $data);
@@ -263,6 +269,8 @@ class Bka extends CI_Controller
 			$data['title'] = 'Surat Perintah Tugas';
 			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 			$data['spt']= $this->bka->searchspt($kategori, $keyword);
+			$data['surat_disposisi_belum_spt'] = $this->bka->getbelumspt();
+			$data['hitung_surat_disposisi_belum_spt'] = $this->bka->hitungbelumspt();
 
 			if($data){
 				$this->load->view('templates/header', $data);

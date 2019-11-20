@@ -58,11 +58,13 @@ class Kontrol_Spt extends CI_Controller
 		$data['title'] = 'SPT BKD';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['spt'] = $this->kontrol->pagkontrolsptbkd($config['per_page'], $data['page'] );
+		$data['spt_lengkap_belum_diupload'] = $this->kontrol->getsptlengkapbelumdiupload();
+		$data['hitung_spt_lengkap_belum_diupload'] = $this->kontrol->hitungsptlengkapbelumdiupload();
 		$data['pagination'] = $this->pagination->create_links();
 
 		foreach ($data['spt'] as $s) {
 			if ($s['status_telat'] == NULL) {
-				if ($s['tgl_akhir_spt'] == date('Y-m-d')) {
+				if ($s['tgl_akhir_spt'] == date('d-m-Y')) {
 					$this->kontrol->telat($s['id_surat_spt']);
 				}
 			}
@@ -122,11 +124,13 @@ class Kontrol_Spt extends CI_Controller
 		$data['title'] = 'SPT BKA';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['spt'] = $this->kontrol->pagkontrolsptbka($config['per_page'], $data['page'] );
+		$data['spt_lengkap_belum_diupload'] = $this->kontrol->getsptlengkapbelumdiupload();
+		$data['hitung_spt_lengkap_belum_diupload'] = $this->kontrol->hitungsptlengkapbelumdiupload();
 		$data['pagination'] = $this->pagination->create_links();
 
 		foreach ($data['spt'] as $s) {
 			if ($s['status_telat'] == NULL) {
-				if ($s['tgl_akhir_spt'] == date('Y-m-d')) {
+				if ($s['tgl_akhir_spt'] == date('d-m-Y')) {
 					$this->kontrol->telat($s['id_surat_spt']);
 				}
 			}
@@ -154,6 +158,8 @@ class Kontrol_Spt extends CI_Controller
 		$data['title'] = 'SPT BKD';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['spt'] = $this->kontrol->getdetailspt($id);
+		$data['spt_lengkap_belum_diupload'] = $this->kontrol->getsptlengkapbelumdiupload();
+		$data['hitung_spt_lengkap_belum_diupload'] = $this->kontrol->hitungsptlengkapbelumdiupload();
 
 		$submit = $this->input->post('submit');
 
@@ -175,6 +181,8 @@ class Kontrol_Spt extends CI_Controller
 		$data['title'] = 'SPT BKA';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['spt'] = $this->kontrol->getdetailspt($id);
+		$data['spt_lengkap_belum_diupload'] = $this->kontrol->getsptlengkapbelumdiupload();
+		$data['hitung_spt_lengkap_belum_diupload'] = $this->kontrol->hitungsptlengkapbelumdiupload();
 
 		$submit = $this->input->post('submit');
 
@@ -224,6 +232,8 @@ class Kontrol_Spt extends CI_Controller
 			$data['title'] = 'SPT BKD';
 			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 			$data['spt']= $this->kontrol->searchkontrolsptbkd($kategori, $keyword);
+			$data['spt_lengkap_belum_diupload'] = $this->kontrol->getsptlengkapbelumdiupload();
+			$data['hitung_spt_lengkap_belum_diupload'] = $this->kontrol->hitungsptlengkapbelumdiupload();
 
 			if($data){
 				$this->load->view('templates/header', $data);
@@ -252,6 +262,8 @@ class Kontrol_Spt extends CI_Controller
 			$data['title'] = 'SPT BKA';
 			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 			$data['spt']= $this->kontrol->searchkontrolsptbka($kategori, $keyword);
+			$data['spt_lengkap_belum_diupload'] = $this->kontrol->getsptlengkapbelumdiupload();
+			$data['hitung_spt_lengkap_belum_diupload'] = $this->kontrol->hitungsptlengkapbelumdiupload();
 
 			if($data){
 				$this->load->view('templates/header', $data);

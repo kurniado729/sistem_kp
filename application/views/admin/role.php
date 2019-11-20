@@ -25,9 +25,16 @@
 						<th scope="row"><?= $i; ?></th>
 						<td><?= $r['role'] ?></td>
 						<td>
-							<a href="<?= base_url('admin/roleaccess/') . $r['id'] ?>" class="badge badge-warning">access</a>
-							<a href="<?= base_url('admin/editrole/') . $r['id'] ?>" class="badge badge-success">edit</a>
-							<a href="<?= base_url('admin/deleterole/') . $r['id'] ?>" class="badge badge-danger tombol-hapus">delete</a>
+							<a href="<?= base_url('admin/roleaccess/') . $r['id'] ?>" class="btn btn-warning btn-circle" data-toggle="tooltip" data-placement="top" title="akses">
+								<i class="fas fa-universal-access"></i>
+							</a>
+							<a href="<?= base_url('admin/editrole/') . $r['id'] ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Edit">
+								<i class="fas fa-edit"></i>
+							</a>
+							<a href="<?= base_url('admin/deleterole/') . $r['id'] ?>" class="btn btn-danger btn-circle tombol-hapus" data-toggle="tooltip" data-placement="top" title="Hapus">
+								<i class="fas fa-trash-alt"></i>
+							</a>
+
 						</td>
 					</tr>
 						<?php $i++; ?>

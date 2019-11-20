@@ -58,6 +58,12 @@ class Surat_Masuk extends CI_Controller
 		$data['title'] = 'Surat Masuk';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['surat_masuk'] = $this->surat_masuk->pagsuratmasuk($config['per_page'], $data['page'] );
+
+		//untuk pesan topbar
+		$data['surat_masuk_belum_disposisi'] = $this->surat_masuk->getsuratmasukbelumdisposisi();
+		$data['hitung_surat_masuk_belum_disposisi'] = $this->surat_masuk->hitungsuratmasukbelumdisposisi();
+		//sampe sini
+
 		$data['pagination'] = $this->pagination->create_links();
 
 		$this->load->view('templates/header', $data);
@@ -114,6 +120,8 @@ class Surat_Masuk extends CI_Controller
 		$data['title'] = 'Trash';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['trash'] = $this->surat_masuk->pagtrash($config['per_page'], $data['page'] );
+		$data['surat_masuk_belum_disposisi'] = $this->surat_masuk->getsuratmasukbelumdisposisi();
+		$data['hitung_surat_masuk_belum_disposisi'] = $this->surat_masuk->hitungsuratmasukbelumdisposisi();
 		$data['pagination'] = $this->pagination->create_links();
 
 		$this->load->view('templates/header', $data);
@@ -128,6 +136,8 @@ class Surat_Masuk extends CI_Controller
 
 		$data['title'] = 'Surat Masuk';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['surat_masuk_belum_disposisi'] = $this->surat_masuk->getsuratmasukbelumdisposisi();
+		$data['hitung_surat_masuk_belum_disposisi'] = $this->surat_masuk->hitungsuratmasukbelumdisposisi();
 //		$data['menu'] = $this->db->get('user_menu')->result_array();
 
 		$this->form_validation->set_rules('pengirim', 'Pengirim', 'required');
@@ -359,6 +369,8 @@ class Surat_Masuk extends CI_Controller
 			$data['title'] = 'Surat Masuk';
 			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 			$data['surat_masuk']= $this->surat_masuk->searchsuratmasuk($kategori, $keyword);
+			$data['surat_masuk_belum_disposisi'] = $this->surat_masuk->getsuratmasukbelumdisposisi();
+			$data['hitung_surat_masuk_belum_disposisi'] = $this->surat_masuk->hitungsuratmasukbelumdisposisi();
 
 			if($data){
 				$this->load->view('templates/header', $data);
@@ -387,6 +399,8 @@ class Surat_Masuk extends CI_Controller
 			$data['title'] = 'Trash';
 			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 			$data['trash']= $this->surat_masuk->searchtrash($kategori, $keyword);
+			$data['surat_masuk_belum_disposisi'] = $this->surat_masuk->getsuratmasukbelumdisposisi();
+			$data['hitung_surat_masuk_belum_disposisi'] = $this->surat_masuk->hitungsuratmasukbelumdisposisi();
 
 			if($data){
 				$this->load->view('templates/header', $data);

@@ -58,6 +58,8 @@ class Surat_Disposisi extends CI_Controller
 		$data['title'] = 'Persetujuan Disposisi';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['surat_disposisi'] = $this->surat_disposisi->pagpersetujuandisposisi($config['per_page'], $data['page'] );
+		$data['surat_disposisi_belum_ditujukan'] = $this->surat_disposisi->getsuratdisposisibelumditujukan();
+		$data['hitung_surat_disposisi_belum_ditujukan'] = $this->surat_disposisi->hitungsuratdisposisibelumditujukan();
 		$data['pagination'] = $this->pagination->create_links();
 
 		$this->load->view('templates/header', $data);
@@ -114,6 +116,8 @@ class Surat_Disposisi extends CI_Controller
 		$data['title'] = 'Disposisi BKD';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['surat_disposisi'] = $this->surat_disposisi->pagdisposisibkd($config['per_page'], $data['page'] );
+		$data['surat_disposisi_belum_ditujukan'] = $this->surat_disposisi->getsuratdisposisibelumditujukan();
+		$data['hitung_surat_disposisi_belum_ditujukan'] = $this->surat_disposisi->hitungsuratdisposisibelumditujukan();
 		$data['pagination'] = $this->pagination->create_links();
 
 		$this->load->view('templates/header', $data);
@@ -170,6 +174,8 @@ class Surat_Disposisi extends CI_Controller
 		$data['title'] = 'Disposisi BKA';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['surat_disposisi'] = $this->surat_disposisi->pagdisposisibka($config['per_page'], $data['page'] );
+		$data['surat_disposisi_belum_ditujukan'] = $this->surat_disposisi->getsuratdisposisibelumditujukan();
+		$data['hitung_surat_disposisi_belum_ditujukan'] = $this->surat_disposisi->hitungsuratdisposisibelumditujukan();
 		$data['pagination'] = $this->pagination->create_links();
 
 		$this->load->view('templates/header', $data);
@@ -254,6 +260,8 @@ class Surat_Disposisi extends CI_Controller
 		$data['title'] = 'Disposisi BKD';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['surat_disposisi'] = $this->surat_disposisi->getdetailsuratdisposisi($id);
+		$data['surat_disposisi_belum_ditujukan'] = $this->surat_disposisi->getsuratdisposisibelumditujukan();
+		$data['hitung_surat_disposisi_belum_ditujukan'] = $this->surat_disposisi->hitungsuratdisposisibelumditujukan();
 
 		$submit = $this->input->post('submit');
 
@@ -339,6 +347,8 @@ class Surat_Disposisi extends CI_Controller
 		$data['title'] = 'Disposisi BKA';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['surat_disposisi'] = $this->surat_disposisi->getdetailsuratdisposisi($id);
+		$data['surat_disposisi_belum_ditujukan'] = $this->surat_disposisi->getsuratdisposisibelumditujukan();
+		$data['hitung_surat_disposisi_belum_ditujukan'] = $this->surat_disposisi->hitungsuratdisposisibelumditujukan();
 
 		$submit = $this->input->post('submit');
 
@@ -417,6 +427,8 @@ class Surat_Disposisi extends CI_Controller
 			$data['title'] = 'Persetujuan Disposisi';
 			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 			$data['surat_disposisi']= $this->surat_disposisi->searchdisposisi($kategori, $keyword);
+			$data['surat_disposisi_belum_ditujukan'] = $this->surat_disposisi->getsuratdisposisibelumditujukan();
+			$data['hitung_surat_disposisi_belum_ditujukan'] = $this->surat_disposisi->hitungsuratdisposisibelumditujukan();
 
 			if($data){
 				$this->load->view('templates/header', $data);
@@ -445,6 +457,8 @@ class Surat_Disposisi extends CI_Controller
 			$data['title'] = 'Disposisi BKD';
 			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 			$data['surat_disposisi']= $this->surat_disposisi->searchdisposisibkd($kategori, $keyword);
+			$data['surat_disposisi_belum_ditujukan'] = $this->surat_disposisi->getsuratdisposisibelumditujukan();
+			$data['hitung_surat_disposisi_belum_ditujukan'] = $this->surat_disposisi->hitungsuratdisposisibelumditujukan();
 
 			if($data){
 				$this->load->view('templates/header', $data);
@@ -473,6 +487,8 @@ class Surat_Disposisi extends CI_Controller
 			$data['title'] = 'Disposisi BKA';
 			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 			$data['surat_disposisi']= $this->surat_disposisi->searchdisposisibka($kategori, $keyword);
+			$data['surat_disposisi_belum_ditujukan'] = $this->surat_disposisi->getsuratdisposisibelumditujukan();
+			$data['hitung_surat_disposisi_belum_ditujukan'] = $this->surat_disposisi->hitungsuratdisposisibelumditujukan();
 
 			if($data){
 				$this->load->view('templates/header', $data);

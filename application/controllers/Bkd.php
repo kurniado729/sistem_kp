@@ -58,6 +58,10 @@ class Bkd extends CI_Controller
 		$data['title'] = 'Surat BKD';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['bkd'] = $this->bkd->pagsuratbkd($config['per_page'], $data['page'] );
+		//sini
+		$data['surat_disposisi_belum_spt'] = $this->bkd->getbelumspt();
+		$data['hitung_surat_disposisi_belum_spt'] = $this->bkd->hitungbelumspt();
+		//sini
 		$data['pagination'] = $this->pagination->create_links();
 
 		$this->load->view('templates/header', $data);
@@ -114,6 +118,8 @@ class Bkd extends CI_Controller
 		$data['title'] = 'Surat Perintah Tugas';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['spt'] = $this->bkd->pagspt($config['per_page'], $data['page'] );
+		$data['surat_disposisi_belum_spt'] = $this->bkd->getbelumspt();
+		$data['hitung_surat_disposisi_belum_spt'] = $this->bkd->hitungbelumspt();
 		$data['pagination'] = $this->pagination->create_links();
 
 		$this->load->view('templates/header', $data);
@@ -149,6 +155,9 @@ class Bkd extends CI_Controller
 		$data['title'] = 'Surat BKD';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['bkd'] = $this->bkd->getdetailsuratdisposisi($id);
+		$data['surat_disposisi_belum_spt'] = $this->bkd->getbelumspt();
+		$data['hitung_surat_disposisi_belum_spt'] = $this->bkd->hitungbelumspt();
+
 
 		$this->form_validation->set_rules('platform', 'Pegawai', 'required');
 
@@ -231,6 +240,8 @@ class Bkd extends CI_Controller
 			$data['title'] = 'Surat BKD';
 			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 			$data['bkd']= $this->bkd->searchbkd($kategori, $keyword);
+			$data['surat_disposisi_belum_spt'] = $this->bkd->getbelumspt();
+			$data['hitung_surat_disposisi_belum_spt'] = $this->bkd->hitungbelumspt();
 
 			if($data){
 				$this->load->view('templates/header', $data);
@@ -259,6 +270,8 @@ class Bkd extends CI_Controller
 			$data['title'] = 'Surat Perintah Tugas';
 			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 			$data['spt']= $this->bkd->searchspt($kategori, $keyword);
+			$data['surat_disposisi_belum_spt'] = $this->bkd->getbelumspt();
+			$data['hitung_surat_disposisi_belum_spt'] = $this->bkd->hitungbelumspt();
 
 			if($data){
 				$this->load->view('templates/header', $data);

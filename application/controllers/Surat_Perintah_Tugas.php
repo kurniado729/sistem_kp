@@ -58,6 +58,8 @@ class Surat_Perintah_Tugas extends CI_Controller
 		$data['title'] = 'Persetujuan SPT BKD';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['spt'] = $this->spt->pagpersetujuansptbkd($config['per_page'], $data['page'] );
+		$data['spt_belum_disetujui'] = $this->spt->getsptbelumdisetujui();
+		$data['hitung_spt_belum_disetujui'] = $this->spt->hitungsptbelumdisetujui();
 		$data['pagination'] = $this->pagination->create_links();
 
 		$this->load->view('templates/header', $data);
@@ -114,6 +116,8 @@ class Surat_Perintah_Tugas extends CI_Controller
 		$data['title'] = 'Persetujuan SPT BKA';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['spt'] = $this->spt->pagpersetujuansptbka($config['per_page'], $data['page'] );
+		$data['spt_belum_disetujui'] = $this->spt->getsptbelumdisetujui();
+		$data['hitung_spt_belum_disetujui'] = $this->spt->hitungsptbelumdisetujui();
 		$data['pagination'] = $this->pagination->create_links();
 
 		$this->load->view('templates/header', $data);
@@ -160,6 +164,8 @@ class Surat_Perintah_Tugas extends CI_Controller
 		$data['title'] = 'Persetujuan SPT BKD';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['spt'] = $this->spt->getdetailspt($id);
+		$data['spt_belum_disetujui'] = $this->spt->getsptbelumdisetujui();
+		$data['hitung_spt_belum_disetujui'] = $this->spt->hitungsptbelumdisetujui();
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/sidebar', $data);
@@ -184,6 +190,8 @@ class Surat_Perintah_Tugas extends CI_Controller
 		$data['title'] = 'Persetujuan SPT BKA';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['spt'] = $this->spt->getdetailspt($id);
+		$data['spt_belum_disetujui'] = $this->spt->getsptbelumdisetujui();
+		$data['hitung_spt_belum_disetujui'] = $this->spt->hitungsptbelumdisetujui();
 
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/sidebar', $data);
@@ -222,6 +230,8 @@ class Surat_Perintah_Tugas extends CI_Controller
 			$data['title'] = 'Persetujuan SPT BKD';
 			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 			$data['spt']= $this->spt->searchpersetujuansptbkd($kategori, $keyword);
+			$data['spt_belum_disetujui'] = $this->spt->getsptbelumdisetujui();
+			$data['hitung_spt_belum_disetujui'] = $this->spt->hitungsptbelumdisetujui();
 
 			if($data){
 				$this->load->view('templates/header', $data);
@@ -250,6 +260,8 @@ class Surat_Perintah_Tugas extends CI_Controller
 			$data['title'] = 'Persetujuan SPT BKA';
 			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 			$data['spt']= $this->spt->searchpersetujuansptbka($kategori, $keyword);
+			$data['spt_belum_disetujui'] = $this->spt->getsptbelumdisetujui();
+			$data['hitung_spt_belum_disetujui'] = $this->spt->hitungsptbelumdisetujui();
 
 			if($data){
 				$this->load->view('templates/header', $data);

@@ -35,6 +35,16 @@ class Surat_Disposisi_model extends CI_Model
 		return $this->db->query($query)->result_array();
 	}
 
+	public function getsuratdisposisibelumditujukan(){
+		$query = "SELECT * FROM surat_disposisi WHERE tujuan IS NULL ";
+		return $this->db->query($query)->result_array();
+	}
+
+	public function hitungsuratdisposisibelumditujukan(){
+		$query = "SELECT * FROM surat_disposisi WHERE tujuan IS NULL ";
+		return count($this->db->query($query)->result_array());
+	}
+
 	public function getsuratdisposisibkd(){
 		$query = "SELECT * FROM surat_disposisi WHERE tujuan = 'BKD' ORDER BY file_disposisi_sudah_disetujui";
 		return $this->db->query($query)->result_array();
