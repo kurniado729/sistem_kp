@@ -41,6 +41,7 @@
 					<tr>
 						<th scope="col">#</th>
 						<th scope="col">Nama</th>
+						<th scope="col">NIP</th>
 						<th scope="col">Bagian</th>
 						<th scope="col">Jabatan</th>
 						<th scope="col">Action</th>
@@ -52,6 +53,7 @@
 					<tr>
 						<th scope="row"><?= $i; ?></th>
 						<td><?= $t['nama_pegawai'] ?></td>
+						<td><?= $t['nip'] ?></td>
 						<td><?= $t['bagian'] ?></td>
 						<td><?= $t['jabatan'] ?></td>
 						<td>

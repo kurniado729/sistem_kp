@@ -64,7 +64,7 @@
 
 									</div>
 									<div class="form-group" id="show-id">
-										<input type="text" class="form-control" id="id" name="id" placeholder="NIP" readonly>
+										<input type="text" class="form-control" id="nip" name="nip" placeholder="NIP" readonly>
 									</div>
 									<div class="form-group" id="show-jabatan">
 										<input type="text" class="form-control" id="jabatan" name="jabatan" placeholder="Jabatan" readonly>

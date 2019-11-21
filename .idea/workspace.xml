@@ -3,16 +3,26 @@
   <component name="ChangeListManager">
     <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Bka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Bka.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Bkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Bkd.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Kontrol_Spt.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Kontrol_Spt.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Surat_Disposisi.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Surat_Disposisi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Surat_Perintah_Tugas.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Surat_Perintah_Tugas.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/Bka_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Bka_model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/Bkd_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Bkd_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Kontrol_Spt_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Kontrol_Spt_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Spt_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Spt_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Surat_Disposisi_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Surat_Disposisi_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Pegawai_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Pegawai_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/bka/addsuratperintahjalan.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/bka/addsuratperintahjalan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/bkd/addsuratperintahjalan.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/bkd/addsuratperintahjalan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/addpegawaibka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/addpegawaibka.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/addpegawaibkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/addpegawaibkd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/addpegawaitu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/addpegawaitu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/editpegawaibka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/editpegawaibka.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/editpegawaibkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/editpegawaibkd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/editpegawaitu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/editpegawaitu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/pegawaibka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/pegawaibka.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/pegawaibkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/pegawaibkd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/trash.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/trash.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/templates/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/templates/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/templates/topbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/templates/topbar.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -226,7 +236,8 @@
       <workItem from="1574080291232" duration="8938000" />
       <workItem from="1574183914040" duration="8460000" />
       <workItem from="1574258027395" duration="12674000" />
-      <workItem from="1574308118024" duration="7065000" />
+      <workItem from="1574308118024" duration="7271000" />
+      <workItem from="1574327303687" duration="11295000" />
     </task>
     <task id="LOCAL-00001" summary="update view">
       <created>1573067332216</created>
@@ -396,7 +407,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574272302369</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="tambah pesan di topbar">
+      <created>1574315367770</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1574315367770</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -55,7 +55,7 @@
 						</div>
 					</li>
 				<?php elseif ($this->uri->segment(1) == 'surat_disposisi'): ?>
-				<?php if ($this->uri->segment(2) == NULL): ?>
+				<?php if ($this->uri->segment(2) == NULL OR $this->uri->segment(2) == 'searchdisposisi' OR $this->uri->segment(2) == 'index'): ?>
 						<!-- Nav Item - Messages -->
 						<li class="nav-item dropdown no-arrow mx-1">
 							<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
@@ -94,7 +94,7 @@
 								<?php endif; ?>
 							</div>
 						</li>
-				<?php elseif ($this->uri->segment(2) == 'disposisibkd' OR $this->uri->segment(2) == 'uploaddisposisibkd'): ?>
+				<?php elseif ($this->uri->segment(2) == 'disposisibkd' OR $this->uri->segment(2) == 'uploaddisposisibkd' OR $this->uri->segment(2) == 'searchdisposisibkd'): ?>
 						<!-- Nav Item - Messages -->
 						<li class="nav-item dropdown no-arrow mx-1">
 							<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
@@ -175,7 +175,7 @@
 				<?php endif; ?>
 
 				<?php elseif ($this->uri->segment(1) == 'bkd'): ?>
-				<?php if ($this->uri->segment(2) == NULL OR $this->uri->segment(2) == 'addsuratperintahjalan'): ?>
+				<?php if ($this->uri->segment(2) == NULL OR $this->uri->segment(2) == 'addsuratperintahjalan' OR $this->uri->segment(2) == 'index' OR $this->uri->segment(2) == 'searchbkd'): ?>
 						<!-- Nav Item - Messages -->
 						<li class="nav-item dropdown no-arrow mx-1">
 							<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
@@ -255,7 +255,7 @@
 						</li>
 				<?php endif; ?>
 				<?php elseif ($this->uri->segment(1) == 'bka'): ?>
-				<?php if ($this->uri->segment(2) == NULL OR $this->uri->segment(2) == 'addsuratperintahjalan'): ?>
+				<?php if ($this->uri->segment(2) == NULL OR $this->uri->segment(2) == 'addsuratperintahjalan'  OR $this->uri->segment(2) == 'index' OR $this->uri->segment(2) == 'searchbka'): ?>
 					<!-- Nav Item - Messages -->
 					<li class="nav-item dropdown no-arrow mx-1">
 						<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
@@ -334,7 +334,7 @@
 						</li>
 					<?php endif; ?>
 				<?php elseif ($this->uri->segment(1) == 'surat_perintah_tugas'): ?>
-					<?php if ($this->uri->segment(2) == NULL OR $this->uri->segment(2) == 'formuploadsptbkd'): ?>
+					<?php if ($this->uri->segment(2) == NULL OR $this->uri->segment(2) == 'formuploadsptbkd' OR $this->uri->segment(2) == 'index' OR $this->uri->segment(2) == 'searchpersetujuansptbkd'): ?>
 						<!-- Nav Item - Messages -->
 						<li class="nav-item dropdown no-arrow mx-1">
 							<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
@@ -355,7 +355,7 @@
 									Surat Perintah Tugas
 								</h6>
 								<?php if ($spt_bkd_belum_disetujui): ?>
-									<?php foreach ($spt_bkd_belum_disetujui as $sbd) : ?>
+									<?php foreach ($spt_bkd_belum_disetujui as $sbbd) : ?>
 										<a class="dropdown-item d-flex align-items-center" href="#">
 											<div class="font-weight-bold">
 												<div class="text-truncate"><?= $sbbd['pengirim'] ?>.</div>
@@ -413,7 +413,7 @@
 					<?php endif; ?>
 
 				<?php elseif ($this->uri->segment(1) == 'kontrol_spt'): ?>
-					<?php if ($this->uri->segment(2) == NULL OR $this->uri->segment(2) == 'uploadsptbkdlengkap'): ?>
+					<?php if ($this->uri->segment(2) == NULL OR $this->uri->segment(2) == 'uploadsptbkdlengkap' OR $this->uri->segment(2) == 'searchkontrolsptbkd' OR $this->uri->segment(2) == 'index'): ?>
 						<!-- Nav Item - Messages -->
 						<li class="nav-item dropdown no-arrow mx-1">
 							<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"

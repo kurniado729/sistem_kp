@@ -23,6 +23,12 @@
 								</div>
 							</div>
 							<div class="form-group row">
+								<label for="nip" class="col-sm-2 col-form-label">NIP</label>
+								<div class="col-sm-10">
+									<input type="text" class="form-control" id="nip" name="nip" value="<?= $pegawai['nip'] ?>">
+								</div>
+							</div>
+							<div class="form-group row">
 								<label for="bagian" class="col-sm-2 col-form-label">Bagian</label>
 								<div class="col-sm-10">
 								<input type="text" class="form-control" id="bagian" name="bagian" value="<?= $pegawai['bagian'] ?>" readonly>

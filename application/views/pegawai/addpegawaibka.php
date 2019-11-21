@@ -20,6 +20,9 @@
 								<input type="text" class="form-control" id="nama_pegawai" name="nama_pegawai" placeholder="Nama">
 							</div>
 							<div class="form-group">
+								<input type="text" class="form-control" id="nip" name="nip" placeholder="NIP">
+							</div>
+							<div class="form-group">
 								<!--								<label for="exampleFormControlSelect1">Jabatan</label>-->
 								<select class="form-control" id="jabatan" name="jabatan">
 									<option value="jabatan1">jabatan1</option>

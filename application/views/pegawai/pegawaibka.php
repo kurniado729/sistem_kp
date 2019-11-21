@@ -47,6 +47,7 @@
 					<tr>
 						<th scope="col">#</th>
 						<th scope="col">Nama</th>
+						<th scope="col">NIP</th>
 						<th scope="col">Jabatan</th>
 						<th scope="col">Action</th>
 					</tr>
@@ -57,6 +58,7 @@
 					<tr>
 						<th scope="row"><?= $i; ?></th>
 						<td><?= $p['nama_pegawai'] ?></td>
+						<td><?= $p['nip'] ?></td>
 						<td><?= $p['jabatan'] ?></td>
 						<td>
 							<a href="<?= base_url('pegawai/editpegawaibka/' . $p['id_pegawai']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Edit">

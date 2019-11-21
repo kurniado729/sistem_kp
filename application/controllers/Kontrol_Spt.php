@@ -25,7 +25,7 @@ class Kontrol_Spt extends CI_Controller
 //		$this->load->view('templates/footer');
 
 		//konfigurasi pagination
-		$config['base_url'] = site_url('surat_perintah_tugas/index'); //site url
+		$config['base_url'] = site_url('kontrol_spt/index'); //site url
 		$config['total_rows'] = $this->db->count_all('surat_spt'); //total row
 		$config['per_page'] = 5;  //show record per halaman
 		$config["uri_segment"] = 3;  // uri parameter
@@ -91,7 +91,7 @@ class Kontrol_Spt extends CI_Controller
 //		$this->load->view('templates/footer');
 
 		//konfigurasi pagination
-		$config['base_url'] = site_url('surat_perintah_tugas/sptbka'); //site url
+		$config['base_url'] = site_url('kontrol_spt/kontrolsptbka'); //site url
 		$config['total_rows'] = $this->db->count_all('surat_spt'); //total row
 		$config['per_page'] = 5;  //show record per halaman
 		$config["uri_segment"] = 3;  // uri parameter

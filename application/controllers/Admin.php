@@ -115,6 +115,10 @@ class Admin extends CI_Controller
 
 	public function roleaccess($role_id)
 	{
+		if($this->session->userdata('role_id') != '1'){
+			redirect('auth/blocked');
+		}
+
 		$data['title'] = 'Role Access';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 

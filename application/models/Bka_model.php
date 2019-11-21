@@ -117,7 +117,7 @@ class Bka_model extends CI_Model
 			'tgl_akhir_spt' => $this->input->post('tgl_akhir_spt'),
 			'ringkasan' => $this->input->post('ringkasan'),
 			'nama_pegawai' => $this->input->post('platform'),
-			'nip_pegawai' => $this->input->post('id'),
+			'nip_pegawai' => $this->input->post('nip'),
 			'jabatan' => $this->input->post('jabatan'),
 			'bagian' => 'BKA'
 		];

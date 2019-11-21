@@ -111,7 +111,7 @@
 				async: 'false',
                 success: function (response) {
                     $('#searchbkd').val('');
-                    $('#id').val(response[0]['id_pegawai']);
+                    $('#nip').val(response[0]['nip']);
                     $('#jabatan').val(response[0]['jabatan']);
 
                 },
@@ -165,7 +165,7 @@
                 async: 'false',
                 success: function (response) {
                     $('#searchbka').val('');
-                    $('#id').val(response[0]['id_pegawai']);
+                    $('#nip').val(response[0]['nip']);
                     $('#jabatan').val(response[0]['jabatan']);
 
                 },
