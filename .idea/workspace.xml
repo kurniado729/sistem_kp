@@ -7,130 +7,13 @@
       <change beforePath="$PROJECT_DIR$/application/controllers/Bkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Bkd.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Kontrol_Spt.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Kontrol_Spt.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Surat_Disposisi.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Surat_Disposisi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Surat_Masuk.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Surat_Masuk.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/Surat_Perintah_Tugas.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Surat_Perintah_Tugas.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/Bka_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Bka_model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/Bkd_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Bkd_model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/Kontrol_Spt_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Kontrol_Spt_model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/Spt_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Spt_model.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/models/Surat_Disposisi_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Surat_Disposisi_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Surat_Masuk_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Surat_Masuk_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/admin/role.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/role.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/bka/addsuratperintahjalan.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/bka/addsuratperintahjalan.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/bkd/addsuratperintahjalan.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/bkd/addsuratperintahjalan.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_masuk/addmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_masuk/addmail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/templates/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/templates/footer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/templates/topbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/templates/topbar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/Contoh_User_Manual.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/Contoh_User_Manual1.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/Contoh_User_Manual2.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/Contoh_User_Manual3.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/Dok_baru_2019-10-30_00_14.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/arrow_down.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/coba.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/data_pengawas.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/data_pengawas1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/data_pengawas2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/data_pengawas3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/persetujuan_disposisi.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/persetujuan_disposisi1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/persetujuan_disposisi2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/persetujuan_disposisi3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/persetujuan_disposisi4.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/persetujuan_disposisi5.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/transaksi.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/transaksi1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/transaksi10.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/transaksi11.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/transaksi12.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/transaksi13.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/transaksi14.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/transaksi15.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/transaksi16.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/transaksi2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/transaksi3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/transaksi4.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/transaksi5.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/transaksi6.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/transaksi7.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/transaksi8.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/transaksi9.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/yandayanda.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/yandayanda1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/yandayanda2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/yandayanda3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/yandayanda4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/yandayanda5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/disposisi/yandayanda6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/spt/CobiT_4_1_(2).pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/spt/coba.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/spt/data_pengawas.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/spt/transaksi.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/spt/transaksi1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/spt/transaksi2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/spt/transaksi3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/spt/transaksi4.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/spt/transaksi5.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/spt/transaksi6.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/spt/transaksi7.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/spt/transaksi8.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/sptlengkap/transaksi.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/sptlengkap/transaksi1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/sptlengkap/transaksi2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/sptlengkap/transaksi3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/sptlengkap/transaksi4.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/sptlengkap/transaksi5.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/sptlengkap/transaksi6.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/sptlengkap/transaksi7.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/sptlengkap/transaksi8.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/sptlengkap/transaksi9.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/CHAPTER_8_-_PROJECT_QUALITY_MANAGEMENT.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/COVER_Tesis.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/Contoh_User_Manual.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/Contoh_User_Manual2.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/Contoh_User_Manual4.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/Contoh_User_Manual5.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/Laporan_DWH_nia.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/Laporan_DWH_nia1.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/The_Architecture_Of_Computer_Hardware.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/The_Architecture_Of_Computer_Hardware1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/coba.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/data_pengawas.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi1.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi10.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi11.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi12.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi13.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi14.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi15.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi16.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi17.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi18.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi19.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi20.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi21.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi22.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi23.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi24.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi25.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi26.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi27.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi28.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi4.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi5.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi6.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi7.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi8.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/transaksi9.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/yandayanda.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/yandayanda1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/yandayanda2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/yandayanda3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/yandayanda4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/upload/suratmasuk/yandayanda5.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -342,7 +225,8 @@
       <workItem from="1574007401351" duration="1934000" />
       <workItem from="1574080291232" duration="8938000" />
       <workItem from="1574183914040" duration="8460000" />
-      <workItem from="1574258027395" duration="12354000" />
+      <workItem from="1574258027395" duration="12674000" />
+      <workItem from="1574308118024" duration="7065000" />
     </task>
     <task id="LOCAL-00001" summary="update view">
       <created>1573067332216</created>
@@ -505,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574192356948</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="tambah pesan di topbar">
+      <created>1574272302369</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1574272302369</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -530,6 +421,7 @@
     <MESSAGE value="update dashboard" />
     <MESSAGE value="update model" />
     <MESSAGE value="sweet alert" />
-    <option name="LAST_COMMIT_MESSAGE" value="sweet alert" />
+    <MESSAGE value="tambah pesan di topbar" />
+    <option name="LAST_COMMIT_MESSAGE" value="tambah pesan di topbar" />
   </component>
 </project>

@@ -37,6 +37,16 @@ class Bka_model extends CI_Model
 		return count($this->db->query($query)->result_array());
 	}
 
+	public function getdisposisibelumajukanspt(){
+		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKA' AND status_pengajuan = '0'";
+		return $this->db->query($query)->result_array();
+	}
+
+	public function hitungdisposisibelumajukanspt(){
+		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKA' AND status_pengajuan = '0'";
+		return count($this->db->query($query)->result_array());
+	}
+
 	public function getdetailsuratdisposisi($id){
 		$query = "SELECT * FROM surat_disposisi WHERE id_surat_disposisi = $id ";
 		return $this->db->query($query)->row_array();

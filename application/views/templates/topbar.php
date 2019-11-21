@@ -25,71 +25,237 @@
 							<?php if ($hitung_surat_masuk_belum_disposisi == '0'): ?>
 								<span class="badge badge-danger badge-counter"></span>
 							<?php else: ?>
-								<span class="badge badge-danger badge-counter"><?= $hitung_surat_masuk_belum_disposisi; ?></span>
+								<span
+									class="badge badge-danger badge-counter"><?= $hitung_surat_masuk_belum_disposisi; ?></span>
 							<?php endif; ?>
 						</a>
 						<!-- Dropdown - Messages -->
-							<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-								 aria-labelledby="messagesDropdown">
-								<h6 class="dropdown-header">
-									Surat Masuk
-								</h6>
-								<?php if ($surat_masuk_belum_disposisi): ?>
+						<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+							 aria-labelledby="messagesDropdown">
+							<h6 class="dropdown-header">
+								Surat Masuk
+							</h6>
+							<?php if ($surat_masuk_belum_disposisi): ?>
 								<?php foreach ($surat_masuk_belum_disposisi as $smbd) : ?>
-									<a class="dropdown-item d-flex align-items-center" href="#">
+									<a href="http://localhost/sistem_kp/surat_masuk"
+									   class="dropdown-item d-flex align-items-center">
 										<div class="font-weight-bold">
 											<div class="text-truncate"><?= $smbd['pengirim'] ?>.</div>
 											<div class="small text-gray-500"><?= $smbd['ringkasan'] ?>.</div>
 										</div>
 									</a>
 								<?php endforeach; ?>
+							<?php else: ?>
+								<a class="dropdown-item d-flex align-items-center" href="#">
+									<div class="font-weight-bold">
+										<div class="">Belum ada surat untuk didisposisi</div>
+									</div>
+								</a>
+							<?php endif; ?>
+						</div>
+					</li>
+				<?php elseif ($this->uri->segment(1) == 'surat_disposisi'): ?>
+				<?php if ($this->uri->segment(2) == NULL): ?>
+						<!-- Nav Item - Messages -->
+						<li class="nav-item dropdown no-arrow mx-1">
+							<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+							   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-envelope fa-fw"></i>
+								<!-- Counter - Messages -->
+								<?php if ($hitung_surat_disposisi_belum_ditujukan == '0'): ?>
+									<span class="badge badge-danger badge-counter"></span>
+								<?php else: ?>
+									<span
+										class="badge badge-danger badge-counter"><?= $hitung_surat_disposisi_belum_ditujukan; ?></span>
+								<?php endif; ?>
+							</a>
+							<!-- Dropdown - Messages -->
+							<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+								 aria-labelledby="messagesDropdown">
+								<h6 class="dropdown-header">
+									Surat Disposisi
+								</h6>
+								<?php if ($surat_disposisi_belum_ditujukan): ?>
+									<?php foreach ($surat_disposisi_belum_ditujukan as $sdbd) : ?>
+										<a class="dropdown-item d-flex align-items-center"
+										   href="http://localhost/sistem_kp/surat_disposisi">
+											<div class="font-weight-bold">
+												<div class="text-truncate"><?= $sdbd['pengirim'] ?>.</div>
+												<div class="small text-gray-500"><?= $sdbd['ringkasan'] ?>.</div>
+											</div>
+										</a>
+									<?php endforeach; ?>
 								<?php else: ?>
 									<a class="dropdown-item d-flex align-items-center" href="#">
 										<div class="font-weight-bold">
-											<div class="text-truncate">tidak ada data</div>
+											<div class="">Belum ada surat untuk didisposisi</div>
 										</div>
 									</a>
 								<?php endif; ?>
 							</div>
-					</li>
-				<?php elseif($this->uri->segment(1) == 'surat_disposisi'): ?>
-					<!-- Nav Item - Messages -->
-					<li class="nav-item dropdown no-arrow mx-1">
-						<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<i class="fas fa-envelope fa-fw"></i>
-							<!-- Counter - Messages -->
-							<?php if ($hitung_surat_disposisi_belum_ditujukan == '0'): ?>
-								<span class="badge badge-danger badge-counter"></span>
-							<?php else: ?>
-								<span class="badge badge-danger badge-counter"><?= $hitung_surat_disposisi_belum_ditujukan; ?></span>
-							<?php endif; ?>
-						</a>
-						<!-- Dropdown - Messages -->
-						<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-							 aria-labelledby="messagesDropdown">
-							<h6 class="dropdown-header">
-								Surat Disposisi
-							</h6>
-							<?php if ($surat_disposisi_belum_ditujukan): ?>
-							<?php foreach ($surat_disposisi_belum_ditujukan as $sdbd) : ?>
-								<a class="dropdown-item d-flex align-items-center" href="#">
-									<div class="font-weight-bold">
-										<div class="text-truncate"><?= $sdbd['pengirim'] ?>.</div>
-										<div class="small text-gray-500"><?= $sdbd['ringkasan'] ?>.</div>
-									</div>
-								</a>
-							<?php endforeach; ?>
-							<?php else: ?>
-								<a class="dropdown-item d-flex align-items-center" href="#">
-									<div class="font-weight-bold">
-										<div class="text-truncate">tidak ada data</div>
-									</div>
-								</a>
-							<?php endif; ?>
-						</div>
-					</li>
-				<?php elseif($this->uri->segment(1) == 'bkd'): ?>
+						</li>
+				<?php elseif ($this->uri->segment(2) == 'disposisibkd' OR $this->uri->segment(2) == 'uploaddisposisibkd'): ?>
+						<!-- Nav Item - Messages -->
+						<li class="nav-item dropdown no-arrow mx-1">
+							<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+							   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-envelope fa-fw"></i>
+								<!-- Counter - Messages -->
+								<?php if ($hitung_surat_disposisi_bkd_belum_disetujui == '0'): ?>
+									<span class="badge badge-danger badge-counter"></span>
+								<?php else: ?>
+									<span
+										class="badge badge-danger badge-counter"><?= $hitung_surat_disposisi_bkd_belum_disetujui; ?></span>
+								<?php endif; ?>
+							</a>
+							<!-- Dropdown - Messages -->
+							<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+								 aria-labelledby="messagesDropdown">
+								<h6 class="dropdown-header">
+									Surat Disposisi
+								</h6>
+								<?php if ($surat_disposisi_bkd_belum_disetujui): ?>
+									<?php foreach ($surat_disposisi_bkd_belum_disetujui as $sdbbd) : ?>
+										<a class="dropdown-item d-flex align-items-center"
+										   href="http://localhost/sistem_kp/surat_disposisi">
+											<div class="font-weight-bold">
+												<div class="text-truncate"><?= $sdbbd['pengirim'] ?>.</div>
+												<div class="small text-gray-500"><?= $sdbbd['ringkasan'] ?>.</div>
+											</div>
+										</a>
+									<?php endforeach; ?>
+								<?php else: ?>
+									<a class="dropdown-item d-flex align-items-center" href="#">
+										<div class="font-weight-bold">
+											<div class="">Belum ada surat disposisi untuk disetujui</div>
+										</div>
+									</a>
+								<?php endif; ?>
+							</div>
+						</li>
+				<?php else: ?>
+						<!-- Nav Item - Messages -->
+						<li class="nav-item dropdown no-arrow mx-1">
+							<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+							   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-envelope fa-fw"></i>
+								<!-- Counter - Messages -->
+								<?php if ($hitung_surat_disposisi_bka_belum_disetujui == '0'): ?>
+									<span class="badge badge-danger badge-counter"></span>
+								<?php else: ?>
+									<span
+										class="badge badge-danger badge-counter"><?= $hitung_surat_disposisi_bka_belum_disetujui; ?></span>
+								<?php endif; ?>
+							</a>
+							<!-- Dropdown - Messages -->
+							<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+								 aria-labelledby="messagesDropdown">
+								<h6 class="dropdown-header">
+									Surat Disposisi
+								</h6>
+								<?php if ($surat_disposisi_bka_belum_disetujui): ?>
+									<?php foreach ($surat_disposisi_bka_belum_disetujui as $sdbbd) : ?>
+										<a class="dropdown-item d-flex align-items-center"
+										   href="http://localhost/sistem_kp/surat_disposisi">
+											<div class="font-weight-bold">
+												<div class="text-truncate"><?= $sdbbd['pengirim'] ?>.</div>
+												<div class="small text-gray-500"><?= $sdbbd['ringkasan'] ?>.</div>
+											</div>
+										</a>
+									<?php endforeach; ?>
+								<?php else: ?>
+									<a class="dropdown-item d-flex align-items-center" href="#">
+										<div class="font-weight-bold">
+											<div class="">Belum ada surat disposisi untuk disetujui</div>
+										</div>
+									</a>
+								<?php endif; ?>
+							</div>
+						</li>
+				<?php endif; ?>
+
+				<?php elseif ($this->uri->segment(1) == 'bkd'): ?>
+				<?php if ($this->uri->segment(2) == NULL OR $this->uri->segment(2) == 'addsuratperintahjalan'): ?>
+						<!-- Nav Item - Messages -->
+						<li class="nav-item dropdown no-arrow mx-1">
+							<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+							   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-envelope fa-fw"></i>
+								<!-- Counter - Messages -->
+								<?php if ($hitung_surat_disposisi_belum_spt == '0'): ?>
+									<span class="badge badge-danger badge-counter"></span>
+								<?php else: ?>
+									<span
+										class="badge badge-danger badge-counter"><?= $hitung_surat_disposisi_belum_spt; ?></span>
+								<?php endif; ?>
+							</a>
+							<!-- Dropdown - Messages -->
+							<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+								 aria-labelledby="messagesDropdown">
+								<h6 class="dropdown-header">
+									Surat BKD
+								</h6>
+								<?php if ($surat_disposisi_belum_spt): ?>
+									<?php foreach ($surat_disposisi_belum_spt as $sdbs) : ?>
+										<a class="dropdown-item d-flex align-items-center"
+										   href="http://localhost/sistem_kp/bkd">
+											<div class="font-weight-bold">
+												<div class="text-truncate"><?= $sdbs['pengirim'] ?>.</div>
+												<div class="small text-gray-500"><?= $sdbs['ringkasan'] ?>.</div>
+											</div>
+										</a>
+									<?php endforeach; ?>
+								<?php else: ?>
+									<a class="dropdown-item d-flex align-items-center" href="#">
+										<div class="font-weight-bold">
+											<div class="">Belum ada spt yang harus dibuat</div>
+										</div>
+									</a>
+								<?php endif; ?>
+							</div>
+						</li>
+				<?php else: ?>
+						<!-- Nav Item - Messages -->
+						<li class="nav-item dropdown no-arrow mx-1">
+							<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+							   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-envelope fa-fw"></i>
+								<!-- Counter - Messages -->
+								<?php if ($hitung_surat_disposisi_belum_ajukan_spt == '0'): ?>
+									<span class="badge badge-danger badge-counter"></span>
+								<?php else: ?>
+									<span
+										class="badge badge-danger badge-counter"><?= $hitung_surat_disposisi_belum_ajukan_spt; ?></span>
+								<?php endif; ?>
+							</a>
+							<!-- Dropdown - Messages -->
+							<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+								 aria-labelledby="messagesDropdown">
+								<h6 class="dropdown-header">
+									Surat BKD
+								</h6>
+								<?php if ($surat_disposisi_belum_ajukan_spt): ?>
+									<?php foreach ($surat_disposisi_belum_ajukan_spt as $sdbas) : ?>
+										<a class="dropdown-item d-flex align-items-center"
+										   href="http://localhost/sistem_kp/bkd">
+											<div class="font-weight-bold">
+												<div class="text-truncate"><?= $sdbas['pengirim'] ?>.</div>
+												<div class="small text-gray-500"><?= $sdbas['ringkasan'] ?>.</div>
+											</div>
+										</a>
+									<?php endforeach; ?>
+								<?php else: ?>
+									<a class="dropdown-item d-flex align-items-center" href="#">
+										<div class="font-weight-bold">
+											<div class="">Belum ada spt yang harus diajukan</div>
+										</div>
+									</a>
+								<?php endif; ?>
+							</div>
+						</li>
+				<?php endif; ?>
+				<?php elseif ($this->uri->segment(1) == 'bka'): ?>
+				<?php if ($this->uri->segment(2) == NULL OR $this->uri->segment(2) == 'addsuratperintahjalan'): ?>
 					<!-- Nav Item - Messages -->
 					<li class="nav-item dropdown no-arrow mx-1">
 						<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
@@ -99,44 +265,8 @@
 							<?php if ($hitung_surat_disposisi_belum_spt == '0'): ?>
 								<span class="badge badge-danger badge-counter"></span>
 							<?php else: ?>
-								<span class="badge badge-danger badge-counter"><?= $hitung_surat_disposisi_belum_spt; ?></span>
-							<?php endif; ?>
-						</a>
-						<!-- Dropdown - Messages -->
-						<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-							 aria-labelledby="messagesDropdown">
-							<h6 class="dropdown-header">
-								Surat BKD
-							</h6>
-							<?php if ($surat_disposisi_belum_spt): ?>
-							<?php foreach ($surat_disposisi_belum_spt as $sdbs) : ?>
-								<a class="dropdown-item d-flex align-items-center" href="#">
-									<div class="font-weight-bold">
-										<div class="text-truncate"><?= $sdbs['pengirim'] ?>.</div>
-										<div class="small text-gray-500"><?= $sdbs['ringkasan'] ?>.</div>
-									</div>
-								</a>
-							<?php endforeach; ?>
-							<?php else: ?>
-								<a class="dropdown-item d-flex align-items-center" href="#">
-									<div class="font-weight-bold">
-										<div class="text-truncate">tidak ada data</div>
-									</div>
-								</a>
-							<?php endif; ?>
-						</div>
-					</li>
-				<?php elseif($this->uri->segment(1) == 'bka'): ?>
-					<!-- Nav Item - Messages -->
-					<li class="nav-item dropdown no-arrow mx-1">
-						<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<i class="fas fa-envelope fa-fw"></i>
-							<!-- Counter - Messages -->
-							<?php if ($hitung_surat_disposisi_belum_spt == '0'): ?>
-								<span class="badge badge-danger badge-counter"></span>
-							<?php else: ?>
-								<span class="badge badge-danger badge-counter"><?= $hitung_surat_disposisi_belum_spt; ?></span>
+								<span
+									class="badge badge-danger badge-counter"><?= $hitung_surat_disposisi_belum_spt; ?></span>
 							<?php endif; ?>
 						</a>
 						<!-- Dropdown - Messages -->
@@ -146,99 +276,222 @@
 								Surat BKA
 							</h6>
 							<?php if ($surat_disposisi_belum_spt): ?>
-							<?php foreach ($surat_disposisi_belum_spt as $sdbs) : ?>
-								<a class="dropdown-item d-flex align-items-center" href="#">
-									<div class="font-weight-bold">
-										<div class="text-truncate"><?= $sdbs['pengirim'] ?>.</div>
-										<div class="small text-gray-500"><?= $sdbs['ringkasan'] ?>.</div>
-									</div>
-								</a>
-							<?php endforeach; ?>
+								<?php foreach ($surat_disposisi_belum_spt as $sdbs) : ?>
+									<a class="dropdown-item d-flex align-items-center" href="#">
+										<div class="font-weight-bold">
+											<div class="text-truncate"><?= $sdbs['pengirim'] ?>.</div>
+											<div class="small text-gray-500"><?= $sdbs['ringkasan'] ?>.</div>
+										</div>
+									</a>
+								<?php endforeach; ?>
 							<?php else: ?>
 								<a class="dropdown-item d-flex align-items-center" href="#">
 									<div class="font-weight-bold">
-										<div class="text-truncate">tidak ada data</div>
+										<div class="">Belum ada spt yang harus dibuat</div>
 									</div>
 								</a>
 							<?php endif; ?>
 						</div>
 					</li>
-				<?php elseif($this->uri->segment(1) == 'surat_perintah_tugas'): ?>
-					<!-- Nav Item - Messages -->
-					<li class="nav-item dropdown no-arrow mx-1">
-						<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<i class="fas fa-envelope fa-fw"></i>
-							<!-- Counter - Messages -->
-							<?php if ($hitung_spt_belum_disetujui == '0'): ?>
-								<span class="badge badge-danger badge-counter"></span>
-							<?php else: ?>
-								<span class="badge badge-danger badge-counter"><?= $hitung_spt_belum_disetujui; ?></span>
-							<?php endif; ?>
-						</a>
-						<!-- Dropdown - Messages -->
-						<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-							 aria-labelledby="messagesDropdown">
-							<h6 class="dropdown-header">
-								Surat Perintah Tugas
-							</h6>
-							<?php if ($spt_belum_disetujui): ?>
-							<?php foreach ($spt_belum_disetujui as $sbd) : ?>
-								<a class="dropdown-item d-flex align-items-center" href="#">
-									<div class="font-weight-bold">
-										<div class="text-truncate"><?= $sbd['pengirim'] ?>.</div>
-										<div class="small text-gray-500"><?= $sbd['ringkasan'] ?>.</div>
-									</div>
-								</a>
-							<?php endforeach; ?>
-							<?php else: ?>
-								<a class="dropdown-item d-flex align-items-center" href="#">
-									<div class="font-weight-bold">
-										<div class="text-truncate">tidak ada data</div>
-									</div>
-								</a>
-							<?php endif; ?>
-						</div>
-					</li>
-				<?php elseif($this->uri->segment(1) == 'kontrol_spt'): ?>
-					<!-- Nav Item - Messages -->
-					<li class="nav-item dropdown no-arrow mx-1">
-						<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
-						   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							<i class="fas fa-envelope fa-fw"></i>
-							<!-- Counter - Messages -->
-							<?php if ($hitung_spt_lengkap_belum_diupload == '0'): ?>
-								<span class="badge badge-danger badge-counter"></span>
-							<?php else: ?>
-								<span class="badge badge-danger badge-counter"><?= $hitung_spt_lengkap_belum_diupload; ?></span>
-							<?php endif; ?>
-						</a>
-						<!-- Dropdown - Messages -->
-						<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-							 aria-labelledby="messagesDropdown">
-							<h6 class="dropdown-header">
-								Kontrol SPT
-							</h6>
-							<?php if ($spt_lengkap_belum_diupload): ?>
-							<?php foreach ($spt_lengkap_belum_diupload as $slbd) : ?>
-								<a class="dropdown-item d-flex align-items-center" href="#">
-									<div class="font-weight-bold">
-										<div class="text-truncate"><?= $slbd['pengirim'] ?>.</div>
-										<div class="small text-gray-500"><?= $slbd['ringkasan'] ?>.</div>
-									</div>
-								</a>
-							<?php endforeach; ?>
-							<?php else: ?>
-								<a class="dropdown-item d-flex align-items-center" href="#">
-									<div class="font-weight-bold">
-										<div class="text-truncate">tidak ada data</div>
-									</div>
-								</a>
-							<?php endif; ?>
-						</div>
-					</li>
-				<?php else: ?>
+					<?php else: ?>
+						<!-- Nav Item - Messages -->
+						<li class="nav-item dropdown no-arrow mx-1">
+							<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+							   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-envelope fa-fw"></i>
+								<!-- Counter - Messages -->
+								<?php if ($hitung_surat_disposisi_belum_ajukan_spt == '0'): ?>
+									<span class="badge badge-danger badge-counter"></span>
+								<?php else: ?>
+									<span
+										class="badge badge-danger badge-counter"><?= $hitung_surat_disposisi_belum_ajukan_spt; ?></span>
+								<?php endif; ?>
+							</a>
+							<!-- Dropdown - Messages -->
+							<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+								 aria-labelledby="messagesDropdown">
+								<h6 class="dropdown-header">
+									Surat BKD
+								</h6>
+								<?php if ($surat_disposisi_belum_ajukan_spt): ?>
+									<?php foreach ($surat_disposisi_belum_ajukan_spt as $sdbas) : ?>
+										<a class="dropdown-item d-flex align-items-center"
+										   href="http://localhost/sistem_kp/bkd">
+											<div class="font-weight-bold">
+												<div class="text-truncate"><?= $sdbas['pengirim'] ?>.</div>
+												<div class="small text-gray-500"><?= $sdbas['ringkasan'] ?>.</div>
+											</div>
+										</a>
+									<?php endforeach; ?>
+								<?php else: ?>
+									<a class="dropdown-item d-flex align-items-center" href="#">
+										<div class="font-weight-bold">
+											<div class="">Belum ada spt yang harus diajukan</div>
+										</div>
+									</a>
+								<?php endif; ?>
+							</div>
+						</li>
+					<?php endif; ?>
+				<?php elseif ($this->uri->segment(1) == 'surat_perintah_tugas'): ?>
+					<?php if ($this->uri->segment(2) == NULL OR $this->uri->segment(2) == 'formuploadsptbkd'): ?>
+						<!-- Nav Item - Messages -->
+						<li class="nav-item dropdown no-arrow mx-1">
+							<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+							   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-envelope fa-fw"></i>
+								<!-- Counter - Messages -->
+								<?php if ($hitung_spt_bkd_belum_disetujui == '0'): ?>
+									<span class="badge badge-danger badge-counter"></span>
+								<?php else: ?>
+									<span
+										class="badge badge-danger badge-counter"><?= $hitung_spt_bkd_belum_disetujui; ?></span>
+								<?php endif; ?>
+							</a>
+							<!-- Dropdown - Messages -->
+							<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+								 aria-labelledby="messagesDropdown">
+								<h6 class="dropdown-header">
+									Surat Perintah Tugas
+								</h6>
+								<?php if ($spt_bkd_belum_disetujui): ?>
+									<?php foreach ($spt_bkd_belum_disetujui as $sbd) : ?>
+										<a class="dropdown-item d-flex align-items-center" href="#">
+											<div class="font-weight-bold">
+												<div class="text-truncate"><?= $sbbd['pengirim'] ?>.</div>
+												<div class="small text-gray-500"><?= $sbbd['ringkasan'] ?>.</div>
+											</div>
+										</a>
+									<?php endforeach; ?>
+								<?php else: ?>
+									<a class="dropdown-item d-flex align-items-center" href="#">
+										<div class="font-weight-bold">
+											<div class="">Belum ada SPT yang harus disetujui</div>
+										</div>
+									</a>
+								<?php endif; ?>
+							</div>
+						</li>
+					<?php else: ?>
+						<!-- Nav Item - Messages -->
+						<li class="nav-item dropdown no-arrow mx-1">
+							<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+							   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-envelope fa-fw"></i>
+								<!-- Counter - Messages -->
+								<?php if ($hitung_spt_bka_belum_disetujui == '0'): ?>
+									<span class="badge badge-danger badge-counter"></span>
+								<?php else: ?>
+									<span
+										class="badge badge-danger badge-counter"><?= $hitung_spt_bka_belum_disetujui; ?></span>
+								<?php endif; ?>
+							</a>
+							<!-- Dropdown - Messages -->
+							<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+								 aria-labelledby="messagesDropdown">
+								<h6 class="dropdown-header">
+									Surat Perintah Tugas
+								</h6>
+								<?php if ($spt_bka_belum_disetujui): ?>
+									<?php foreach ($spt_bka_belum_disetujui as $sbbd) : ?>
+										<a class="dropdown-item d-flex align-items-center" href="#">
+											<div class="font-weight-bold">
+												<div class="text-truncate"><?= $sbbd['pengirim'] ?>.</div>
+												<div class="small text-gray-500"><?= $sbbd['ringkasan'] ?>.</div>
+											</div>
+										</a>
+									<?php endforeach; ?>
+								<?php else: ?>
+									<a class="dropdown-item d-flex align-items-center" href="#">
+										<div class="font-weight-bold">
+											<div class="">Belum ada SPT yang harus disetujui</div>
+										</div>
+									</a>
+								<?php endif; ?>
+							</div>
+						</li>
+					<?php endif; ?>
 
+				<?php elseif ($this->uri->segment(1) == 'kontrol_spt'): ?>
+					<?php if ($this->uri->segment(2) == NULL OR $this->uri->segment(2) == 'uploadsptbkdlengkap'): ?>
+						<!-- Nav Item - Messages -->
+						<li class="nav-item dropdown no-arrow mx-1">
+							<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+							   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-envelope fa-fw"></i>
+								<!-- Counter - Messages -->
+								<?php if ($hitung_spt_lengkap_bkd_belum_diupload == '0'): ?>
+									<span class="badge badge-danger badge-counter"></span>
+								<?php else: ?>
+									<span
+										class="badge badge-danger badge-counter"><?= $hitung_spt_lengkap_bkd_belum_diupload; ?></span>
+								<?php endif; ?>
+							</a>
+							<!-- Dropdown - Messages -->
+							<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+								 aria-labelledby="messagesDropdown">
+								<h6 class="dropdown-header">
+									Kontrol SPT
+								</h6>
+								<?php if ($spt_lengkap_bkd_belum_diupload): ?>
+									<?php foreach ($spt_lengkap_bkd_belum_diupload as $slbbd) : ?>
+										<a class="dropdown-item d-flex align-items-center" href="#">
+											<div class="font-weight-bold">
+												<div class="text-truncate"><?= $slbbd['pengirim'] ?>.</div>
+												<div class="small text-gray-500"><?= $slbbd['ringkasan'] ?>.</div>
+											</div>
+										</a>
+									<?php endforeach; ?>
+								<?php else: ?>
+									<a class="dropdown-item d-flex align-items-center" href="#">
+										<div class="font-weight-bold">
+											<div class="text-truncate">tidak ada data</div>
+										</div>
+									</a>
+								<?php endif; ?>
+							</div>
+						</li>
+					<?php else: ?>
+						<!-- Nav Item - Messages -->
+						<li class="nav-item dropdown no-arrow mx-1">
+							<a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+							   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-envelope fa-fw"></i>
+								<!-- Counter - Messages -->
+								<?php if ($hitung_spt_lengkap_bka_belum_diupload == '0'): ?>
+									<span class="badge badge-danger badge-counter"></span>
+								<?php else: ?>
+									<span
+										class="badge badge-danger badge-counter"><?= $hitung_spt_lengkap_bka_belum_diupload; ?></span>
+								<?php endif; ?>
+							</a>
+							<!-- Dropdown - Messages -->
+							<div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+								 aria-labelledby="messagesDropdown">
+								<h6 class="dropdown-header">
+									Kontrol SPT
+								</h6>
+								<?php if ($spt_lengkap_bka_belum_diupload): ?>
+									<?php foreach ($spt_lengkap_bka_belum_diupload as $slbbd) : ?>
+										<a class="dropdown-item d-flex align-items-center" href="#">
+											<div class="font-weight-bold">
+												<div class="text-truncate"><?= $slbbd['pengirim'] ?>.</div>
+												<div class="small text-gray-500"><?= $slbbd['ringkasan'] ?>.</div>
+											</div>
+										</a>
+									<?php endforeach; ?>
+								<?php else: ?>
+									<a class="dropdown-item d-flex align-items-center" href="#">
+										<div class="font-weight-bold">
+											<div class="text-truncate">tidak ada data</div>
+										</div>
+									</a>
+								<?php endif; ?>
+							</div>
+						</li>
+					<?php endif; ?>
+
+				<?php else: ?>
 				<?php endif; ?>
 
 				<div class="topbar-divider d-none d-sm-block"></div>

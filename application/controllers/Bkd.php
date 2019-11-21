@@ -118,8 +118,8 @@ class Bkd extends CI_Controller
 		$data['title'] = 'Surat Perintah Tugas';
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['spt'] = $this->bkd->pagspt($config['per_page'], $data['page'] );
-		$data['surat_disposisi_belum_spt'] = $this->bkd->getbelumspt();
-		$data['hitung_surat_disposisi_belum_spt'] = $this->bkd->hitungbelumspt();
+		$data['$surat_disposisi_belum_ajukan_spt'] = $this->bkd->getdisposisibelumajukanspt();
+		$data['hitung_surat_disposisi_belum_ajukan_spt'] = $this->bkd->hitungdisposisibelumajukanspt();
 		$data['pagination'] = $this->pagination->create_links();
 
 		$this->load->view('templates/header', $data);
@@ -270,8 +270,8 @@ class Bkd extends CI_Controller
 			$data['title'] = 'Surat Perintah Tugas';
 			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 			$data['spt']= $this->bkd->searchspt($kategori, $keyword);
-			$data['surat_disposisi_belum_spt'] = $this->bkd->getbelumspt();
-			$data['hitung_surat_disposisi_belum_spt'] = $this->bkd->hitungbelumspt();
+			$data['$surat_disposisi_belum_ajukan_spt'] = $this->bkd->getdisposisibelumajukanspt();
+			$data['hitung_surat_disposisi_belum_ajukan_spt'] = $this->bkd->hitungdisposisibelumajukanspt();
 
 			if($data){
 				$this->load->view('templates/header', $data);

@@ -17,13 +17,23 @@ class Spt_model extends CI_Model
 		return $data->result_array();
 	}
 
-	public function getsptbelumdisetujui(){
-		$query = "SELECT * FROM surat_spt WHERE  file_spt_sudah_disetujui IS NULL";
+	public function getsptbkdbelumdisetujui(){
+		$query = "SELECT * FROM surat_spt WHERE  bagian = 'BKD' AND file_spt_sudah_disetujui IS NULL AND status_pengajuan = '1'";
 		return $this->db->query($query)->result_array();
 	}
 
-	public function hitungsptbelumdisetujui(){
-		$query = "SELECT * FROM surat_spt WHERE file_spt_sudah_disetujui IS NULL";
+	public function hitungsptbkdbelumdisetujui(){
+		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKD' AND file_spt_sudah_disetujui IS NULL AND status_pengajuan = '1'";
+		return count($this->db->query($query)->result_array());
+	}
+
+	public function getsptbkabelumdisetujui(){
+		$query = "SELECT * FROM surat_spt WHERE  bagian = 'BKA' AND file_spt_sudah_disetujui IS NULL AND status_pengajuan = '1'";
+		return $this->db->query($query)->result_array();
+	}
+
+	public function hitungsptbkabelumdisetujui(){
+		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKA' AND file_spt_sudah_disetujui IS NULL AND status_pengajuan = '1'";
 		return count($this->db->query($query)->result_array());
 	}
 

@@ -17,13 +17,23 @@ class Kontrol_Spt_model extends CI_Model
 		return $data->result_array();
 	}
 
-	public function getsptlengkapbelumdiupload(){
-		$query = "SELECT * FROM surat_spt WHERE status = '1' AND file_spt_lengkap IS NULL";
+	public function getsptlengkapbkdbelumdiupload(){
+		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKD' AND status = '1' AND file_spt_lengkap IS NULL";
 		return $this->db->query($query)->result_array();
 	}
 
-	public function hitungsptlengkapbelumdiupload(){
-		$query = "SELECT * FROM surat_spt WHERE status = '1' AND file_spt_lengkap IS NULL";
+	public function hitungsptlengkapbkdbelumdiupload(){
+		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKD' AND status = '1' AND file_spt_lengkap IS NULL";
+		return count($this->db->query($query)->result_array());
+	}
+
+	public function getsptlengkapbkabelumdiupload(){
+		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKA' AND status = '1' AND file_spt_lengkap IS NULL";
+		return $this->db->query($query)->result_array();
+	}
+
+	public function hitungsptlengkapbkabelumdiupload(){
+		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKA' AND status = '1' AND file_spt_lengkap IS NULL";
 		return count($this->db->query($query)->result_array());
 	}
 

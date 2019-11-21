@@ -37,6 +37,16 @@ class Bkd_model extends CI_Model
 		$query = "SELECT * FROM surat_disposisi WHERE tujuan = 'BKD' AND status_spt = '0'  AND status = '1'";
 		return count($this->db->query($query)->result_array());
 	}
+
+	public function getdisposisibelumajukanspt(){
+		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKD' AND status_pengajuan = '0'";
+		return $this->db->query($query)->result_array();
+	}
+
+	public function hitungdisposisibelumajukanspt(){
+		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKD' AND status_pengajuan = '0'";
+		return count($this->db->query($query)->result_array());
+	}
 	//sini
 
 
