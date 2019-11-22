@@ -13,17 +13,6 @@ class Surat_Perintah_Tugas extends CI_Controller
 
 	public function index()
 	{
-//		$data['title'] = 'Persetujuan SPT BKD';
-//		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-//
-//		$data['spt'] = $this->spt->suratsptbkd();
-//
-//		$this->load->view('templates/header', $data);
-//		$this->load->view('templates/sidebar', $data);
-//		$this->load->view('templates/topbar', $data);
-//		$this->load->view('surat_perintah_tugas/index', $data);
-//		$this->load->view('templates/footer');
-
 		//konfigurasi pagination
 		$config['base_url'] = site_url('surat_perintah_tugas/index'); //site url
 		$config['total_rows'] = $this->db->count_all('surat_spt'); //total row
@@ -56,7 +45,7 @@ class Surat_Perintah_Tugas extends CI_Controller
 		$data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
 		$data['title'] = 'Persetujuan SPT BKD';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->spt->getuser();
 		$data['spt'] = $this->spt->pagpersetujuansptbkd($config['per_page'], $data['page'] );
 		$data['spt_bkd_belum_disetujui'] = $this->spt->getsptbkdbelumdisetujui();
 		$data['hitung_spt_bkd_belum_disetujui'] = $this->spt->hitungsptbkdbelumdisetujui();
@@ -71,17 +60,6 @@ class Surat_Perintah_Tugas extends CI_Controller
 
 	public function sptbka()
 	{
-//		$data['title'] = 'Persetujuan SPT BKA';
-//		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-//
-//		$data['spt'] = $this->spt->suratsptbka();
-//
-//		$this->load->view('templates/header', $data);
-//		$this->load->view('templates/sidebar', $data);
-//		$this->load->view('templates/topbar', $data);
-//		$this->load->view('surat_perintah_tugas/sptbka', $data);
-//		$this->load->view('templates/footer');
-
 		//konfigurasi pagination
 		$config['base_url'] = site_url('surat_perintah_tugas/sptbka'); //site url
 		$config['total_rows'] = $this->db->count_all('surat_spt'); //total row
@@ -114,7 +92,7 @@ class Surat_Perintah_Tugas extends CI_Controller
 		$data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
 		$data['title'] = 'Persetujuan SPT BKA';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->spt->getuser();
 		$data['spt'] = $this->spt->pagpersetujuansptbka($config['per_page'], $data['page'] );
 		$data['spt_bka_belum_disetujui'] = $this->spt->getsptbkabelumdisetujui();
 		$data['hitung_spt_bka_belum_disetujui'] = $this->spt->hitungsptbkabelumdisetujui();
@@ -160,55 +138,50 @@ class Surat_Perintah_Tugas extends CI_Controller
 		redirect('surat_perintah_tugas/sptbka');
 	}
 
-	public function formuploadsptbkd($id){
-		$data['title'] = 'Persetujuan SPT BKD';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-		$data['spt'] = $this->spt->getdetailspt($id);
-		$data['spt_bkd_belum_disetujui'] = $this->spt->getsptbkdbelumdisetujui();
-		$data['hitung_spt_bkd_belum_disetujui'] = $this->spt->hitungsptbkdbelumdisetujui();
-
-		$this->load->view('templates/header', $data);
-		$this->load->view('templates/sidebar', $data);
-		$this->load->view('templates/topbar', $data);
-		$this->load->view('surat_perintah_tugas/uploadsptbkd', $data);
-		$this->load->view('templates/footer');
-	}
-
 	public function uploadsptbkd($id)
 	{
-
 		$data['title'] = 'Persetujuan SPT BKD';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-
-
-		$this->spt->uploadsptbkd($id);
-		$this->session->set_flashdata('message', 'persetujuan SPT berhasil diupload');
-		redirect('surat_perintah_tugas');
-	}
-
-	public function formuploadsptbka($id){
-		$data['title'] = 'Persetujuan SPT BKA';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->spt->getuser();
 		$data['spt'] = $this->spt->getdetailspt($id);
 		$data['spt_bka_belum_disetujui'] = $this->spt->getsptbkabelumdisetujui();
 		$data['hitung_spt_bka_belum_disetujui'] = $this->spt->hitungsptbkabelumdisetujui();
 
-		$this->load->view('templates/header', $data);
-		$this->load->view('templates/sidebar', $data);
-		$this->load->view('templates/topbar', $data);
-		$this->load->view('surat_perintah_tugas/uploadsptbka', $data);
-		$this->load->view('templates/footer');
+		$submit = $this->input->post('submit');
+
+		if (!isset($submit)){
+			$this->load->view('templates/header', $data);
+			$this->load->view('templates/sidebar', $data);
+			$this->load->view('templates/topbar', $data);
+			$this->load->view('surat_perintah_tugas/uploadsptbkd', $data);
+			$this->load->view('templates/footer');
+		} else {
+			$this->spt->uploadsptbkd($id);
+			$this->session->set_flashdata('message', 'persetujuan SPT berhasil diupload');
+			redirect('surat_perintah_tugas');
+		}
 	}
 
 	public function uploadsptbka($id)
 	{
-
 		$data['title'] = 'Persetujuan SPT BKA';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->spt->getuser();
+		$data['spt'] = $this->spt->getdetailspt($id);
+		$data['spt_bka_belum_disetujui'] = $this->spt->getsptbkabelumdisetujui();
+		$data['hitung_spt_bka_belum_disetujui'] = $this->spt->hitungsptbkabelumdisetujui();
 
-		$this->spt->uploadsptbka($id);
-		$this->session->set_flashdata('message', 'persetujuan SPT berhasil diupload');
-		redirect('surat_perintah_tugas/sptbka');
+		$submit = $this->input->post('submit');
+
+		if (!isset($submit)){
+			$this->load->view('templates/header', $data);
+			$this->load->view('templates/sidebar', $data);
+			$this->load->view('templates/topbar', $data);
+			$this->load->view('surat_perintah_tugas/uploadsptbka', $data);
+			$this->load->view('templates/footer');
+		} else {
+			$this->spt->uploadsptbka($id);
+			$this->session->set_flashdata('message', 'persetujuan SPT berhasil diupload');
+			redirect('surat_perintah_tugas/sptbka');
+		}
 	}
 
 	public function viewpersetujuanspt($id)
@@ -228,7 +201,7 @@ class Surat_Perintah_Tugas extends CI_Controller
 			$kategori = $this->input->post('kategori');
 			$keyword = htmlspecialchars($this->input->post('keyword'));
 			$data['title'] = 'Persetujuan SPT BKD';
-			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+			$data['user'] = $this->spt->getuser();
 			$data['spt']= $this->spt->searchpersetujuansptbkd($kategori, $keyword);
 			$data['spt_bkd_belum_disetujui'] = $this->spt->getsptbkdbelumdisetujui();
 			$data['hitung_spt_bkd_belum_disetujui'] = $this->spt->hitungsptbkdbelumdisetujui();
@@ -258,7 +231,7 @@ class Surat_Perintah_Tugas extends CI_Controller
 			$kategori = $this->input->post('kategori');
 			$keyword = htmlspecialchars($this->input->post('keyword'));
 			$data['title'] = 'Persetujuan SPT BKA';
-			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+			$data['user'] = $this->spt->getuser();
 			$data['spt']= $this->spt->searchpersetujuansptbka($kategori, $keyword);
 			$data['spt_bka_belum_disetujui'] = $this->spt->getsptbkabelumdisetujui();
 			$data['hitung_spt_bka_belum_disetujui'] = $this->spt->hitungsptbkabelumdisetujui();

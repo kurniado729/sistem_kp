@@ -17,6 +17,14 @@ class Surat_Masuk_model extends CI_Model
 		return $data->result_array();
 	}
 
+	public function getuser(){
+		$this->db->SELECT('*');
+		$this->db->FROM('user');
+		$this->db->WHERE('email', $this->session->userdata('email'));
+		$data = $this->db->get();
+		return $data->row_array();
+	}
+
 	public function getsuratmasuk(){
 		$query = "SELECT * FROM surat_masuk WHERE hapus = '0' ORDER BY disposisi ";
 		return $this->db->query($query)->result_array();

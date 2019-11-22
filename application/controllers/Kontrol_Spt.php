@@ -13,16 +13,6 @@ class Kontrol_Spt extends CI_Controller
 
 	public function index()
 	{
-//		$data['title'] = 'Persetujuan SPT BKD';
-//		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-//
-//		$data['spt'] = $this->spt->suratsptbkd();
-//
-//		$this->load->view('templates/header', $data);
-//		$this->load->view('templates/sidebar', $data);
-//		$this->load->view('templates/topbar', $data);
-//		$this->load->view('surat_perintah_tugas/index', $data);
-//		$this->load->view('templates/footer');
 
 		//konfigurasi pagination
 		$config['base_url'] = site_url('kontrol_spt/index'); //site url
@@ -56,7 +46,7 @@ class Kontrol_Spt extends CI_Controller
 		$data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
 		$data['title'] = 'SPT BKD';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->kontrol->getuser();
 		$data['spt'] = $this->kontrol->pagkontrolsptbkd($config['per_page'], $data['page'] );
 		$data['spt_lengkap_bkd_belum_diupload'] = $this->kontrol->getsptlengkapbkdbelumdiupload();
 		$data['hitung_spt_lengkap_bkd_belum_diupload'] = $this->kontrol->hitungsptlengkapbkdbelumdiupload();
@@ -79,17 +69,6 @@ class Kontrol_Spt extends CI_Controller
 
 	public function kontrolsptbka()
 	{
-//		$data['title'] = 'Persetujuan SPT BKA';
-//		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-//
-//		$data['spt'] = $this->spt->suratsptbka();
-//
-//		$this->load->view('templates/header', $data);
-//		$this->load->view('templates/sidebar', $data);
-//		$this->load->view('templates/topbar', $data);
-//		$this->load->view('surat_perintah_tugas/sptbka', $data);
-//		$this->load->view('templates/footer');
-
 		//konfigurasi pagination
 		$config['base_url'] = site_url('kontrol_spt/kontrolsptbka'); //site url
 		$config['total_rows'] = $this->db->count_all('surat_spt'); //total row
@@ -122,7 +101,7 @@ class Kontrol_Spt extends CI_Controller
 		$data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
 		$data['title'] = 'SPT BKA';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->kontrol->getuser();
 		$data['spt'] = $this->kontrol->pagkontrolsptbka($config['per_page'], $data['page'] );
 		$data['spt_lengkap_bka_belum_diupload'] = $this->kontrol->getsptlengkapbkabelumdiupload();
 		$data['hitung_spt_lengkap_bka_belum_diupload'] = $this->kontrol->hitungsptlengkapbkabelumdiupload();
@@ -156,7 +135,7 @@ class Kontrol_Spt extends CI_Controller
 	public function uploadsptbkdlengkap($id)
 	{
 		$data['title'] = 'SPT BKD';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->kontrol->getuser();
 		$data['spt'] = $this->kontrol->getdetailspt($id);
 		$data['spt_lengkap_bkd_belum_diupload'] = $this->kontrol->getsptlengkapbkdbelumdiupload();
 		$data['hitung_spt_lengkap_bkd_belum_diupload'] = $this->kontrol->hitungsptlengkapbkdbelumdiupload();
@@ -179,7 +158,7 @@ class Kontrol_Spt extends CI_Controller
 	public function uploadsptbkalengkap($id)
 	{
 		$data['title'] = 'SPT BKA';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->kontrol->getuser();
 		$data['spt'] = $this->kontrol->getdetailspt($id);
 		$data['spt_lengkap_bka_belum_diupload'] = $this->kontrol->getsptlengkapbkabelumdiupload();
 		$data['hitung_spt_lengkap_bka_belum_diupload'] = $this->kontrol->hitungsptlengkapbkabelumdiupload();
@@ -230,7 +209,7 @@ class Kontrol_Spt extends CI_Controller
 			$kategori = $this->input->post('kategori');
 			$keyword = htmlspecialchars($this->input->post('keyword'));
 			$data['title'] = 'SPT BKD';
-			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+			$data['user'] = $this->kontrol->getuser();
 			$data['spt']= $this->kontrol->searchkontrolsptbkd($kategori, $keyword);
 			$data['spt_lengkap_bkd_belum_diupload'] = $this->kontrol->getsptlengkapbkdbelumdiupload();
 			$data['hitung_spt_lengkap_bkd_belum_diupload'] = $this->kontrol->hitungsptlengkapbkdbelumdiupload();
@@ -260,7 +239,7 @@ class Kontrol_Spt extends CI_Controller
 			$kategori = $this->input->post('kategori');
 			$keyword = htmlspecialchars($this->input->post('keyword'));
 			$data['title'] = 'SPT BKA';
-			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+			$data['user'] = $this->kontrol->getuser();
 			$data['spt']= $this->kontrol->searchkontrolsptbka($kategori, $keyword);
 			$data['spt_lengkap_bka_belum_diupload'] = $this->kontrol->getsptlengkapbkabelumdiupload();
 			$data['hitung_spt_lengkap_bka_belum_diupload'] = $this->kontrol->hitungsptlengkapbkabelumdiupload();

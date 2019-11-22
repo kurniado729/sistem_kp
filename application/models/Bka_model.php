@@ -17,6 +17,30 @@ class Bka_model extends CI_Model
 		return $data->result_array();
 	}
 
+	public function getuser(){
+		$this->db->SELECT('*');
+		$this->db->FROM('user');
+		$this->db->WHERE('email', $this->session->userdata('email'));
+		$data = $this->db->get();
+		return $data->row_array();
+	}
+
+	public function action($inpText){
+		$query = "SELECT * FROM pegawai WHERE bagian = 'BKA' AND nama_pegawai LIKE '%$inpText%'";
+		$result = $this->db->query($query);
+
+		if($result->num_rows() > 0){
+			$row ['isi']= $result->result_array();
+			foreach ($row['isi'] as $pegawai){
+//				echo " <a href='#' id='kontol' class='pilihan list-group-item list-group-item-action border-1'>". $pegawai['nama_pegawai'] ."</a> ";
+				echo "<option class='one-test-one'>". $pegawai['nama_pegawai'] ."</option>";
+			}
+			echo '<br/>';
+		}else{
+			echo "<option class='one-test-one'>No Record</option>";
+		}
+	}
+
 	public function suratbka(){
 		$query = "SELECT * FROM surat_disposisi WHERE tujuan = 'BKA' AND status = '1' ORDER BY status_spt";
 		return $this->db->query($query)->result_array();

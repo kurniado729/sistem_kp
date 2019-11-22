@@ -25,7 +25,7 @@ class User extends CI_Controller
 	public function edit()
 	{
 		$data['title'] = 'Edit Profile';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->user->getuser();
 
 		$this->form_validation->set_rules('name', 'Name', 'required|trim');
 
@@ -46,7 +46,7 @@ class User extends CI_Controller
 	public function changepassword()
 	{
 		$data['title'] = 'Change Password';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->user->getuser();
 
 		$this->form_validation->set_rules('current_password', 'Current Password', 'required|trim');
 		$this->form_validation->set_rules('new_password1', 'New Password', 'required|trim|min_length[3]|matches[new_password2]');

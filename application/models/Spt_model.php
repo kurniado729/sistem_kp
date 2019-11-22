@@ -17,6 +17,12 @@ class Spt_model extends CI_Model
 		return $data->result_array();
 	}
 
+	public function getuser()
+	{
+		$data = $this->db->get_where('user', ['email' => $this->session->userdata('email')]);
+		return $data->row_array();
+	}
+
 	public function getsptbkdbelumdisetujui(){
 		$query = "SELECT * FROM surat_spt WHERE  bagian = 'BKD' AND file_spt_sudah_disetujui IS NULL AND status_pengajuan = '1'";
 		return $this->db->query($query)->result_array();

@@ -3,6 +3,35 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin_model extends CI_Model
 {
+	public function getuser(){
+		$this->db->SELECT('*');
+		$this->db->FROM('user');
+		$this->db->WHERE('email', $this->session->userdata('email'));
+		$data = $this->db->get();
+		return $data->row_array();
+	}
+
+	public function getrole(){
+		$query = "SELECT * FROM user_role";
+		return $this->db->query($query)->result_array();
+	}
+
+	public function getdetailrole($id){
+		$query = "SELECT * FROM user_role WHERE id = $id";
+		return $this->db->query($query)->row_array();
+	}
+
+	public function getroleaccess($role_id){
+		$query = "SELECT * FROM user_role where id = $role_id";
+		return $this->db->query($query)->row_array();
+	}
+
+	public function getmenu(){
+		$query = "SELECT * FROM user_menu WHERE id != 1";
+		return $this->db->query($query)->result_array();
+	}
+
+
 	public function getsuratmasuk(){
 		$query = "SELECT * FROM surat_masuk WHERE hapus = '0' ";
 		return count($this->db->query($query)->result_array());

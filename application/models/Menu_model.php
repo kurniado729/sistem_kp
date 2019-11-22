@@ -25,6 +25,14 @@ class Menu_model extends CI_Model
 				return $data->result_array();
 	}
 
+	public function getuser(){
+		$this->db->SELECT('*');
+		$this->db->FROM('user');
+		$this->db->WHERE('email', $this->session->userdata('email'));
+		$data = $this->db->get();
+		return $data->row_array();
+	}
+
 	public function getmenu(){
 		$query = "SELECT * FROM user_menu ORDER BY id DESC";
 		return $this->db->query($query)->result_array();

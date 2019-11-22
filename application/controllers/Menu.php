@@ -13,17 +13,6 @@ class Menu extends CI_Controller
 
 	public function index()
 	{
-//		$data['title'] = 'Menu Management';
-//		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-//
-//		$data['menu'] = $this->menu->getmenu();
-//
-//		$this->load->view('templates/header', $data);
-//		$this->load->view('templates/sidebar', $data);
-//		$this->load->view('templates/topbar', $data);
-//		$this->load->view('menu/index', $data);
-//		$this->load->view('templates/footer');
-
 		//konfigurasi pagination
 		$config['base_url'] = site_url('menu/index'); //site url
 		$config['total_rows'] = $this->db->count_all('user_menu'); //total row
@@ -56,7 +45,7 @@ class Menu extends CI_Controller
 		$data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
 		$data['title'] = 'Menu Management';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->menu->getuser();
 		$data['menu'] = $this->menu->pagmenu($config['per_page'], $data['page'] );
 		$data['pagination'] = $this->pagination->create_links();
 
@@ -72,8 +61,7 @@ class Menu extends CI_Controller
 	public function addmenu(){
 
 		$data['title'] = 'Menu Management';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-//		$data['menu'] = $this->db->get('user_menu')->result_array();
+		$data['user'] = $this->menu->getuser();
 
 		$this->form_validation->set_rules('menu', 'Menu', 'required');
 
@@ -94,7 +82,7 @@ class Menu extends CI_Controller
 	public function editmenu($id)
 	{
 		$data['title'] = 'Menu Management';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->menu->getuser();
 		$data['menu'] = $this->menu->getdetailmenu($id);
 
 		$this->form_validation->set_rules('menu', 'Menu', 'required|trim');
@@ -116,7 +104,7 @@ class Menu extends CI_Controller
 	public function deletemenu($id)
 	{
 		$data['title'] = 'Menu Management';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->menu->getuser();
 		$data['menu'] = $this->menu->getdetailmenu($id);
 
 		$this->menu->deletemenu($id);
@@ -127,19 +115,6 @@ class Menu extends CI_Controller
 
 	public function submenu()
 	{
-//		$data['title'] = 'SubMenu Management';
-//		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-//
-//		$data['submenu'] = $this->menu->getsubmenu();
-//
-//		$this->load->view('templates/header', $data);
-//		$this->load->view('templates/sidebar', $data);
-//		$this->load->view('templates/topbar', $data);
-//		$this->load->view('menu/submenu', $data);
-//		$this->load->view('templates/footer');
-
-
-		//konfigurasi pagination
 		$config['base_url'] = site_url('menu/submenu'); //site url
 		$config['total_rows'] = $this->db->count_all('user_sub_menu'); //total row
 		$config['per_page'] = 5;  //show record per halaman
@@ -171,7 +146,7 @@ class Menu extends CI_Controller
 		$data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
 		$data['title'] = 'SubMenu Management';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->menu->getuser();
 		$data['submenu'] = $this->menu->pagsubmenu($config['per_page'], $data['page'] );
 		$data['pagination'] = $this->pagination->create_links();
 
@@ -185,7 +160,7 @@ class Menu extends CI_Controller
 	public function addsubmenu(){
 
 		$data['title'] = 'SubMenu Management';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->menu->getuser();
 		$data['menu'] = $this->menu->getmenu();
 
 		$this->form_validation->set_rules('title', 'Title', 'required');
@@ -210,7 +185,7 @@ class Menu extends CI_Controller
 	public function editsubmenu($id)
 	{
 		$data['title'] = 'SubMenu Management';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->menu->getuser();
 		$data['submenu'] = $this->menu->getdetailsubmenu($id);
 		$data['menu'] = $this->menu->getmenu();
 
@@ -236,14 +211,7 @@ class Menu extends CI_Controller
 	public function deletesubmenu($id)
 {
 	$data['title'] = 'SubMenu Management';
-	$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-//		$data['submenu'] = $this->menu->getdetailsubmenu($id);
-
-//		$this->load->view('templates/header', $data);
-//		$this->load->view('templates/sidebar', $data);
-//		$this->load->view('templates/topbar', $data);
-//		$this->load->view('menu/deletesubmenu', $data);
-//		$this->load->view('templates/footer');
+	$data['user'] = $this->menu->getuser();
 
 	$this->menu->deletesubmenu($id);
 
@@ -263,7 +231,7 @@ class Menu extends CI_Controller
 			$kategori = $this->input->post('kategori');
 			$keyword = htmlspecialchars($this->input->post('keyword'));
 			$data['title'] = 'Menu Management';
-			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+			$data['user'] = $this->menu->getuser();
 			$data['menu']= $this->menu->searchmenu($kategori, $keyword);
 
 			if($data){
@@ -291,7 +259,7 @@ class Menu extends CI_Controller
 			$kategori = $this->input->post('kategori');
 			$keyword = htmlspecialchars($this->input->post('keyword'));
 			$data['title'] = 'SubMenu Management';
-			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+			$data['user'] = $this->menu->getuser();
 			$data['submenu']= $this->menu->searchsubmenu($kategori, $keyword);
 
 			if($data){

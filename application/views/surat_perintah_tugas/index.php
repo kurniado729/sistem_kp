@@ -69,7 +69,7 @@
 							<a href="<?= base_url('surat_perintah_tugas/viewspt/' . $s['id_surat_spt']); ?>" class="btn btn-info btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat SPT">
 								<i class="fas fa-envelope-open"></i></a>
 							<?php if ($s['file_spt_sudah_disetujui'] == NULL): ?>
-								<a href="<?= base_url('surat_perintah_tugas/formuploadsptbkd/' . $s['id_surat_spt']); ?>" class="btn btn-primary btn-circle" data-toggle="tooltip" data-placement="top" title="Upload Persetujuan SPT">
+								<a href="<?= base_url('surat_perintah_tugas/uploadsptbkd/' . $s['id_surat_spt']); ?>" class="btn btn-primary btn-circle" data-toggle="tooltip" data-placement="top" title="Upload Persetujuan SPT">
 									<i class="fas fa-arrow-alt-circle-up"></i></a>
 							<?php else: ?>
 								<a href="<?= base_url('surat_perintah_tugas/viewpersetujuanspt/' . $s['id_surat_spt']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat Persetujuan SPT">

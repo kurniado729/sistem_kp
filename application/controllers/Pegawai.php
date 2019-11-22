@@ -13,17 +13,6 @@ class Pegawai extends CI_Controller
 
 	public function index()
 	{
-//		$data['title'] = 'Pegawai TU';
-//		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-//
-	//		$data['pegawai'] = $this->pegawai->getTU();
-//
-//		$this->load->view('templates/header', $data);
-//		$this->load->view('templates/sidebar', $data);
-//		$this->load->view('templates/topbar', $data);
-//		$this->load->view('pegawai/index', $data);
-//		$this->load->view('templates/footer');
-
 		//konfigurasi pagination
 		$config['base_url'] = site_url('pegawai/index'); //site url
 		$config['total_rows'] = $this->db->count_all('pegawai'); //total row
@@ -56,7 +45,7 @@ class Pegawai extends CI_Controller
 		$data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
 		$data['title'] = 'Pegawai TU';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->pegawai->getuser();
 		$data['pegawai'] = $this->pegawai->pagpegawaitu($config['per_page'], $data['page'] );
 		$data['pagination'] = $this->pagination->create_links();
 
@@ -69,17 +58,6 @@ class Pegawai extends CI_Controller
 
 	public function pegawaibkd()
 	{
-//		$data['title'] = 'Pegawai BKD';
-//		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-//
-//		$data['pegawai'] = $this->pegawai->getBKD();
-//
-//		$this->load->view('templates/header', $data);
-//		$this->load->view('templates/sidebar', $data);
-//		$this->load->view('templates/topbar', $data);
-//		$this->load->view('pegawai/pegawaibkd', $data);
-//		$this->load->view('templates/footer');
-
 		//konfigurasi pagination
 		$config['base_url'] = site_url('pegawai/pegawaibkd'); //site url
 		$config['total_rows'] = $this->db->count_all('pegawai'); //total row
@@ -112,7 +90,7 @@ class Pegawai extends CI_Controller
 		$data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
 		$data['title'] = 'Pegawai BKD';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->pegawai->getuser();
 		$data['pegawai'] = $this->pegawai->pagpegawaibkd($config['per_page'], $data['page'] );
 		$data['pagination'] = $this->pagination->create_links();
 
@@ -126,17 +104,6 @@ class Pegawai extends CI_Controller
 
 	public function pegawaibka()
 	{
-//		$data['title'] = 'Pegawai BKA';
-//		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-//
-//		$data['pegawai'] = $this->pegawai->getBKA();
-//
-//		$this->load->view('templates/header', $data);
-//		$this->load->view('templates/sidebar', $data);
-//		$this->load->view('templates/topbar', $data);
-//		$this->load->view('pegawai/pegawaibka', $data);
-//		$this->load->view('templates/footer');
-
 		//konfigurasi pagination
 		$config['base_url'] = site_url('pegawai/pegawaibka'); //site url
 		$config['total_rows'] = $this->db->count_all('pegawai'); //total row
@@ -169,7 +136,7 @@ class Pegawai extends CI_Controller
 		$data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
 		$data['title'] = 'Pegawai BKA';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->pegawai->getuser();
 		$data['pegawai'] = $this->pegawai->pagpegawaibka($config['per_page'], $data['page'] );
 		$data['pagination'] = $this->pagination->create_links();
 
@@ -183,17 +150,6 @@ class Pegawai extends CI_Controller
 
 	public function trash()
 	{
-//		$data['title'] = 'Trash';
-//		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-//
-//		$data['trash'] = $this->pegawai->gettrash();
-//
-//		$this->load->view('templates/header', $data);
-//		$this->load->view('templates/sidebar', $data);
-//		$this->load->view('templates/topbar', $data);
-//		$this->load->view('pegawai/trash', $data);
-//		$this->load->view('templates/footer');
-
 		//konfigurasi pagination
 		$config['base_url'] = site_url('pegawai/trash'); //site url
 		$config['total_rows'] = $this->db->count_all('pegawai'); //total row
@@ -226,7 +182,7 @@ class Pegawai extends CI_Controller
 		$data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
 		$data['title'] = 'Trash';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->pegawai->getuser();
 		$data['trash'] = $this->pegawai->pagtrash($config['per_page'], $data['page'] );
 		$data['pagination'] = $this->pagination->create_links();
 
@@ -240,7 +196,7 @@ class Pegawai extends CI_Controller
 	public function addpegawaitu(){
 
 		$data['title'] = 'Pegawai TU';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->pegawai->getuser();
 
 		$this->form_validation->set_rules('nama_pegawai', 'Nama', 'required');
 
@@ -261,7 +217,7 @@ class Pegawai extends CI_Controller
 	public function addpegawaibkd(){
 
 		$data['title'] = 'Pegawai BKD';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->pegawai->getuser();
 
 		$this->form_validation->set_rules('nama_pegawai', 'Nama', 'required');
 
@@ -282,7 +238,7 @@ class Pegawai extends CI_Controller
 	public function addpegawaibka(){
 
 		$data['title'] = 'Pegawai BKA';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->pegawai->getuser();
 
 		$this->form_validation->set_rules('nama_pegawai', 'Nama', 'required');
 
@@ -303,7 +259,7 @@ class Pegawai extends CI_Controller
 	public function editpegawaitu($id)
 	{
 		$data['title'] = 'Pegawai TU';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->pegawai->getuser();
 		$data['pegawai'] = $this->pegawai->getdetailpegawai($id);
 
 		$this->form_validation->set_rules('nama_pegawai', 'Nama', 'required|trim');
@@ -326,7 +282,7 @@ class Pegawai extends CI_Controller
 	public function editpegawaibkd($id)
 	{
 		$data['title'] = 'Pegawai BKD';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->pegawai->getuser();
 		$data['pegawai'] = $this->pegawai->getdetailpegawai($id);
 
 		$this->form_validation->set_rules('nama_pegawai', 'Nama', 'required|trim');
@@ -349,7 +305,7 @@ class Pegawai extends CI_Controller
 	public function editpegawaibka($id)
 	{
 		$data['title'] = 'Pegawai BKA';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->pegawai->getuser();
 		$data['pegawai'] = $this->pegawai->getdetailpegawai($id);
 
 		$this->form_validation->set_rules('nama_pegawai', 'Nama', 'required|trim');
@@ -371,7 +327,7 @@ class Pegawai extends CI_Controller
 	public function deletepegawaitu($id)
 	{
 		$data['title'] = 'Pegawai TU';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->pegawai->getuser();
 		$data['pegawai'] = $this->pegawai->getdetailpegawai($id);
 
 			$this->pegawai->deletepegawaitu($id);
@@ -382,7 +338,7 @@ class Pegawai extends CI_Controller
 	public function deletepegawaibkd($id)
 	{
 		$data['title'] = 'Pegawai BKD';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->pegawai->getuser();
 		$data['pegawai'] = $this->pegawai->getdetailpegawai($id);
 
 		$this->pegawai->deletepegawaibkd($id);
@@ -393,7 +349,7 @@ class Pegawai extends CI_Controller
 	public function deletepegawaibka($id)
 	{
 		$data['title'] = 'Pegawai BKA';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->pegawai->getuser();
 		$data['pegawai'] = $this->pegawai->getdetailpegawai($id);
 
 		$this->pegawai->deletepegawaibka($id);
@@ -404,7 +360,7 @@ class Pegawai extends CI_Controller
 	public function restorepegawai($id)
 	{
 		$data['title'] = 'Surat Masuk';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->pegawai->getuser();
 		$data['pegawai'] = $this->pegawai->getdetailpegawai($id);
 
 		$this->pegawai->restorepegawai($id);
@@ -415,7 +371,7 @@ class Pegawai extends CI_Controller
 	public function deletepermanentpegawai($id)
 	{
 		$data['title'] = 'Surat Masuk';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->pegawai->getuser();
 		$data['pegawai'] = $this->pegawai->getdetailpegawai($id);
 
 		$this->pegawai->deletepermanentpegawai($id);
@@ -423,143 +379,137 @@ class Pegawai extends CI_Controller
 		redirect('pegawai/trash');
 	}
 
-	public function downloadmail($id){
+//	public function downloadmail($id){
+//
+//		$this->load->helper('download');
+//		$data['surat_masuk'] = $this->surat_masuk->getdetailsuratmasuk($id);
+//		if($data['surat_masuk'])
+//		{
+//			$surat   = file_get_contents('./assets/upload/suratmasuk/'.$data['surat_masuk']['file_surat_masuk']);
+//		}
+//		$name   = $data['surat_masuk']['file_surat_masuk'];
+//
+//		force_download($name, $surat);
+//	}
 
-		$this->load->helper('download');
-		$data['surat_masuk'] = $this->surat_masuk->getdetailsuratmasuk($id);
-		if($data['surat_masuk'])
-		{
-			$surat   = file_get_contents('./assets/upload/suratmasuk/'.$data['surat_masuk']['file_surat_masuk']);
-		}
-		$name   = $data['surat_masuk']['file_surat_masuk'];
 
-		force_download($name, $surat);
-	}
-
-
-	public function submenu()
-	{
-		$data['title'] = 'SubMenu Management';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-
-		$data['submenu'] = $this->menu->getsubmenu();
-
-		$this->load->view('templates/header', $data);
-		$this->load->view('templates/sidebar', $data);
-		$this->load->view('templates/topbar', $data);
-		$this->load->view('menu/submenu', $data);
-		$this->load->view('templates/footer');
-	}
-
-	public function addsubmenu(){
-
-		$data['title'] = 'SubMenu Management';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-		$data['menu'] = $this->menu->getmenu();
-
-		$this->form_validation->set_rules('title', 'Title', 'required');
-		$this->form_validation->set_rules('menu_id', 'Menu', 'required');
-		$this->form_validation->set_rules('url', 'Url', 'required');
-		$this->form_validation->set_rules('icon', 'Icon', 'required');
-
-		if($this->form_validation->run() == false ){
-			$this->load->view('templates/header', $data);
-			$this->load->view('templates/sidebar', $data);
-			$this->load->view('templates/topbar', $data);
-			$this->load->view('menu/addsubmenu', $data);
-			$this->load->view('templates/footer');
-		}else{
-			$data =[
-				'title' => $this->input->post('title'),
-				'menu_id' => $this->input->post('menu_id'),
-				'url' => $this->input->post('url'),
-				'icon' => $this->input->post('icon'),
-				'is_active' => $this->input->post('is_active')
-
-			];
-
-			$this->db->insert('user_sub_menu', $data);
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> New sub menu added!</div>');
-			redirect('menu/submenu');
-		}
-
-	}
-
-	public function editsubmenu($id)
-	{
-		$data['title'] = 'SubMenu Management';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-		$data['submenu'] = $this->menu->getdetailsubmenu($id);
-		$data['menu'] = $this->menu->getmenu();
-
-		$this->form_validation->set_rules('title', 'Title', 'required');
-		$this->form_validation->set_rules('menu_id', 'Menu', 'required');
-		$this->form_validation->set_rules('url', 'Url', 'required');
-		$this->form_validation->set_rules('icon', 'Icon', 'required');
-
-		if ($this->form_validation->run() == false ){
-			$this->load->view('templates/header', $data);
-			$this->load->view('templates/sidebar', $data);
-			$this->load->view('templates/topbar', $data);
-			$this->load->view('menu/editsubmenu', $data);
-			$this->load->view('templates/footer');
-		}else{
-			$title = $this->input->post('title');
-			$menu_id = $this->input->post('menu_id');
-			$url = $this->input->post('url');
-			$icon = $this->input->post('icon');
-			$is_active = $this->input->post('is_active');
-
-			$this->db->set('title', $title);
-			$this->db->set('menu_id', $menu_id);
-			$this->db->set('url', $url);
-			$this->db->set('menu_id', $menu_id);
-			$this->db->set('icon', $icon);
-			$this->db->set('is_active', $is_active);
-			$this->db->where('id', $id);
-			$this->db->update('user_sub_menu');
-
-			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your submenu has been updated!</div>');
-			redirect('menu/submenu');
-		}
-
-	}
-
-	public function deletesubmenu($id)
-	{
-		$data['title'] = 'SubMenu Management';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-		$data['submenu'] = $this->menu->getdetailsubmenu($id);
-
+//	public function submenu()
+//	{
+//		$data['title'] = 'SubMenu Management';
+//		$data['user'] = $this->pegawai->getuser();
+//
+//		$data['submenu'] = $this->menu->getsubmenu();
+//
 //		$this->load->view('templates/header', $data);
 //		$this->load->view('templates/sidebar', $data);
 //		$this->load->view('templates/topbar', $data);
-//		$this->load->view('menu/deletesubmenu', $data);
+//		$this->load->view('menu/submenu', $data);
 //		$this->load->view('templates/footer');
+//	}
 
-		$this->db->where('id', $id);
-		$this->db->delete('user_sub_menu');
-
-		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your menu has been deleted!</div>');
-		redirect('menu/submenu');
-
-
-	}
-
-	public function disposisimail ($id){
-
-		$data['title'] = 'Surat Disposisi';
-//		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-
-		$data['surat_masuk'] = $this->surat_masuk->getdetailsuratmasuk($id);
-
-		$this->load->library('pdf');
-
-		$this->pdf->setPaper('A4', 'potrait');
-		$this->pdf->filename = $data['surat_masuk']['file_surat_masuk'];
-		$this->pdf->load_view('surat_masuk/disposisi', $data);
-
-	}
+//	public function addsubmenu(){
+//
+//		$data['title'] = 'SubMenu Management';
+//		$data['user'] = $this->pegawai->getuser();
+//		$data['menu'] = $this->menu->getmenu();
+//
+//		$this->form_validation->set_rules('title', 'Title', 'required');
+//		$this->form_validation->set_rules('menu_id', 'Menu', 'required');
+//		$this->form_validation->set_rules('url', 'Url', 'required');
+//		$this->form_validation->set_rules('icon', 'Icon', 'required');
+//
+//		if($this->form_validation->run() == false ){
+//			$this->load->view('templates/header', $data);
+//			$this->load->view('templates/sidebar', $data);
+//			$this->load->view('templates/topbar', $data);
+//			$this->load->view('menu/addsubmenu', $data);
+//			$this->load->view('templates/footer');
+//		}else{
+//			$data =[
+//				'title' => $this->input->post('title'),
+//				'menu_id' => $this->input->post('menu_id'),
+//				'url' => $this->input->post('url'),
+//				'icon' => $this->input->post('icon'),
+//				'is_active' => $this->input->post('is_active')
+//
+//			];
+//
+//			$this->db->insert('user_sub_menu', $data);
+//			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> New sub menu added!</div>');
+//			redirect('menu/submenu');
+//		}
+//
+//	}
+//
+//	public function editsubmenu($id)
+//	{
+//		$data['title'] = 'SubMenu Management';
+//		$data['user'] = $this->pegawai->getuser();
+//		$data['submenu'] = $this->menu->getdetailsubmenu($id);
+//		$data['menu'] = $this->menu->getmenu();
+//
+//		$this->form_validation->set_rules('title', 'Title', 'required');
+//		$this->form_validation->set_rules('menu_id', 'Menu', 'required');
+//		$this->form_validation->set_rules('url', 'Url', 'required');
+//		$this->form_validation->set_rules('icon', 'Icon', 'required');
+//
+//		if ($this->form_validation->run() == false ){
+//			$this->load->view('templates/header', $data);
+//			$this->load->view('templates/sidebar', $data);
+//			$this->load->view('templates/topbar', $data);
+//			$this->load->view('menu/editsubmenu', $data);
+//			$this->load->view('templates/footer');
+//		}else{
+//			$title = $this->input->post('title');
+//			$menu_id = $this->input->post('menu_id');
+//			$url = $this->input->post('url');
+//			$icon = $this->input->post('icon');
+//			$is_active = $this->input->post('is_active');
+//
+//			$this->db->set('title', $title);
+//			$this->db->set('menu_id', $menu_id);
+//			$this->db->set('url', $url);
+//			$this->db->set('menu_id', $menu_id);
+//			$this->db->set('icon', $icon);
+//			$this->db->set('is_active', $is_active);
+//			$this->db->where('id', $id);
+//			$this->db->update('user_sub_menu');
+//
+//			$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your submenu has been updated!</div>');
+//			redirect('menu/submenu');
+//		}
+//
+//	}
+//
+//	public function deletesubmenu($id)
+//	{
+//		$data['title'] = 'SubMenu Management';
+//		$data['user'] = $this->pegawai->getuser();
+//		$data['submenu'] = $this->menu->getdetailsubmenu($id);
+//
+//		$this->db->where('id', $id);
+//		$this->db->delete('user_sub_menu');
+//
+//		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Your menu has been deleted!</div>');
+//		redirect('menu/submenu');
+//
+//
+//	}
+//
+//	public function disposisimail ($id){
+//
+//		$data['title'] = 'Surat Disposisi';
+////		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+//
+//		$data['surat_masuk'] = $this->surat_masuk->getdetailsuratmasuk($id);
+//
+//		$this->load->library('pdf');
+//
+//		$this->pdf->setPaper('A4', 'potrait');
+//		$this->pdf->filename = $data['surat_masuk']['file_surat_masuk'];
+//		$this->pdf->load_view('surat_masuk/disposisi', $data);
+//
+//	}
 
 	public function searchpegawaitu()
 	{

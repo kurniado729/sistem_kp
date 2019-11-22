@@ -17,6 +17,12 @@ class Kontrol_Spt_model extends CI_Model
 		return $data->result_array();
 	}
 
+	public function getuser()
+	{
+		$data = $this->db->get_where('user', ['email' => $this->session->userdata('email')]);
+		return $data->row_array();
+	}
+
 	public function getsptlengkapbkdbelumdiupload(){
 		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKD' AND status = '1' AND file_spt_lengkap IS NULL";
 		return $this->db->query($query)->result_array();

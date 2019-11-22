@@ -13,17 +13,6 @@ class Bkd extends CI_Controller
 
 	public function index()
 	{
-//		$data['title'] = 'Surat BKD';
-//		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-//
-//		$data['bkd'] = $this->bkd->suratbkd();
-//
-//		$this->load->view('templates/header', $data);
-//		$this->load->view('templates/sidebar', $data);
-//		$this->load->view('templates/topbar', $data);
-//		$this->load->view('bkd/index', $data);
-//		$this->load->view('templates/footer');
-
 		//konfigurasi pagination
 		$config['base_url'] = site_url('bkd/index'); //site url
 		$config['total_rows'] = $this->db->count_all('surat_disposisi'); //total row
@@ -56,8 +45,8 @@ class Bkd extends CI_Controller
 		$data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
 
 		$data['title'] = 'Surat BKD';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 		$data['bkd'] = $this->bkd->pagsuratbkd($config['per_page'], $data['page'] );
+		$data['user'] = $this->bkd->getuser();
 		//sini
 		$data['surat_disposisi_belum_spt'] = $this->bkd->getbelumspt();
 		$data['hitung_surat_disposisi_belum_spt'] = $this->bkd->hitungbelumspt();
@@ -73,17 +62,6 @@ class Bkd extends CI_Controller
 
 	public function spt()
 	{
-//		$data['title'] = 'Surat Perintah Tugas';
-//		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-//
-//		$data['spt'] = $this->bkd->suratspt();
-//
-//		$this->load->view('templates/header', $data);
-//		$this->load->view('templates/sidebar', $data);
-//		$this->load->view('templates/topbar', $data);
-//		$this->load->view('bkd/spt', $data);
-//		$this->load->view('templates/footer');
-
 		//konfigurasi pagination
 		$config['base_url'] = site_url('bkd/spt'); //site url
 		$config['total_rows'] = $this->db->count_all('surat_disposisi'); //total row
@@ -129,22 +107,6 @@ class Bkd extends CI_Controller
 		$this->load->view('templates/footer');
 	}
 
-//	public function viewdisposisimail($id)
-//	{
-//
-//		$data['title'] = 'Surat BKD';
-////		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-//
-//		$data['disposisi_bkd'] = $this->bkd->getdetailsuratdisposisi($id);
-//
-//		$this->load->library('pdf');
-//
-//		$this->pdf->setPaper('A4', 'potrait');
-//		$this->pdf->filename = $data['disposisi_bkd']['id_surat_disposisi'];
-//		$this->pdf->load_view('bkd/disposisibkd', $data);
-//
-//	}
-
 	public function viewpersetujuandisposisi($id)
 	{
 		$this->bkd->viewpersetujuandisposisi($id);
@@ -153,7 +115,7 @@ class Bkd extends CI_Controller
 	public function addsuratperintahjalan($id)
 	{
 		$data['title'] = 'Surat BKD';
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$data['user'] = $this->bkd->getuser();
 		$data['bkd'] = $this->bkd->getdetailsuratdisposisi($id);
 		$data['surat_disposisi_belum_spt'] = $this->bkd->getbelumspt();
 		$data['hitung_surat_disposisi_belum_spt'] = $this->bkd->hitungbelumspt();
@@ -175,37 +137,9 @@ class Bkd extends CI_Controller
 
 	}
 
-//	public function viewsuratperintahkerja($id)
-//	{
-//
-////		$data['title'] = BKD';
-////		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-//
-//		$data['spk'] = $this->bkd->getdetailsuratdisposisi($id);
-//
-//		$this->load->library('pdf');
-//
-//		$this->pdf->setPaper('A4', 'potrait');
-//		$this->pdf->filename = $data['spk']['id_surat_disposisi'];
-//		$this->pdf->load_view('bkd/viewsuratperintahkerja', $data);
-//
-//	}
-
 	public function action(){
 		$inpText = $this->input->post('query');
-		$query = "SELECT * FROM pegawai WHERE bagian = 'BKD' AND nama_pegawai LIKE '%$inpText%'";
-		$result = $this->db->query($query);
-
-		if($result->num_rows() > 0){
-			$row ['isi']= $result->result_array();
-			foreach ($row['isi'] as $pegawai){
-//				echo " <a href='#' id='kontol' class='pilihan list-group-item list-group-item-action border-1'>". $pegawai['nama_pegawai'] ."</a> ";
-				echo "<option class='one-test-one'>". $pegawai['nama_pegawai'] ."</option>";
-			}
-			echo '<br/>';
-		}else{
-			echo "<option class='one-test-one'>No Record</option>";
-		}
+		$this->bkd->action($inpText);
 	}
 
 	public function action2(){
@@ -238,7 +172,7 @@ class Bkd extends CI_Controller
 			$kategori = $this->input->post('kategori');
 			$keyword = htmlspecialchars($this->input->post('keyword'));
 			$data['title'] = 'Surat BKD';
-			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+			$data['user'] = $this->bkd->getuser();
 			$data['bkd']= $this->bkd->searchbkd($kategori, $keyword);
 			$data['surat_disposisi_belum_spt'] = $this->bkd->getbelumspt();
 			$data['hitung_surat_disposisi_belum_spt'] = $this->bkd->hitungbelumspt();
@@ -268,7 +202,7 @@ class Bkd extends CI_Controller
 			$kategori = $this->input->post('kategori');
 			$keyword = htmlspecialchars($this->input->post('keyword'));
 			$data['title'] = 'Surat Perintah Tugas';
-			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+			$data['user'] = $this->bkd->getuser();
 			$data['spt']= $this->bkd->searchspt($kategori, $keyword);
 			$data['$surat_disposisi_belum_ajukan_spt'] = $this->bkd->getdisposisibelumajukanspt();
 			$data['hitung_surat_disposisi_belum_ajukan_spt'] = $this->bkd->hitungdisposisibelumajukanspt();
