@@ -23,6 +23,22 @@
 								<input type="text" class="form-control" id="nip" name="nip" placeholder="NIP">
 							</div>
 							<div class="form-group">
+								<!--								<label for="exampleFormControlSelect1">Jabatan</label>-->
+								<select class="form-control" id="jenis_kelamin" name="jenis_kelamin">
+									<option value="laki-laki">laki-laki</option>
+									<option value="perempuan">perempuan</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" placeholder="Tempat Lahir">
+							</div>
+							<div class="form-group"> <!-- Date input -->
+								<input class="form-control" id="tanggal_lahir" name="tanggal_lahir" placeholder="Tanggal Lahir" autocomplete="off" type="text"/>
+							</div>
+							<div class="form-group">
+								<input type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat">
+							</div>
+							<div class="form-group">
 <!--								<label for="exampleFormControlSelect1">Jabatan</label>-->
 								<select class="form-control" id="jabatan" name="jabatan">
 									<option value="jabatan1">jabatan1</option>

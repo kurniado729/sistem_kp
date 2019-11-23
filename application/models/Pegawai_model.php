@@ -153,6 +153,10 @@ class Pegawai_model extends CI_Model
 		$this->db->insert('pegawai', [
 			'nama_pegawai' => $this->input->post('nama_pegawai'),
 			'nip' => $this->input->post('nip'),
+			'jenis_kelamin' => $this->input->post('jenis_kelamin'),
+			'tempat_lahir' => $this->input->post('tempat_lahir'),
+			'tanggal_lahir' => $this->input->post('tanggal_lahir'),
+			'alamat' => $this->input->post('alamat'),
 			'jabatan' => $this->input->post('jabatan'),
 			'bagian' => $this->input->post('bagian')
 		]);
@@ -162,6 +166,10 @@ class Pegawai_model extends CI_Model
 		$this->db->insert('pegawai', [
 			'nama_pegawai' => $this->input->post('nama_pegawai'),
 			'nip' => $this->input->post('nip'),
+			'jenis_kelamin' => $this->input->post('jenis_kelamin'),
+			'tempat_lahir' => $this->input->post('tempat_lahir'),
+			'tanggal_lahir' => $this->input->post('tanggal_lahir'),
+			'alamat' => $this->input->post('alamat'),
 			'jabatan' => $this->input->post('jabatan'),
 			'bagian' => $this->input->post('bagian')
 		]);
@@ -171,6 +179,10 @@ class Pegawai_model extends CI_Model
 		$this->db->insert('pegawai', [
 			'nama_pegawai' => $this->input->post('nama_pegawai'),
 			'nip' => $this->input->post('nip'),
+			'jenis_kelamin' => $this->input->post('jenis_kelamin'),
+			'tempat_lahir' => $this->input->post('tempat_lahir'),
+			'tanggal_lahir' => $this->input->post('tanggal_lahir'),
+			'alamat' => $this->input->post('alamat'),
 			'jabatan' => $this->input->post('jabatan'),
 			'bagian' => $this->input->post('bagian')
 		]);
@@ -179,9 +191,19 @@ class Pegawai_model extends CI_Model
 	public function editpegawaitu($id){
 		$nama_pegawai = $this->input->post('nama_pegawai');
 		$nip = $this->input->post('nip');
+		$jenis_kelamin = $this->input->post('jenis_kelamin');
+		$tempat_lahir = $this->input->post('tempat_lahir');
+		$tanggal_lahir = $this->input->post('tanggal_lahir');
+		$alamat = $this->input->post('alamat');
+		$jabatan = $this->input->post('jabatan');
 
 		$this->db->set('nama_pegawai', $nama_pegawai);
 		$this->db->set('nip', $nip);
+		$this->db->set('jenis_kelamin', $jenis_kelamin);
+		$this->db->set('tempat_lahir', $tempat_lahir);
+		$this->db->set('tanggal_lahir', $tanggal_lahir);
+		$this->db->set('alamat', $alamat);
+		$this->db->set('jabatan', $jabatan);
 		$this->db->where('id_pegawai', $id);
 		$this->db->update('pegawai');
 
@@ -190,9 +212,19 @@ class Pegawai_model extends CI_Model
 	public function editpegawaibkd($id){
 		$nama_pegawai = $this->input->post('nama_pegawai');
 		$nip = $this->input->post('nip');
+		$jenis_kelamin = $this->input->post('jenis_kelamin');
+		$tempat_lahir = $this->input->post('tempat_lahir');
+		$tanggal_lahir = $this->input->post('tanggal_lahir');
+		$alamat = $this->input->post('alamat');
+		$jabatan = $this->input->post('jabatan');
 
 		$this->db->set('nama_pegawai', $nama_pegawai);
 		$this->db->set('nip', $nip);
+		$this->db->set('jenis_kelamin', $jenis_kelamin);
+		$this->db->set('tempat_lahir', $tempat_lahir);
+		$this->db->set('tanggal_lahir', $tanggal_lahir);
+		$this->db->set('alamat', $alamat);
+		$this->db->set('jabatan', $jabatan);
 		$this->db->where('id_pegawai', $id);
 		$this->db->update('pegawai');
 	}
@@ -200,9 +232,19 @@ class Pegawai_model extends CI_Model
 	public function editpegawaibka($id){
 		$nama_pegawai = $this->input->post('nama_pegawai');
 		$nip = $this->input->post('nip');
+		$jenis_kelamin = $this->input->post('jenis_kelamin');
+		$tempat_lahir = $this->input->post('tempat_lahir');
+		$tanggal_lahir = $this->input->post('tanggal_lahir');
+		$alamat = $this->input->post('alamat');
+		$jabatan = $this->input->post('jabatan');
 
 		$this->db->set('nama_pegawai', $nama_pegawai);
 		$this->db->set('nip', $nip);
+		$this->db->set('jenis_kelamin', $jenis_kelamin);
+		$this->db->set('tempat_lahir', $tempat_lahir);
+		$this->db->set('tanggal_lahir', $tanggal_lahir);
+		$this->db->set('alamat', $alamat);
+		$this->db->set('jabatan', $jabatan);
 		$this->db->where('id_pegawai', $id);
 		$this->db->update('pegawai');
 	}
