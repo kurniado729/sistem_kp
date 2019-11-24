@@ -198,7 +198,13 @@ class Pegawai extends CI_Controller
 		$data['title'] = 'Pegawai TU';
 		$data['user'] = $this->pegawai->getuser();
 
-		$this->form_validation->set_rules('nama_pegawai', 'Nama', 'required');
+		$this->form_validation->set_rules('nama_pegawai', 'Nama', 'trim|required');
+		$this->form_validation->set_rules('nip', 'NIP', 'trim|required');
+		$this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'trim|required');
+		$this->form_validation->set_rules('tempat_lahir', 'Tempat Lahir', 'trim|required');
+		$this->form_validation->set_rules('tanggal_lahir', 'Tanggal Lahir', 'trim|required');
+		$this->form_validation->set_rules('alamat', 'Alamat', 'trim|required');
+		$this->form_validation->set_rules('jabatan', 'Jabatan', 'trim|required');
 
 		if($this->form_validation->run() == false ){
 			$this->load->view('templates/header', $data);
@@ -219,7 +225,13 @@ class Pegawai extends CI_Controller
 		$data['title'] = 'Pegawai BKD';
 		$data['user'] = $this->pegawai->getuser();
 
-		$this->form_validation->set_rules('nama_pegawai', 'Nama', 'required');
+		$this->form_validation->set_rules('nama_pegawai', 'Nama', 'trim|required');
+		$this->form_validation->set_rules('nip', 'NIP', 'trim|required');
+		$this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'trim|required');
+		$this->form_validation->set_rules('tempat_lahir', 'Tempat Lahir', 'trim|required');
+		$this->form_validation->set_rules('tanggal_lahir', 'Tanggal Lahir', 'trim|required');
+		$this->form_validation->set_rules('alamat', 'Alamat', 'trim|required');
+		$this->form_validation->set_rules('jabatan', 'Jabatan', 'trim|required');
 
 		if($this->form_validation->run() == false ){
 			$this->load->view('templates/header', $data);
@@ -240,7 +252,13 @@ class Pegawai extends CI_Controller
 		$data['title'] = 'Pegawai BKA';
 		$data['user'] = $this->pegawai->getuser();
 
-		$this->form_validation->set_rules('nama_pegawai', 'Nama', 'required');
+		$this->form_validation->set_rules('nama_pegawai', 'Nama', 'trim|required');
+		$this->form_validation->set_rules('nip', 'NIP', 'trim|required');
+		$this->form_validation->set_rules('jenis_kelamin', 'Jenis Kelamin', 'trim|required');
+		$this->form_validation->set_rules('tempat_lahir', 'Tempat Lahir', 'trim|required');
+		$this->form_validation->set_rules('tanggal_lahir', 'Tanggal Lahir', 'trim|required');
+		$this->form_validation->set_rules('alamat', 'Alamat', 'trim|required');
+		$this->form_validation->set_rules('jabatan', 'Jabatan', 'trim|required');
 
 		if($this->form_validation->run() == false ){
 			$this->load->view('templates/header', $data);

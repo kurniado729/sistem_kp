@@ -8,6 +8,12 @@
 		<div class="col-lg-6">
 
 			<?= form_error ('nama_pegawai', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
+			<?= form_error ('nip', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
+			<?= form_error ('jenis_kelamin', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
+			<?= form_error ('tempat_lahir', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
+			<?= form_error ('tanggal_lahir', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
+			<?= form_error ('alamat', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
+			<?= form_error ('jabatan', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
 
 			<div class="card">
 				<div class="card-header">
@@ -17,10 +23,10 @@
 					<blockquote class="blockquote mb-0">
 						<form method="post" action="<?= base_url('pegawai/addpegawaibkd'); ?>">
 							<div class="form-group">
-								<input type="text" class="form-control" id="nama_pegawai" name="nama_pegawai" placeholder="Nama">
+								<input type="text" class="form-control" id="nama_pegawai" name="nama_pegawai" placeholder="Nama" value="<?= set_value('nama_pegawai')?>">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" id="nip" name="nip" placeholder="NIP">
+								<input type="text" class="form-control" id="nip" name="nip" placeholder="NIP" value="<?= set_value('nip')?>">
 							</div>
 							<div class="form-group">
 								<!--								<label for="exampleFormControlSelect1">Jabatan</label>-->
@@ -30,13 +36,13 @@
 								</select>
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" placeholder="Tempat Lahir">
+								<input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" placeholder="Tempat Lahir" value="<?= set_value('tempat_lahir')?>">
 							</div>
 							<div class="form-group"> <!-- Date input -->
-								<input class="form-control" id="tanggal_lahir" name="tanggal_lahir" placeholder="Tanggal Lahir" autocomplete="off" type="text"/>
+								<input class="form-control" id="tanggal_lahir" name="tanggal_lahir" placeholder="Tanggal Lahir" autocomplete="off" type="text"/ value="<?= set_value('tanggal_lahir')?>">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat">
+								<input type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat" value="<?= set_value('alamat')?>">
 							</div>
 							<div class="form-group">
 								<!--								<label for="exampleFormControlSelect1">Jabatan</label>-->
