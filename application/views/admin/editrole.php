@@ -11,7 +11,7 @@
 
 			<div class="card">
 				<div class="card-header">
-					Edit menu
+					Edit Role
 				</div>
 				<div class="card-body">
 					<blockquote class="blockquote mb-0">

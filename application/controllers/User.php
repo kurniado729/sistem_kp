@@ -59,27 +59,9 @@ class User extends CI_Controller
 			$this->load->view('user/changepassword', $data);
 			$this->load->view('templates/footer');
 		}else{
-			$current_password = $this->input->post('current_password');
-			$new_password = $this->input->post('new_password1');
-
-			if(!password_verify($current_password, $data['user']['password'])){
-				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> Wrong current password!</div>');
-				redirect('user/changepassword');
-			}else{
-				if($current_password == $new_password){
-					$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert"> New passsword cannot be the same as current password!</div>');
-					redirect('user/changepassword');
-				}else{
-					$password_hash = password_hash($new_password, PASSWORD_DEFAULT);
-
-					$this->db->set('password', $password_hash);
-					$this->db->where('email', $this->session->userdata('email'));
-					$this->db->update('user');
-
-					$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert"> Password Changed!</div>');
-					redirect('user/changepassword');
-				}
-			}
+			$this->user->changepassword();
+			$this->session->set_flashdata('message', 'password berhasil diedit');
+			redirect('user/changepassword');
 		}
 
 	}

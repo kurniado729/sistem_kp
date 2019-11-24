@@ -19,7 +19,7 @@
 					<blockquote class="blockquote mb-0">
 						<form method="post" action="<?= base_url('menu/addsubmenu'); ?>">
 							<div class="form-group">
-								<input type="text" class="form-control" id="title" name="title" placeholder="Submenu title">
+								<input type="text" class="form-control" id="title" name="title" placeholder="Submenu title" value="<?= set_value('title')?>">
 							</div>
 							<div class="form-group">
 								<select name="menu_id" id="menu_id" class="form-control">
@@ -31,10 +31,10 @@
 
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" id="url" name="url" placeholder="Submenu url">
+								<input type="text" class="form-control" id="url" name="url" placeholder="Submenu url" value="<?= set_value('url')?>">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" id="icon" name="icon" placeholder="Submenu icon">
+								<input type="text" class="form-control" id="icon" name="icon" placeholder="Submenu icon" value="<?= set_value('icon')?>">
 							</div>
 							<div class="form-group">
 								<div class="form-check">

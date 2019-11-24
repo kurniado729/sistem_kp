@@ -48,6 +48,10 @@
 						<th scope="col">#</th>
 						<th scope="col">Nama</th>
 						<th scope="col">NIP</th>
+						<th scope="col">Jenis Kelamin</th>
+						<th scope="col">Tempat Lahir</th>
+						<th scope="col">Tanggal Lahir</th>
+						<th scope="col">Alamat</th>
 						<th scope="col">Jabatan</th>
 						<th scope="col">Action</th>
 					</tr>
@@ -59,6 +63,10 @@
 						<th scope="row"><?= $i; ?></th>
 						<td><?= $p['nama_pegawai'] ?></td>
 						<td><?= $p['nip'] ?></td>
+						<td><?= $p['jenis_kelamin'] ?></td>
+						<td><?= $p['tempat_lahir'] ?></td>
+						<td><?= $p['tanggal_lahir'] ?></td>
+						<td><?= $p['alamat'] ?></td>
 						<td><?= $p['jabatan'] ?></td>
 						<td>
 							<a href="<?= base_url('pegawai/editpegawaibkd/' . $p['id_pegawai']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Edit">

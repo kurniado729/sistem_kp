@@ -3,14 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Pegawai_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Pegawai_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pegawai/addpegawaibka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/addpegawaibka.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pegawai/addpegawaibkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/addpegawaibkd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pegawai/addpegawaitu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/addpegawaitu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pegawai/editpegawaibka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/editpegawaibka.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pegawai/editpegawaibkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/editpegawaibkd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pegawai/editpegawaitu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/editpegawaitu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/templates/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/templates/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/User_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/User_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/editrole.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/editrole.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/menu/addsubmenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/menu/addsubmenu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/pegawaibka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/pegawaibka.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/pegawaibkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/pegawaibkd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/user/changepassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/user/changepassword.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -227,7 +227,8 @@
       <workItem from="1574327303687" duration="11679000" />
       <workItem from="1574422422767" duration="6482000" />
       <workItem from="1574471868316" duration="3141000" />
-      <workItem from="1574531300308" duration="2541000" />
+      <workItem from="1574531300308" duration="2831000" />
+      <workItem from="1574587214696" duration="1866000" />
     </task>
     <task id="LOCAL-00001" summary="update view">
       <created>1573067332216</created>
@@ -425,7 +426,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574428395917</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="perbaiki pegawai">
+      <created>1574533908690</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1574533908690</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,6 +459,7 @@
     <MESSAGE value="update model" />
     <MESSAGE value="sweet alert" />
     <MESSAGE value="tambah pesan di topbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="tambah pesan di topbar" />
+    <MESSAGE value="perbaiki pegawai" />
+    <option name="LAST_COMMIT_MESSAGE" value="perbaiki pegawai" />
   </component>
 </project>

@@ -7,7 +7,7 @@
 	<div class="row">
 		<div class="col-lg-6">
 
-			<?= $this->session->flashdata('message') ?>
+			<div class="flash-data" data-flashdata="<?= $this->session->flashdata('message'); ?>"></div>
 
 			<form method="post" action="<?= base_url('user/changepassword') ?>">
 				<div class="form-group">
