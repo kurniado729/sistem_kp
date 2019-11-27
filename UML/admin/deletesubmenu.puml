@@ -1,0 +1,32 @@
+@startuml
+
+autonumber
+hide footbox
+title delete submenu
+
+Actor Aktor_Admin
+boundary dashboard
+boundary Submenu
+control Admin
+control Menu_C
+Entity submenu
+
+Admin --> dashboard: load->view()
+dashboard --> Aktor_Admin: Halaman dashboard
+Aktor_Admin --> dashboard: klik submenu submenu management
+dashboard --> Menu_C: submenu()
+Menu_C --> submenu:
+    
+    submenu --> Menu_C:
+    Menu_C --> Submenu: load->view()
+    Submenu --> Aktor_Admin: Halaman submenu management
+
+Aktor_Admin --> Submenu: klik tombol deletesubmenu
+Submenu --> Menu_C: deletesubmenu()
+Menu_C --> submenu:
+  
+    submenu --> Menu_C:
+    Menu_C --> Submenu: load->view()
+    Submenu --> Aktor_Admin: Halaman submenu
+
+@enduml

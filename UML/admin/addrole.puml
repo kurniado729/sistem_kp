@@ -1,0 +1,50 @@
+@startuml
+
+autonumber
+hide footbox
+title add Menu
+
+Actor Aktor_Admin
+boundary dashboard
+boundary Role
+boundary addrole
+control Admin
+Entity role
+
+Admin --> dashboard: load->view()
+dashboard --> Aktor_Admin: Halaman dashboard
+Aktor_Admin --> dashboard: klik menu Role
+dashboard --> Admin: Role()
+Admin --> role:
+    
+    role --> Admin:
+    Admin --> Role: load->view()
+    Role --> Aktor_Admin: Halaman role
+
+Aktor_Admin --> Role: klik tombol addrole
+Role --> Admin: addrole()
+Admin --> addrole: load->view()
+addrole --> Aktor_Admin: Halaman addrole
+
+Aktor_Admin --> addrole: Mengisi Inputan
+    note right of Aktor_Admin
+        Inputan role
+            end note
+addrole --> Admin: addrole()
+Admin --> role:
+
+alt isValid() case
+    
+    role --> Admin: isValid()
+    Admin --> Role: load->view()
+    Role --> Aktor_Admin: Halaman Role
+
+else isInvalid() case
+    
+    role --> Admin: isInvalid()
+    Admin --> addrole: load->view()
+    addrole --> Aktor_Admin: this field is required
+end
+
+
+@enduml

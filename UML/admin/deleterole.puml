@@ -1,0 +1,31 @@
+@startuml
+
+autonumber
+hide footbox
+title add role Admin
+
+Actor Aktor_Admin
+boundary dashboard
+boundary Role
+control Admin
+Entity role
+
+Admin --> dashboard: load->view()
+dashboard --> Aktor_Admin: Halaman dashboard
+Aktor_Admin --> dashboard: klik menu Role
+dashboard --> Admin: Role()
+Admin --> role:
+    
+    role --> Admin:
+    Admin --> Role: load->view()
+    Role --> Aktor_Admin: Halaman role
+
+Aktor_Admin --> Role: klik tombol deleterole
+Role --> Admin: deleterole()
+Admin --> role:
+  
+    role --> Admin:
+    Admin --> Role: load->view()
+    Role --> Aktor_Admin: Halaman Role
+
+@enduml

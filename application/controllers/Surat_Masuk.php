@@ -117,10 +117,10 @@ class Surat_Masuk extends CI_Controller
 		$data['surat_masuk_belum_disposisi'] = $this->surat_masuk->getsuratmasukbelumdisposisi();
 		$data['hitung_surat_masuk_belum_disposisi'] = $this->surat_masuk->hitungsuratmasukbelumdisposisi();
 
-		$this->form_validation->set_rules('pengirim', 'Pengirim', 'required');
-		$this->form_validation->set_rules('no_surat_masuk', 'No Surat', 'required');
-		$this->form_validation->set_rules('tgl_surat_masuk', 'Tanggal Surat', 'required');
-		$this->form_validation->set_rules('ringkasan', 'Ringkasan', 'required');
+		$this->form_validation->set_rules('pengirim', 'Pengirim', 'trim|required');
+		$this->form_validation->set_rules('no_surat_masuk', 'No Surat', 'trim|required');
+		$this->form_validation->set_rules('tgl_surat_masuk', 'Tanggal Surat', 'trim|required');
+		$this->form_validation->set_rules('ringkasan', 'Ringkasan', 'trim|required');
 
 		if ($this->form_validation->run() == false) {
 			$this->load->view('templates/header', $data);
@@ -144,10 +144,10 @@ class Surat_Masuk extends CI_Controller
 		$data['surat_masuk_belum_disposisi'] = $this->surat_masuk->getsuratmasukbelumdisposisi();
 		$data['hitung_surat_masuk_belum_disposisi'] = $this->surat_masuk->hitungsuratmasukbelumdisposisi();
 
-		$this->form_validation->set_rules('pengirim', 'Pengirim', 'required');
-		$this->form_validation->set_rules('no_surat_masuk', 'No Surat', 'required');
-		$this->form_validation->set_rules('tgl_surat_masuk', 'Tanggal Surat', 'required');
-		$this->form_validation->set_rules('ringkasan', 'Ringkasan', 'required');
+		$this->form_validation->set_rules('pengirim', 'Pengirim', 'trim|required');
+		$this->form_validation->set_rules('no_surat_masuk', 'No Surat', 'trim|required');
+		$this->form_validation->set_rules('tgl_surat_masuk', 'Tanggal Surat', 'trim|required');
+		$this->form_validation->set_rules('ringkasan', 'Ringkasan', 'trim|required');
 
 		if ($this->form_validation->run() == false) {
 			$this->load->view('templates/header', $data);

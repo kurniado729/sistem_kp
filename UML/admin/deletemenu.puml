@@ -1,0 +1,32 @@
+@startuml
+
+autonumber
+hide footbox
+title Lihat Menu
+
+Actor Aktor_Admin
+boundary dashboard
+boundary Menu
+control Admin
+control Menu_C
+Entity menu
+
+Admin --> dashboard: load->view()
+dashboard --> Aktor_Admin: Halaman dashboard
+Aktor_Admin --> dashboard: klik menu Menu management
+dashboard --> Menu_C: index()
+Menu_C --> menu:
+    
+    menu --> Menu_C:
+    Menu_C --> Menu: load->view()
+    Menu --> Aktor_Admin: Halaman menu management
+
+Aktor_Admin --> Menu: klik tombol deletemenu
+Menu --> Menu_C: deletemenu()
+Menu_C --> menu:
+  
+    menu --> Menu_C:
+    Menu_C --> Menu: load->view()
+    Menu --> Aktor_Admin: Halaman Menu
+
+@enduml

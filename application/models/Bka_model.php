@@ -6,6 +6,7 @@ class Bka_model extends CI_Model
 	public function pagsuratbka($limit, $start)
 	{
 		$this->db->order_by('status_spt', 'ASC');
+		$this->db->order_by('id_surat_disposisi', 'DESC');
 		$data = $this->db->get_where('surat_disposisi', ['tujuan' => 'BKA', 'status' => '1' ], $limit, $start);
 		return $data->result_array();
 	}
@@ -13,6 +14,7 @@ class Bka_model extends CI_Model
 	public function pagspt($limit, $start)
 	{
 		$this->db->order_by('status_pengajuan', 'ASC');
+		$this->db->order_by('id_surat_spt', 'DESC');
 		$data = $this->db->get_where('surat_spt', ['bagian' => 'BKA'], $limit, $start);
 		return $data->result_array();
 	}

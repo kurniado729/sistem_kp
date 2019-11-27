@@ -1,0 +1,50 @@
+@startuml
+
+autonumber
+hide footbox
+title Lihat Menu
+
+Actor Aktor_Admin
+boundary dashboard
+boundary Menu
+boundary addmenu
+control Admin
+control Menu_C
+Entity menu
+
+Admin --> dashboard: load->view()
+dashboard --> Aktor_Admin: Halaman dashboard
+Aktor_Admin --> dashboard: klik menu Menu management
+dashboard --> Menu_C: index()
+Menu_C --> menu:
+    
+    menu --> Menu_C:
+    Menu_C --> Menu: load->view()
+    Menu --> Aktor_Admin: Halaman menu management
+
+Aktor_Admin --> Menu: klik tombol addmenu
+Menu --> Menu_C: addmenu()
+Menu_C --> addmenu: load->view()
+addmenu --> Aktor_Admin: Halaman addmenu
+
+Aktor_Admin --> addmenu: Mengisi Inputan
+    note right of Aktor_Admin
+        Inputan menu
+            end note
+addmenu --> Menu_C: addmenu()
+Menu_C --> menu:
+
+alt isValid() case
+    
+    menu --> Menu_C: isValid()
+    Menu_C --> Menu: load->view()
+    Menu --> Aktor_Admin: Halaman Menu
+
+else isInvalid() case
+    
+    menu --> Menu_C: isValid()
+    Menu_C --> addmenu: load->view()
+    addmenu --> Aktor_Admin: this field is required
+
+end
+@enduml

@@ -1,0 +1,50 @@
+@startuml
+
+autonumber
+hide footbox
+title Edit SubMenu
+
+Actor Aktor_Admin
+boundary dashboard
+boundary Submenu
+boundary editsubmenu
+control Admin
+control Menu_C
+Entity submenu
+
+Admin --> dashboard: load->view()
+dashboard --> Aktor_Admin: Halaman dashboard
+Aktor_Admin --> dashboard: klik menu Submenu management
+dashboard --> Menu_C: Submenu()
+Menu_C --> submenu:
+    
+    submenu --> Menu_C:
+    Menu_C --> Submenu: load->view()
+    Submenu --> Aktor_Admin: Halaman Submenu management
+
+Aktor_Admin --> Submenu: klik tombol editsubmenu
+Submenu --> Menu_C: editsubmenu()
+Menu_C --> editsubmenu: load->view()
+editsubmenu --> Aktor_Admin: Halaman editsubmenu
+
+Aktor_Admin --> editsubmenu: Mengisi Inputan
+    note right of Aktor_Admin
+        Inputan Submenu
+            end note
+editsubmenu --> Menu_C: editsubmenu()
+Menu_C --> submenu:
+
+alt isValid() case
+    
+    submenu --> Menu_C: isValid()
+    Menu_C --> Submenu: load->view()
+    Submenu --> Aktor_Admin: Halaman Submenu
+
+else isInvalid() case
+    
+    submenu --> Menu_C: isValid()
+    Menu_C --> editsubmenu: load->view()
+    editsubmenu --> Aktor_Admin: this field is required
+
+end
+@enduml

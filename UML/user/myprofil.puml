@@ -1,0 +1,23 @@
+@startuml
+
+autonumber
+hide footbox
+title myprofil Aktor
+
+Actor Aktor
+boundary dashboard
+boundary myprofil
+control User
+Entity user
+
+User --> dashboard: load->view()
+dashboard --> Aktor: Halaman dashboard
+Aktor --> dashboard: klik menu my profil
+dashboard --> User: index()
+User --> user:
+    
+    user --> User:
+    User --> myprofil: load->view()
+    myprofil --> Aktor: Halaman my profil
+
+@enduml

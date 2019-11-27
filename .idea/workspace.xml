@@ -3,10 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Pegawai.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Pegawai.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pegawai/addpegawaibka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/addpegawaibka.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pegawai/addpegawaibkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/addpegawaibkd.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/pegawai/addpegawaitu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/addpegawaitu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Surat_Masuk.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Surat_Masuk.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Bka_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Bka_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Bkd_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Bkd_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Kontrol_Spt_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Kontrol_Spt_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Spt_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Spt_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Surat_Disposisi_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Surat_Disposisi_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Surat_Masuk_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Surat_Masuk_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/surat_masuk/addmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_masuk/addmail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/surat_masuk/editmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_masuk/editmail.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -88,16 +94,16 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/views/kontrol_spt" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/views/pengguna" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\sistem_kp\application\views\kontrol_spt" />
+      <recent name="C:\xampp\htdocs\sistem_kp\application\views\pengguna" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\models" />
-      <recent name="C:\xampp\htdocs\sistem_kp\application\views" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\controllers" />
-      <recent name="C:\xampp\htdocs\sistem_kp\assets" />
+      <recent name="C:\xampp\htdocs\sistem_kp\application\views\kontrol_spt" />
+      <recent name="C:\xampp\htdocs\sistem_kp\application\views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -224,7 +230,10 @@
       <workItem from="1574422422767" duration="6482000" />
       <workItem from="1574471868316" duration="3141000" />
       <workItem from="1574531300308" duration="2831000" />
-      <workItem from="1574587214696" duration="3100000" />
+      <workItem from="1574587214696" duration="3358000" />
+      <workItem from="1574595072726" duration="5291000" />
+      <workItem from="1574864924534" duration="3078000" />
+      <workItem from="1574869128385" duration="8302000" />
     </task>
     <task id="LOCAL-00001" summary="update view">
       <created>1573067332216</created>
@@ -436,7 +445,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574589281979</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="perbaiki pegawai">
+      <created>1574590566570</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1574590566570</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

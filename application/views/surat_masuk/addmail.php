@@ -21,16 +21,16 @@
 <!--						<form method="post" action="--><?//= base_url('surat_masuk/addmail')?><!--" enctype="multipart/form-data">-->
 							<?php echo form_open_multipart() ?>
 							<div class="form-group">
-								<input type="text" class="form-control" id="pengirim" name="pengirim" placeholder="Pengirim">
+								<input type="text" class="form-control" id="pengirim" name="pengirim" placeholder="Pengirim" value="<?= set_value('pengirim')?>">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" id="no_surat_masuk" name="no_surat_masuk" placeholder="No Surat">
+								<input type="text" class="form-control" id="no_surat_masuk" name="no_surat_masuk" placeholder="No Surat" value="<?= set_value('no_surat_masuk')?>">
 							</div>
 							<div class="form-group"> <!-- Date input -->
-								<input class="form-control" id="tgl_surat_masuk" name="tgl_surat_masuk" placeholder="Tanggal Surat Masuk" autocomplete="off" type="text"/>
+								<input class="form-control" id="tgl_surat_masuk" name="tgl_surat_masuk" placeholder="Tanggal Surat Masuk" autocomplete="off" type="text"/ value="<?= set_value('tanggal_surat_masuk')?>">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" id="ringkasan" name="ringkasan" placeholder="Ringkasan">
+								<input type="text" class="form-control" id="ringkasan" name="ringkasan" placeholder="Ringkasan" value="<?= set_value('ringkasan')?>">
 							</div>
 							<div class="form-group">
 								<div class="custom-file">

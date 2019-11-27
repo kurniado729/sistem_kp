@@ -6,6 +6,7 @@ class Surat_Masuk_model extends CI_Model
 	public function pagsuratmasuk($limit, $start)
 	{
 		$this->db->order_by('disposisi', 'ASC');
+		$this->db->order_by('id_surat_masuk', 'DESC');
 		$data = $this->db->get_where('surat_masuk', ['hapus' => '0'], $limit, $start);
 		return $data->result_array();
 	}

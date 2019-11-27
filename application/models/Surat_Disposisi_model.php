@@ -18,14 +18,18 @@ class Surat_Disposisi_model extends CI_Model
 
 	public function pagdisposisibkd($limit, $start)
 	{
+		$this->db->order_by('status', 'ASC');
 		$this->db->order_by('file_disposisi_sudah_disetujui', 'ASC');
+		$this->db->order_by('id_surat_disposisi', 'DESC');
 		$data = $this->db->get_where('surat_disposisi', ['tujuan' => 'BKD'], $limit, $start);
 		return $data->result_array();
 	}
 
 	public function pagdisposisibka($limit, $start)
 	{
+		$this->db->order_by('status', 'ASC');
 		$this->db->order_by('file_disposisi_sudah_disetujui', 'ASC');
+		$this->db->order_by('id_surat_disposisi', 'DESC');
 		$data = $this->db->get_where('surat_disposisi', ['tujuan' => 'BKA'], $limit, $start);
 		return $data->result_array();
 	}

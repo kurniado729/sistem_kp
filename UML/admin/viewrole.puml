@@ -1,0 +1,23 @@
+@startuml
+
+autonumber
+hide footbox
+title edit profil Admin
+
+Actor Aktor_Admin
+boundary dashboard
+boundary Role
+control Admin
+Entity role
+
+Admin --> dashboard: load->view()
+dashboard --> Aktor_Admin: Halaman dashboard
+Aktor_Admin --> dashboard: klik menu Role
+dashboard --> Admin: Role()
+Admin --> role:
+    
+    role --> Admin:
+    Admin --> Role: load->view()
+    Role --> Admin: Halaman change password
+
+@enduml

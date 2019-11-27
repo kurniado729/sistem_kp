@@ -5,14 +5,18 @@ class Spt_model extends CI_Model
 {
 	public function pagpersetujuansptbkd($limit, $start)
 	{
+		$this->db->order_by('status', 'ASC');
 		$this->db->order_by('file_spt_sudah_disetujui', 'ASC');
+		$this->db->order_by('id_surat_spt', 'DESC');
 		$data = $this->db->get_where('surat_spt', ['bagian' => 'BKD', 'status_pengajuan' => '1' ], $limit, $start);
 		return $data->result_array();
 	}
 
 	public function pagpersetujuansptbka($limit, $start)
 	{
+		$this->db->order_by('status', 'ASC');
 		$this->db->order_by('file_spt_sudah_disetujui', 'ASC');
+		$this->db->order_by('id_surat_spt', 'DESC');
 		$data = $this->db->get_where('surat_spt', ['bagian' => 'BKA', 'status_pengajuan' => '1' ], $limit, $start);
 		return $data->result_array();
 	}

@@ -1,0 +1,25 @@
+@startuml
+
+autonumber
+hide footbox
+title changepassword Aktor
+
+Actor Aktor
+boundary changepassword
+control Auth
+Entity User
+
+Auth --> changepassword: load->view()
+changepassword --> Aktor: Halaman changepassword
+Aktor --> changepassword: Mengisi Inputan
+    note right of Aktor
+        Inputan email
+            end note
+changepassword --> Auth: changepassword()
+Auth --> User:
+    
+    User --> Auth:
+    Auth --> changepassword: load->view()
+    changepassword --> Aktor: Halaman Login
+
+@enduml

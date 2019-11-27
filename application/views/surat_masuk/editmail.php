@@ -7,7 +7,10 @@
 	<div class="row">
 		<div class="col-lg-6">
 
-			<?= form_error ('pemgirim', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
+			<?= form_error ('pengirim', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
+			<?= form_error ('no_surat_masuk', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
+			<?= form_error ('tgl_surat_masuk', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
+			<?= form_error ('ringkasan', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
 
 			<div class="card">
 				<div class="card-header">

@@ -1,0 +1,44 @@
+@startuml
+
+autonumber
+hide footbox
+title editprofil Aktor
+
+Actor Aktor
+boundary dashboard
+boundary editprofil
+boundary myprofil
+control User
+Entity user
+
+User --> dashboard: load->view()
+dashboard --> Aktor: Halaman dashboard
+Aktor --> dashboard: klik menu editprofil
+dashboard --> User: edit()
+User --> user:
+    
+    user --> User:
+    User --> editprofil: load->view()
+    editprofil --> Aktor: Halaman edit profil
+
+Aktor --> editprofil: Mengisi Inputan
+    note right of Aktor
+        Inputan fullname dan picture
+            end note
+editprofil --> User: edit()
+User --> user:
+
+alt isValid() case
+    
+    user --> User: isValid()
+    User --> myprofil: load->view()
+    myprofil --> Aktor: Halaman myprofil
+
+else isInvalid() case
+    
+    user --> User: isInvalid()
+    User --> editprofil: load->view()
+    editprofil --> Aktor: this field is required
+end
+
+@enduml
