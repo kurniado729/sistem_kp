@@ -1,0 +1,24 @@
+@startuml
+
+autonumber
+hide footbox
+title Lihat Kontrol SPT BKD
+
+Actor Aktor_AdminTU
+boundary Dashborad_V
+boundary KontrolSPTBKD_V
+control Admin_C
+control KontrolSPT_C
+Entity SuratSPT_E
+
+Admin_C --> Dashborad_V: load->view()
+Dashborad_V --> Aktor_AdminTU: Halaman Dashborad
+Aktor_AdminTU --> Dashborad_V: klik Menu SPT BKD
+Dashborad_V --> KontrolSPT_C: index()
+KontrolSPT_C --> SuratSPT_E:
+    
+    SuratSPT_E --> KontrolSPT_C:
+    KontrolSPT_C --> KontrolSPTBKD_V: load->view()
+    KontrolSPTBKD_V --> Aktor_AdminTU: Halaman Kontrol SPT BKD
+
+@enduml

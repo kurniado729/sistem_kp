@@ -1,0 +1,32 @@
+@startuml
+
+autonumber
+hide footbox
+title Hapus Pegawai BKA
+
+Actor Aktor_Admin
+boundary Dashboard_V
+boundary PegawaiBKA_V
+control Admin_C
+control Pegawai_C
+Entity Pegawai_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> Aktor_Admin: Halaman Dashboard
+Aktor_Admin --> Dashboard_V: klik menu Pegawai BKA
+Dashboard_V --> Pegawai_C: index()
+Pegawai_C --> Pegawai_E:
+    
+    Pegawai_E --> Pegawai_C:
+    Pegawai_C --> PegawaiBKA_V: load->view()
+    PegawaiBKA_V --> Aktor_Admin: Halaman Pegawai BKA
+
+Aktor_Admin --> PegawaiBKA_V: klik tombol Delete Pegawai BKA
+PegawaiBKA_V --> Pegawai_C: deletepegawaibka()
+Pegawai_C --> Pegawai_E:
+   
+    Pegawai_E --> Pegawai_C:
+    Pegawai_C --> PegawaiBKA_V: load->view()
+    PegawaiBKA_V --> Aktor_Admin: Halaman Pegawai BKA
+
+@enduml

@@ -5,31 +5,31 @@ hide footbox
 title Login Aktor
 
 Actor Aktor
-boundary Login
-boundary Dashboard
-control Auth
-Entity User
+boundary Login_V
+boundary Dashboard_V
+control Auth_C
+Entity User_E
 
-Auth --> Login: load->view()
-Login --> Aktor: Halaman Login
-Aktor --> Login: Mengisi Inputan
+Auth_C --> Login_V: load->view()
+Login_V --> Aktor: Halaman Login
+Aktor --> Login_V: Mengisi Inputan
     note right of Aktor
         Inputan email dan password
             end note
-Login --> Auth: index()
-Auth --> User: Login()
+Login_V --> Auth_C: index()
+Auth_C --> User_E: Login()
 
 alt isValid() case
     
-    User --> Auth: isValid()
-    Auth --> Dashboard: load->view()
-    Dashboard --> Aktor: Halaman Dashboard
+    User_E --> Auth_C: isValid()
+    Auth_C --> Dashboard_V: load->view()
+    Dashboard_V --> Aktor: Halaman Dashboard
 
 else isInvalid() case
     
-    User --> Auth: isInvalid()
-    Auth --> Login: load->view()
-    Login --> Aktor: email not registered/ wrong password
+    User_E --> Auth_C: isInvalid()
+    Auth_C --> Login_V: load->view()
+    Login_V --> Aktor: email not registered/ wrong password
 
 end
 

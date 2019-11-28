@@ -2,30 +2,30 @@
 
 autonumber
 hide footbox
-title add role Admin
+title Hapus Role
 
 Actor Aktor_Admin
-boundary dashboard
-boundary Role
-control Admin
-Entity role
+boundary Dashboard_V
+boundary Role_V
+control Admin_C
+Entity Role_E
 
-Admin --> dashboard: load->view()
-dashboard --> Aktor_Admin: Halaman dashboard
-Aktor_Admin --> dashboard: klik menu Role
-dashboard --> Admin: Role()
-Admin --> role:
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> Aktor_Admin: Halaman Dashboard
+Aktor_Admin --> Dashboard_V: klik menu Role
+Dashboard_V --> Admin_C: Role()
+Admin_C --> Role_E:
     
-    role --> Admin:
-    Admin --> Role: load->view()
-    Role --> Aktor_Admin: Halaman role
+    Role_E --> Admin_C:
+    Admin_C --> Role_V: load->view()
+    Role_V --> Aktor_Admin: Halaman Role
 
-Aktor_Admin --> Role: klik tombol deleterole
-Role --> Admin: deleterole()
-Admin --> role:
+Aktor_Admin --> Role_V: klik tombol deleterole
+Role_V --> Admin_C: deleterole()
+Admin_C --> Role_E:
   
-    role --> Admin:
-    Admin --> Role: load->view()
-    Role --> Aktor_Admin: Halaman Role
+    Role_E --> Admin_C:
+    Admin_C --> Role_V: load->view()
+    Role_V --> Aktor_Admin: Halaman Role
 
 @enduml

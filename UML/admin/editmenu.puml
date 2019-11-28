@@ -2,49 +2,49 @@
 
 autonumber
 hide footbox
-title Lihat Menu
+title Ubah Menu
 
 Actor Aktor_Admin
-boundary dashboard
-boundary Menu
-boundary editmenu
-control Admin
+boundary Dashboard_V
+boundary Menu_V
+boundary EditMenu_V
+control Admin_C
 control Menu_C
-Entity menu
+Entity Menu_E
 
-Admin --> dashboard: load->view()
-dashboard --> Aktor_Admin: Halaman dashboard
-Aktor_Admin --> dashboard: klik menu Menu management
-dashboard --> Menu_C: index()
-Menu_C --> menu:
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> Aktor_Admin: Halaman Dashboard
+Aktor_Admin --> Dashboard_V: klik Menu_E Menu management
+Dashboard_V --> Menu_C: index()
+Menu_C --> Menu_E:
     
-    menu --> Menu_C:
-    Menu_C --> Menu: load->view()
-    Menu --> Aktor_Admin: Halaman menu management
+    Menu_E --> Menu_C:
+    Menu_C --> Menu_V: load->view()
+    Menu_V --> Aktor_Admin: Halaman Menu management
 
-Aktor_Admin --> Menu: klik tombol editmenu
-Menu --> Menu_C: editmenu()
-Menu_C --> editmenu: load->view()
-editmenu --> Aktor_Admin: Halaman editmenu
+Aktor_Admin --> Menu_V: klik tombol EditMenu
+Menu_V --> Menu_C: EditMenu()
+Menu_C --> EditMenu_V: load->view()
+EditMenu_V --> Aktor_Admin: Halaman EditMenu
 
-Aktor_Admin --> editmenu: Mengisi Inputan
+Aktor_Admin --> EditMenu_V: Mengisi Inputan dan klik tombol edit
     note right of Aktor_Admin
-        Inputan menu
+        Inputan Menu
             end note
-editmenu --> Menu_C: editmenu()
-Menu_C --> menu:
+EditMenu_V --> Menu_C: EditMenu()
+Menu_C --> Menu_E:
 
 alt isValid() case
     
-    menu --> Menu_C: isValid()
-    Menu_C --> Menu: load->view()
-    Menu --> Aktor_Admin: Halaman Menu
+    Menu_E --> Menu_C: isValid()
+    Menu_C --> Menu_V: load->view()
+    Menu_V --> Aktor_Admin: Halaman Menu
 
 else isInvalid() case
     
-    menu --> Menu_C: isValid()
-    Menu_C --> editmenu: load->view()
-    editmenu --> Aktor_Admin: this field is required
+    Menu_E --> Menu_C: isValid()
+    Menu_C --> EditMenu_V: load->view()
+    EditMenu_V --> Aktor_Admin: this field is required
 
 end
 @enduml

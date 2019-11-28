@@ -2,49 +2,49 @@
 
 autonumber
 hide footbox
-title Lihat Menu
+title Tambah Submenu
 
 Actor Aktor_Admin
-boundary dashboard
-boundary Submenu
-boundary addsubmenu
-control Admin
+boundary Dashboard_V
+boundary Submenu_V
+boundary AddSubmenu_V
+control Admin_C
 control Menu_C
-Entity submenu
+Entity Submenu_E
 
-Admin --> dashboard: load->view()
-dashboard --> Aktor_Admin: Halaman dashboard
-Aktor_Admin --> dashboard: klik menu Submenu management
-dashboard --> Menu_C: Submenu()
-Menu_C --> submenu:
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> Aktor_Admin: Halaman Dashboard
+Aktor_Admin --> Dashboard_V: klik menu Submenu management
+Dashboard_V --> Menu_C: Submenu()
+Menu_C --> Submenu_E:
     
-    submenu --> Menu_C:
-    Menu_C --> Submenu: load->view()
-    Submenu --> Aktor_Admin: Halaman Submenu management
+    Submenu_E --> Menu_C:
+    Menu_C --> Submenu_V: load->view()
+    Submenu_V --> Aktor_Admin: Halaman Submenu management
 
-Aktor_Admin --> Submenu: klik tombol addsubmenu
-Submenu --> Menu_C: addsubmenu()
-Menu_C --> addsubmenu: load->view()
-addsubmenu --> Aktor_Admin: Halaman addsubmenu
+Aktor_Admin --> Submenu_V: klik tombol AddSubmenu
+Submenu_V --> Menu_C: AddSubmenu()
+Menu_C --> AddSubmenu_V: load->view()
+AddSubmenu_V --> Aktor_Admin: Halaman AddSubmenu
 
-Aktor_Admin --> addsubmenu: Mengisi Inputan
+Aktor_Admin --> AddSubmenu_V: Mengisi Inputan dan klik tombol add
     note right of Aktor_Admin
-        Inputan Submenu
+        Inputan title, menu, url, icon dan status active
             end note
-addsubmenu --> Menu_C: addsubmenu()
-Menu_C --> submenu:
+AddSubmenu_V --> Menu_C: AddSubmenu()
+Menu_C --> Submenu_E:
 
 alt isValid() case
     
-    submenu --> Menu_C: isValid()
-    Menu_C --> Submenu: load->view()
-    Submenu --> Aktor_Admin: Halaman Submenu
+    Submenu_E --> Menu_C: isValid()
+    Menu_C --> Submenu_V: load->view()
+    Submenu_V --> Aktor_Admin: Halaman Submenu
 
 else isInvalid() case
     
-    submenu --> Menu_C: isValid()
-    Menu_C --> addsubmenu: load->view()
-    addsubmenu --> Aktor_Admin: this field is required
+    Submenu_E --> Menu_C: isValid()
+    Menu_C --> AddSubmenu_V: load->view()
+    AddSubmenu_V --> Aktor_Admin: this field is required
 
 end
 @enduml

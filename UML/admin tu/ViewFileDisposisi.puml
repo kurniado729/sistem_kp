@@ -1,0 +1,33 @@
+@startuml
+
+autonumber
+hide footbox
+title Lihat Disposisi
+
+Actor Aktor_AdminTU
+boundary Dashboard_V
+boundary SuratMasuk_V
+boundary PDF_V
+control Admin_C
+control SuratMasuk_C
+Entity SuratMasuk_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> Aktor_AdminTU: Halaman Dashboard
+Aktor_AdminTU --> Dashboard_V: klik menu Surat Masuk
+Dashboard_V --> SuratMasuk_C: index()
+SuratMasuk_C --> SuratMasuk_E:
+    
+    SuratMasuk_E --> SuratMasuk_C:
+    SuratMasuk_C --> SuratMasuk_V: load->view()
+    SuratMasuk_V --> Aktor_AdminTU: Halaman Surat Masuk
+
+Aktor_AdminTU --> SuratMasuk_V: klik tombol Lihat Disposisi Surat Masuk
+SuratMasuk_V --> SuratMasuk_C: viewmail()
+SuratMasuk_C --> SuratMasuk_E:
+   
+    SuratMasuk_E --> SuratMasuk_C:
+    SuratMasuk_C --> PDF_V: load->view()
+    PDF_V --> Aktor_AdminTU: Tampilan file disposisi
+
+@enduml

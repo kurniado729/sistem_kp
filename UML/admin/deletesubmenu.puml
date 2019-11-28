@@ -2,31 +2,31 @@
 
 autonumber
 hide footbox
-title delete submenu
+title hapus Submenu
 
 Actor Aktor_Admin
-boundary dashboard
-boundary Submenu
-control Admin
+boundary Dashboard_V
+boundary Submenu_V
+control Admin_C
 control Menu_C
-Entity submenu
+Entity Submenu_E
 
-Admin --> dashboard: load->view()
-dashboard --> Aktor_Admin: Halaman dashboard
-Aktor_Admin --> dashboard: klik submenu submenu management
-dashboard --> Menu_C: submenu()
-Menu_C --> submenu:
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> Aktor_Admin: Halaman Dashboard
+Aktor_Admin --> Dashboard_V: klik Submenu Submenu management
+Dashboard_V --> Menu_C: Submenu()
+Menu_C --> Submenu_E:
     
-    submenu --> Menu_C:
-    Menu_C --> Submenu: load->view()
-    Submenu --> Aktor_Admin: Halaman submenu management
+    Submenu_E --> Menu_C:
+    Menu_C --> Submenu_V: load->view()
+    Submenu_V --> Aktor_Admin: Halaman Submenu management
 
-Aktor_Admin --> Submenu: klik tombol deletesubmenu
-Submenu --> Menu_C: deletesubmenu()
-Menu_C --> submenu:
+Aktor_Admin --> Submenu_V: klik tombol deletesubmenu
+Submenu_V --> Menu_C: deletesubmenu()
+Menu_C --> Submenu_E:
   
-    submenu --> Menu_C:
-    Menu_C --> Submenu: load->view()
-    Submenu --> Aktor_Admin: Halaman submenu
+    Submenu_E --> Menu_C:
+    Menu_C --> Submenu_V: load->view()
+    Submenu_V --> Aktor_Admin: Halaman Submenu
 
 @enduml

@@ -1,0 +1,24 @@
+@startuml
+
+autonumber
+hide footbox
+title Lihat Pegawai BKD
+
+Actor Aktor_Admin
+boundary Dashborad_V
+boundary PegawaiTU_V
+control Admin_C
+control Pegawai_C
+Entity Pegawai_E
+
+Admin_C --> Dashborad_V: load->view()
+Dashborad_V --> Aktor_Admin: Halaman Dashborad
+Aktor_Admin --> Dashborad_V: klik Menu Pegawai BKD
+Dashborad_V --> Pegawai_C: pegawaibkd()
+Pegawai_C --> Pegawai_E:
+    
+    Pegawai_E --> Pegawai_C:
+    Pegawai_C --> PegawaiTU_V: load->view()
+    PegawaiTU_V --> Aktor_Admin: Halaman Pegawai BKD
+
+@enduml

@@ -2,23 +2,23 @@
 
 autonumber
 hide footbox
-title Lihat Menu
+title Lihat Submenu
 
 Actor Aktor_Admin
-boundary dashboard
-boundary Menu
-control Admin
+boundary Dashboard_V
+boundary Menu_V
+control Admin_C
 control Menu_C
-Entity submenu
+Entity Submenu_E
 
-Admin --> dashboard: load->view()
-dashboard --> Aktor_Admin: Halaman dashboard
-Aktor_Admin --> dashboard: klik submenu subenu management
-dashboard --> Menu_C: submenu()
-Menu_C --> submenu:
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> Aktor_Admin: Halaman Dashboard
+Aktor_Admin --> Dashboard_V: klik Submenu submenu management
+Dashboard_V --> Menu_C: Submenu()
+Menu_C --> Submenu_E:
     
-    submenu --> Menu_C:
-    Menu_C --> Menu: load->view()
-    Menu --> Aktor_Admin: Halaman submenu management
+    Submenu_E --> Menu_C:
+    Menu_C --> Menu_V: load->view()
+    Menu_V --> Aktor_Admin: Halaman Submenu management
 
 @enduml

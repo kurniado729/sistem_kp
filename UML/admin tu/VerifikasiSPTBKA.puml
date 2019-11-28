@@ -1,0 +1,32 @@
+@startuml
+
+autonumber
+hide footbox
+title Verifikasi SPT BKA
+
+Actor Aktor_AdminTU
+boundary Dashboard_V
+boundary KontrolSPTBKA_V
+control Admin_C
+control KontroSPT_C
+Entity SuratSPT_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> Aktor_AdminTU: Halaman Dashboard
+Aktor_AdminTU --> Dashboard_V: klik menu SPT BKA
+Dashboard_V --> KontroSPT_C: kontrolsptbka()
+KontroSPT_C --> SuratSPT_E:
+    
+    SuratSPT_E --> KontroSPT_C:
+    KontroSPT_C --> KontrolSPTBKA_V: load->view()
+    KontrolSPTBKA_V --> Aktor_AdminTU: Halaman SPT BKA
+
+Aktor_AdminTU --> KontrolSPTBKA_V: klik tombol Accept SPT BKA
+KontrolSPTBKA_V --> KontroSPT_C: acceptsptbkalengkap()
+KontroSPT_C --> SuratSPT_E:
+   
+    SuratSPT_E --> KontroSPT_C:
+    KontroSPT_C --> KontrolSPTBKA_V: load->view()
+    KontrolSPTBKA_V --> Aktor_AdminTU: Halaman SPT BKA
+
+@enduml

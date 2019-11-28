@@ -2,43 +2,43 @@
 
 autonumber
 hide footbox
-title editprofil Aktor
+title EditProfile Aktor
 
 Actor Aktor
-boundary dashboard
-boundary editprofil
-boundary myprofil
-control User
-Entity user
+boundary Dashboard_V
+boundary EditProfile_V
+boundary MyProfile_V
+control User_C
+Entity User_E
 
-User --> dashboard: load->view()
-dashboard --> Aktor: Halaman dashboard
-Aktor --> dashboard: klik menu editprofil
-dashboard --> User: edit()
-User --> user:
+User_C --> Dashboard_V: load->view()
+Dashboard_V --> Aktor: Halaman Dashboard_V
+Aktor --> Dashboard_V: klik menu EditProfile_V
+Dashboard_V --> User_C: edit()
+User_C --> User_E:
     
-    user --> User:
-    User --> editprofil: load->view()
-    editprofil --> Aktor: Halaman edit profil
+    User_E --> User_C:
+    User_C --> EditProfile_V: load->view()
+    EditProfile_V --> Aktor: Halaman edit profil
 
-Aktor --> editprofil: Mengisi Inputan
+Aktor --> EditProfile_V: Mengisi Inputan
     note right of Aktor
         Inputan fullname dan picture
             end note
-editprofil --> User: edit()
-User --> user:
+EditProfile_V --> User_C: edit()
+User_C --> User_E:
 
 alt isValid() case
     
-    user --> User: isValid()
-    User --> myprofil: load->view()
-    myprofil --> Aktor: Halaman myprofil
+    User_E --> User_C: isValid()
+    User_C --> MyProfile_V: load->view()
+    MyProfile_V --> Aktor: Halaman MyProfile_V
 
 else isInvalid() case
     
-    user --> User: isInvalid()
-    User --> editprofil: load->view()
-    editprofil --> Aktor: this field is required
+    User_E --> User_C: isInvalid()
+    User_C --> EditProfile_V: load->view()
+    EditProfile_V --> Aktor: this field is required
 end
 
 @enduml

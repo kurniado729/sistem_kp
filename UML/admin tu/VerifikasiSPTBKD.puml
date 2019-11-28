@@ -1,0 +1,32 @@
+@startuml
+
+autonumber
+hide footbox
+title Verifikasi SPT BKD
+
+Actor Aktor_AdminTU
+boundary Dashboard_V
+boundary KontrolSPTBKD_V
+control Admin_C
+control KontroSPT_C
+Entity SuratSPT_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> Aktor_AdminTU: Halaman Dashboard
+Aktor_AdminTU --> Dashboard_V: klik menu SPT BKD
+Dashboard_V --> KontroSPT_C: index()
+KontroSPT_C --> SuratSPT_E:
+    
+    SuratSPT_E --> KontroSPT_C:
+    KontroSPT_C --> KontrolSPTBKD_V: load->view()
+    KontrolSPTBKD_V --> Aktor_AdminTU: Halaman SPT BKD
+
+Aktor_AdminTU --> KontrolSPTBKD_V: klik tombol Accept SPT BKD
+KontrolSPTBKD_V --> KontroSPT_C: acceptsptbkdlengkap()
+KontroSPT_C --> SuratSPT_E:
+   
+    SuratSPT_E --> KontroSPT_C:
+    KontroSPT_C --> KontrolSPTBKD_V: load->view()
+    KontrolSPTBKD_V --> Aktor_AdminTU: Halaman SPT BKD
+
+@enduml
