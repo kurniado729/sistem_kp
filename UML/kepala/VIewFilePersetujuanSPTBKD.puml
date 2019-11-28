@@ -1,0 +1,33 @@
+@startuml
+
+autonumber
+hide footbox
+title Lihat File Persetujuan SPT BKD
+
+Actor Aktor_Kepala
+boundary Dashboard_V
+boundary SPRBKD_V
+boundary PDF_V
+control Admin_C
+control SuratPerintahTugas_C
+Entity SuratPerintahTugas_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> Aktor_Kepala: Halaman Dashboard
+Aktor_Kepala --> Dashboard_V: klik menu SPT BKD
+Dashboard_V --> SuratPerintahTugas_C: index()
+SuratPerintahTugas_C --> SuratPerintahTugas_E:
+    
+    SuratPerintahTugas_E --> SuratPerintahTugas_C:
+    SuratPerintahTugas_C --> SPRBKD_V: load->view()
+    SPRBKD_V --> Aktor_Kepala: Halaman SPT BKD
+
+Aktor_Kepala --> SPRBKD_V: klik tombol Lihat File Persetujuan SPT BKD
+SPRBKD_V --> SuratPerintahTugas_C: viewspt()
+SuratPerintahTugas_C --> SuratPerintahTugas_E:
+   
+    SuratPerintahTugas_E --> SuratPerintahTugas_C:
+    SuratPerintahTugas_C --> PDF_V: load->view()
+    PDF_V --> Aktor_Kepala: Tampilan file Persetujuan SPT BKD
+
+@enduml

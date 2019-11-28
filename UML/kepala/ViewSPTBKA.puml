@@ -1,0 +1,24 @@
+@startuml
+
+autonumber
+hide footbox
+title Lihat Persetujuan SPT BKA 
+
+Actor Aktor_Kepala
+boundary Dashboard_V
+boundary SPTBKA_V
+control Admin_C
+control SuratPerintahTugas_C
+Entity SuratPerintahTugas_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> Aktor_Kepala: Halaman Dashboard
+Aktor_Kepala --> Dashboard_V: klik menu Persetujuan SPT BKA 
+Dashboard_V --> SuratPerintahTugas_C: index()
+SuratPerintahTugas_C --> SuratPerintahTugas_E:
+    
+    SuratPerintahTugas_E --> SuratPerintahTugas_C:
+    SuratPerintahTugas_C --> SPTBKA_V: load->view()
+    SPTBKA_V --> Aktor_Kepala: Halaman Persetujuan SPT BKA 
+
+@enduml
