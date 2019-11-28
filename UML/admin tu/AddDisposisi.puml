@@ -10,6 +10,7 @@ boundary SuratMasuk_V
 control Admin_C
 control SuratMasuk_C
 Entity SuratMasuk_E
+Entity SuratDisposisi_E
 
 Admin_C --> Dashboard_V: load->view()
 Dashboard_V --> Aktor_AdminTU: Halaman Dashboard
@@ -26,6 +27,10 @@ SuratMasuk_V --> SuratMasuk_C: disposisimail()
 SuratMasuk_C --> SuratMasuk_E:
    
     SuratMasuk_E --> SuratMasuk_C:
+
+SuratMasuk_C --> SuratDisposisi_E:
+   
+    SuratDisposisi_E --> SuratMasuk_C:    
     SuratMasuk_C --> SuratMasuk_V: load->view()
     SuratMasuk_V --> Aktor_AdminTU: Halaman Surat Masuk
 
