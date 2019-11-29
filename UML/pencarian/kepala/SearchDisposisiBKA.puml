@@ -1,0 +1,24 @@
+@startuml
+
+autonumber
+hide footbox
+title Mencari Surat Disposisi BKA
+
+Actor Aktor_Kepala
+boundary Dashborad_V
+boundary DisposisiBKA_V
+control Admin_C
+control SuratDisposisi_C
+Entity SuratDisposisi_E
+
+Admin_C --> Dashborad_V: load->view()
+Dashborad_V --> Aktor_Kepala: Halaman Dashborad
+Aktor_Kepala --> Dashborad_V: tulis keyword yang ingin dicari pada form pencarian
+Dashborad_V --> SuratDisposisi_C: searchdisposisibka()
+SuratDisposisi_C --> SuratDisposisi_E:
+    
+    SuratDisposisi_E --> SuratDisposisi_C:
+    SuratDisposisi_C --> DisposisiBKA_V: load->view()
+    DisposisiBKA_V --> Aktor_Kepala: Halaman Surat Disposisi BKA
+
+@enduml

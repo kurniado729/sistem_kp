@@ -1,0 +1,24 @@
+@startuml
+
+autonumber
+hide footbox
+title Mencari Pegawai BKD
+
+Actor Aktor_Admin
+boundary Dashborad_V
+boundary PegawaiBKD_V
+control Admin_C
+control Pegawai_C
+Entity Pegawai_E
+
+Admin_C --> Dashborad_V: load->view()
+Dashborad_V --> Aktor_Admin: Halaman Dashborad
+Aktor_Admin --> Dashborad_V: tulis keyword yang ingin dicari pada form pencarian
+Dashborad_V --> Pegawai_C: searchpegawaibkd()
+Pegawai_C --> Pegawai_E:
+    
+    Pegawai_E --> Pegawai_C:
+    Pegawai_C --> PegawaiBKD_V: load->view()
+    PegawaiBKD_V --> Aktor_Admin: Halaman Pegawai BKD
+
+@enduml

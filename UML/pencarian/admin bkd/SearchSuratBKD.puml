@@ -1,0 +1,24 @@
+@startuml
+
+autonumber
+hide footbox
+title Mencari Surat BKD
+
+Actor Aktor_AdminBKD
+boundary Dashborad_V
+boundary SuratBKD_V
+control Admin_C
+control BKD_C
+Entity SuratDisposisi_E
+
+Admin_C --> Dashborad_V: load->view()
+Dashborad_V --> Aktor_AdminBKD: Halaman Dashborad
+Aktor_AdminBKD --> Dashborad_V: tulis keyword yang ingin dicari pada form pencarian
+Dashborad_V --> BKD_C: searchbkd()
+BKD_C --> SuratDisposisi_E:
+    
+    SuratDisposisi_E --> BKD_C:
+    BKD_C --> SuratBKD_V: load->view()
+    SuratBKD_V --> Aktor_AdminBKD: Halaman Surat BKD
+
+@enduml

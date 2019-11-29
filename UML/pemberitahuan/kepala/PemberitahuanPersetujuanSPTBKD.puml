@@ -1,0 +1,24 @@
+@startuml
+
+autonumber
+hide footbox
+title Pemberitahuan Persetujuan Surat SPT BKD
+
+Actor Aktor_Kepala
+boundary Dashborad_V
+boundary PersetujuanSPTBKD_V
+control Admin_C
+control SuratPerintahTugas_C
+Entity SuratPerintahTugas_E
+
+Admin_C --> Dashborad_V: load->view()
+Dashborad_V --> Aktor_Kepala: Halaman Dashborad
+Aktor_Kepala --> Dashborad_V: klik tombol pemberitahuan
+Dashborad_V --> SuratPerintahTugas_C: index()
+SuratPerintahTugas_C --> SuratPerintahTugas_E:
+    
+    SuratPerintahTugas_E --> SuratPerintahTugas_C:
+    SuratPerintahTugas_C --> PersetujuanSPTBKD_V: load->view()
+    PersetujuanSPTBKD_V --> Aktor_Kepala: Halaman Persetujuan Surat SPT BKD
+
+@enduml

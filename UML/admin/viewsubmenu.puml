@@ -6,7 +6,7 @@ title Lihat Submenu
 
 Actor Aktor_Admin
 boundary Dashboard_V
-boundary Menu_V
+boundary Submenu_V
 control Admin_C
 control Menu_C
 Entity Submenu_E
@@ -18,7 +18,7 @@ Dashboard_V --> Menu_C: Submenu()
 Menu_C --> Submenu_E:
     
     Submenu_E --> Menu_C:
-    Menu_C --> Menu_V: load->view()
-    Menu_V --> Aktor_Admin: Halaman Submenu management
+    Menu_C --> Submenu_V: load->view()
+    Submenu_V --> Aktor_Admin: Halaman Submenu management
 
 @enduml

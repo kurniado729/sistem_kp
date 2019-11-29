@@ -1,0 +1,24 @@
+@startuml
+
+autonumber
+hide footbox
+title Pemberitahuan Surat BKA
+
+Actor Aktor_AdminBKA
+boundary Dashborad_V
+boundary SuratBKA_V
+control Admin_C
+control BKA_C
+Entity SuratDisposisi_E
+
+Admin_C --> Dashborad_V: load->view()
+Dashborad_V --> Aktor_AdminBKA: Halaman Dashborad
+Aktor_AdminBKA --> Dashborad_V: klik tombol pemberitahuan
+Dashborad_V --> BKA_C: index()
+BKA_C --> SuratDisposisi_E:
+    
+    SuratDisposisi_E --> BKA_C:
+    BKA_C --> SuratBKA_V: load->view()
+    SuratBKA_V --> Aktor_AdminBKA: Halaman Surat BKA
+
+@enduml

@@ -2,23 +2,23 @@
 
 autonumber
 hide footbox
-title Lihat Kontrol SPT BKD
+title Pemberitahuan SPT BKD
 
 Actor Aktor_AdminTU
 boundary Dashborad_V
-boundary KontrolSPTBKD_V
+boundary SPTBKD_V
 control Admin_C
 control KontrolSPT_C
 Entity SuratPerintahTugas_E
 
 Admin_C --> Dashborad_V: load->view()
 Dashborad_V --> Aktor_AdminTU: Halaman Dashborad
-Aktor_AdminTU --> Dashborad_V: klik Menu SPT BKD
-Dashborad_V --> KontrolSPT_C: index()
+Aktor_AdminTU --> Dashborad_V: klik tombol pemberitahuan
+Dashborad_V --> KontrolSPT_C: kontrolsptbka()
 KontrolSPT_C --> SuratPerintahTugas_E:
     
     SuratPerintahTugas_E --> KontrolSPT_C:
-    KontrolSPT_C --> KontrolSPTBKD_V: load->view()
-    KontrolSPTBKD_V --> Aktor_AdminTU: Halaman Kontrol SPT BKD
+    KontrolSPT_C --> SPTBKD_V: load->view()
+    SPTBKD_V --> Aktor_AdminTU: Halaman SPT BKD
 
 @enduml

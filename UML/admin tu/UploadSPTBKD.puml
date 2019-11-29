@@ -10,15 +10,15 @@ boundary KontrolSPTBKD_V
 boundary UploadSPTBKD_V
 control Admin_C
 control KontrolSPT_C
-Entity SuratSPT_E
+Entity SuratPerintahTugas_E
 
 Admin_C --> Dashboard_V: load->view()
 Dashboard_V --> Aktor_AdminTU: Halaman Dashboard
 Aktor_AdminTU --> Dashboard_V: klik menu SPT BKD
 Dashboard_V --> KontrolSPT_C: index()
-KontrolSPT_C --> SuratSPT_E:
+KontrolSPT_C --> SuratPerintahTugas_E:
     
-    SuratSPT_E --> KontrolSPT_C:
+    SuratPerintahTugas_E --> KontrolSPT_C:
     KontrolSPT_C --> KontrolSPTBKD_V: load->view()
     KontrolSPTBKD_V --> Aktor_AdminTU: Halaman SPT BKD
 
@@ -32,17 +32,17 @@ Aktor_AdminTU --> UploadSPTBKD_V: Mengisi Inputan dan klik tombol upload
         Inputan file spt bkd lengkap
             end note
 UploadSPTBKD_V --> KontrolSPT_C: uploadsptbkdlengkap()
-KontrolSPT_C --> SuratSPT_E:
+KontrolSPT_C --> SuratPerintahTugas_E:
 
 alt isValid() case
     
-    SuratSPT_E --> KontrolSPT_C: isValid()
+    SuratPerintahTugas_E --> KontrolSPT_C: isValid()
     KontrolSPT_C --> KontrolSPTBKD_V: load->view()
     KontrolSPTBKD_V --> Aktor_AdminTU: Halaman Kontrol SPT BKD
 
 else isInvalid() case
     
-    SuratSPT_E --> KontrolSPT_C: isValid()
+    SuratPerintahTugas_E --> KontrolSPT_C: isValid()
     KontrolSPT_C --> UploadSPTBKD_V: load->view()
     UploadSPTBKD_V --> Aktor_AdminTU: this field is required
 

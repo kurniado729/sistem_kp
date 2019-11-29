@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="" />
+    <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LAPORAN/laporan kp 2.docx" beforeDir="false" afterPath="$PROJECT_DIR$/LAPORAN/laporan kp 2.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/UploadSPTBKA.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin tu/UploadSPTBKA.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/UploadSPTBKD.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin tu/UploadSPTBKD.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/VerifikasiSPTBKA.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin tu/VerifikasiSPTBKA.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/VerifikasiSPTBKD.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin tu/VerifikasiSPTBKD.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/ViewFileLengkapSPTBKA.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin tu/ViewFileLengkapSPTBKA.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/ViewFileLengkapSPTBKD.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin tu/ViewFileLengkapSPTBKD.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/ViewFileSPTBKA.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin tu/ViewFileSPTBKA.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/ViewFileSPTBKD.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin tu/ViewFileSPTBKD.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/ViewSPTBKA.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin tu/ViewSPTBKA.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/ViewSPTBKD.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin tu/ViewSPTBKD.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/viewsubmenu.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin/viewsubmenu.puml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,6 +239,8 @@
       <workItem from="1574913455732" duration="586000" />
       <workItem from="1574934862236" duration="13427000" />
       <workItem from="1574961368214" duration="2655000" />
+      <workItem from="1575010102989" duration="114000" />
+      <workItem from="1575029806758" duration="3962000" />
     </task>
     <task id="LOCAL-00001" summary="update view">
       <created>1573067332216</created>
@@ -478,7 +494,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574964078987</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="laporan">
+      <created>1575010186953</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1575010186953</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -507,6 +530,7 @@
     <MESSAGE value="perbaiki pegawai" />
     <MESSAGE value="uml" />
     <MESSAGE value="uml-sequence" />
-    <option name="LAST_COMMIT_MESSAGE" value="uml-sequence" />
+    <MESSAGE value="laporan" />
+    <option name="LAST_COMMIT_MESSAGE" value="laporan" />
   </component>
 </project>

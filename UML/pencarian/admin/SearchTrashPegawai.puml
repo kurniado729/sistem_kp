@@ -1,0 +1,24 @@
+@startuml
+
+autonumber
+hide footbox
+title Mencari Trash Pegawai
+
+Actor Aktor_Admin
+boundary Dashborad_V
+boundary Trash_V
+control Admin_C
+control Pegawai_C
+Entity Pegawai_E
+
+Admin_C --> Dashborad_V: load->view()
+Dashborad_V --> Aktor_Admin: Halaman Dashborad
+Aktor_Admin --> Dashborad_V: tulis keyword yang ingin dicari pada form pencarian
+Dashborad_V --> Pegawai_C: searchtrash()
+Pegawai_C --> Pegawai_E:
+    
+    Pegawai_E --> Pegawai_C:
+    Pegawai_C --> Trash_V: load->view()
+    Trash_V --> Aktor_Admin: Halaman Trash Pegawai
+
+@enduml

@@ -1,0 +1,24 @@
+@startuml
+
+autonumber
+hide footbox
+title Pemberitahuan Surat Disposisi BKD
+
+Actor Aktor_Kepala
+boundary Dashborad_V
+boundary DisposisiBKD_V
+control Admin_C
+control SuratDisposisi_C
+Entity SuratDisposisi_E
+
+Admin_C --> Dashborad_V: load->view()
+Dashborad_V --> Aktor_Kepala: Halaman Dashborad
+Aktor_Kepala --> Dashborad_V: klik tombol pemberitahuan
+Dashborad_V --> SuratDisposisi_C: disposisibkd()
+SuratDisposisi_C --> SuratDisposisi_E:
+    
+    SuratDisposisi_E --> SuratDisposisi_C:
+    SuratDisposisi_C --> DisposisiBKD_V: load->view()
+    DisposisiBKD_V --> Aktor_Kepala: Halaman Surat Disposisi BKD
+
+@enduml

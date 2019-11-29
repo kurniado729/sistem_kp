@@ -10,23 +10,23 @@ boundary KontrolSPTBKA_V
 boundary PDF_V
 control Admin_C
 control KontrolSPT_C
-Entity KontrolSPT_E
+Entity SuratPerintahTugas_E
 
 Admin_C --> Dashboard_V: load->view()
 Dashboard_V --> Aktor_AdminTU: Halaman Dashboard
 Aktor_AdminTU --> Dashboard_V: klik menu SPT BKA
 Dashboard_V --> KontrolSPT_C: kontrolsptbka()
-KontrolSPT_C --> KontrolSPT_E:
+KontrolSPT_C --> SuratPerintahTugas_E:
     
-    KontrolSPT_E --> KontrolSPT_C:
+    SuratPerintahTugas_E --> KontrolSPT_C:
     KontrolSPT_C --> KontrolSPTBKA_V: load->view()
     KontrolSPTBKA_V --> Aktor_AdminTU: Halaman SPT BKA
 
 Aktor_AdminTU --> KontrolSPTBKA_V: klik tombol Lihat File SPT BKA
 KontrolSPTBKA_V --> KontrolSPT_C: viewspt()
-KontrolSPT_C --> KontrolSPT_E:
+KontrolSPT_C --> SuratPerintahTugas_E:
    
-    KontrolSPT_E --> KontrolSPT_C:
+    SuratPerintahTugas_E --> KontrolSPT_C:
     KontrolSPT_C --> PDF_V: load->view()
     PDF_V --> Aktor_AdminTU: Tampilan file SPT
 

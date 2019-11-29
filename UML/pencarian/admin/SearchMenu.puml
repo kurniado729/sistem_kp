@@ -1,0 +1,24 @@
+@startuml
+
+autonumber
+hide footbox
+title Mencari Menu
+
+Actor Aktor_Admin
+boundary Dashborad_V
+boundary Menu_V
+control Admin_C
+control Menu_C
+Entity Menu_E
+
+Admin_C --> Dashborad_V: load->view()
+Dashborad_V --> Aktor_Admin: Halaman Dashborad
+Aktor_Admin --> Dashborad_V: tulis keyword yang ingin dicari pada form pencarian
+Dashborad_V --> Menu_C: searchmenu()
+Menu_C --> Menu_E:
+    
+    Menu_E --> Menu_C:
+    Menu_C --> Menu_V: load->view()
+    Menu_V --> Aktor_Admin: Halaman Menu management
+
+@enduml

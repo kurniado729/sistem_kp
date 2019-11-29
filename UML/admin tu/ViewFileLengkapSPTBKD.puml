@@ -10,23 +10,23 @@ boundary KontrolSPTBKD_V
 boundary PDF_V
 control Admin_C
 control KontrolSPT_C
-Entity KontrolSPT_E
+Entity SuratPerintahTugas_E
 
 Admin_C --> Dashboard_V: load->view()
 Dashboard_V --> Aktor_AdminTU: Halaman Dashboard
 Aktor_AdminTU --> Dashboard_V: klik menu SPT BKD
 Dashboard_V --> KontrolSPT_C: index()
-KontrolSPT_C --> KontrolSPT_E:
+KontrolSPT_C --> SuratPerintahTugas_E:
     
-    KontrolSPT_E --> KontrolSPT_C:
+    SuratPerintahTugas_E --> KontrolSPT_C:
     KontrolSPT_C --> KontrolSPTBKD_V: load->view()
     KontrolSPTBKD_V --> Aktor_AdminTU: Halaman SPT BKD
 
 Aktor_AdminTU --> KontrolSPTBKD_V: klik tombol Lihat File Lengkap SPT BKD
 KontrolSPTBKD_V --> KontrolSPT_C: viewsptlengkap()
-KontrolSPT_C --> KontrolSPT_E:
+KontrolSPT_C --> SuratPerintahTugas_E:
    
-    KontrolSPT_E --> KontrolSPT_C:
+    SuratPerintahTugas_E --> KontrolSPT_C:
     KontrolSPT_C --> PDF_V: load->view()
     PDF_V --> Aktor_AdminTU: Tampilan file lengkap SPT
 
