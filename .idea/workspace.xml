@@ -4,17 +4,133 @@
     <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LAPORAN/laporan kp 2.docx" beforeDir="false" afterPath="$PROJECT_DIR$/LAPORAN/laporan kp 2.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/admin tu/UploadSPTBKA.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin tu/UploadSPTBKA.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/admin tu/UploadSPTBKD.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin tu/UploadSPTBKD.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/admin tu/VerifikasiSPTBKA.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin tu/VerifikasiSPTBKA.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/admin tu/VerifikasiSPTBKD.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin tu/VerifikasiSPTBKD.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/admin tu/ViewFileLengkapSPTBKA.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin tu/ViewFileLengkapSPTBKA.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/admin tu/ViewFileLengkapSPTBKD.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin tu/ViewFileLengkapSPTBKD.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/admin tu/ViewFileSPTBKA.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin tu/ViewFileSPTBKA.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/admin tu/ViewFileSPTBKD.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin tu/ViewFileSPTBKD.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/admin tu/ViewSPTBKA.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin tu/ViewSPTBKA.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/admin tu/ViewSPTBKD.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin tu/ViewSPTBKD.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/admin/viewsubmenu.puml" beforeDir="false" afterPath="$PROJECT_DIR$/UML/admin/viewsubmenu.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LAPORAN/~$poran kp 2.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/AddDisposisi.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/AddSUratMasuk.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/DeletePermanentSuratMasuk.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/DeleteSuratMasuk.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/EditSuratMasuk.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/RestoreSuratMasuk.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/UploadSPTBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/UploadSPTBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/VerifikasiSPTBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/VerifikasiSPTBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/ViewFileDisposisi.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/ViewFileLengkapSPTBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/ViewFileLengkapSPTBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/ViewFileSPTBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/ViewFileSPTBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/ViewSPTBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/ViewSPTBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/ViewSuratMasuk.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin tu/ViewTrashSuratMasuk.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/AddPegawaiBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/AddPegawaiBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/DeletePegawaiBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/DeletePegawaiBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/DeletePegawaiTU.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/DeletePermanentPegawai.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/EditPegawaiBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/EditPegawaiBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/EditPegawaiTU.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/RestorePegawai.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/ViewTrashPegawai.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/ViewpegawaiTU.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/addPegawaiTU.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/addmenu.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/addrole.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/addsubmenu.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/deletemenu.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/deleterole.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/deletesubmenu.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/editmenu.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/editrole.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/editsubmenu.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/viewmenu.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/viewpegawaiBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/viewpegawaiBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/viewrole.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/admin/viewsubmenu.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/auth/login.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/auth/register.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/bka/AjukanSPT.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/bka/VIewFileDisposisiBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/bka/ViewSPTBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/bka/ViewSuratBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/bka/addSPTBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/bkd/AjukanSPT.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/bkd/VIewFileDisposisiBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/bkd/ViewSPTBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/bkd/ViewSuratBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/bkd/addSPTBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/MenyetujuiDisposisiBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/MenyetujuiDisposisiBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/SetujuiDisposisiBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/SetujuiDisposisiBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/SetujuiSPTBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/SetujuiSPTBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/TolakDisposisiBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/TolakDisposisiBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/TolakSPTBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/TolakSPTBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/UploadPersetujuanDisposisiBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/UploadPersetujuanDisposisiBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/UploadPersetujuanSPTBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/UploadPersetujuanSPTBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/VIewFileDisposisi.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/VIewFileDisposisiBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/VIewFileDisposisiBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/VIewFilePersetujuanDisposisiBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/VIewFilePersetujuanDisposisiBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/VIewFilePersetujuanSPTBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/VIewFilePersetujuanSPTBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/VIewFileSPTBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/VIewFileSPTBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/ViewDisposisiBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/ViewDisposisiBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/ViewPersetujuanDisposisi.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/ViewSPTBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/kepala/ViewSPTBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/login.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pemberitahuan/admin bka/PemberitahuanSPT.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pemberitahuan/admin bka/PemberitahuanSuratBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pemberitahuan/admin bkd/SearchSPT.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pemberitahuan/admin bkd/SearchSuratBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pemberitahuan/admin tu/PemberitahuanSPTBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pemberitahuan/admin tu/PemberitahuanSPTBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pemberitahuan/admin tu/PemberitahuanSuratMasuk.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pemberitahuan/admin tu/PemberitahuanTrashSuratMasuk.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pemberitahuan/kepala/PemberitahuanDisposisiBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pemberitahuan/kepala/PemberitahuanDisposisiBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pemberitahuan/kepala/PemberitahuanPersetujuanDisposisi.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pemberitahuan/kepala/PemberitahuanPersetujuanSPTBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pemberitahuan/kepala/PemberitahuanPersetujuanSPTBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pencarian/admin bka/SearchSPT.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pencarian/admin bka/SearchSuratBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pencarian/admin bkd/SearchSPT.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pencarian/admin bkd/SearchSuratBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pencarian/admin tu/SearchSPTBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pencarian/admin tu/SearchSPTBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pencarian/admin tu/SearchSuratMasuk.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pencarian/admin tu/SearchTrashSuratMasuk.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pencarian/admin/SearchMenu.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pencarian/admin/SearchPegawaiBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pencarian/admin/SearchPegawaiBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pencarian/admin/SearchPegawaiTU.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pencarian/admin/SearchSubmenu.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pencarian/admin/SearchTrashPegawai.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pencarian/kepala/SearchDisposisiBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pencarian/kepala/SearchDisposisiBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pencarian/kepala/SearchPersetujuanDisposisi.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pencarian/kepala/SearchPersetujuanSPTBKA.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/pencarian/kepala/SearchPersetujuanSPTBKD.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/register.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/user/changepassword.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/user/editprofil.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UML/user/myprofil.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Kontrol_Spt.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Kontrol_Spt.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Kontrol_Spt_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Kontrol_Spt_model.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -240,7 +356,8 @@
       <workItem from="1574934862236" duration="13427000" />
       <workItem from="1574961368214" duration="2655000" />
       <workItem from="1575010102989" duration="114000" />
-      <workItem from="1575029806758" duration="3962000" />
+      <workItem from="1575029806758" duration="4070000" />
+      <workItem from="1575039138689" duration="6538000" />
     </task>
     <task id="LOCAL-00001" summary="update view">
       <created>1573067332216</created>
@@ -501,7 +618,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575010186953</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="uml pemberitahuan">
+      <created>1575038676141</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1575038676141</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -531,6 +655,7 @@
     <MESSAGE value="uml" />
     <MESSAGE value="uml-sequence" />
     <MESSAGE value="laporan" />
-    <option name="LAST_COMMIT_MESSAGE" value="laporan" />
+    <MESSAGE value="uml pemberitahuan" />
+    <option name="LAST_COMMIT_MESSAGE" value="uml pemberitahuan" />
   </component>
 </project>

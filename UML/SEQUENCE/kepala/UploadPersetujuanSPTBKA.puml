@@ -1,0 +1,49 @@
+@startuml
+
+autonumber
+hide footbox
+title Upload Persetujuan SPT BKA
+
+Actor Aktor_Kepala
+boundary Dashboard_V
+boundary SPTBKA_V
+boundary UploadSPTBKA_V
+control Admin_C
+control SuratPerintahTugas_C
+Entity SuratPerintahTugas_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> Aktor_Kepala: Halaman Dashboard
+Aktor_Kepala --> Dashboard_V: klik menu Persetujuan SPT BKA
+Dashboard_V --> SuratPerintahTugas_C: sptbka()
+SuratPerintahTugas_C --> SuratPerintahTugas_E:
+    
+    SuratPerintahTugas_E --> SuratPerintahTugas_C:
+    SuratPerintahTugas_C --> SPTBKA_V: load->view()
+    SPTBKA_V --> Aktor_Kepala: Halaman Persetujuan SPT BKA
+
+Aktor_Kepala --> SPTBKA_V: klik tombol Upload Persetujuan SPT BKA
+SPTBKA_V --> SuratPerintahTugas_C: uploadsptbka()
+SuratPerintahTugas_C --> UploadSPTBKA_V: load->view()
+UploadSPTBKA_V --> Aktor_Kepala: Halaman Upload File Persetujuan SPT BKA
+
+Aktor_Kepala --> UploadSPTBKA_V: Mengisi Inputan dan klik tombol upload
+    note right of Aktor_Kepala
+        Inputan file SPT BKD lengkap
+            end note
+UploadSPTBKA_V --> SuratPerintahTugas_C: uploadsptbka()
+SuratPerintahTugas_C --> SuratPerintahTugas_E:
+
+alt isValid() case
+    
+    SuratPerintahTugas_E --> SuratPerintahTugas_C: isValid()
+    SuratPerintahTugas_C --> SPTBKA_V: load->view()
+    SPTBKA_V --> Aktor_Kepala: Halaman Persetujuan SPT BKA
+
+else isInvalid() case
+    
+    SuratPerintahTugas_E --> SuratPerintahTugas_C: isValid()
+    SuratPerintahTugas_C --> UploadSPTBKA_V: load->view()
+    UploadSPTBKA_V --> Aktor_Kepala: Halaman Upload SPT BKA
+end
+@enduml

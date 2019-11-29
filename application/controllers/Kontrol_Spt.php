@@ -192,7 +192,7 @@ class Kontrol_Spt extends CI_Controller
 
 	public function acceptsptbkalengkap($id)
 	{
-		$this->kontrol->acceptsptbkdlengkap($id);
+		$this->kontrol->acceptsptbkalengkap($id);
 		$this->session->set_flashdata('message', 'spt tidak telat');
 		redirect('kontrol_spt/kontrolsptbka');
 	}

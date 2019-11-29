@@ -1,0 +1,50 @@
+@startuml
+
+autonumber
+hide footbox
+title Edit Surat Masuk
+
+Actor Aktor_AdminTU
+boundary Dashboard_V
+boundary SuratMasuk_V
+boundary EditSuratMasuk_V
+control Admin_C
+control SuratMasuk_C
+Entity SuratMasuk_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> Aktor_AdminTU: Halaman Dashboard
+Aktor_AdminTU --> Dashboard_V: klik menu Surat Masuk
+Dashboard_V --> SuratMasuk_C: index()
+SuratMasuk_C --> SuratMasuk_E:
+    
+    SuratMasuk_E --> SuratMasuk_C:
+    SuratMasuk_C --> SuratMasuk_V: load->view()
+    SuratMasuk_V --> Aktor_AdminTU: Halaman Surat Masuk
+
+Aktor_AdminTU --> SuratMasuk_V: klik tombol Edit Surat Masuk
+SuratMasuk_V --> SuratMasuk_C: editmail()
+SuratMasuk_C --> EditSuratMasuk_V: load->view()
+EditSuratMasuk_V --> Aktor_AdminTU: Halaman Edit Surat Masuk
+
+Aktor_AdminTU --> EditSuratMasuk_V: Mengisi Inputan dan klik tombol Edit
+    note right of Aktor_AdminTU
+       Inputan Pengirim, no surat, tanggal surat masuk, ringkasan, file surat masuk
+            end note
+EditSuratMasuk_V --> SuratMasuk_C: editmail()
+SuratMasuk_C --> SuratMasuk_E:
+
+alt isValid() case
+    
+    SuratMasuk_E --> SuratMasuk_C: isValid()
+    SuratMasuk_C --> SuratMasuk_V: load->view()
+    SuratMasuk_V --> Aktor_AdminTU: Halaman Surat Masuk
+
+else isInvalid() case
+    
+    SuratMasuk_E --> SuratMasuk_C: isValid()
+    SuratMasuk_C --> EditSuratMasuk_V: load->view()
+    EditSuratMasuk_V --> Aktor_AdminTU: Halaman Edit Surat Masuk
+
+end
+@enduml

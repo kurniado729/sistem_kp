@@ -1,0 +1,279 @@
+@startuml
+scale 2
+
+
+class user_access_menu {
+    -id: int
+    +role_id: int
+    +menu_id: int
+    -changeaccess()
+}
+
+class user_token {
+    -id: int
+    +email: varchar
+    +token: varchar
+    +date_created: int
+    -method()
+}
+
+class user_role {
+    -id: int
+    +role: varchar
+    -getrole()
+    -getdetailrole()
+    -getroleaccess()
+    -addrole()
+    -editrole()
+    -deleterole()
+}
+
+class user_sub_menu {
+    -id: int
+    +menu_id: int
+    +title: varchar
+    +url: varchar
+    +icon: varchar
+    +is_active: int
+    -pagsubmenu()
+    -getsubmenu()
+    -getdetailsubmenu()
+    -searchsubmenu()
+    -addsubmenu()
+    -editsubmenu()
+    -deletesubmenu()
+}
+
+class user_menu {
+    -id: int
+    +menu: varchar
+    -getmenu()
+    -pagmenu()
+    -pagsubmenu()
+    -getdetailmenu()
+    -getsubmenu()
+    -getdetailsubmenu()
+    -searchmenu()
+    -searchsubmenu()
+    -addmenu()
+    -editmenu()
+    -deletemenu()
+}
+
+class user {
+    -id: int
+    +name: varchar
+    +email: varchar
+    +image: varchar
+    +password: varchar
+    +role_id: int
+    +is_active: int
+    +date_created: int
+    +hapus: enum
+    -getuser()
+    -edit()
+    -changepassword()
+    -login()
+    -verify()
+    -logout()
+    -resetpassword()
+}
+
+class surat_masuk {
+    -id_surat_masuk: int
+    +file_surat_masuk: varchar
+    +pengirim: varchar
+    +no_surat_masuk: varchar
+    +tgl_surat_masuk: varchar
+    +ringkasan: varchar
+    +disposisi: enum
+    +hapus: enum
+    -getsuratmasuk()
+    -getsuratmasuksudahdisposisi()
+    -getsuratmasukbelumdisposisi()
+    -gettrash()
+    -pagsuratmasuk()
+    -pagtrash()
+    -hitungsuratmasukbelumdisposisi()
+    -getdetailsuratmasuk()
+    -searchsuratmasuk()
+    -searchtrash()
+    -addmail()
+    -editmail()
+    -deletemail()
+    -restoremail()
+    -deletepermanentmail()
+    -disposisimail()
+    -viewmail()
+}
+
+class pegawai {
+    -id_pegawai: int
+    +nim: varchar
+    +nama_pegawai: varchar
+    +jenis_kelamin: enum
+    +tempat_lahir: varchar
+    +tanggal_lahir: varchar
+    +alamat: varchar
+    +bagian: enum
+    +jabatan: varchar
+    +hapus: enum
+    -action()
+    -getpegawai()
+    -pagpegawaitu()
+    -pagpegawaibkd()
+    -pagpegawaibka()
+    -pagtrash()
+    -gettu()
+    -getTU()
+    -getBKD()
+    -getBKA()
+    -gettrash()
+    -getdetailpegawai()
+    -searchpegawaitu()
+    -searchpegawaibkd()
+    -searchpegawaibka()
+    -searchtrash()
+    -addpegawaitu()
+    -addpegawaibkd()
+    -addpegawaibka()
+    -editpegawaitu()
+    -editpegawaibkd()
+    -editpegawaibka()
+    -deletepegawaitu()
+    -deletepegawaibkd()
+    -deletepegawaibka()
+    -restorepegawai()
+    -deletepermanentpegawai()
+}
+
+class surat_disposisi {
+    -id_surat_disposisi: int
+    +pengirim: varchar
+    +no_surat_masuk: varchar
+    +tgl_surat_masuk: varchar
+    +ringkasan: varchar
+    +tujuan: enum
+    +file_disposisi_sudah_disetujui: varchar
+    +status: enum
+    +status_spt: enum
+    -getsuratbkd()
+    -getsuratsudahsptbkd()
+    -getsuratbelumsptbkd()
+    -getsuratbka()
+    -getsuratsudahsptbka()
+    -getsuratbelumsptbka()
+    -getsuratdisposisi()
+    -getsuratdisposisibkd()
+    -getsuratdisposisibelumuploadbkd()
+    -getsuratdisposisisudahuploadbkd()
+    -getsuratdisposisisudahsetujuibkd()
+    -getsuratdisposisibelumsetujuibkd()
+    -getsuratdisposisibka()
+    -getsuratdisposisibelumuploadbka()
+    -getsuratdisposisisudahuploadbka()
+    -getsuratdisposisisudahsetujuibka()
+    -getsuratdisposisibelumsetujuibka()
+    -pagsuratbka()
+    -suratbka()
+    -getbelumspt()
+    -hitungbelumspt()
+    -getdetailsuratdisposisi()
+    -searchbka()
+    -addsuratperintahjalan()
+    -pagsuratbkd()
+    -suratbkd()
+    -searchbkd()
+    -searchdisposisi()
+    -searchdisposisibkd()
+    -searchdisposisibka()
+    -disposisimailbkd()
+    -disposisimailbka()
+    -viewdisposisimail()
+    -uploaddisposisibkd()
+    -uploaddisposisibka()
+    -acceptbkd()
+    -rejectbkd()
+    -acceptbka()
+    -rejectbka()
+    -viewpersetujuandisposisi()
+    -disposisimail()
+}
+
+class surat_spt {
+    -id_surat_spt: int
+    +pengirim: varchar
+    +no_surat_masuk: varchar
+    +tgl_surat_masuk: varchar
+    +tgl_akhir_spt: varchar
+    +ringkasan: varchar
+    +nama_pegawai: varchar
+    +nip_pegawai: varchar
+    +jabatan: varchar
+    +bagian: enum
+    +status_pengajuan: enum
+    +status: enum
+    +file_spt_sudah_disetujui: varchar
+    +file_spt_lengkap: varchar
+    +status_telat: enum
+    -getsuratsudahdiajukansptbkd()
+    -getsuratbelumdiajukansptbkd()
+    -getsuratsudahdiajukansptbka()
+    -getsuratbelumdiajukansptbka()
+    -getsuratspt()
+    -getsuratsptbkd()
+    -getsuratsptbka()
+    -getsuratsptbkdsudahdiupload()
+    -getsuratsptbkdbelumdiupload()
+    -getsuratsptbkdsudahdisetujui()
+    -getsuratsptbkdbelumdisetujui()
+    -getsuratsptbkasudahdiupload()
+    -getsuratsptbkabelumdiupload()
+    -getsuratsptbkasudahdisetujui()
+    -getsuratsptbkabelumdisetujui()
+    -pagspt()
+    -suratspt()
+    -getdisposisibelumajukanspt()
+    -hitungdisposisibelumajukanspt()
+    -getdetailspt()
+    -searchspt()
+    -viewspt()
+    -addsuratperintahjalan()
+    -ajukanspt()
+    -pagkontroksptbkd()
+    -pagkontroksptbka()
+    -getsptlengkapbkdbelumdiupload()
+    -hitungsptlengkapbkdbelumdiupload()
+    -getsptlengkapbkabelumdiupload()
+    -hitungsptlengkapbkabelumdiupload()
+    -searchkontrolsptbkd()
+    -searchkontrolsptbka()
+    -viewspt()
+    -uploadsptbkd()
+    -uploadsptbka()
+    -telat()
+    -uploadsptlengkap()
+    -acceptsptbkdlengkap()
+    -acceptsptbkalengkap()
+    -pagpersetujuansptbkd()
+    -pagpersetujuansptbka()
+    -getsptbkdbelumdisetujui()
+    -hitungsptbkdbelumdisetujui()
+    -getsptbkabelumdisetujui()
+    -hitungsptbkabelumdisetujui()
+    -searchpersetujuansptbkd()
+    -searchpersetujuansptbka()
+    -acceptbkd()
+    -rejectbkd()
+    -acceptbka()
+    -rejectbka()
+    
+
+}
+
+' user -- user_role
+' user_access_menu -- user_role
+' user_access_menu -- user_menu
+' user_sub_menu -- user_menu
+
+@enduml

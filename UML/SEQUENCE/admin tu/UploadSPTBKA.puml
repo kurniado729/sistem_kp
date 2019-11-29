@@ -1,0 +1,50 @@
+@startuml
+
+autonumber
+hide footbox
+title Upload SPT BKA
+
+Actor Aktor_AdminTU
+boundary Dashboard_V
+boundary KontrolSPTBKA_V
+boundary UploadSPTBKA_V
+control Admin_C
+control KontrolSPT_C
+Entity SuratPerintahTugas_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> Aktor_AdminTU: Halaman Dashboard
+Aktor_AdminTU --> Dashboard_V: klik menu SPT BKA
+Dashboard_V --> KontrolSPT_C: kontrolsptbka()
+KontrolSPT_C --> SuratPerintahTugas_E:
+    
+    SuratPerintahTugas_E --> KontrolSPT_C:
+    KontrolSPT_C --> KontrolSPTBKA_V: load->view()
+    KontrolSPTBKA_V --> Aktor_AdminTU: Halaman SPT BKA
+
+Aktor_AdminTU --> KontrolSPTBKA_V: klik tombol Upload SPT BKA
+KontrolSPTBKA_V --> KontrolSPT_C: uploadsptbkalengkap()
+KontrolSPT_C --> UploadSPTBKA_V: load->view()
+UploadSPTBKA_V --> Aktor_AdminTU: Halaman Upload File Lengkap SPT BKA
+
+Aktor_AdminTU --> UploadSPTBKA_V: Mengisi Inputan dan klik tombol upload
+    note right of Aktor_AdminTU
+        Inputan file spt bka lengkap
+            end note
+UploadSPTBKA_V --> KontrolSPT_C: uploadsptbkalengkap()
+KontrolSPT_C --> SuratPerintahTugas_E:
+
+alt isValid() case
+    
+    SuratPerintahTugas_E --> KontrolSPT_C: isValid()
+    KontrolSPT_C --> KontrolSPTBKA_V: load->view()
+    KontrolSPTBKA_V --> Aktor_AdminTU: Halaman Kontrol SPT BKA
+
+else isInvalid() case
+    
+    SuratPerintahTugas_E --> KontrolSPT_C: isValid()
+    KontrolSPT_C --> UploadSPTBKA_V: load->view()
+    UploadSPTBKA_V --> Aktor_AdminTU: Halaman Upload SPT BKA
+
+end
+@enduml

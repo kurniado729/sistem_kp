@@ -188,5 +188,12 @@ class Kontrol_Spt_model extends CI_Model
 			$this->db->update('surat_spt');
 	}
 
+	public function acceptsptbkalengkap($id){
+		$this->kontrol->getdetailspt($id);
+
+		$this->db->set('status_telat', '0');
+		$this->db->where('id_surat_spt', $id);
+		$this->db->update('surat_spt');
+	}
 
 }

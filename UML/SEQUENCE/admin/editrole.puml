@@ -1,0 +1,50 @@
+@startuml
+
+autonumber
+hide footbox
+title Ubah Role
+
+Actor Aktor_Admin
+boundary Dashboar_V
+boundary Role_V
+boundary EditRole_V
+control Admin_C
+Entity Role_E
+
+Admin_C --> Dashboar_V: load->view()
+Dashboar_V --> Aktor_Admin: Halaman Dashboar
+Aktor_Admin --> Dashboar_V: klik menu Role
+Dashboar_V --> Admin_C: Role()
+Admin_C --> Role_E:
+    
+    Role_E --> Admin_C:
+    Admin_C --> Role_V: load->view()
+    Role_V --> Aktor_Admin: Halaman Role
+
+Aktor_Admin --> Role_V: klik tombol EditRole
+Role_V --> Admin_C: EditRole_V()
+Admin_C --> EditRole_V: load->view()
+EditRole_V --> Aktor_Admin: Halaman EditRole
+
+Aktor_Admin --> EditRole_V: Mengisi Inputan dan klik tombol edit
+    note right of Aktor_Admin
+        Inputan Role
+            end note
+EditRole_V --> Admin_C: EditRole()
+Admin_C --> Role_E:
+
+alt isValid() case
+    
+    Role_E --> Admin_C: isValid()
+    Admin_C --> Role_V: load->view()
+    Role_V --> Aktor_Admin: Halaman Role
+
+else isInvalid() case
+    
+    Role_E --> Admin_C: isInvalid()
+    Admin_C --> EditRole_V: load->view()
+    EditRole_V --> Aktor_Admin: Halaman Edit Role
+end
+
+
+@enduml

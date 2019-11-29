@@ -295,7 +295,10 @@ class Auth extends CI_Controller {
 
 	public function changepassword(){
 
-		if(!$this->session->userdata('reset_email')){
+		if(!$this->session->
+
+
+		data('reset_email')){
 			redirect('auth');
 		}
 
