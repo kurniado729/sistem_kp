@@ -3,130 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LAPORAN/laporan kp 2.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/Class Diagram/ClassDiagram.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/ERD/ERD.PNG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin tu/AddDisposisi.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin tu/AddSUratMasuk.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin tu/DeletePermanentSuratMasuk.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin tu/DeleteSuratMasuk.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin tu/EditSuratMasuk.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin tu/RestoreSuratMasuk.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin tu/UploadSPTBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin tu/UploadSPTBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin tu/VerifikasiSPTBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin tu/VerifikasiSPTBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin tu/ViewFileDisposisi.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin tu/ViewFileLengkapSPTBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin tu/ViewFileLengkapSPTBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin tu/ViewFileSPTBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin tu/ViewFileSPTBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin tu/ViewSPTBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin tu/ViewSPTBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin tu/ViewSuratMasuk.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin tu/ViewTrashSuratMasuk.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/AddPegawaiBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/AddPegawaiBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/DeletePegawaiBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/DeletePegawaiBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/DeletePegawaiTU.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/DeletePermanentPegawai.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/EditPegawaiBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/EditPegawaiBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/EditPegawaiTU.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/RestorePegawai.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/ViewTrashPegawai.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/ViewpegawaiTU.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/addPegawaiTU.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/addmenu.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/addrole.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/addsubmenu.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/deletemenu.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/deleterole.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/deletesubmenu.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/editmenu.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/editrole.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/editsubmenu.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/viewmenu.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/viewpegawaiBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/viewpegawaiBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/viewrole.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/admin/viewsubmenu.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/auth/ForgotPassword.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/auth/login.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/bka/AjukanSPT.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/bka/VIewFileDisposisiBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/bka/ViewSPTBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/bka/ViewSuratBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/bka/addSPTBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/bkd/AjukanSPT.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/bkd/VIewFileDisposisiBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/bkd/ViewSPTBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/bkd/ViewSuratBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/bkd/addSPTBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/MenyetujuiDisposisiBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/MenyetujuiDisposisiBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/SetujuiDisposisiBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/SetujuiDisposisiBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/SetujuiSPTBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/SetujuiSPTBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/TolakDisposisiBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/TolakDisposisiBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/TolakSPTBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/TolakSPTBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/UploadPersetujuanDisposisiBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/UploadPersetujuanDisposisiBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/UploadPersetujuanSPTBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/UploadPersetujuanSPTBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/VIewFileDisposisi.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/VIewFileDisposisiBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/VIewFileDisposisiBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/VIewFilePersetujuanDisposisiBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/VIewFilePersetujuanDisposisiBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/VIewFilePersetujuanSPTBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/VIewFilePersetujuanSPTBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/VIewFileSPTBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/VIewFileSPTBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/ViewDisposisiBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/ViewDisposisiBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/ViewPersetujuanDisposisi.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/ViewSPTBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/kepala/ViewSPTBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pemberitahuan/admin bka/PemberitahuanSPT.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pemberitahuan/admin bka/PemberitahuanSuratBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pemberitahuan/admin bkd/SearchSPT.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pemberitahuan/admin bkd/SearchSuratBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pemberitahuan/admin tu/PemberitahuanSPTBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pemberitahuan/admin tu/PemberitahuanSPTBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pemberitahuan/admin tu/PemberitahuanSuratMasuk.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pemberitahuan/admin tu/PemberitahuanTrashSuratMasuk.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pemberitahuan/kepala/PemberitahuanDisposisiBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pemberitahuan/kepala/PemberitahuanDisposisiBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pemberitahuan/kepala/PemberitahuanPersetujuanDisposisi.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pemberitahuan/kepala/PemberitahuanPersetujuanSPTBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pemberitahuan/kepala/PemberitahuanPersetujuanSPTBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pencarian/admin bka/SearchSPT.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pencarian/admin bka/SearchSuratBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pencarian/admin bkd/SearchSPT.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pencarian/admin bkd/SearchSuratBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pencarian/admin tu/SearchSPTBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pencarian/admin tu/SearchSPTBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pencarian/admin tu/SearchSuratMasuk.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pencarian/admin tu/SearchTrashSuratMasuk.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pencarian/admin/SearchMenu.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pencarian/admin/SearchPegawaiBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pencarian/admin/SearchPegawaiBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pencarian/admin/SearchPegawaiTU.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pencarian/admin/SearchSubmenu.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pencarian/admin/SearchTrashPegawai.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pencarian/kepala/SearchDisposisiBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pencarian/kepala/SearchDisposisiBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pencarian/kepala/SearchPersetujuanDisposisi.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pencarian/kepala/SearchPersetujuanSPTBKA.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/pencarian/kepala/SearchPersetujuanSPTBKD.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/user/changepassword.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/user/editprofil.puml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/SEQUENCE/user/myprofil.puml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Admin_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Admin_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/index_bka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/index_bka.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/index_bkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/index_bkd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/index_kepala.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/index_kepala.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/admin/index_tu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/admin/index_tu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/auth/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/auth/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/templates/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/templates/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/sb-admin-2.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/sb-admin-2.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/css/sb-admin-2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/sb-admin-2.min.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -209,9 +96,14 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/application/views/pengguna" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\sistem_kp\assets\js\demo" />
+      <recent name="C:\xampp\htdocs\sistem_kp\assets\js" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\sistem_kp\application\views\pengguna" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\models" />
@@ -354,7 +246,7 @@
       <workItem from="1575010102989" duration="114000" />
       <workItem from="1575029806758" duration="4070000" />
       <workItem from="1575039138689" duration="6627000" />
-      <workItem from="1575123923968" duration="193000" />
+      <workItem from="1575123923968" duration="11023000" />
     </task>
     <task id="LOCAL-00001" summary="update view">
       <created>1573067332216</created>
@@ -629,7 +521,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575049468908</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="tambah prototype">
+      <created>1575124184857</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1575124184857</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -661,6 +560,7 @@
     <MESSAGE value="laporan" />
     <MESSAGE value="uml pemberitahuan" />
     <MESSAGE value="uml class diagram" />
-    <option name="LAST_COMMIT_MESSAGE" value="uml class diagram" />
+    <MESSAGE value="tambah prototype" />
+    <option name="LAST_COMMIT_MESSAGE" value="tambah prototype" />
   </component>
 </project>

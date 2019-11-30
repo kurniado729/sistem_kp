@@ -15,6 +15,10 @@ class Admin extends CI_Controller
 		$data['title'] = 'Dashboard';
 		$data['user'] = $this->admin->getuser();
 
+		$data['pegawaitu'] = $this->admin->getpegawaitu();
+		$data['pegawaibkd'] = $this->admin->getpegawaibkd();
+		$data['pegawaibka'] = $this->admin->getpegawaibka();
+
 		$data['surat_masuk'] = $this->admin->getsuratmasuk();
 		$data['surat_masuk_sudah_disposisi'] = $this->admin->getsuratmasuksudahdisposisi();
 		$data['surat_masuk_belum_disposisi'] = $this->admin->getsuratmasukbelumdisposisi();
@@ -73,7 +77,7 @@ class Admin extends CI_Controller
 		}else{
 			var_dump('error');
 		}
-		$this->load->view('templates/footer');
+		$this->load->view('templates/footer', $data);
 	}
 
 	public function role()

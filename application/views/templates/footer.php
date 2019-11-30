@@ -49,6 +49,18 @@
 <!-- Custom scripts for all pages-->
 <script src="<?= base_url('assets'); ?>/js/sb-admin-2.min.js"></script>
 
+
+<!-- Page level plugins -->
+<script src="<?= base_url('assets'); ?>/vendor/chart.js/Chart.min.js"></script>
+
+<!-- Page level custom scripts -->
+<script src="<?= base_url('assets'); ?>/js/demo/chart-area-demo.js"></script>
+<script src="<?= base_url('assets'); ?>/js/demo/chart-pie-demo.js"></script>
+<script src="<?= base_url('assets'); ?>/js/demo/chart-bar-demo.js"></script>
+<script src="<?= base_url('assets'); ?>/js/demo/datatables-demo.js"></script>
+
+
+
 <script src="<?= base_url(); ?>assets/js/js-sweetalert/sweetalert2.all.min.js" ></script>
 <script src="<?= base_url(); ?>assets/js/js-sweetalert/myscript.js" ></script>
 
@@ -219,4 +231,590 @@
 </script>
 </body>
 
+
+
+<script>
+    // Set new default font family and font color to mimic Bootstrap's default styling
+    Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    Chart.defaults.global.defaultFontColor = '#858796';
+
+
+    //ambil data
+
+	var pegawaitu = <?php echo $pegawaitu;?>;
+	var pegawaibkd = <?php echo $pegawaibkd;?>;
+	var pegawaibka = <?php echo $pegawaibka;?>;
+
+    // Pie Chart Example
+    var ctx = document.getElementById("pegawai");
+    var pegawai = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ["Pegawai TU", "Pegawai BKD", "Pegawai BKA"],
+            datasets: [{
+                data: [pegawaitu, pegawaibkd, pegawaibka],
+                backgroundColor: ['#4e73df', '#f6c23e', '#36b9cc'],
+                hoverBackgroundColor: ['#2e59d9', '#f6b20b', '#2c9faf'],
+                hoverBorderColor: "rgba(234, 236, 244, 1)",
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            tooltips: {
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+            },
+            legend: {
+                display: false
+            },
+            cutoutPercentage: 80,
+        },
+    });
+
+</script>
+
+<script>
+    // Set new default font family and font color to mimic Bootstrap's default styling
+    Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    Chart.defaults.global.defaultFontColor = '#858796';
+
+
+    //ambil data
+
+    var surat_masuk = <?php echo $surat_masuk;?>;
+    var trash = <?php echo $trash;?>;
+
+    // Pie Chart Example
+    var ctx = document.getElementById("surat_masuk");
+    var surat_masuk = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ["Surat Masuk", "Trash"],
+            datasets: [{
+                data: [surat_masuk, trash],
+                backgroundColor: ['#4e73df', '#f6c23e', '#36b9cc'],
+                hoverBackgroundColor: ['#2e59d9', '#f6b20b', '#2c9faf'],
+                hoverBorderColor: "rgba(234, 236, 244, 1)",
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            tooltips: {
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+            },
+            legend: {
+                display: false
+            },
+            cutoutPercentage: 80,
+        },
+    });
+
+</script>
+
+<script>
+    // Set new default font family and font color to mimic Bootstrap's default styling
+    Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    Chart.defaults.global.defaultFontColor = '#858796';
+
+
+    //ambil data
+
+    var surat_masuk_sudah_disposisi = <?php echo $surat_masuk_sudah_disposisi;?>;
+    var surat_masuk_belum_disposisi = <?php echo $surat_masuk_belum_disposisi;?>;
+
+    // Pie Chart Example
+    var ctx = document.getElementById("surat_disposisi");
+    var surat_disposisi = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ["Sudah Didisposisi", "Belum Didisposisi"],
+            datasets: [{
+                data: [surat_masuk_sudah_disposisi, surat_masuk_belum_disposisi],
+                backgroundColor: ['#4e73df', '#f6c23e', '#36b9cc'],
+                hoverBackgroundColor: ['#2e59d9', '#f6b20b', '#2c9faf'],
+                hoverBorderColor: "rgba(234, 236, 244, 1)",
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            tooltips: {
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+            },
+            legend: {
+                display: false
+            },
+            cutoutPercentage: 80,
+        },
+    });
+
+</script>
+
+<script>
+    // Set new default font family and font color to mimic Bootstrap's default styling
+    Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    Chart.defaults.global.defaultFontColor = '#858796';
+
+
+    //ambil data
+
+    var surat_sudah_spt_bkd = <?php echo $surat_sudah_spt_bkd;?>;
+    var surat_belum_spt_bkd = <?php echo $surat_belum_spt_bkd;?>;
+
+    // Pie Chart Example
+    var ctx = document.getElementById("surat_bkd");
+    var surat_bkd = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ["Sudah Dibuat SPT", "Belum Dibuat SPT"],
+            datasets: [{
+                data: [surat_sudah_spt_bkd, surat_belum_spt_bkd],
+                backgroundColor: ['#4e73df', '#f6c23e', '#36b9cc'],
+                hoverBackgroundColor: ['#2e59d9', '#f6b20b', '#2c9faf'],
+                hoverBorderColor: "rgba(234, 236, 244, 1)",
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            tooltips: {
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+            },
+            legend: {
+                display: false
+            },
+            cutoutPercentage: 80,
+        },
+    });
+
+</script>
+<script>
+    // Set new default font family and font color to mimic Bootstrap's default styling
+    Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    Chart.defaults.global.defaultFontColor = '#858796';
+
+
+    //ambil data
+
+    var surat_sudah_diajukan_spt_bkd = <?php echo $surat_sudah_diajukan_spt_bkd;?>;
+    var surat_belum_diajukan_spt_bkd = <?php echo $surat_belum_diajukan_spt_bkd;?>;
+
+    // Pie Chart Example
+    var ctx = document.getElementById("surat_spt_bkd");
+    var surat_spt_bkd = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ["Sudah Diajukan", "Belum Diajukan"],
+            datasets: [{
+                data: [surat_sudah_diajukan_spt_bkd, surat_belum_diajukan_spt_bkd],
+                backgroundColor: ['#4e73df', '#f6c23e', '#36b9cc'],
+                hoverBackgroundColor: ['#2e59d9', '#f6b20b', '#2c9faf'],
+                hoverBorderColor: "rgba(234, 236, 244, 1)",
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            tooltips: {
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+            },
+            legend: {
+                display: false
+            },
+            cutoutPercentage: 80,
+        },
+    });
+
+</script>
+
+<script>
+    // Set new default font family and font color to mimic Bootstrap's default styling
+    Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    Chart.defaults.global.defaultFontColor = '#858796';
+
+
+    //ambil data
+
+    var surat_sudah_spt_bka = <?php echo $surat_sudah_spt_bka;?>;
+    var surat_belum_spt_bka = <?php echo $surat_belum_spt_bka;?>;
+
+    // Pie Chart Example
+    var ctx = document.getElementById("surat_bka");
+    var surat_bka = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ["Sudah Dibuat SPT", "Belum Dibuat SPT"],
+            datasets: [{
+                data: [surat_sudah_spt_bka, surat_belum_spt_bka],
+                backgroundColor: ['#4e73df', '#f6c23e', '#36b9cc'],
+                hoverBackgroundColor: ['#2e59d9', '#f6b20b', '#2c9faf'],
+                hoverBorderColor: "rgba(234, 236, 244, 1)",
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            tooltips: {
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+            },
+            legend: {
+                display: false
+            },
+            cutoutPercentage: 80,
+        },
+    });
+
+</script>
+<script>
+    // Set new default font family and font color to mimic Bootstrap's default styling
+    Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    Chart.defaults.global.defaultFontColor = '#858796';
+
+
+    //ambil data
+
+    var surat_sudah_diajukan_spt_bka = <?php echo $surat_sudah_diajukan_spt_bka;?>;
+    var surat_belum_diajukan_spt_bka = <?php echo $surat_belum_diajukan_spt_bka;?>;
+
+    // Pie Chart Example
+    var ctx = document.getElementById("surat_spt_bka");
+    var surat_spt_bka = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ["Sudah Diajukan", "Belum Diajukan"],
+            datasets: [{
+                data: [surat_sudah_diajukan_spt_bka, surat_belum_diajukan_spt_bka],
+                backgroundColor: ['#4e73df', '#f6c23e', '#36b9cc'],
+                hoverBackgroundColor: ['#2e59d9', '#f6b20b', '#2c9faf'],
+                hoverBorderColor: "rgba(234, 236, 244, 1)",
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            tooltips: {
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+            },
+            legend: {
+                display: false
+            },
+            cutoutPercentage: 80,
+        },
+    });
+
+</script>
+
+<script>
+    // Set new default font family and font color to mimic Bootstrap's default styling
+    Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    Chart.defaults.global.defaultFontColor = '#858796';
+
+
+    //ambil data
+
+    var surat_disposisi_bkd = <?php echo $surat_disposisi_bkd;?>;
+    var surat_disposisi_bka = <?php echo $surat_disposisi_bka;?>;
+
+    // Pie Chart Example
+    var ctx = document.getElementById("surat_disposisi");
+    var surat_disposisi = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ["BKD", "BKA"],
+            datasets: [{
+                data: [surat_disposisi_bkd, surat_disposisi_bka],
+                backgroundColor: ['#4e73df', '#f6c23e', '#36b9cc'],
+                hoverBackgroundColor: ['#2e59d9', '#f6b20b', '#2c9faf'],
+                hoverBorderColor: "rgba(234, 236, 244, 1)",
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            tooltips: {
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+            },
+            legend: {
+                display: false
+            },
+            cutoutPercentage: 80,
+        },
+    });
+
+</script>
+<script>
+    // Set new default font family and font color to mimic Bootstrap's default styling
+    Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    Chart.defaults.global.defaultFontColor = '#858796';
+
+
+    //ambil data
+
+    var surat_disposisi_bkd_sudah_upload = <?php echo $surat_disposisi_bkd_sudah_upload;?>;
+    var surat_disposisi_bkd_belum_upload = <?php echo $surat_disposisi_bkd_belum_upload;?>;
+    var surat_disposisi_bkd_sudah_disetujui = <?php echo $surat_disposisi_bkd_sudah_disetujui;?>;
+    var surat_disposisi_bkd_belum_disetujui = <?php echo $surat_disposisi_bkd_belum_disetujui;?>;
+
+    // Pie Chart Example
+    var ctx = document.getElementById("surat_disposisi_bkd");
+    var surat_disposisi_bkd = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ["Sudah Diupload", "Belum Diupload", "Sudah Disetujui", "Belum Disetujui"],
+            datasets: [{
+                data: [surat_disposisi_bkd_sudah_upload, surat_disposisi_bkd_belum_upload, surat_disposisi_bkd_sudah_disetujui, surat_disposisi_bkd_belum_disetujui ],
+                backgroundColor: ['#4e73df', '#f6c23e', '#36b9cc', '#b462cc'],
+                hoverBackgroundColor: ['#2e59d9', '#f6b20b', '#1491af', '#b001cc'],
+                hoverBorderColor: "rgba(234, 236, 244, 1)",
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            tooltips: {
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+            },
+            legend: {
+                display: false
+            },
+            cutoutPercentage: 80,
+        },
+    });
+
+</script>
+
+<script>
+    // Set new default font family and font color to mimic Bootstrap's default styling
+    Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    Chart.defaults.global.defaultFontColor = '#858796';
+
+
+    //ambil data
+
+    var surat_disposisi_bka_sudah_upload = <?php echo $surat_disposisi_bka_sudah_upload;?>;
+    var surat_disposisi_bka_belum_upload = <?php echo $surat_disposisi_bka_belum_upload;?>;
+    var surat_disposisi_bka_sudah_disetujui = <?php echo $surat_disposisi_bka_sudah_disetujui;?>;
+    var surat_disposisi_bka_belum_disetujui = <?php echo $surat_disposisi_bka_belum_disetujui;?>;
+
+    // Pie Chart Example
+    var ctx = document.getElementById("surat_disposisi_bka");
+    var surat_disposisi_bka = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ["Sudah Diupload", "Belum Diupload", "Sudah Disetujui", "Belum Disetujui"],
+            datasets: [{
+                data: [surat_disposisi_bka_sudah_upload, surat_disposisi_bka_belum_upload, surat_disposisi_bka_sudah_disetujui, surat_disposisi_bka_belum_disetujui ],
+                backgroundColor: ['#4e73df', '#f6c23e', '#36b9cc', '#b462cc'],
+                hoverBackgroundColor: ['#2e59d9', '#f6b20b', '#1491af', '#b001cc'],
+                hoverBorderColor: "rgba(234, 236, 244, 1)",
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            tooltips: {
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+            },
+            legend: {
+                display: false
+            },
+            cutoutPercentage: 80,
+        },
+    });
+</script>
+<script>
+    // Set new default font family and font color to mimic Bootstrap's default styling
+    Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    Chart.defaults.global.defaultFontColor = '#858796';
+
+
+    //ambil data
+
+    var surat_spt_bkd = <?php echo $surat_spt_bkd;?>;
+    var surat_spt_bka = <?php echo $surat_spt_bka;?>;
+
+    // Pie Chart Example
+    var ctx = document.getElementById("surat_spt");
+    var surat_spt = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ["BKD", "BKA"],
+            datasets: [{
+                data: [surat_spt_bkd, surat_spt_bka],
+                backgroundColor: ['#4e73df', '#f6c23e', '#36b9cc'],
+                hoverBackgroundColor: ['#2e59d9', '#f6b20b', '#2c9faf'],
+                hoverBorderColor: "rgba(234, 236, 244, 1)",
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            tooltips: {
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+            },
+            legend: {
+                display: false
+            },
+            cutoutPercentage: 80,
+        },
+    });
+
+</script>
+<script>
+    // Set new default font family and font color to mimic Bootstrap's default styling
+    Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    Chart.defaults.global.defaultFontColor = '#858796';
+
+
+    //ambil data
+
+    var surat_spt_bkd_sudah_upload = <?php echo $surat_spt_bkd_sudah_upload;?>;
+    var surat_spt_bkd_belum_upload = <?php echo $surat_spt_bkd_belum_upload;?>;
+    var surat_spt_bkd_sudah_disetujui = <?php echo $surat_spt_bkd_sudah_disetujui;?>;
+    var surat_spt_bkd_belum_disetujui = <?php echo $surat_spt_bkd_belum_disetujui;?>;
+
+    // Pie Chart Example
+    var ctx = document.getElementById("surat_spt_bkd");
+    var surat_spt_bkd = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ["Sudah Diupload", "Belum Diupload", "Sudah Disetujui", "Belum Disetujui"],
+            datasets: [{
+                data: [surat_spt_bkd_sudah_upload, surat_spt_bkd_belum_upload, surat_spt_bkd_sudah_disetujui, surat_spt_bkd_belum_disetujui ],
+                backgroundColor: ['#4e73df', '#f6c23e', '#36b9cc', '#b462cc'],
+                hoverBackgroundColor: ['#2e59d9', '#f6b20b', '#1491af', '#b001cc'],
+                hoverBorderColor: "rgba(234, 236, 244, 1)",
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            tooltips: {
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+            },
+            legend: {
+                display: false
+            },
+            cutoutPercentage: 80,
+        },
+    });
+</script>
+<script>
+    // Set new default font family and font color to mimic Bootstrap's default styling
+    Chart.defaults.global.defaultFontFamily = 'Nunito', '-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif';
+    Chart.defaults.global.defaultFontColor = '#858796';
+
+
+    //ambil data
+
+    var surat_spt_bka_sudah_upload = <?php echo $surat_spt_bka_sudah_upload;?>;
+    var surat_spt_bka_belum_upload = <?php echo $surat_spt_bka_belum_upload;?>;
+    var surat_spt_bka_sudah_disetujui = <?php echo $surat_spt_bka_sudah_disetujui;?>;
+    var surat_spt_bka_belum_disetujui = <?php echo $surat_spt_bka_belum_disetujui;?>;
+
+    // Pie Chart Example
+    var ctx = document.getElementById("surat_spt_bka");
+    var surat_spt_bka = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ["Sudah Diupload", "Belum Diupload", "Sudah Disetujui", "Belum Disetujui"],
+            datasets: [{
+                data: [surat_spt_bka_sudah_upload, surat_spt_bka_belum_upload, surat_spt_bka_sudah_disetujui, surat_spt_bka_belum_disetujui ],
+                backgroundColor: ['#4e73df', '#f6c23e', '#36b9cc', '#b462cc'],
+                hoverBackgroundColor: ['#2e59d9', '#f6b20b', '#1491af', '#b001cc'],
+                hoverBorderColor: "rgba(234, 236, 244, 1)",
+            }],
+        },
+        options: {
+            maintainAspectRatio: false,
+            tooltips: {
+                backgroundColor: "rgb(255,255,255)",
+                bodyFontColor: "#858796",
+                borderColor: '#dddfeb',
+                borderWidth: 1,
+                xPadding: 15,
+                yPadding: 15,
+                displayColors: false,
+                caretPadding: 10,
+            },
+            legend: {
+                display: false
+            },
+            cutoutPercentage: 80,
+        },
+    });
+</script>
 </html>

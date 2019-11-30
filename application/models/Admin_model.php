@@ -11,6 +11,21 @@ class Admin_model extends CI_Model
 		return $data->row_array();
 	}
 
+	public function getpegawaitu (){
+		$query = "SELECT * FROM pegawai WHERE bagian = 'TU' AND hapus = '0'";
+		return count($this->db->query($query)->result_array());
+	}
+
+	public function getpegawaibkd (){
+		$query = "SELECT * FROM pegawai WHERE bagian = 'BKD' AND hapus = '0'";
+		return count($this->db->query($query)->result_array());
+	}
+
+	public function getpegawaiBKA (){
+		$query = "SELECT * FROM pegawai WHERE bagian = 'BKA' AND hapus = '0'";
+		return count($this->db->query($query)->result_array());
+	}
+
 	public function getrole(){
 		$query = "SELECT * FROM user_role";
 		return $this->db->query($query)->result_array();
@@ -173,42 +188,42 @@ class Admin_model extends CI_Model
 	}
 
 	public function getsuratsptbkdsudahdiupload(){
-		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKD' AND status_pengajuan = '0' AND file_spt_sudah_disetujui IS NOT NULL";
+		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKD' AND status_pengajuan = '1' AND file_spt_sudah_disetujui IS NOT NULL";
 		return count($this->db->query($query)->result_array());
 	}
 
 	public function getsuratsptbkdbelumdiupload(){
-		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKD' AND status_pengajuan = '0' AND file_spt_sudah_disetujui IS NULL";
+		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKD' AND status_pengajuan = '1' AND file_spt_sudah_disetujui IS NULL";
 		return count($this->db->query($query)->result_array());
 	}
 
 	public function getsuratsptbkdsudahdisetujui(){
-		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKD' AND status_pengajuan = '0' AND file_spt_sudah_disetujui IS NOT NULL AND status = '1'";
+		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKD' AND status_pengajuan = '1' AND file_spt_sudah_disetujui IS NOT NULL AND status = '1'";
 		return count($this->db->query($query)->result_array());
 	}
 
 	public function getsuratsptbkdbelumdisetujui(){
-		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKD' AND status_pengajuan = '0' AND file_spt_sudah_disetujui IS NOT NULL AND status = '0'";
+		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKD' AND status_pengajuan = '1' AND file_spt_sudah_disetujui IS NOT NULL AND status = '0'";
 		return count($this->db->query($query)->result_array());
 	}
 
 	public function getsuratsptbkasudahdiupload(){
-		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKA' AND status_pengajuan = '0' AND file_spt_sudah_disetujui IS NOT NULL";
+		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKA' AND status_pengajuan = '1' AND file_spt_sudah_disetujui IS NOT NULL";
 		return count($this->db->query($query)->result_array());
 	}
 
 	public function getsuratsptbkabelumdiupload(){
-		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKA' AND status_pengajuan = '0' AND file_spt_sudah_disetujui IS NULL";
+		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKA' AND status_pengajuan = '1' AND file_spt_sudah_disetujui IS NULL";
 		return count($this->db->query($query)->result_array());
 	}
 
 	public function getsuratsptbkasudahdisetujui(){
-		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKA' AND status_pengajuan = '0' AND file_spt_sudah_disetujui IS NOT NULL AND status = '1'";
+		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKA' AND status_pengajuan = '1' AND file_spt_sudah_disetujui IS NOT NULL AND status = '1'";
 		return count($this->db->query($query)->result_array());
 	}
 
 	public function getsuratsptbkabelumdisetujui(){
-		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKA' AND status_pengajuan = '0' AND file_spt_sudah_disetujui IS NOT NULL AND status = '0'";
+		$query = "SELECT * FROM surat_spt WHERE bagian = 'BKA' AND status_pengajuan = '1' AND file_spt_sudah_disetujui IS NOT NULL AND status = '0'";
 		return count($this->db->query($query)->result_array());
 	}
 
