@@ -336,8 +336,8 @@
     var surat_masuk_belum_disposisi = <?php echo $surat_masuk_belum_disposisi;?>;
 
     // Pie Chart Example
-    var ctx = document.getElementById("surat_disposisi");
-    var surat_disposisi = new Chart(ctx, {
+    var ctx = document.getElementById("surat_disposisi_tu");
+    var surat_disposisi_tu = new Chart(ctx, {
         type: 'doughnut',
         data: {
             labels: ["Sudah Didisposisi", "Belum Didisposisi"],
@@ -425,8 +425,8 @@
     var surat_belum_diajukan_spt_bkd = <?php echo $surat_belum_diajukan_spt_bkd;?>;
 
     // Pie Chart Example
-    var ctx = document.getElementById("surat_spt_bkd");
-    var surat_spt_bkd = new Chart(ctx, {
+    var ctx = document.getElementById("surat_spt_ajukan_bkd");
+    var surat_spt_ajukan_bkd = new Chart(ctx, {
         type: 'doughnut',
         data: {
             labels: ["Sudah Diajukan", "Belum Diajukan"],
@@ -514,8 +514,8 @@
     var surat_belum_diajukan_spt_bka = <?php echo $surat_belum_diajukan_spt_bka;?>;
 
     // Pie Chart Example
-    var ctx = document.getElementById("surat_spt_bka");
-    var surat_spt_bka = new Chart(ctx, {
+    var ctx = document.getElementById("surat_spt_ajukan_bka");
+    var surat_spt_ajukan_bka = new Chart(ctx, {
         type: 'doughnut',
         data: {
             labels: ["Sudah Diajukan", "Belum Diajukan"],
@@ -612,8 +612,8 @@
             labels: ["Sudah Diupload", "Belum Diupload", "Sudah Disetujui", "Belum Disetujui"],
             datasets: [{
                 data: [surat_disposisi_bkd_sudah_upload, surat_disposisi_bkd_belum_upload, surat_disposisi_bkd_sudah_disetujui, surat_disposisi_bkd_belum_disetujui ],
-                backgroundColor: ['#4e73df', '#f6c23e', '#36b9cc', '#b462cc'],
-                hoverBackgroundColor: ['#2e59d9', '#f6b20b', '#1491af', '#b001cc'],
+                backgroundColor: ['#4e73df', '#f6c23e', '#36b9cc', '#e74a3b'],
+                hoverBackgroundColor: ['#2e59d9', '#f6b20b', '#1491af', '#e73526'],
                 hoverBorderColor: "rgba(234, 236, 244, 1)",
             }],
         },
@@ -659,8 +659,8 @@
             labels: ["Sudah Diupload", "Belum Diupload", "Sudah Disetujui", "Belum Disetujui"],
             datasets: [{
                 data: [surat_disposisi_bka_sudah_upload, surat_disposisi_bka_belum_upload, surat_disposisi_bka_sudah_disetujui, surat_disposisi_bka_belum_disetujui ],
-                backgroundColor: ['#4e73df', '#f6c23e', '#36b9cc', '#b462cc'],
-                hoverBackgroundColor: ['#2e59d9', '#f6b20b', '#1491af', '#b001cc'],
+                backgroundColor: ['#4e73df', '#f6c23e', '#36b9cc', '#e74a3b'],
+                hoverBackgroundColor: ['#2e59d9', '#f6b20b', '#1491af', '#e73526'],
                 hoverBorderColor: "rgba(234, 236, 244, 1)",
             }],
         },
@@ -748,8 +748,8 @@
             labels: ["Sudah Diupload", "Belum Diupload", "Sudah Disetujui", "Belum Disetujui"],
             datasets: [{
                 data: [surat_spt_bkd_sudah_upload, surat_spt_bkd_belum_upload, surat_spt_bkd_sudah_disetujui, surat_spt_bkd_belum_disetujui ],
-                backgroundColor: ['#4e73df', '#f6c23e', '#36b9cc', '#b462cc'],
-                hoverBackgroundColor: ['#2e59d9', '#f6b20b', '#1491af', '#b001cc'],
+                backgroundColor: ['#4e73df', '#f6c23e', '#36b9cc', '#e74a3b'],
+                hoverBackgroundColor: ['#2e59d9', '#f6b20b', '#1491af', '#e73526'],
                 hoverBorderColor: "rgba(234, 236, 244, 1)",
             }],
         },
@@ -793,8 +793,8 @@
             labels: ["Sudah Diupload", "Belum Diupload", "Sudah Disetujui", "Belum Disetujui"],
             datasets: [{
                 data: [surat_spt_bka_sudah_upload, surat_spt_bka_belum_upload, surat_spt_bka_sudah_disetujui, surat_spt_bka_belum_disetujui ],
-                backgroundColor: ['#4e73df', '#f6c23e', '#36b9cc', '#b462cc'],
-                hoverBackgroundColor: ['#2e59d9', '#f6b20b', '#1491af', '#b001cc'],
+                backgroundColor: ['#4e73df', '#f6c23e', '#36b9cc', '#e74a3b'],
+                hoverBackgroundColor: ['#2e59d9', '#f6b20b', '#1491af', '#e73526'],
                 hoverBorderColor: "rgba(234, 236, 244, 1)",
             }],
         },

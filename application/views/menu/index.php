@@ -40,7 +40,7 @@
 			</div>
 
 			<table class="table table-hover">
-				<thead>
+				<thead">
 					<tr>
 						<th scope="col">#</th>
 						<th scope="col">Menu</th>

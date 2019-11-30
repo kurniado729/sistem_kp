@@ -26,11 +26,11 @@
 		</div>
 		<div class="col">
 			<div class="col-xl-6 col-md-6 mb-4">
-				<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card border-left-primary shadow h-100 py-2">
 					<div class="card-body">
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
-								<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">BKD</div>
+								<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">BKD</div>
 								<div class="h5 mb-0 font-weight-bold text-gray-800"><?= $surat_disposisi_bkd; ?></div>
 							</div>
 							<div class="col-auto">
@@ -82,11 +82,11 @@
 		</div>
 		<div class="col">
 			<div class="col-xl-9 col-md-6 mb-4">
-				<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card border-left-primary shadow h-100 py-2">
 					<div class="card-body">
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
-								<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Disposisi BKD
+								<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Disposisi BKD
 									Sudah Upload
 								</div>
 								<div
@@ -122,11 +122,11 @@
 		</div>
 		<div class="col">
 			<div class="col-xl-9 col-md-6 mb-4">
-				<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card border-left-info shadow h-100 py-2">
 					<div class="card-body">
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
-								<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Disposisi BKD
+								<div class="text-xs font-weight-bold text-info text-uppercase mb-1">Disposisi BKD
 									Sudah Disetujui
 								</div>
 								<div
@@ -141,11 +141,11 @@
 				</div>
 			</div>
 			<div class="col-xl-9 col-md-6 mb-4">
-				<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card border-left-danger shadow h-100 py-2">
 					<div class="card-body">
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
-								<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Disposisi BKD
+								<div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Disposisi BKD
 									Belum Disetujui
 								</div>
 								<div
@@ -184,11 +184,11 @@
 		</div>
 		<div class="col">
 			<div class="col-xl-9 col-md-6 mb-4">
-				<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card border-left-primary shadow h-100 py-2">
 					<div class="card-body">
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
-								<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Disposisi BKA
+								<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Disposisi BKA
 									Sudah Upload
 								</div>
 								<div
@@ -224,11 +224,11 @@
 		</div>
 		<div class="col">
 			<div class="col-xl-9 col-md-6 mb-4">
-				<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card border-left-info shadow h-100 py-2">
 					<div class="card-body">
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
-								<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Disposisi BKA
+								<div class="text-xs font-weight-bold text-info text-uppercase mb-1">Disposisi BKA
 									Sudah Disetujui
 								</div>
 								<div
@@ -243,11 +243,11 @@
 				</div>
 			</div>
 			<div class="col-xl-9 col-md-6 mb-4">
-				<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card border-left-danger shadow h-100 py-2">
 					<div class="card-body">
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
-								<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Disposisi BKA
+								<div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Disposisi BKA
 									Belum Disetujui
 								</div>
 								<div
@@ -286,11 +286,11 @@
 		</div>
 		<div class="col">
 			<div class="col-xl-6 col-md-6 mb-4">
-				<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card border-left-primary shadow h-100 py-2">
 					<div class="card-body">
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
-								<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">BKD</div>
+								<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">BKD</div>
 								<div class="h5 mb-0 font-weight-bold text-gray-800"><?= $surat_spt_bkd; ?></div>
 							</div>
 							<div class="col-auto">
@@ -343,11 +343,11 @@
 		</div>
 		<div class="col">
 			<div class="col-xl-9 col-md-6 mb-4">
-				<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card border-left-primary shadow h-100 py-2">
 					<div class="card-body">
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
-								<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">SPT BKD Sudah
+								<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">SPT BKD Sudah
 									Upload
 								</div>
 								<div
@@ -383,11 +383,11 @@
 		</div>
 		<div class="col">
 			<div class="col-xl-9 col-md-6 mb-4">
-				<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card border-left-info shadow h-100 py-2">
 					<div class="card-body">
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
-								<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">SPT BKD Sudah
+								<div class="text-xs font-weight-bold text-info text-uppercase mb-1">SPT BKD Sudah
 									Disetujui
 								</div>
 								<div
@@ -402,11 +402,11 @@
 				</div>
 			</div>
 			<div class="col-xl-9 col-md-6 mb-4">
-				<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card border-left-danger shadow h-100 py-2">
 					<div class="card-body">
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
-								<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">SPT BKD Belum
+								<div class="text-xs font-weight-bold text-danger text-uppercase mb-1">SPT BKD Belum
 									Disetujui
 								</div>
 								<div
@@ -445,11 +445,11 @@
 		</div>
 		<div class="col">
 			<div class="col-xl-9 col-md-6 mb-4">
-				<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card border-left-primary shadow h-100 py-2">
 					<div class="card-body">
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
-								<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">SPT BKA Sudah
+								<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">SPT BKA Sudah
 									Upload
 								</div>
 								<div
@@ -485,11 +485,11 @@
 		</div>
 		<div class="col">
 			<div class="col-xl-9 col-md-6 mb-4">
-				<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card border-left-info shadow h-100 py-2">
 					<div class="card-body">
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
-								<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">SPT BKA Sudah
+								<div class="text-xs font-weight-bold text-info text-uppercase mb-1">SPT BKA Sudah
 									Disetujui
 								</div>
 								<div
@@ -504,11 +504,11 @@
 				</div>
 			</div>
 			<div class="col-xl-9 col-md-6 mb-4">
-				<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card border-left-danger shadow h-100 py-2">
 					<div class="card-body">
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
-								<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">SPT BKA Belum
+								<div class="text-xs font-weight-bold text-danger text-uppercase mb-1">SPT BKA Belum
 									Disetujui
 								</div>
 								<div

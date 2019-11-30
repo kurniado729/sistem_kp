@@ -25,11 +25,11 @@
 		</div>
 		<div class="col">
 			<div class="col-xl-6 col-md-6 mb-4">
-				<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card border-left-primary shadow h-100 py-2">
 					<div class="card-body">
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
-								<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Sudah Di SPT</div>
+								<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Sudah Di SPT</div>
 								<div class="h5 mb-0 font-weight-bold text-gray-800"><?= $surat_sudah_spt_bkd; ?></div>
 							</div>
 							<div class="col-auto">
@@ -69,7 +69,7 @@
 					<!-- Card Body -->
 					<div class="card-body">
 						<div class="chart-pie pt-4">
-							<canvas id="surat_spt_bkd"></canvas>
+							<canvas id="surat_spt_ajukan_bkd"></canvas>
 						</div>
 						<hr>
 						Data Surat SPT
@@ -79,11 +79,11 @@
 		</div>
 		<div class="col">
 			<div class="col-xl-6 col-md-6 mb-4">
-				<div class="card border-left-warning shadow h-100 py-2">
+				<div class="card border-left-primary shadow h-100 py-2">
 					<div class="card-body">
 						<div class="row no-gutters align-items-center">
 							<div class="col mr-2">
-								<div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Sudah Diajukan</div>
+								<div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Sudah Diajukan</div>
 								<div class="h5 mb-0 font-weight-bold text-gray-800"><?= $surat_sudah_diajukan_spt_bkd; ?></div>
 							</div>
 							<div class="col-auto">
