@@ -2,9 +2,9 @@
 
 autonumber
 hide footbox
-title Lihat Menu
+title Menghapus Menu
 
-Actor Aktor_Admin
+Actor Admin
 boundary Dashborad_V
 boundary Menu_V
 control Admin_C
@@ -12,21 +12,21 @@ control Menu_C
 Entity Menu_E
 
 Admin_C --> Dashborad_V: load->view()
-Dashborad_V --> Aktor_Admin: Halaman Dashborad_V
-Aktor_Admin --> Dashborad_V: klik Menu Menu management
+Dashborad_V --> Admin: Halaman Dashborad_V
+Admin --> Dashborad_V: klik Menu Menu management
 Dashborad_V --> Menu_C: index()
 Menu_C --> Menu_E:
     
     Menu_E --> Menu_C:
     Menu_C --> Menu_V: load->view()
-    Menu_V --> Aktor_Admin: Halaman Menu management
+    Menu_V --> Admin: Halaman Menu management
 
-Aktor_Admin --> Menu_V: klik tombol deletemenu
+Admin --> Menu_V: klik tombol deletemenu
 Menu_V --> Menu_C: deletemenu()
 Menu_C --> Menu_E:
   
     Menu_E --> Menu_C:
     Menu_C --> Menu_V: load->view()
-    Menu_V --> Aktor_Admin: Halaman Menu
+    Menu_V --> Admin: Halaman Menu
 
 @enduml

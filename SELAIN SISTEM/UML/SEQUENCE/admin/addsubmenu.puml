@@ -2,9 +2,9 @@
 
 autonumber
 hide footbox
-title Tambah Submenu
+title Menambah Submenu
 
-Actor Aktor_Admin
+Actor Admin
 boundary Dashboard_V
 boundary Submenu_V
 boundary AddSubmenu_V
@@ -13,22 +13,22 @@ control Menu_C
 Entity Submenu_E
 
 Admin_C --> Dashboard_V: load->view()
-Dashboard_V --> Aktor_Admin: Halaman Dashboard
-Aktor_Admin --> Dashboard_V: klik menu Submenu management
+Dashboard_V --> Admin: Halaman Dashboard
+Admin --> Dashboard_V: klik menu Submenu management
 Dashboard_V --> Menu_C: Submenu()
 Menu_C --> Submenu_E:
     
     Submenu_E --> Menu_C:
     Menu_C --> Submenu_V: load->view()
-    Submenu_V --> Aktor_Admin: Halaman Submenu management
+    Submenu_V --> Admin: Halaman Submenu management
 
-Aktor_Admin --> Submenu_V: klik tombol AddSubmenu
+Admin --> Submenu_V: klik tombol AddSubmenu
 Submenu_V --> Menu_C: AddSubmenu()
 Menu_C --> AddSubmenu_V: load->view()
-AddSubmenu_V --> Aktor_Admin: Halaman AddSubmenu
+AddSubmenu_V --> Admin: Halaman AddSubmenu
 
-Aktor_Admin --> AddSubmenu_V: Mengisi Inputan dan klik tombol add
-    note right of Aktor_Admin
+Admin --> AddSubmenu_V: Mengisi Inputan dan klik tombol add
+    note right of Admin
         Inputan title, menu, url, icon dan status active
             end note
 AddSubmenu_V --> Menu_C: AddSubmenu()
@@ -38,13 +38,13 @@ alt isValid() case
     
     Submenu_E --> Menu_C: isValid()
     Menu_C --> Submenu_V: load->view()
-    Submenu_V --> Aktor_Admin: Halaman Submenu
+    Submenu_V --> Admin: Halaman Submenu
 
 else isInvalid() case
     
     Submenu_E --> Menu_C: isValid()
     Menu_C --> AddSubmenu_V: load->view()
-    AddSubmenu_V --> Aktor_Admin: Halaman Add Submenu
+    AddSubmenu_V --> Admin: Halaman Add Submenu
 
 end
 @enduml

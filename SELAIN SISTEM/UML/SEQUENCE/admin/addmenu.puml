@@ -2,9 +2,9 @@
 
 autonumber
 hide footbox
-title Tambah Menu
+title Menambah Menu
 
-Actor Aktor_Admin
+Actor Admin
 boundary Dashboard_V
 boundary Menu_V
 boundary AddMenu_V
@@ -13,22 +13,22 @@ control Menu_C
 Entity Menu_E
 
 Admin_C --> Dashboard_V: load->view()
-Dashboard_V --> Aktor_Admin: Halaman Dashboard
-Aktor_Admin --> Dashboard_V: klik Menu Menu management
+Dashboard_V --> Admin: Halaman Dashboard
+Admin --> Dashboard_V: klik Menu Menu management
 Dashboard_V --> Menu_C: index()
 Menu_C --> Menu_E:
     
     Menu_E --> Menu_C:
     Menu_C --> Menu_V: load->view()
-    Menu_V --> Aktor_Admin: Halaman Menu management
+    Menu_V --> Admin: Halaman Menu management
 
-Aktor_Admin --> Menu_V: klik tombol AddMenu
+Admin --> Menu_V: klik tombol AddMenu
 Menu_V --> Menu_C: AddMenu()
 Menu_C --> AddMenu_V: load->view()
-AddMenu_V --> Aktor_Admin: Halaman AddMenu
+AddMenu_V --> Admin: Halaman AddMenu
 
-Aktor_Admin --> AddMenu_V: Mengisi Inputan dan klik tombol add
-    note right of Aktor_Admin
+Admin --> AddMenu_V: Mengisi Inputan dan klik tombol add
+    note right of Admin
         Inputan Menu
             end note
 AddMenu_V --> Menu_C: AddMenu()
@@ -38,13 +38,13 @@ alt isValid() case
     
     Menu_E --> Menu_C: isValid()
     Menu_C --> Menu_V: load->view()
-    Menu_V --> Aktor_Admin: Halaman Menu
+    Menu_V --> Admin: Halaman Menu
 
 else isInvalid() case
     
     Menu_E --> Menu_C: isValid()
     Menu_C --> AddMenu_V: load->view()
-    AddMenu_V --> Aktor_Admin: Halaman Add Menu
+    AddMenu_V --> Admin: Halaman Add Menu
 
 end
 @enduml

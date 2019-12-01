@@ -2,9 +2,9 @@
 
 autonumber
 hide footbox
-title Hapus Pegawai BKD
+title Menghapus Pegawai BKD
 
-Actor Aktor_Admin
+Actor Admin
 boundary Dashboard_V
 boundary PegawaiBKD_V
 control Admin_C
@@ -12,21 +12,21 @@ control Pegawai_C
 Entity Pegawai_E
 
 Admin_C --> Dashboard_V: load->view()
-Dashboard_V --> Aktor_Admin: Halaman Dashboard
-Aktor_Admin --> Dashboard_V: klik menu Pegawai BKD
+Dashboard_V --> Admin: Halaman Dashboard
+Admin --> Dashboard_V: klik menu Pegawai BKD
 Dashboard_V --> Pegawai_C: index()
 Pegawai_C --> Pegawai_E:
     
     Pegawai_E --> Pegawai_C:
     Pegawai_C --> PegawaiBKD_V: load->view()
-    PegawaiBKD_V --> Aktor_Admin: Halaman Pegawai BKD
+    PegawaiBKD_V --> Admin: Halaman Pegawai BKD
 
-Aktor_Admin --> PegawaiBKD_V: klik tombol Delete Pegawai BKD
+Admin --> PegawaiBKD_V: klik tombol Delete Pegawai BKD
 PegawaiBKD_V --> Pegawai_C: deletepegawaibkd()
 Pegawai_C --> Pegawai_E:
    
     Pegawai_E --> Pegawai_C:
     Pegawai_C --> PegawaiBKD_V: load->view()
-    PegawaiBKD_V --> Aktor_Admin: Halaman Pegawai BKD
+    PegawaiBKD_V --> Admin: Halaman Pegawai BKD
 
 @enduml

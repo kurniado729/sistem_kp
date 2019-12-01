@@ -2,30 +2,30 @@
 
 autonumber
 hide footbox
-title Hapus Role
+title Menghapus Role
 
-Actor Aktor_Admin
+Actor Admin
 boundary Dashboard_V
 boundary Role_V
 control Admin_C
 Entity Role_E
 
 Admin_C --> Dashboard_V: load->view()
-Dashboard_V --> Aktor_Admin: Halaman Dashboard
-Aktor_Admin --> Dashboard_V: klik menu Role
+Dashboard_V --> Admin: Halaman Dashboard
+Admin --> Dashboard_V: klik menu Role
 Dashboard_V --> Admin_C: Role()
 Admin_C --> Role_E:
     
     Role_E --> Admin_C:
     Admin_C --> Role_V: load->view()
-    Role_V --> Aktor_Admin: Halaman Role
+    Role_V --> Admin: Halaman Role
 
-Aktor_Admin --> Role_V: klik tombol deleterole
+Admin --> Role_V: klik tombol deleterole
 Role_V --> Admin_C: deleterole()
 Admin_C --> Role_E:
   
     Role_E --> Admin_C:
     Admin_C --> Role_V: load->view()
-    Role_V --> Aktor_Admin: Halaman Role
+    Role_V --> Admin: Halaman Role
 
 @enduml

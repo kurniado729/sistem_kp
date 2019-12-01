@@ -2,9 +2,9 @@
 
 autonumber
 hide footbox
-title Lihat Submenu
+title Melihat Submenu
 
-Actor Aktor_Admin
+Actor Admin
 boundary Dashboard_V
 boundary Submenu_V
 control Admin_C
@@ -12,13 +12,13 @@ control Menu_C
 Entity Submenu_E
 
 Admin_C --> Dashboard_V: load->view()
-Dashboard_V --> Aktor_Admin: Halaman Dashboard
-Aktor_Admin --> Dashboard_V: klik Submenu submenu management
+Dashboard_V --> Admin: Halaman Dashboard
+Admin --> Dashboard_V: klik Submenu submenu management
 Dashboard_V --> Menu_C: Submenu()
 Menu_C --> Submenu_E:
     
     Submenu_E --> Menu_C:
     Menu_C --> Submenu_V: load->view()
-    Submenu_V --> Aktor_Admin: Halaman Submenu management
+    Submenu_V --> Admin: Halaman Submenu management
 
 @enduml

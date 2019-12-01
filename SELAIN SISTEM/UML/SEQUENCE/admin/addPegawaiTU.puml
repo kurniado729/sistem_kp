@@ -2,9 +2,9 @@
 
 autonumber
 hide footbox
-title Tambah Pegawai TU
+title Menambah Pegawai TU
 
-Actor Aktor_Admin
+Actor Admin
 boundary Dashboard_V
 boundary PegawaiTU_V
 boundary AddPegawaiTU_V
@@ -13,22 +13,22 @@ control Pegawai_C
 Entity Pegawai_E
 
 Admin_C --> Dashboard_V: load->view()
-Dashboard_V --> Aktor_Admin: Halaman Dashboard
-Aktor_Admin --> Dashboard_V: klik menu Pegawai TU
+Dashboard_V --> Admin: Halaman Dashboard
+Admin --> Dashboard_V: klik menu Pegawai TU
 Dashboard_V --> Pegawai_C: index()
 Pegawai_C --> Pegawai_E:
     
     Pegawai_E --> Pegawai_C:
     Pegawai_C --> PegawaiTU_V: load->view()
-    PegawaiTU_V --> Aktor_Admin: Halaman Pegawai TU
+    PegawaiTU_V --> Admin: Halaman Pegawai TU
 
-Aktor_Admin --> PegawaiTU_V: klik tombol Add Pegawai TU
+Admin --> PegawaiTU_V: klik tombol Add Pegawai TU
 PegawaiTU_V --> Pegawai_C: addpegawaitu()
 Pegawai_C --> AddPegawaiTU_V: load->view()
-AddPegawaiTU_V --> Aktor_Admin: Halaman Add Pegawai TU
+AddPegawaiTU_V --> Admin: Halaman Add Pegawai TU
 
-Aktor_Admin --> AddPegawaiTU_V: Mengisi Inputan dan klik tombol add
-    note right of Aktor_Admin
+Admin --> AddPegawaiTU_V: Mengisi Inputan dan klik tombol add
+    note right of Admin
         Inputan Nama, NIP, Jenis Kelamin, tempat lahir, tanggal lahir, alamat dan jabatan
             end note
 AddPegawaiTU_V --> Pegawai_C: addpegawaitu()
@@ -38,13 +38,13 @@ alt isValid() case
     
     Pegawai_E --> Pegawai_C: isValid()
     Pegawai_C --> PegawaiTU_V: load->view()
-    PegawaiTU_V --> Aktor_Admin: Halaman Pegawai TU
+    PegawaiTU_V --> Admin: Halaman Pegawai TU
 
 else isInvalid() case
     
     Pegawai_E --> Pegawai_C: isValid()
     Pegawai_C --> AddPegawaiTU_V: load->view()
-    AddPegawaiTU_V --> Aktor_Admin: Halaman Add Pegawai TU
+    AddPegawaiTU_V --> Admin: Halaman Add Pegawai TU
 
 end
 @enduml

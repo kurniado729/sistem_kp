@@ -2,9 +2,9 @@
 
 autonumber
 hide footbox
-title Hapus Pegawai TU
+title Menghapus Pegawai TU
 
-Actor Aktor_Admin
+Actor Admin
 boundary Dashboard_V
 boundary PegawaiTU_V
 control Admin_C
@@ -12,21 +12,21 @@ control Pegawai_C
 Entity Pegawai_E
 
 Admin_C --> Dashboard_V: load->view()
-Dashboard_V --> Aktor_Admin: Halaman Dashboard
-Aktor_Admin --> Dashboard_V: klik menu Pegawai TU
+Dashboard_V --> Admin: Halaman Dashboard
+Admin --> Dashboard_V: klik menu Pegawai TU
 Dashboard_V --> Pegawai_C: index()
 Pegawai_C --> Pegawai_E:
     
     Pegawai_E --> Pegawai_C:
     Pegawai_C --> PegawaiTU_V: load->view()
-    PegawaiTU_V --> Aktor_Admin: Halaman Pegawai TU
+    PegawaiTU_V --> Admin: Halaman Pegawai TU
 
-Aktor_Admin --> PegawaiTU_V: klik tombol Delete Pegawai TU
+Admin --> PegawaiTU_V: klik tombol Delete Pegawai TU
 PegawaiTU_V --> Pegawai_C: deletepegawaitu()
 Pegawai_C --> Pegawai_E:
    
     Pegawai_E --> Pegawai_C:
     Pegawai_C --> PegawaiTU_V: load->view()
-    PegawaiTU_V --> Aktor_Admin: Halaman Pegawai TU
+    PegawaiTU_V --> Admin: Halaman Pegawai TU
 
 @enduml

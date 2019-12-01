@@ -2,9 +2,9 @@
 
 autonumber
 hide footbox
-title Ubah Menu
+title Mengubah Menu
 
-Actor Aktor_Admin
+Actor Admin
 boundary Dashboard_V
 boundary Menu_V
 boundary EditMenu_V
@@ -13,22 +13,22 @@ control Menu_C
 Entity Menu_E
 
 Admin_C --> Dashboard_V: load->view()
-Dashboard_V --> Aktor_Admin: Halaman Dashboard
-Aktor_Admin --> Dashboard_V: klik Menu_E Menu management
+Dashboard_V --> Admin: Halaman Dashboard
+Admin --> Dashboard_V: klik Menu_E Menu management
 Dashboard_V --> Menu_C: index()
 Menu_C --> Menu_E:
     
     Menu_E --> Menu_C:
     Menu_C --> Menu_V: load->view()
-    Menu_V --> Aktor_Admin: Halaman Menu management
+    Menu_V --> Admin: Halaman Menu management
 
-Aktor_Admin --> Menu_V: klik tombol EditMenu
+Admin --> Menu_V: klik tombol EditMenu
 Menu_V --> Menu_C: EditMenu()
 Menu_C --> EditMenu_V: load->view()
-EditMenu_V --> Aktor_Admin: Halaman EditMenu
+EditMenu_V --> Admin: Halaman EditMenu
 
-Aktor_Admin --> EditMenu_V: Mengisi Inputan dan klik tombol edit
-    note right of Aktor_Admin
+Admin --> EditMenu_V: Mengisi Inputan dan klik tombol edit
+    note right of Admin
         Inputan Menu
             end note
 EditMenu_V --> Menu_C: EditMenu()
@@ -38,13 +38,13 @@ alt isValid() case
     
     Menu_E --> Menu_C: isValid()
     Menu_C --> Menu_V: load->view()
-    Menu_V --> Aktor_Admin: Halaman Menu
+    Menu_V --> Admin: Halaman Menu
 
 else isInvalid() case
     
     Menu_E --> Menu_C: isValid()
     Menu_C --> EditMenu_V: load->view()
-    EditMenu_V --> Aktor_Admin: Halaman Edit Menu
+    EditMenu_V --> Admin: Halaman Edit Menu
 
 end
 @enduml
