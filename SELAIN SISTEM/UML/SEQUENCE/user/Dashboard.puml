@@ -1,0 +1,16 @@
+@startuml
+
+autonumber
+hide footbox
+title Dashboard Aktor
+
+Actor Aktor
+boundary Dashboard_V
+boundary MyProfile_V
+control User_C
+Entity User_E
+
+User_C --> Dashboard_V: load->view()
+Dashboard_V --> Aktor: Halaman Dashboard_V
+
+@enduml
