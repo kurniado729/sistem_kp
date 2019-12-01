@@ -2,9 +2,9 @@
 
 autonumber
 hide footbox
-title Disposisi
+title Mendisposisi Surat Masuk
 
-Actor Aktor_AdminTU
+Actor AdminTU
 boundary Dashboard_V
 boundary SuratMasuk_V
 control Admin_C
@@ -13,16 +13,16 @@ Entity SuratMasuk_E
 Entity SuratDisposisi_E
 
 Admin_C --> Dashboard_V: load->view()
-Dashboard_V --> Aktor_AdminTU: Halaman Dashboard
-Aktor_AdminTU --> Dashboard_V: klik menu Surat Masuk
+Dashboard_V --> AdminTU: Halaman Dashboard
+AdminTU --> Dashboard_V: klik menu Surat Masuk
 Dashboard_V --> SuratMasuk_C: index()
 SuratMasuk_C --> SuratMasuk_E:
     
     SuratMasuk_E --> SuratMasuk_C:
     SuratMasuk_C --> SuratMasuk_V: load->view()
-    SuratMasuk_V --> Aktor_AdminTU: Halaman Surat Masuk
+    SuratMasuk_V --> AdminTU: Halaman Surat Masuk
 
-Aktor_AdminTU --> SuratMasuk_V: klik tombol Disposisi Surat Masuk
+AdminTU --> SuratMasuk_V: klik tombol Disposisi Surat Masuk
 SuratMasuk_V --> SuratMasuk_C: disposisimail()
 SuratMasuk_C --> SuratMasuk_E:
    
@@ -32,6 +32,6 @@ SuratMasuk_C --> SuratDisposisi_E:
    
     SuratDisposisi_E --> SuratMasuk_C:    
     SuratMasuk_C --> SuratMasuk_V: load->view()
-    SuratMasuk_V --> Aktor_AdminTU: Halaman Surat Masuk
+    SuratMasuk_V --> AdminTU: Halaman Surat Masuk
 
 @enduml

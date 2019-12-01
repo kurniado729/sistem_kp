@@ -2,9 +2,9 @@
 
 autonumber
 hide footbox
-title Upload Persetujuan SPT BKD
+title Mengupload Persetujuan SPT BKD
 
-Actor Aktor_Kepala
+Actor Kepala
 boundary Dashboard_V
 boundary SPTBKD_V
 boundary UploadSPTBKD_V
@@ -13,22 +13,22 @@ control SuratPerintahTugas_C
 Entity SuratPerintahTugas_E
 
 Admin_C --> Dashboard_V: load->view()
-Dashboard_V --> Aktor_Kepala: Halaman Dashboard
-Aktor_Kepala --> Dashboard_V: klik menu Persetujuan SPT BKD
+Dashboard_V --> Kepala: Halaman Dashboard
+Kepala --> Dashboard_V: klik menu Persetujuan SPT BKD
 Dashboard_V --> SuratPerintahTugas_C: index()
 SuratPerintahTugas_C --> SuratPerintahTugas_E:
     
     SuratPerintahTugas_E --> SuratPerintahTugas_C:
     SuratPerintahTugas_C --> SPTBKD_V: load->view()
-    SPTBKD_V --> Aktor_Kepala: Halaman Persetujuan SPT BKD
+    SPTBKD_V --> Kepala: Halaman Persetujuan SPT BKD
 
-Aktor_Kepala --> SPTBKD_V: klik tombol Upload Persetujuan SPT BKD
+Kepala --> SPTBKD_V: klik tombol Upload Persetujuan SPT BKD
 SPTBKD_V --> SuratPerintahTugas_C: uploadsptbkd()
 SuratPerintahTugas_C --> UploadSPTBKD_V: load->view()
-UploadSPTBKD_V --> Aktor_Kepala: Halaman Upload File Persetujuan SPT BKD
+UploadSPTBKD_V --> Kepala: Halaman Upload File Persetujuan SPT BKD
 
-Aktor_Kepala --> UploadSPTBKD_V: Mengisi Inputan dan klik tombol upload
-    note right of Aktor_Kepala
+Kepala --> UploadSPTBKD_V: Mengisi Inputan dan klik tombol upload
+    note right of Kepala
         Inputan file SPT BKD lengkap
             end note
 UploadSPTBKD_V --> SuratPerintahTugas_C: uploadsptbkd()
@@ -38,13 +38,13 @@ alt isValid() case
     
     SuratPerintahTugas_E --> SuratPerintahTugas_C: isValid()
     SuratPerintahTugas_C --> SPTBKD_V: load->view()
-    SPTBKD_V --> Aktor_Kepala: Halaman Persetujuan SPT BKD
+    SPTBKD_V --> Kepala: Halaman Persetujuan SPT BKD
 
 else isInvalid() case
     
     SuratPerintahTugas_E --> SuratPerintahTugas_C: isValid()
     SuratPerintahTugas_C --> UploadSPTBKD_V: load->view()
-    UploadSPTBKD_V --> Aktor_Kepala: Halaman Upload SPT BKD
+    UploadSPTBKD_V --> Kepala: Halaman Upload SPT BKD
 
 end
 @enduml

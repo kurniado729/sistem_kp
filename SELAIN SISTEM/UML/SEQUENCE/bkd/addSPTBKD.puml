@@ -2,9 +2,9 @@
 
 autonumber
 hide footbox
-title Tambah SPT BKD
+title Menambah SPT BKD
 
-Actor Aktor_AdminBKD
+Actor AdminBKD
 boundary Dashboard_V
 boundary SuratBKD_V
 boundary AddSPTBKD_V
@@ -14,22 +14,22 @@ Entity SuratDisposisi_E
 Entity SuratPerintahTugas_E
 
 Admin_C --> Dashboard_V: load->view()
-Dashboard_V --> Aktor_AdminBKD: Halaman Dashboard
-Aktor_AdminBKD --> Dashboard_V: klik menu Surat BKD
+Dashboard_V --> AdminBKD: Halaman Dashboard
+AdminBKD --> Dashboard_V: klik menu Surat BKD
 Dashboard_V --> BKD_C: index()
 BKD_C --> SuratDisposisi_E:
     
     SuratDisposisi_E --> BKD_C:
     BKD_C --> SuratBKD_V: load->view()
-    SuratBKD_V --> Aktor_AdminBKD: Halaman Surat BKD
+    SuratBKD_V --> AdminBKD: Halaman Surat BKD
 
-Aktor_AdminBKD --> SuratBKD_V: klik tombol Add Surat SPT
+AdminBKD --> SuratBKD_V: klik tombol Add Surat SPT
 SuratBKD_V --> BKD_C: addsuratperintahjalan()
 BKD_C --> AddSPTBKD_V: load->view()
-AddSPTBKD_V --> Aktor_AdminBKD: Halaman Add SPT BKD
+AddSPTBKD_V --> AdminBKD: Halaman Add SPT BKD
 
-Aktor_AdminBKD --> AddSPTBKD_V: Mengisi Inputan dan klik tombol add
-    note right of Aktor_AdminBKD
+AdminBKD --> AddSPTBKD_V: Mengisi Inputan dan klik tombol add
+    note right of AdminBKD
         Inputan Pengirim, no surat, tanggal surat, ringkasan, tanggal akhir spt, nama pegawai, nip dan jabatan
             end note
 AddSPTBKD_V --> BKD_C: addsuratperintahjalan()
@@ -41,14 +41,14 @@ alt isValid() case
     SuratDisposisi_E --> BKD_C: isValid()
     SuratPerintahTugas_E --> BKD_C: isValid()
     BKD_C --> SuratBKD_V: load->view()
-    SuratBKD_V --> Aktor_AdminBKD: Halaman Surat BKD
+    SuratBKD_V --> AdminBKD: Halaman Surat BKD
 
 else isInvalid() case
     
     SuratDisposisi_E --> BKD_C: isValid()
     SuratPerintahTugas_E --> BKD_C: isValid()
     BKD_C --> AddSPTBKD_V: load->view()
-    AddSPTBKD_V --> Aktor_AdminBKD: Halaman Add SPT BKD
+    AddSPTBKD_V --> AdminBKD: Halaman Add SPT BKD
 
 end
 @enduml

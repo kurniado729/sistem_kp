@@ -2,9 +2,9 @@
 
 autonumber
 hide footbox
-title setujui Persetujuan SPT BKA
+title Menyetujui Persetujuan SPT BKA
 
-Actor Aktor_Kepala
+Actor Kepala
 boundary Dashboard_V
 boundary SPTBKA_V
 control Admin_C
@@ -12,21 +12,21 @@ control SuratPerintahTugas_C
 Entity SuratPerintahTugas_E
 
 Admin_C --> Dashboard_V: load->view()
-Dashboard_V --> Aktor_Kepala: Halaman Dashboard
-Aktor_Kepala --> Dashboard_V: klik menu Persetujuan SPT BKA
+Dashboard_V --> Kepala: Halaman Dashboard
+Kepala --> Dashboard_V: klik menu Persetujuan SPT BKA
 Dashboard_V --> SuratPerintahTugas_C: sptbka()
 SuratPerintahTugas_C --> SuratPerintahTugas_E:
     
     SuratPerintahTugas_E --> SuratPerintahTugas_C:
     SuratPerintahTugas_C --> SPTBKA_V: load->view()
-    SPTBKA_V --> Aktor_Kepala: Halaman Persetujuan SPT BKA
+    SPTBKA_V --> Kepala: Halaman Persetujuan SPT BKA
 
-Aktor_Kepala --> SPTBKA_V: klik tombol setujui SPT BKA
+Kepala --> SPTBKA_V: klik tombol setujui SPT BKA
 SPTBKA_V --> SuratPerintahTugas_C: acceptbka()
 SuratPerintahTugas_C --> SuratPerintahTugas_E:
    
     SuratPerintahTugas_E --> SuratPerintahTugas_C:
     SuratPerintahTugas_C --> SPTBKA_V: load->view()
-    SPTBKA_V --> Aktor_Kepala: Halaman Persetujuan SPT BKA
+    SPTBKA_V --> Kepala: Halaman Persetujuan SPT BKA
 
 @enduml

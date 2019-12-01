@@ -4,7 +4,7 @@ autonumber
 hide footbox
 title Mencari Surat BKA
 
-Actor Aktor_AdminBKA
+Actor AdminBKA
 boundary Dashborad_V
 boundary SuratBKA_V
 control Admin_C
@@ -12,13 +12,13 @@ control BKA_C
 Entity SuratDisposisi_E
 
 Admin_C --> Dashborad_V: load->view()
-Dashborad_V --> Aktor_AdminBKA: Halaman Dashborad
-Aktor_AdminBKA --> Dashborad_V: tulis keyword yang ingin dicari pada form pencarian
+Dashborad_V --> AdminBKA: Halaman Dashborad
+AdminBKA --> Dashborad_V: tulis keyword yang ingin dicari pada form pencarian
 Dashborad_V --> BKA_C: searchbka()
 BKA_C --> SuratDisposisi_E:
     
     SuratDisposisi_E --> BKA_C:
     BKA_C --> SuratBKA_V: load->view()
-    SuratBKA_V --> Aktor_AdminBKA: Halaman Surat BKA
+    SuratBKA_V --> AdminBKA: Halaman Surat BKA
 
 @enduml

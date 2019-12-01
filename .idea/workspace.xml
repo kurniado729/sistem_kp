@@ -87,16 +87,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\sistem_kp\assets\js\demo" />
-      <recent name="C:\xampp\htdocs\sistem_kp\assets\js" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\sistem_kp\application\views\pengguna" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\models" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\controllers" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\views\kontrol_spt" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\sistem_kp\assets\js\demo" />
+      <recent name="C:\xampp\htdocs\sistem_kp\assets\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -235,7 +235,7 @@
       <workItem from="1575039138689" duration="6627000" />
       <workItem from="1575123923968" duration="11136000" />
       <workItem from="1575146594541" duration="4853000" />
-      <workItem from="1575197409673" duration="157000" />
+      <workItem from="1575197409673" duration="212000" />
     </task>
     <task id="LOCAL-00001" summary="update view">
       <created>1573067332216</created>
@@ -545,7 +545,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575197570142</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="masukkan sequence di laporan">
+      <created>1575197582914</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1575197582914</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

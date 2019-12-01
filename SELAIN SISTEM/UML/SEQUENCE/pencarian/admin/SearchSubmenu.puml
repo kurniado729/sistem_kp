@@ -4,7 +4,7 @@ autonumber
 hide footbox
 title Mencari Submenu
 
-Actor Aktor_Admin
+Actor Admin
 boundary Dashborad_V
 boundary Submenu_V
 control Admin_C
@@ -12,13 +12,13 @@ control Menu_C
 Entity Submenu_E
 
 Admin_C --> Dashborad_V: load->view()
-Dashborad_V --> Aktor_Admin: Halaman Dashborad
-Aktor_Admin --> Dashborad_V: tulis keyword yang ingin dicari pada form pencarian
+Dashborad_V --> Admin: Halaman Dashborad
+Admin --> Dashborad_V: tulis keyword yang ingin dicari pada form pencarian
 Dashborad_V --> Menu_C: searchsubmenu()
 Menu_C --> Submenu_E:
     
     Submenu_E --> Menu_C:
     Menu_C --> Submenu_V: load->view()
-    Submenu_V --> Aktor_Admin: Halaman Menu management
+    Submenu_V --> Admin: Halaman Menu management
 
 @enduml

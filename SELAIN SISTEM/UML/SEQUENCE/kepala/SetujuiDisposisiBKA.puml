@@ -2,9 +2,9 @@
 
 autonumber
 hide footbox
-title setujui Disposisi BKA
+title Menyetujui Disposisi BKA
 
-Actor Aktor_Kepala
+Actor Kepala
 boundary Dashboard_V
 boundary DisposisiBKA_V
 control Admin_C
@@ -12,21 +12,21 @@ control SuratDisposisi_C
 Entity SuratDisposisi_E
 
 Admin_C --> Dashboard_V: load->view()
-Dashboard_V --> Aktor_Kepala: Halaman Dashboard
-Aktor_Kepala --> Dashboard_V: klik menu Disposisi BKA
+Dashboard_V --> : Halaman Dashboard
+ --> Dashboard_V: klik menu Disposisi BKA
 Dashboard_V --> SuratDisposisi_C: disposisibka()
 SuratDisposisi_C --> SuratDisposisi_E:
     
     SuratDisposisi_E --> SuratDisposisi_C:
     SuratDisposisi_C --> DisposisiBKA_V: load->view()
-    DisposisiBKA_V --> Aktor_Kepala: Halaman Disposisi BKA
+    DisposisiBKA_V --> : Halaman Disposisi BKA
 
-Aktor_Kepala --> DisposisiBKA_V: klik tombol setujui Disposisi BKA
+ --> DisposisiBKA_V: klik tombol setujui Disposisi BKA
 DisposisiBKA_V --> SuratDisposisi_C: acceptbka()
 SuratDisposisi_C --> SuratDisposisi_E:
    
     SuratDisposisi_E --> SuratDisposisi_C:
     SuratDisposisi_C --> DisposisiBKA_V: load->view()
-    DisposisiBKA_V --> Aktor_Kepala: Halaman Disposisi BKA
+    DisposisiBKA_V --> : Halaman Disposisi BKA
 
 @enduml

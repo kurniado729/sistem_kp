@@ -2,9 +2,9 @@
 
 autonumber
 hide footbox
-title Upload SPT BKD
+title Mengupload SPT BKD
 
-Actor Aktor_AdminTU
+Actor AdminTU
 boundary Dashboard_V
 boundary KontrolSPTBKD_V
 boundary UploadSPTBKD_V
@@ -13,22 +13,22 @@ control KontrolSPT_C
 Entity SuratPerintahTugas_E
 
 Admin_C --> Dashboard_V: load->view()
-Dashboard_V --> Aktor_AdminTU: Halaman Dashboard
-Aktor_AdminTU --> Dashboard_V: klik menu SPT BKD
+Dashboard_V --> AdminTU: Halaman Dashboard
+AdminTU --> Dashboard_V: klik menu SPT BKD
 Dashboard_V --> KontrolSPT_C: index()
 KontrolSPT_C --> SuratPerintahTugas_E:
     
     SuratPerintahTugas_E --> KontrolSPT_C:
     KontrolSPT_C --> KontrolSPTBKD_V: load->view()
-    KontrolSPTBKD_V --> Aktor_AdminTU: Halaman SPT BKD
+    KontrolSPTBKD_V --> AdminTU: Halaman SPT BKD
 
-Aktor_AdminTU --> KontrolSPTBKD_V: klik tombol Upload SPT BKD
+AdminTU --> KontrolSPTBKD_V: klik tombol Upload SPT BKD
 KontrolSPTBKD_V --> KontrolSPT_C: uploadsptbkdlengkap()
 KontrolSPT_C --> UploadSPTBKD_V: load->view()
-UploadSPTBKD_V --> Aktor_AdminTU: Halaman Upload File Lengkap SPT BKD
+UploadSPTBKD_V --> AdminTU: Halaman Upload File Lengkap SPT BKD
 
-Aktor_AdminTU --> UploadSPTBKD_V: Mengisi Inputan dan klik tombol upload
-    note right of Aktor_AdminTU
+AdminTU --> UploadSPTBKD_V: Mengisi Inputan dan klik tombol upload
+    note right of AdminTU
         Inputan file spt bkd lengkap
             end note
 UploadSPTBKD_V --> KontrolSPT_C: uploadsptbkdlengkap()
@@ -38,12 +38,12 @@ alt isValid() case
     
     SuratPerintahTugas_E --> KontrolSPT_C: isValid()
     KontrolSPT_C --> KontrolSPTBKD_V: load->view()
-    KontrolSPTBKD_V --> Aktor_AdminTU: Halaman Kontrol SPT BKD
+    KontrolSPTBKD_V --> AdminTU: Halaman Kontrol SPT BKD
 
 else isInvalid() case
     
     SuratPerintahTugas_E --> KontrolSPT_C: isValid()
     KontrolSPT_C --> UploadSPTBKD_V: load->view()
-    UploadSPTBKD_V --> Aktor_AdminTU: Halaman Upload SPT BKD
+    UploadSPTBKD_V --> AdminTU: Halaman Upload SPT BKD
 end
 @enduml

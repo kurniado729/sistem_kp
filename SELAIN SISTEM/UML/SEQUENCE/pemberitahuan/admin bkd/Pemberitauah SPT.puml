@@ -2,9 +2,9 @@
 
 autonumber
 hide footbox
-title Pemberitahuan Surat Perintah Tugas
+title Pemberitahuan SPT BKD
 
-Actor Aktor_AdminBKD
+Actor AdminBKD
 boundary Dashborad_V
 boundary SuratPerintahTugas_V
 control Admin_C
@@ -12,13 +12,13 @@ control BKD_C
 Entity SuratPerintahTugas_E
 
 Admin_C --> Dashborad_V: load->view()
-Dashborad_V --> Aktor_AdminBKD: Halaman Dashborad
-Aktor_AdminBKD --> Dashborad_V: klik tombol pemberitahuan
+Dashborad_V --> AdminBKD: Halaman Dashborad
+AdminBKD --> Dashborad_V: klik tombol pemberitahuan
 Dashborad_V --> BKD_C: spt()
 BKD_C --> SuratPerintahTugas_E:
     
     SuratPerintahTugas_E --> BKD_C:
     BKD_C --> SuratPerintahTugas_V: load->view()
-    SuratPerintahTugas_V --> Aktor_AdminBKD: Halaman Surat Perintah Tugas
+    SuratPerintahTugas_V --> AdminBKD: Halaman Surat Perintah Tugas
 
 @enduml

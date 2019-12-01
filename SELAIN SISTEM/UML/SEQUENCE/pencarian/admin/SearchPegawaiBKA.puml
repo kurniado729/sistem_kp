@@ -4,7 +4,7 @@ autonumber
 hide footbox
 title Mencari Pegawai BKA
 
-Actor Aktor_Admin
+Actor Admin
 boundary Dashborad_V
 boundary PegawaiBKA_V
 control Admin_C
@@ -12,13 +12,13 @@ control Pegawai_C
 Entity Pegawai_E
 
 Admin_C --> Dashborad_V: load->view()
-Dashborad_V --> Aktor_Admin: Halaman Dashborad
-Aktor_Admin --> Dashborad_V: tulis keyword yang ingin dicari pada form pencarian
+Dashborad_V --> Admin: Halaman Dashborad
+Admin --> Dashborad_V: tulis keyword yang ingin dicari pada form pencarian
 Dashborad_V --> Pegawai_C: searchpegawaibka()
 Pegawai_C --> Pegawai_E:
     
     Pegawai_E --> Pegawai_C:
     Pegawai_C --> PegawaiBKA_V: load->view()
-    PegawaiBKA_V --> Aktor_Admin: Halaman Pegawai BKA
+    PegawaiBKA_V --> Admin: Halaman Pegawai BKA
 
 @enduml

@@ -2,9 +2,9 @@
 
 autonumber
 hide footbox
-title Hapus Permanen Surat Masuk
+title Menghapus Permanen Surat Masuk
 
-Actor Aktor_AdminTU
+Actor AdminTU
 boundary Dashboard_V
 boundary Trash_V
 control Admin_C
@@ -12,21 +12,21 @@ control SuratMasuk_C
 Entity SuratMasuk_E
 
 Admin_C --> Dashboard_V: load->view()
-Dashboard_V --> Aktor_AdminTU: Halaman Dashboard
-Aktor_AdminTU --> Dashboard_V: klik menu Trash Surat Masuk
+Dashboard_V --> AdminTU: Halaman Dashboard
+AdminTU --> Dashboard_V: klik menu Trash Surat Masuk
 Dashboard_V --> SuratMasuk_C: trash()
 SuratMasuk_C --> SuratMasuk_E:
     
     SuratMasuk_E --> SuratMasuk_C:
     SuratMasuk_C --> Trash_V: load->view()
-    Trash_V --> Aktor_AdminTU: Halaman Trash Surat Masuk
+    Trash_V --> AdminTU: Halaman Trash Surat Masuk
 
-Aktor_AdminTU --> Trash_V: klik tombol Delete Permanent Pegawai
+AdminTU --> Trash_V: klik tombol Delete Permanent Pegawai
 Trash_V --> SuratMasuk_C: deletepermanentmail()
 SuratMasuk_C --> SuratMasuk_E:
    
     SuratMasuk_E --> SuratMasuk_C:
     SuratMasuk_C --> Trash_V: load->view()
-    Trash_V --> Aktor_AdminTU: Halaman Trash Surat Masuk
+    Trash_V --> AdminTU: Halaman Trash Surat Masuk
 
 @enduml

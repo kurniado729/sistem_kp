@@ -4,7 +4,7 @@ autonumber
 hide footbox
 title Mencari Persetujuan Surat Disposisi
 
-Actor Aktor_Kepala
+Actor Kepala
 boundary Dashborad_V
 boundary PersetujuanDisposisi_V
 control Admin_C
@@ -12,13 +12,13 @@ control SuratDisposisi_C
 Entity SuratDisposisi_E
 
 Admin_C --> Dashborad_V: load->view()
-Dashborad_V --> Aktor_Kepala: Halaman Dashborad
-Aktor_Kepala --> Dashborad_V: tulis keyword yang ingin dicari pada form pencarian
+Dashborad_V --> Kepala: Halaman Dashborad
+Kepala --> Dashborad_V: tulis keyword yang ingin dicari pada form pencarian
 Dashborad_V --> SuratDisposisi_C: searchdisposisi()
 SuratDisposisi_C --> SuratDisposisi_E:
     
     SuratDisposisi_E --> SuratDisposisi_C:
     SuratDisposisi_C --> PersetujuanDisposisi_V: load->view()
-    PersetujuanDisposisi_V --> Aktor_Kepala: Halaman Persetujuan Surat Disposisi
+    PersetujuanDisposisi_V --> Kepala: Halaman Persetujuan Surat Disposisi
 
 @enduml

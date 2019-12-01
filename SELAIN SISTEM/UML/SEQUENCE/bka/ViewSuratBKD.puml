@@ -2,9 +2,9 @@
 
 autonumber
 hide footbox
-title Lihat Surat BKA 
+title Melihat Surat BKA 
 
-Actor Aktor_AdminBKA
+Actor AdminBKA
 boundary Dashboard_V
 boundary SuratBKA_V
 control Admin_C
@@ -12,13 +12,13 @@ control BKA_C
 Entity SuratDisposisi_E
 
 Admin_C --> Dashboard_V: load->view()
-Dashboard_V --> Aktor_AdminBKA: Halaman Dashboard
-Aktor_AdminBKA --> Dashboard_V: klik menu Surat BKA 
+Dashboard_V --> AdminBKA: Halaman Dashboard
+AdminBKA --> Dashboard_V: klik menu Surat BKA 
 Dashboard_V --> BKA_C: index()
 BKA_C --> SuratDisposisi_E:
     
     SuratDisposisi_E --> BKA_C:
     BKA_C --> SuratBKA_V: load->view()
-    SuratBKA_V --> Aktor_AdminBKA: Halaman Surat BKA 
+    SuratBKA_V --> AdminBKA: Halaman Surat BKA 
 
 @enduml

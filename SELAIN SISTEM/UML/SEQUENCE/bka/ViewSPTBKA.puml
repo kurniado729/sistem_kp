@@ -2,9 +2,9 @@
 
 autonumber
 hide footbox
-title Lihat SPT BKA 
+title Melihat SPT BKA 
 
-Actor Aktor_AdminBKA
+Actor AdminBKA
 boundary Dashboard_V
 boundary SPT_V
 control Admin_C
@@ -12,13 +12,13 @@ control BKA_C
 Entity SuratPerintahTugas_E
 
 Admin_C --> Dashboard_V: load->view()
-Dashboard_V --> Aktor_AdminBKA: Halaman Dashboard
-Aktor_AdminBKA --> Dashboard_V: klik menu Surat Perintah Tugas 
+Dashboard_V --> Aktor_AdminBKA: Halaman ashboard
+Aktor_AdminBKA --> Dashboard_V: klik menu Surat h Tugas 
 Dashboard_V --> BKA_C: spt()
 BKA_C --> SuratPerintahTugas_E:
     
     SuratPerintahTugas_E --> BKA_C:
     BKA_C --> SPT_V: load->view()
-    SPT_V --> Aktor_AdminBKA: Halaman Surat Perintah Tugas 
+    SPT_V --> Aktor_AdminBKA: Halaman Surat h Tugas 
 
 @enduml

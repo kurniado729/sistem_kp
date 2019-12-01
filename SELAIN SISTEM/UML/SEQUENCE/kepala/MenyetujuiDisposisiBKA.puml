@@ -4,7 +4,7 @@ autonumber
 hide footbox
 title Menyetujui Disposisi Ke BKA
 
-Actor Aktor_Kepala
+Actor Kepala
 boundary Dashboard_V
 boundary PersetujuanDisposisi_V
 control Admin_C
@@ -12,21 +12,21 @@ control SuratDisposisi_C
 Entity SuratDisposisi_E
 
 Admin_C --> Dashboard_V: load->view()
-Dashboard_V --> Aktor_Kepala: Halaman Dashboard
-Aktor_Kepala --> Dashboard_V: klik menu Persetujuan Disposisi
+Dashboard_V --> Kepala: Halaman Dashboard
+Kepala --> Dashboard_V: klik menu Persetujuan Disposisi
 Dashboard_V --> SuratDisposisi_C: index()
 SuratDisposisi_C --> SuratDisposisi_E:
     
     SuratDisposisi_E --> SuratDisposisi_C:
     SuratDisposisi_C --> PersetujuanDisposisi_V: load->view()
-    PersetujuanDisposisi_V --> Aktor_Kepala: Halaman Persetujuan Disposisi
+    PersetujuanDisposisi_V --> Kepala: Halaman Persetujuan Disposisi
 
-Aktor_Kepala --> PersetujuanDisposisi_V: klik tombol Menyetujui Disposisi Ke BKA
+Kepala --> PersetujuanDisposisi_V: klik tombol Menyetujui Disposisi Ke BKA
 PersetujuanDisposisi_V --> SuratDisposisi_C: disposisimailbka()
 SuratDisposisi_C --> SuratDisposisi_E:
    
     SuratDisposisi_E --> SuratDisposisi_C:
     SuratDisposisi_C --> PersetujuanDisposisi_V: load->view()
-    PersetujuanDisposisi_V --> Aktor_Kepala: Halaman Persetujuan Disposisi
+    PersetujuanDisposisi_V --> Kepala: Halaman Persetujuan Disposisi
 
 @enduml

@@ -1,0 +1,32 @@
+@startuml
+
+autonumber
+hide footbox
+title Mengurangi Akses
+
+Actor Admin
+boundary Dashboard_V
+boundary RoleAccess_V
+control Admin_C
+Entity Role_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> Admin: Halaman Dashboard
+Admin --> Dashboard_V: klik menu Role
+Dashboard_V --> Admin_C: Role()
+Admin_C --> Role_E:
+    
+    Role_E --> Admin_C:
+    Admin_C --> RoleAccess_V: load->view()
+    RoleAccess_V --> Admin: Halaman Role
+
+Admin --> RoleAccess_V: klik checkbox pada Role Access yang ingin dihapus
+RoleAccess_V --> Admin_C: roleaccess()
+
+    Role_E --> Admin_C: 
+    Admin_C --> RoleAccess_V: load->view()
+    RoleAccess_V --> Admin: Halaman Role Access
+
+
+
+@enduml

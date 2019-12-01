@@ -2,9 +2,9 @@
 
 autonumber
 hide footbox
-title Tolak Disposisi BKD
+title Menolak Disposisi BKD
 
-Actor Aktor_Kepala
+Actor Kepala
 boundary Dashboard_V
 boundary DisposisiBKD_V
 control Admin_C
@@ -12,21 +12,21 @@ control SuratDisposisi_C
 Entity SuratDisposisi_E
 
 Admin_C --> Dashboard_V: load->view()
-Dashboard_V --> Aktor_Kepala: Halaman Dashboard
-Aktor_Kepala --> Dashboard_V: klik menu Disposisi BKD
+Dashboard_V --> Kepala: Halaman Dashboard
+Kepala --> Dashboard_V: klik menu Disposisi BKD
 Dashboard_V --> SuratDisposisi_C: disposisibkd()
 SuratDisposisi_C --> SuratDisposisi_E:
     
     SuratDisposisi_E --> SuratDisposisi_C:
     SuratDisposisi_C --> DisposisiBKD_V: load->view()
-    DisposisiBKD_V --> Aktor_Kepala: Halaman Disposisi BKD
+    DisposisiBKD_V --> Kepala: Halaman Disposisi BKD
 
-Aktor_Kepala --> DisposisiBKD_V: klik tombol tolak Disposisi BKD
+Kepala --> DisposisiBKD_V: klik tombol tolak Disposisi BKD
 DisposisiBKD_V --> SuratDisposisi_C: rejectbkd()
 SuratDisposisi_C --> SuratDisposisi_E:
    
     SuratDisposisi_E --> SuratDisposisi_C:
     SuratDisposisi_C --> DisposisiBKD_V: load->view()
-    DisposisiBKD_V --> Aktor_Kepala: Halaman Disposisi BKD
+    DisposisiBKD_V --> Kepala: Halaman Disposisi BKD
 
 @enduml

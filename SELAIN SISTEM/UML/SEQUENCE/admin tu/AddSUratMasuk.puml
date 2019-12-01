@@ -2,9 +2,9 @@
 
 autonumber
 hide footbox
-title Tambah Surat Masuk
+title Menambah Surat Masuk
 
-Actor Aktor_AdminTU
+Actor AdminTU
 boundary Dashboard_V
 boundary SuratMasuk_V
 boundary AddSuratMasuk_V
@@ -13,22 +13,22 @@ control SuratMasuk_C
 Entity SuratMasuk_E
 
 Admin_C --> Dashboard_V: load->view()
-Dashboard_V --> Aktor_AdminTU: Halaman Dashboard
-Aktor_AdminTU --> Dashboard_V: klik menu Surat Masuk
+Dashboard_V --> AdminTU: Halaman Dashboard
+AdminTU --> Dashboard_V: klik menu Surat Masuk
 Dashboard_V --> SuratMasuk_C: index()
 SuratMasuk_C --> SuratMasuk_E:
     
     SuratMasuk_E --> SuratMasuk_C:
     SuratMasuk_C --> SuratMasuk_V: load->view()
-    SuratMasuk_V --> Aktor_AdminTU: Halaman Surat Masuk
+    SuratMasuk_V --> AdminTU: Halaman Surat Masuk
 
-Aktor_AdminTU --> SuratMasuk_V: klik tombol Add Surat Masuk
+AdminTU --> SuratMasuk_V: klik tombol Add Surat Masuk
 SuratMasuk_V --> SuratMasuk_C: addmail()
 SuratMasuk_C --> AddSuratMasuk_V: load->view()
-AddSuratMasuk_V --> Aktor_AdminTU: Halaman Add Surat Masuk
+AddSuratMasuk_V --> AdminTU: Halaman Add Surat Masuk
 
-Aktor_AdminTU --> AddSuratMasuk_V: Mengisi Inputan dan klik tombol add
-    note right of Aktor_AdminTU
+AdminTU --> AddSuratMasuk_V: Mengisi Inputan dan klik tombol add
+    note right of AdminTU
         Inputan Pengirim, no surat, tanggal surat masuk, ringkasan, file surat masuk
             end note
 AddSuratMasuk_V --> SuratMasuk_C: addmail()
@@ -38,13 +38,13 @@ alt isValid() case
     
     SuratMasuk_E --> SuratMasuk_C: isValid()
     SuratMasuk_C --> SuratMasuk_V: load->view()
-    SuratMasuk_V --> Aktor_AdminTU: Halaman Surat Masuk
+    SuratMasuk_V --> AdminTU: Halaman Surat Masuk
 
 else isInvalid() case
     
     SuratMasuk_E --> SuratMasuk_C: isValid()
     SuratMasuk_C --> AddSuratMasuk_V: load->view()
-    AddSuratMasuk_V --> Aktor_AdminTU: Halaman Add Surat Masuk 
+    AddSuratMasuk_V --> AdminTU: Halaman Add Surat Masuk 
 
 end
 @enduml

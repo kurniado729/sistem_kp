@@ -4,7 +4,7 @@ autonumber
 hide footbox
 title Pemberitahuan Surat BKD
 
-Actor Aktor_AdminBKD
+Actor AdminBKD
 boundary Dashborad_V
 boundary SuratBKD_V
 control Admin_C
@@ -12,13 +12,13 @@ control BKD_C
 Entity SuratDisposisi_E
 
 Admin_C --> Dashborad_V: load->view()
-Dashborad_V --> Aktor_AdminBKD: Halaman Dashborad
-Aktor_AdminBKD --> Dashborad_V: klik tombol pemberitahuan
+Dashborad_V --> AdminBKD: Halaman Dashborad
+AdminBKD --> Dashborad_V: klik tombol pemberitahuan
 Dashborad_V --> BKD_C: index()
 BKD_C --> SuratDisposisi_E:
     
     SuratDisposisi_E --> BKD_C:
     BKD_C --> SuratBKD_V: load->view()
-    SuratBKD_V --> Aktor_AdminBKD: Halaman Surat BKD
+    SuratBKD_V --> AdminBKD: Halaman Surat BKD
 
 @enduml

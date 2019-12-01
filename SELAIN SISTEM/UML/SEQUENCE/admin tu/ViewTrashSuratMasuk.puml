@@ -2,9 +2,9 @@
 
 autonumber
 hide footbox
-title Lihat Trash Surat Masuk
+title Melihat Trash Surat Masuk
 
-Actor Aktor_AdminTU
+Actor AdminTU
 boundary Dashborad_V
 boundary Trash_V
 control Admin_C
@@ -12,13 +12,13 @@ control SuratMasuk_C
 Entity SuratMasuk_E
 
 Admin_C --> Dashborad_V: load->view()
-Dashborad_V --> Aktor_AdminTU: Halaman Dashborad
-Aktor_AdminTU --> Dashborad_V: klik Menu Trash Surat Masuk
+Dashborad_V --> AdminTU: Halaman Dashborad
+AdminTU --> Dashborad_V: klik Menu Trash Surat Masuk
 Dashborad_V --> SuratMasuk_C: trash()
 SuratMasuk_C --> SuratMasuk_E:
     
     SuratMasuk_E --> SuratMasuk_C:
     SuratMasuk_C --> Trash_V: load->view()
-    Trash_V --> Aktor_AdminTU: Halaman Trash Surat Masuk
+    Trash_V --> AdminTU: Halaman Trash Surat Masuk
 
 @enduml
