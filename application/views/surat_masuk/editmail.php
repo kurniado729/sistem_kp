@@ -14,7 +14,7 @@
 
 			<div class="card">
 				<div class="card-header">
-					Edit menu
+					Edit Mail
 				</div>
 				<div class="card-body">
 					<blockquote class="blockquote mb-0">

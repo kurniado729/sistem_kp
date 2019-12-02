@@ -8,7 +8,7 @@
 		<div class="col-lg-6">
 			<div class="card">
 				<div class="card-header">
-					Add mail
+					Upload SPT BKD
 				</div>
 				<div class="card-body">
 					<blockquote class="blockquote mb-0">

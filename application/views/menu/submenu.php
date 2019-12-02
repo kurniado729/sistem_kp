@@ -67,7 +67,7 @@
 							<a href="<?= base_url('menu/editsubmenu/' . $sm['id'] ); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Edit">
 								<i class="fas fa-edit"></i>
 							</a>
-							<a href="<?= base_url('menu/deletesubmenu/' . $sm['id']); ?>" class="btn btn-danger btn-circle" data-toggle="tooltip" data-placement="top" title="Hapus" onclick="return confirm('Yakin Hapus?')">
+							<a href="<?= base_url('menu/deletesubmenu/' . $sm['id']); ?>" class="btn btn-danger btn-circle tombol-hapus" data-toggle="tooltip" data-placement="top" title="Hapus">
 								<i class="fas fa-trash-alt"></i>
 							</a>
 						</td>

@@ -8,7 +8,7 @@
 		<div class="col-lg-6">
 			<div class="card">
 				<div class="card-header">
-					Add mail
+					Upload Persetujuan SPT
 				</div>
 				<div class="card-body">
 					<blockquote class="blockquote mb-0">
@@ -22,7 +22,7 @@
 							</div>
 						<div class="row">
 							<div class="col-3">
-								<a href="<?= base_url('surat_perintah_tugas') ?>" class="btn btn-secondary btn-icon-split">
+								<a href="<?= base_url('surat_perintah_tugas/sptbka') ?>" class="btn btn-secondary btn-icon-split">
 									<span class="icon text-white-50"><i class="fas fa-chevron-left"></i></span>
 									<span class="text">Back</span>
 								</a>

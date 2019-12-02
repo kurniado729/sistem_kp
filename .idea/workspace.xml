@@ -3,8 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/LAPORAN/laporan kp 2.docx" beforeDir="false" afterPath="$PROJECT_DIR$/SELAIN SISTEM/LAPORAN/laporan kp 2.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/LAPORAN/~$poran kp 2.docx" beforeDir="false" afterPath="$PROJECT_DIR$/SELAIN SISTEM/LAPORAN/~$poran kp 2.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/kontrol_spt/uploadsptlengkapbka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/kontrol_spt/uploadsptlengkapbka.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/kontrol_spt/uploadsptlengkapbkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/kontrol_spt/uploadsptlengkapbkd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/menu/submenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/menu/submenu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/addpegawaibka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/addpegawaibka.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/addpegawaibkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/addpegawaibkd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/addpegawaitu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/addpegawaitu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/surat_masuk/editmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_masuk/editmail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/surat_perintah_tugas/uploadsptbka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_perintah_tugas/uploadsptbka.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/surat_perintah_tugas/uploadsptbkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_perintah_tugas/uploadsptbkd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/img/profile/yandayanda7.jpg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -243,6 +251,8 @@
       <workItem from="1575221652468" duration="1163000" />
       <workItem from="1575251174644" duration="529000" />
       <workItem from="1575275624254" duration="266000" />
+      <workItem from="1575300876989" duration="125000" />
+      <workItem from="1575302892429" duration="3335000" />
     </task>
     <task id="LOCAL-00001" summary="update view">
       <created>1573067332216</created>
@@ -573,7 +583,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575251360954</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="perbaiki laporan">
+      <created>1575300970249</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1575300970249</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -608,6 +625,7 @@
     <MESSAGE value="tambah prototype" />
     <MESSAGE value="perbaiki dashboard" />
     <MESSAGE value="masukkan sequence di laporan" />
-    <option name="LAST_COMMIT_MESSAGE" value="masukkan sequence di laporan" />
+    <MESSAGE value="perbaiki laporan" />
+    <option name="LAST_COMMIT_MESSAGE" value="perbaiki laporan" />
   </component>
 </project>

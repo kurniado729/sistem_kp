@@ -17,7 +17,7 @@
 
 			<div class="card">
 				<div class="card-header">
-					Add menu
+					Add Pegawai TU
 				</div>
 				<div class="card-body">
 					<blockquote class="blockquote mb-0">
