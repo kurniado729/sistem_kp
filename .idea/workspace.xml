@@ -1,33 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/LAPORAN/laporan kp 2.docx" beforeDir="false" afterPath="$PROJECT_DIR$/SELAIN SISTEM/LAPORAN/laporan kp 2.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/Access.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/Add Menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/Add Pegawai.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/Add Role.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/Add Submenu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/Change Password.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/Dashboard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/Edit Menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/Edit Pegawai.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/Edit Profil.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/Edit Role.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/Edit Submenu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/Forgot Password.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/Login.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/Menu Management.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/My Profil.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/PROTOTYPE.bmpr" beforeDir="false" afterPath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/PROTOTYPE.bmpr" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/Pegawai.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/Persetujuan Disposisi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/Role.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/SPT.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/Submenu Management.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/Surat Masuk.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/PROTOTYPE/Surat SPT.png" beforeDir="false" />
-    </list>
+    <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -266,14 +240,7 @@
       <workItem from="1575251174644" duration="529000" />
       <workItem from="1575275624254" duration="266000" />
       <workItem from="1575300876989" duration="125000" />
-      <workItem from="1575302892429" duration="3987000" />
-    </task>
-    <task id="LOCAL-00001" summary="update view">
-      <created>1573067332216</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1573067332216</updated>
+      <workItem from="1575302892429" duration="4274000" />
     </task>
     <task id="LOCAL-00002" summary="update view">
       <created>1573142909160</created>
@@ -611,7 +578,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575309407622</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="masukkan prototype di laporan">
+      <created>1575313496064</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1575313496065</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -647,6 +621,7 @@
     <MESSAGE value="perbaiki dashboard" />
     <MESSAGE value="masukkan sequence di laporan" />
     <MESSAGE value="perbaiki laporan" />
-    <option name="LAST_COMMIT_MESSAGE" value="perbaiki laporan" />
+    <MESSAGE value="masukkan prototype di laporan" />
+    <option name="LAST_COMMIT_MESSAGE" value="masukkan prototype di laporan" />
   </component>
 </project>
