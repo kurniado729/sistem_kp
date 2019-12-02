@@ -236,6 +236,7 @@
       <workItem from="1575123923968" duration="11136000" />
       <workItem from="1575146594541" duration="4853000" />
       <workItem from="1575197409673" duration="212000" />
+      <workItem from="1575221652468" duration="1163000" />
     </task>
     <task id="LOCAL-00001" summary="update view">
       <created>1573067332216</created>
@@ -552,7 +553,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575197582914</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="masukkan sequence di laporan">
+      <created>1575221776228</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1575221776228</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
