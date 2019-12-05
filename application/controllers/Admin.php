@@ -12,6 +12,7 @@ class Admin extends CI_Controller
 
 	public function index()
 	{
+//		semua index admin
 		$data['title'] = 'Dashboard';
 		$data['user'] = $this->admin->getuser();
 
