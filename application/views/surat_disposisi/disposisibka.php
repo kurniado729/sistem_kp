@@ -61,7 +61,7 @@
 							<a href="<?= base_url('surat_disposisi/viewdisposisimail/' . $sd['id_surat_disposisi']); ?>" class="btn btn-info btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat Disposisi">
 								<i class="fas fa-envelope-open"></i></a>
 							<?php if ($sd['file_disposisi_sudah_disetujui'] == NULL): ?>
-							<a href="<?= base_url('surat_disposisi/uploaddisposisibka/' . $sd['id_surat_disposisi']); ?>" class="btn btn-success btn-circle" data-toggle="tooltip" data-placement="top" title="Upload Persetujuan Disposisi">
+							<a href="<?= base_url('surat_disposisi/uploaddisposisibka/' . $sd['id_surat_disposisi']); ?>" class="btn btn-primary btn-circle" data-toggle="tooltip" data-placement="top" title="Upload Persetujuan Disposisi">
 								<i class="fas fa-arrow-alt-circle-up"></i>
 							</a>
 							<?php else: ?>

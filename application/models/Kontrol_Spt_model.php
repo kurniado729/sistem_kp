@@ -162,7 +162,7 @@ class Kontrol_Spt_model extends CI_Model
 		$this->db->update('surat_spt');
 	}
 
-	public function uploadsptlengkap($id){
+	public function uploadsptbkdlengkap($id){
 		$config ['upload_path'] = './assets/upload/sptlengkap';
 		$config ['allowed_types'] = 'pdf';
 		$config ['max_size'] = 0;
@@ -170,7 +170,27 @@ class Kontrol_Spt_model extends CI_Model
 		$this->load->library('upload', $config);
 
 		if (!$this->upload->do_upload('file_spt_lengkap')) {
-			echo $this->upload->display_errors();
+			$this->session->set_flashdata('message', 'File yang diinputkan harus PDF');
+			redirect('kontrol_spt/uploadsptbkdlengkap/' . $id);
+		} else {
+			$file = $this->upload->data('file_name');
+		}
+
+		$this->db->set('file_spt_lengkap', $file);
+		$this->db->where('id_surat_spt', $id);
+		$this->db->update('surat_spt');
+	}
+
+	public function uploadsptbkalengkap($id){
+		$config ['upload_path'] = './assets/upload/sptlengkap';
+		$config ['allowed_types'] = 'pdf';
+		$config ['max_size'] = 0;
+
+		$this->load->library('upload', $config);
+
+		if (!$this->upload->do_upload('file_spt_lengkap')) {
+			$this->session->set_flashdata('message', 'File yang diinputkan harus PDF');
+			redirect('kontrol_spt/uploadsptbkalengkap/' . $id);
 		} else {
 			$file = $this->upload->data('file_name');
 		}

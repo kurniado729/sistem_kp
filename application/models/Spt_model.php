@@ -148,7 +148,8 @@ class Spt_model extends CI_Model
 		$this->load->library('upload', $config);
 
 		if (!$this->upload->do_upload('file_surat_spt')) {
-			echo $this->upload->display_errors();
+			$this->session->set_flashdata('message', 'File yang diinputkan harus PDF');
+			redirect('surat_perintah_tugas/uploadsptbkd/' . $id);
 		} else {
 			$file = $this->upload->data('file_name');
 		}
@@ -166,7 +167,8 @@ class Spt_model extends CI_Model
 		$this->load->library('upload', $config);
 
 		if (!$this->upload->do_upload('file_surat_spt')) {
-			echo $this->upload->display_errors();
+			$this->session->set_flashdata('message', 'File yang diinputkan harus PDF');
+			redirect('surat_perintah_tugas/uploadsptbka/' . $id);
 		} else {
 			$file = $this->upload->data('file_name');
 		}

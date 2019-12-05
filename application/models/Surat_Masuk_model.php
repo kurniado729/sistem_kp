@@ -117,15 +117,14 @@ class Surat_Masuk_model extends CI_Model
 
 		$this->load->library('upload', $config);
 
+
+
 		if (!$this->upload->do_upload('file_surat_masuk')) {
-			echo $this->upload->display_errors();
+			$this->session->set_flashdata('message', 'File yang diinputkan harus PDF');
+			redirect('surat_masuk/addmail');
 		} else {
 			$file = $this->upload->data('file_name');
 		}
-
-//		var_dump( $this->input->post('tgl_surat_masuk'));
-//		die;
-
 
 		$data = [
 			'file_surat_masuk' => $file,
@@ -154,7 +153,7 @@ class Surat_Masuk_model extends CI_Model
 				'hapus' => '0'
 			]);
 		} else {
-			$this->session->set_flashdata('message', 'NO Surat yang diinputkan sudah ada');
+			$this->session->set_flashdata('message', 'NO Surat  yang diinputkan sudah ada');
 			redirect('surat_masuk/addmail');
 		}
 

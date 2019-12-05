@@ -200,7 +200,8 @@ class Surat_Disposisi_model extends CI_Model
 		$this->load->library('upload', $config);
 
 		if (!$this->upload->do_upload('file_surat_disposisi')) {
-			echo $this->upload->display_errors();
+			$this->session->set_flashdata('message', 'File yang diinputkan harus PDF');
+			redirect('surat_disposisi/uploaddisposisibkd/' . $id);
 		} else {
 			$file = $this->upload->data('file_name');
 		}
@@ -235,7 +236,8 @@ class Surat_Disposisi_model extends CI_Model
 		$this->load->library('upload', $config);
 
 		if (!$this->upload->do_upload('file_surat_disposisi')) {
-			echo $this->upload->display_errors();
+			$this->session->set_flashdata('message', 'File yang diinputkan harus PDF');
+			redirect('surat_disposisi/uploaddisposisibka/' . $id);
 		} else {
 			$file = $this->upload->data('file_name');
 		}

@@ -149,7 +149,7 @@ class Kontrol_Spt extends CI_Controller
 			$this->load->view('kontrol_spt/uploadsptlengkapbkd', $data);
 			$this->load->view('templates/footer');
 		} else {
-			$this->kontrol->uploadsptlengkap($id);
+			$this->kontrol->uploadsptbkdlengkap($id);
 			$this->session->set_flashdata('message', 'spt lengkap berhasil di upload');
 			redirect('kontrol_spt');
 		}
@@ -172,7 +172,7 @@ class Kontrol_Spt extends CI_Controller
 			$this->load->view('kontrol_spt/uploadsptlengkapbka', $data);
 			$this->load->view('templates/footer');
 		} else {
-			$this->kontrol->uploadsptlengkap($id);
+			$this->kontrol->uploadsptbkalengkap($id);
 			$this->session->set_flashdata('message', 'spt lengkap berhasil di upload');
 			redirect('kontrol_spt/kontrolsptbka');
 		}
