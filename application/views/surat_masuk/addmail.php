@@ -5,6 +5,9 @@
 	<h1 class="h3 mb-4 text-gray-800"><?= $title ?></h1>
 
 	<div class="row">
+
+		<div class="flash-data-danger" data-flashdata="<?= $this->session->flashdata('message'); ?>"></div>
+
 		<div class="col-lg-6">
 
 			<?= form_error ('pengirim', '<div class="alert alert-danger" role="alert">', '</div>'); ?>

@@ -213,9 +213,11 @@ class Pegawai extends CI_Controller
 			$this->load->view('pegawai/addpegawaitu', $data);
 			$this->load->view('templates/footer');
 		}else{
+
 			$this->pegawai->addpegawaitu();
 			$this->session->set_flashdata('message', 'data pegawai berhasil ditambahkan');
 			redirect('pegawai');
+
 		}
 
 	}
@@ -267,9 +269,11 @@ class Pegawai extends CI_Controller
 			$this->load->view('pegawai/addpegawaibka', $data);
 			$this->load->view('templates/footer');
 		}else{
+
 			$this->pegawai->addpegawaibka();
 			$this->session->set_flashdata('message', 'data pegawai berhasil ditambahkan');
 			redirect('pegawai/pegawaibka');
+
 		}
 
 	}

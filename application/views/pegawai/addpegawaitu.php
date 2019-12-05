@@ -5,6 +5,9 @@
 	<h1 class="h3 mb-4 text-gray-800"><?= $title ?></h1>
 
 	<div class="row">
+
+		<div class="flash-data-danger" data-flashdata="<?= $this->session->flashdata('message'); ?>"></div>
+
 		<div class="col-lg-6">
 
 			<?= form_error ('nama_pegawai', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
@@ -39,7 +42,7 @@
 								<input type="text" class="form-control" id="tempat_lahir" name="tempat_lahir" placeholder="Tempat Lahir" value="<?= set_value('tempat_lahir')?>">
 							</div>
 							<div class="form-group"> <!-- Date input -->
-								<input class="form-control" id="tanggal_lahir" name="tanggal_lahir" placeholder="Tanggal Lahir" autocomplete="off" type="text"/ value="<?= set_value('tanggal_lahor')?>">
+								<input class="form-control" id="tanggal_lahir" name="tanggal_lahir" placeholder="Tanggal Lahir" autocomplete="off" type="text"/ value="<?= set_value('tanggal_lahir')?>">
 							</div>
 							<div class="form-group">
 								<input type="text" class="form-control" id="alamat" name="alamat" placeholder="Alamat" value="<?= set_value('alamat')?>">

@@ -8,6 +8,14 @@ if(flashdata){
 	})
 }
 
+const flashdatadanger = $('.flash-data-danger') .data('flashdata');
+if(flashdatadanger){
+	Swal.fire({
+		icon: 'error',
+		title: 'Oops...',
+		text: flashdatadanger,
+	})
+}
 
 //tombol hapus
 

@@ -36,6 +36,11 @@ class Pegawai_model extends CI_Model
 		return $data->row_array();
 	}
 
+	public function getallpegawai(){
+		$query = "SELECT * FROM pegawai";
+		return $this->db->query($query)->result_array();
+	}
+
 	public function getTU(){
 		$query = "SELECT * FROM pegawai WHERE bagian = 'TU' AND hapus='0' ORDER BY id_pegawai DESC";
 		return $this->db->query($query)->result_array();
@@ -150,7 +155,7 @@ class Pegawai_model extends CI_Model
 	}
 
 	public function addpegawaitu(){
-		$this->db->insert('pegawai', [
+		$data = [
 			'nama_pegawai' => $this->input->post('nama_pegawai'),
 			'nip' => $this->input->post('nip'),
 			'jenis_kelamin' => $this->input->post('jenis_kelamin'),
@@ -159,11 +164,37 @@ class Pegawai_model extends CI_Model
 			'alamat' => $this->input->post('alamat'),
 			'jabatan' => $this->input->post('jabatan'),
 			'bagian' => $this->input->post('bagian')
-		]);
+		];
+
+		$data = $this->pegawai->getallpegawai();
+		$tidaksama = true;
+		foreach ($data as $d) {
+			unset($d['id_pegawai']);
+			if ($d['nip'] == $this->input->post('nip')) {
+				$tidaksama = false;
+			}
+		}
+		if ($tidaksama) {
+			$this->db->insert('pegawai', [
+				'nama_pegawai' => $this->input->post('nama_pegawai'),
+				'nip' => $this->input->post('nip'),
+				'jenis_kelamin' => $this->input->post('jenis_kelamin'),
+				'tempat_lahir' => $this->input->post('tempat_lahir'),
+				'tanggal_lahir' => $this->input->post('tanggal_lahir'),
+				'alamat' => $this->input->post('alamat'),
+				'jabatan' => $this->input->post('jabatan'),
+				'bagian' => $this->input->post('bagian')
+			]);
+		} else {
+			$this->session->set_flashdata('message', 'NIP yang diinputkan sudah ada');
+			redirect('pegawai/addpegawaitu');
+		}
+
 	}
 
 	public function addpegawaibkd(){
-		$this->db->insert('pegawai', [
+
+		$data = [
 			'nama_pegawai' => $this->input->post('nama_pegawai'),
 			'nip' => $this->input->post('nip'),
 			'jenis_kelamin' => $this->input->post('jenis_kelamin'),
@@ -172,11 +203,37 @@ class Pegawai_model extends CI_Model
 			'alamat' => $this->input->post('alamat'),
 			'jabatan' => $this->input->post('jabatan'),
 			'bagian' => $this->input->post('bagian')
-		]);
+		];
+
+		$data = $this->pegawai->getallpegawai();
+		$tidaksama = true;
+		foreach ($data as $d) {
+			unset($d['id_pegawai']);
+			if ($d['nip'] == $this->input->post('nip')) {
+				$tidaksama = false;
+			}
+		}
+		if ($tidaksama) {
+			$this->db->insert('pegawai', [
+				'nama_pegawai' => $this->input->post('nama_pegawai'),
+				'nip' => $this->input->post('nip'),
+				'jenis_kelamin' => $this->input->post('jenis_kelamin'),
+				'tempat_lahir' => $this->input->post('tempat_lahir'),
+				'tanggal_lahir' => $this->input->post('tanggal_lahir'),
+				'alamat' => $this->input->post('alamat'),
+				'jabatan' => $this->input->post('jabatan'),
+				'bagian' => $this->input->post('bagian')
+			]);
+		} else {
+			$this->session->set_flashdata('message', 'NIP yang diinputkan sudah ada');
+			redirect('pegawai/addpegawaitu');
+		}
+
 	}
 
 	public function addpegawaibka(){
-		$this->db->insert('pegawai', [
+
+		$data = [
 			'nama_pegawai' => $this->input->post('nama_pegawai'),
 			'nip' => $this->input->post('nip'),
 			'jenis_kelamin' => $this->input->post('jenis_kelamin'),
@@ -185,7 +242,32 @@ class Pegawai_model extends CI_Model
 			'alamat' => $this->input->post('alamat'),
 			'jabatan' => $this->input->post('jabatan'),
 			'bagian' => $this->input->post('bagian')
-		]);
+		];
+
+		$data = $this->pegawai->getallpegawai();
+		$tidaksama = true;
+		foreach ($data as $d) {
+			unset($d['id_pegawai']);
+			if ($d['nip'] == $this->input->post('nip')) {
+				$tidaksama = false;
+			}
+		}
+		if ($tidaksama) {
+			$this->db->insert('pegawai', [
+				'nama_pegawai' => $this->input->post('nama_pegawai'),
+				'nip' => $this->input->post('nip'),
+				'jenis_kelamin' => $this->input->post('jenis_kelamin'),
+				'tempat_lahir' => $this->input->post('tempat_lahir'),
+				'tanggal_lahir' => $this->input->post('tanggal_lahir'),
+				'alamat' => $this->input->post('alamat'),
+				'jabatan' => $this->input->post('jabatan'),
+				'bagian' => $this->input->post('bagian')
+			]);
+		} else {
+			$this->session->set_flashdata('message', 'NIP yang diinputkan sudah ada');
+			redirect('pegawai/addpegawaitu');
+		}
+
 	}
 
 	public function editpegawaitu($id){

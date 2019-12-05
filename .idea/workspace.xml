@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="" />
+    <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/LAPORAN/laporan kp 2.docx" beforeDir="false" afterPath="$PROJECT_DIR$/SELAIN SISTEM/LAPORAN/laporan kp 2.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/Pegawai.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Pegawai.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Pegawai_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Pegawai_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/models/Surat_Masuk_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Surat_Masuk_model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/addpegawaibka.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/addpegawaibka.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/addpegawaibkd.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/addpegawaibkd.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/pegawai/addpegawaitu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/pegawai/addpegawaitu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/surat_masuk/addmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_masuk/addmail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/js/js-sweetalert/myscript.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/js/js-sweetalert/myscript.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,16 +99,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\sistem_kp\assets\js\demo" />
-      <recent name="C:\xampp\htdocs\sistem_kp\assets\js" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\sistem_kp\application\views\pengguna" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\models" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\controllers" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\views\kontrol_spt" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\views" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\sistem_kp\assets\js\demo" />
+      <recent name="C:\xampp\htdocs\sistem_kp\assets\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -246,13 +257,8 @@
       <workItem from="1575395245621" duration="148000" />
       <workItem from="1575488299961" duration="181000" />
       <workItem from="1575516359933" duration="124000" />
-    </task>
-    <task id="LOCAL-00007" summary="spt">
-      <created>1573380428854</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1573380428854</updated>
+      <workItem from="1575522254732" duration="189000" />
+      <workItem from="1575548129252" duration="4211000" />
     </task>
     <task id="LOCAL-00008" summary="spt">
       <created>1573389213679</created>
@@ -590,7 +596,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575516421566</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="laporan paling fix">
+      <created>1575522329075</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1575522329082</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -628,6 +641,7 @@
     <MESSAGE value="perbaiki laporan" />
     <MESSAGE value="masukkan prototype di laporan" />
     <MESSAGE value="fix laporan" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix laporan" />
+    <MESSAGE value="laporan paling fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="laporan paling fix" />
   </component>
 </project>

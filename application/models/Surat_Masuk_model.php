@@ -26,6 +26,11 @@ class Surat_Masuk_model extends CI_Model
 		return $data->row_array();
 	}
 
+	public function getallsuratmasuk(){
+		$query = "SELECT * FROM surat_masuk";
+		return $this->db->query($query)->result_array();
+	}
+
 	public function getsuratmasuk(){
 		$query = "SELECT * FROM surat_masuk WHERE hapus = '0' ORDER BY disposisi ";
 		return $this->db->query($query)->result_array();
@@ -121,15 +126,38 @@ class Surat_Masuk_model extends CI_Model
 //		var_dump( $this->input->post('tgl_surat_masuk'));
 //		die;
 
-		$this->db->insert('surat_masuk', [
+
+		$data = [
 			'file_surat_masuk' => $file,
 			'pengirim' => $this->input->post('pengirim'),
 			'no_surat_masuk' => $this->input->post('no_surat_masuk'),
 			'tgl_surat_masuk' => $this->input->post('tgl_surat_masuk'),
 			'ringkasan' => $this->input->post('ringkasan'),
-			'disposisi' => '0',
-			'hapus' => '0'
-		]);
+		];
+
+		$data = $this->surat_masuk->getallsuratmasuk();
+		$tidaksama = true;
+		foreach ($data as $d) {
+			unset($d['id_surat_masuk']);
+			if ($d['no_surat_masuk'] == $this->input->post('no_surat_masuk')) {
+				$tidaksama = false;
+			}
+		}
+		if ($tidaksama) {
+			$this->db->insert('surat_masuk', [
+				'file_surat_masuk' => $file,
+				'pengirim' => $this->input->post('pengirim'),
+				'no_surat_masuk' => $this->input->post('no_surat_masuk'),
+				'tgl_surat_masuk' => $this->input->post('tgl_surat_masuk'),
+				'ringkasan' => $this->input->post('ringkasan'),
+				'disposisi' => '0',
+				'hapus' => '0'
+			]);
+		} else {
+			$this->session->set_flashdata('message', 'NO Surat yang diinputkan sudah ada');
+			redirect('surat_masuk/addmail');
+		}
+
 	}
 
 	public function editmail($id){
