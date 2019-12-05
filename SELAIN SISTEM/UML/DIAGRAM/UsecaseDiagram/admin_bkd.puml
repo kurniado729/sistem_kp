@@ -1,0 +1,50 @@
+@startuml UsecaseMSPT
+Left to Right Direction
+skinParam packageStyle rectangle
+
+actor Admin_BKD
+
+rectangle "Use Case Diagram Manajemen Surat Perintah Tugas"{
+
+    Admin_BKD -- (Melihat Dashboard)
+    Admin_BKD -- (Melihat Profil)
+    Admin_BKD -- (Mengubah Profil)
+    Admin_BKD-- (Mengubah Password)
+    Admin_BKD -- (Forgot Password)
+    Admin_BKD -- (Melihat Surat BKD)
+    Admin_BKD -- (Melihat Persetujuan Disposisi BKD)
+    Admin_BKD -- (Menambah SPT BKD)
+    Admin_BKD -- (Melihat SPT BKD)
+    Admin_BKD -- (Mengajukan SPT BKD)
+    Admin_BKD -- (Mencari Surat BKD)
+    Admin_BKD -- (Mencari SPT BKD)
+    Admin_BKD -- (Melihat Pemberitahuan Surat BKD)
+    Admin_BKD -- (Melihat Pemberitahuan SPT BKD)
+
+
+    (Melihat Dashboard)..> (Login) : include
+    (Melihat Profil)..> (Login) : include
+    (Mengubah Profil)..> (Login) : include
+    (Mengubah Password)..> (Login) : include
+    (Forgot Password)..> (Login) : include
+    (Melihat Role)..> (Login) : include
+    (Menambah Role)..> (Melihat Role) : include
+    (Mengubah Role)..> (Melihat Role) : include
+    (Menghapus Role)..> (Melihat Role) : include
+    (Menambah Akses)..> (Melihat Role) : include
+    (Mengurangi Akses)..> (Melihat Role) : include
+
+
+    (Melihat Surat BKD)..> (Login) : include
+    (Melihat Persetujuan Disposisi BKD)..> (Melihat Surat BKD) : include
+    (Menambah SPT BKD)..> (Melihat SPT BKD) : include
+    (Melihat SPT BKD)..> (Login) : include
+    (Mengajukan SPT BKD)..> (Melihat SPT BKD) : include
+    (Mencari Surat BKD)..> (Melihat Surat BKD) : include
+    (Mencari SPT BKD)..> (Melihat SPT BKD) : include
+    (Melihat Pemberitahuan Surat BKD)..> (Melihat Surat BKD) : include
+    (Melihat Pemberitahuan SPT BKD)..> (Melihat SPT BKD) : include
+
+}
+
+@enduml

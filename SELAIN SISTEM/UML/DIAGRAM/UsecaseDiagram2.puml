@@ -1,0 +1,78 @@
+@startuml Usecase
+Left to Right Direction
+skinParam packageStyle rectangle
+
+actor Admin_BKD
+actor Admin_BKA
+
+rectangle "Use Case Diagram Manajemen Surat Perintah Tugas"{
+
+    Admin_BKD -- (Melihat Dashboard)
+    Admin_BKD -- (Melihat Profil)
+    Admin_BKD -- (Mengubah Profil)
+    Admin_BKD-- (Mengubah Password)
+    Admin_BKD -- (Forgot Password)
+    Admin_BKD -- (Melihat Surat BKD)
+    Admin_BKD -- (Melihat Persetujuan Disposisi BKD)
+    Admin_BKD -- (Menambah SPT BKD)
+    Admin_BKD -- (Melihat SPT BKD)
+    Admin_BKD -- (Mengajukan SPT BKD)
+    Admin_BKD -- (Mencari Surat BKD)
+    Admin_BKD -- (Mencari SPT BKD)
+    Admin_BKD -- (Melihat Pemberitahuan Surat BKD)
+    Admin_BKD -- (Melihat Pemberitahuan SPT BKD)
+
+    Admin_BKA -- (Melihat Dashboard)
+    Admin_BKA -- (Melihat Profil)
+    Admin_BKA -- (Mengubah Profil)
+    Admin_BKA-- (Mengubah Password)
+    Admin_BKA -- (Forgot Password)
+    Admin_BKA -- (Melihat Surat BKA)
+    Admin_BKA -- (Melihat Persetujuan Disposisi BKA)
+    Admin_BKA -- (Menambah SPT BKA)
+    Admin_BKA -- (Melihat SPT BKA)
+    Admin_BKA -- (Mengajukan SPT BKA)
+    Admin_BKA -- (Mencari Surat BKA)
+    Admin_BKA -- (Mencari SPT BKA)
+    Admin_BKA -- (Melihat Pemberitahuan Surat BKA)
+    Admin_BKA -- (Melihat Pemberitahuan SPT BKA)
+    
+    ' semua aktor
+    (Melihat Dashboard)..> (Login) : include
+    (Melihat Profil)..> (Login) : include
+    (Mengubah Profil)..> (Login) : include
+    (Mengubah Password)..> (Login) : include
+    (Forgot Password)..> (Login) : include
+    (Melihat Role)..> (Login) : include
+    (Menambah Role)..> (Melihat Role) : include
+    (Mengubah Role)..> (Melihat Role) : include
+    (Menghapus Role)..> (Melihat Role) : include
+    (Menambah Akses)..> (Melihat Role) : include
+    (Mengurangi Akses)..> (Melihat Role) : include
+
+
+'    admin bkd
+    (Melihat Surat BKD)..> (Login) : include
+    (Melihat Persetujuan Disposisi BKD)..> (Melihat Surat BKD) : include
+    (Menambah SPT BKD)..> (Melihat SPT BKD) : include
+    (Melihat SPT BKD)..> (Login) : include
+    (Mengajukan SPT BKD)..> (Melihat SPT BKD) : include
+    (Mencari Surat BKD)..> (Melihat Surat BKD) : include
+    (Mencari SPT BKD)..> (Melihat SPT BKD) : include
+    (Melihat Pemberitahuan Surat BKD)..> (Melihat Surat BKD) : include
+    (Melihat Pemberitahuan SPT BKD)..> (Melihat SPT BKD) : include
+
+    '    admin bka
+    (Melihat Surat BKA)..> (Login) : include
+    (Melihat Persetujuan Disposisi BKA)..> (Melihat Surat BKA) : include
+    (Menambah SPT BKA)..> (Melihat SPT BKA) : include
+    (Melihat SPT BKA)..> (Login) : include
+    (Mengajukan SPT BKA)..> (Melihat SPT BKA) : include
+    (Mencari Surat BKA)..> (Melihat Surat BKA) : include
+    (Mencari SPT BKA)..> (Melihat SPT BKA) : include
+    (Melihat Pemberitahuan Surat BKA)..> (Melihat Surat BKA) : include
+    (Melihat Pemberitahuan SPT BKA)..> (Melihat SPT BKA) : include
+
+}
+
+@enduml

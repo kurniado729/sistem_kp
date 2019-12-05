@@ -1,0 +1,111 @@
+@startuml UsecaseMSPT
+Left to Right Direction
+skinParam packageStyle rectangle
+
+actor Kepala
+
+rectangle "Use Case Diagram Manajemen Surat Perintah Tugas"{
+
+    Kepala -- (Melihat Dashboard)
+    Kepala -- (Melihat Profil)
+    Kepala -- (Mengubah Profil)
+    Kepala-- (Mengubah Password)
+    Kepala -- (Forgot Password)
+    Kepala -- (Melihat Persetujuan Disposisi)
+    Kepala -- (Melihat File Disposisi)
+    Kepala -- (Menyetujui Disposisi Ke BKD)
+    Kepala -- (Menyetujui Disposisi Ke BKA)
+    Kepala -- (Melihat Disposisi BKD)
+    Kepala -- (Melihat File Disposisi BKD)
+    Kepala -- (Melihat File Persetujuan Disposisi BKD)
+    Kepala -- (Mengupload Persetujuan Disposisi BKD)
+    Kepala -- (Menyetujui Disposisi BKD)
+    Kepala -- (Menolak Disposisi BKD)
+    Kepala -- (Melihat Disposisi BKA)
+    Kepala -- (Melihat File Disposisi BKA)
+    Kepala -- (Melihat File Persetujuan Disposisi BKA)
+    Kepala -- (Mengupload Persetujuan Disposisi BKA)
+    Kepala -- (Menyetujui Disposisi BKA)
+    Kepala -- (Menolak Disposisi BKA)
+    Kepala -- (Melihat Persetujuan SPT BKD)
+    Kepala -- (Melihat File SPT BKD)
+    Kepala -- (Melihat File Persetujuan SPT BKD)
+    Kepala -- (Mengupload Persetujuan SPT BKD)
+    Kepala -- (Menyetujui SPT BKD)
+    Kepala -- (Menolak SPT BKD)
+    Kepala -- (Melihat Persetujuan SPT BKA)
+    Kepala -- (Melihat File SPT BKA)
+    Kepala -- (Melihat File Persetujuan SPT BKA)
+    Kepala -- (Mengupload Persetujuan SPT BKA)
+    Kepala -- (Menyetujui SPT BKA)
+    Kepala -- (Menolak SPT BKA)
+    Kepala -- (Mencari Persetujuan Disposisi)
+    Kepala -- (Mencari Disposisi BKD)
+    Kepala -- (Mencari Disposisi BKA)
+    Kepala -- (Mencari Persetujuan SPT BKD)
+    Kepala -- (Mencari Persetujuan SPT BKA)
+    Kepala -- (Melihat Pemberitahuan Surat Disposisi)
+    Kepala -- (Melihat Pemberitahuan Surat Disposisi BKD)
+    Kepala -- (Melihat Pemberitahuan Surat Disposisi BKA)
+    Kepala -- (Melihat Pemberitahuan Persetujuan SPT BKD)
+    Kepala -- (Melihat Pemberitahuan Persetujuan SPT BKA)
+
+    (Melihat Dashboard)..> (Login) : include
+    (Melihat Profil)..> (Login) : include
+    (Mengubah Profil)..> (Login) : include
+    (Mengubah Password)..> (Login) : include
+    (Forgot Password)..> (Login) : include
+    (Melihat Role)..> (Login) : include
+    (Menambah Role)..> (Melihat Role) : include
+    (Mengubah Role)..> (Melihat Role) : include
+    (Menghapus Role)..> (Melihat Role) : include
+    (Menambah Akses)..> (Melihat Role) : include
+    (Mengurangi Akses)..> (Melihat Role) : include
+
+   (Melihat Persetujuan Disposisi)..> (Login) : include
+   (Melihat File Disposisi)..> (Melihat Persetujuan Disposisi) : include
+   (Menyetujui Disposisi Ke BKD)..> (Melihat Persetujuan Disposisi) : include
+   (Menyetujui Disposisi Ke BKA)..> (Melihat Persetujuan Disposisi) : include
+
+   (Melihat Disposisi BKD)..> (Login) : include
+   (Melihat File Disposisi BKD)..> (Melihat Disposisi BKD) : include
+   (Melihat File Persetujuan Disposisi BKD)..> (Melihat Disposisi BKD) : include
+   (Mengupload Persetujuan Disposisi BKD)..> (Melihat Disposisi BKD) : include
+   (Menyetujui Disposisi BKD)..> (Melihat Disposisi BKD) : include
+   (Menolak Disposisi BKD)..> (Melihat Disposisi BKD) : include
+
+   (Melihat Disposisi BKA)..> (Login) : include
+   (Melihat File Disposisi BKA)..> (Melihat Disposisi BKA) : include
+   (Melihat File Persetujuan Disposisi BKA)..> (Melihat Disposisi BKA) : include
+   (Mengupload Persetujuan Disposisi BKA)..> (Melihat Disposisi BKA) : include
+   (Menyetujui Disposisi BKA)..> (Melihat Disposisi BKA) : include
+   (Menolak Disposisi BKA)..> (Melihat Disposisi BKA) : include
+
+   (Melihat Persetujuan SPT BKD)..> (Login) : include
+   (Melihat File SPT BKD)..> (Melihat Persetujuan SPT BKD) : include
+   (Melihat File Persetujuan SPT BKD)..> (Melihat Persetujuan SPT BKD) : include
+   (Mengupload Persetujuan SPT BKD)..> (Melihat Persetujuan SPT BKD) : include
+   (Menyetujui SPT BKD)..> (Melihat Persetujuan SPT BKD) : include
+   (Menolak SPT BKD)..> (Melihat Persetujuan SPT BKD) : include
+
+   (Melihat Persetujuan SPT BKA)..> (Login) : include
+   (Melihat File SPT BKA)..> (Melihat Persetujuan SPT BKA) : include
+   (Melihat File Persetujuan SPT BKA)..> (Melihat Persetujuan SPT BKA) : include
+   (Mengupload Persetujuan SPT BKA)..> (Melihat Persetujuan SPT BKA) : include
+   (Menyetujui SPT BKA)..> (Melihat Persetujuan SPT BKA) : include
+   (Menolak SPT BKA)..> (Melihat Persetujuan SPT BKA) : include
+
+   (Mencari Persetujuan Disposisi)..> (Melihat Persetujuan Disposisi) : include
+   (Mencari Disposisi BKD)..> (Melihat Disposisi BKD) : include
+   (Mencari Disposisi BKA)..> (Melihat Disposisi BKA) : include
+   (Mencari Persetujuan SPT BKD)..> (Melihat Persetujuan SPT BKD) : include
+   (Mencari Persetujuan SPT BKA)..> (Melihat Persetujuan SPT BKA) : include
+   (Melihat Pemberitahuan Surat Disposisi)..> (Melihat Persetujuan Disposisi) : include
+   (Melihat Pemberitahuan Surat Disposisi BKD)..> (Melihat Disposisi BKD) : include
+   (Melihat Pemberitahuan Surat Disposisi BKA)..> (Melihat Disposisi BKA) : include
+   (Melihat Pemberitahuan Persetujuan SPT BKD)..> (Melihat Persetujuan SPT BKD) : include
+   (Melihat Pemberitahuan Persetujuan SPT BKA)..> (Melihat Persetujuan SPT BKA) : include
+
+}
+
+@enduml

@@ -1,0 +1,80 @@
+@startuml UsecaseMSPT
+Left to Right Direction
+skinParam packageStyle rectangle
+
+actor Admin_TU
+
+rectangle "Use Case Diagram Manajemen Surat Perintah Tugas"{
+
+    Admin_TU -- (Melihat Dashboard)
+    Admin_TU -- (Melihat Profil)
+    Admin_TU -- (Mengubah Profil)
+    Admin_TU-- (Mengubah Password)
+    Admin_TU -- (Forgot Password)
+    Admin_TU -- (Melihat Surat Masuk)
+    Admin_TU -- (Menambah Surat Masuk)
+    Admin_TU -- (Mengubah Surat Masuk)
+    Admin_TU -- (Menghapus Surat Masuk)
+    Admin_TU -- (Melihat File Disposisi)
+    Admin_TU -- (Mendisposisi Surat Masuk)
+    Admin_TU -- (Melihat Trash Surat Masuk)
+    Admin_TU -- (Mengembalikan Surat Masuk)
+    Admin_TU -- (Menghapus Permanen Surat Masuk)
+    Admin_TU -- (Melihat SPT BKD)
+    Admin_TU -- (Melihat File SPT Lengkap BKD)
+    Admin_TU -- (Mengupload SPT Lengkap BKD)
+    Admin_TU -- (Memverifikasi SPT Lengkap BKD)
+    Admin_TU -- (Melihat SPT BKA)
+    Admin_TU -- (Melihat File SPT Lengkap BKA)
+    Admin_TU -- (Mengupload SPT Lengkap BKA)
+    Admin_TU -- (Memverifikasi SPT Lengkap BKA)
+    Admin_TU -- (Mencari Surat Masuk)
+    Admin_TU -- (Mencari Trash Surat Masuk)
+    Admin_TU -- (Mencari SPT BKD)
+    Admin_TU -- (Mencari SPT BKA)
+    Admin_TU -- (Melihat Pemberitahuan Surat Masuk)
+    Admin_TU -- (Melihat Pemberitahuan SPT BKD)
+    Admin_TU -- (Melihat Pemberitahuan SPT BKA)
+
+    
+    (Melihat Dashboard)..> (Login) : include
+    (Melihat Profil)..> (Login) : include
+    (Mengubah Profil)..> (Login) : include
+    (Mengubah Password)..> (Login) : include
+    (Forgot Password)..> (Login) : include
+    (Melihat Role)..> (Login) : include
+    (Menambah Role)..> (Melihat Role) : include
+    (Mengubah Role)..> (Melihat Role) : include
+    (Menghapus Role)..> (Melihat Role) : include
+    (Menambah Akses)..> (Melihat Role) : include
+    (Mengurangi Akses)..> (Melihat Role) : include
+
+   (Melihat Surat Masuk)..> (Login) : include
+   (Menambah Surat Masuk)..> (Melihat Surat Masuk) : include
+   (Mengubah Surat Masuk)..> (Melihat Surat Masuk) : include
+   (Menghapus Surat Masuk)..> (Melihat Surat Masuk) : include
+   (Melihat File Disposisi)..> (Melihat Surat Masuk) : include
+   (Mendisposisi Surat Masuk)..> (Melihat Surat Masuk) : include
+   (Melihat Trash Surat Masuk)..> (Login) : include
+   (Mengembalikan Surat Masuk)..> (Melihat Trash Surat Masuk) : include
+   (Menghapus Permanen Surat Masuk)..> (Melihat Trash Surat Masuk) : include
+   (Melihat SPT BKD)..> (Login) : include
+   (Melihat File SPT Lengkap BKD)..> (Melihat SPT BKD) : include
+   (Mengupload SPT Lengkap BKD)..> (Melihat SPT BKD) : include
+   (Memverifikasi SPT Lengkap BKD)..> (Melihat SPT BKD) : include
+   (Melihat SPT BKA)..> (Login) : include
+   (Melihat File SPT Lengkap BKA)..> (Melihat SPT BKA) : include
+   (Mengupload SPT Lengkap BKA)..> (Melihat SPT BKA) : include
+   (Memverifikasi SPT Lengkap BKA)..> (Melihat SPT BKA) : include
+   (Mencari Surat Masuk)..> (Melihat Surat Masuk) : include
+   (Mencari Trash Surat Masuk)..> (Melihat Trash Surat Masuk) : include
+   (Mencari SPT BKD)..> (Melihat SPT BKD) : include
+   (Mencari SPT BKA)..> (Melihat SPT BKA) : include
+   (Melihat Pemberitahuan Surat Masuk)..> (Melihat Surat Masuk) : include
+   (Melihat Pemberitahuan SPT BKD)..> (Melihat SPT BKD) : include
+   (Melihat Pemberitahuan SPT BKA)..> (Melihat SPT BKA) : include
+
+
+}
+
+@enduml
