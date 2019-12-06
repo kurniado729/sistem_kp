@@ -204,3 +204,39 @@ $('.tombol-ajukan-spt').on('click', function (e) {
 	});
 });
 
+//tombol logout
+
+$('.tombol-logout').on('click', function (e) {
+	e.preventDefault();
+	const href = $(this).attr('href');
+	const swalWithBootstrapButtons = Swal.mixin({
+		customClass: {
+			confirmButton: 'btn btn-success',
+			cancelButton: 'btn btn-danger'
+		},
+		buttonsStyling: false
+	});
+
+	swalWithBootstrapButtons.fire({
+		title: 'Apakan anda yakin ?',
+		text: "Anda Akan Keluar!",
+		icon: 'warning',
+		showCancelButton: true,
+		confirmButtonText: 'Yes, Logout!',
+		cancelButtonText: 'No, cancel!',
+		reverseButtons: true
+	}).then((result) => {
+		if (result.value) {
+			document.location.href = href;
+		} else if (
+			/* Read more about handling dismissals below */
+			result.dismiss === Swal.DismissReason.cancel
+		) {
+			swalWithBootstrapButtons.fire(
+				'Cancelled',
+				'Welcome back :)',
+				'error'
+			)
+		}
+	});
+});

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/application/controllers/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/templates/topbar.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/templates/topbar.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,21 +86,21 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/views/pengguna" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\sistem_kp\assets\js\demo" />
+      <recent name="C:\xampp\htdocs\sistem_kp\assets\js" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\sistem_kp\application\views\pengguna" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\models" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\controllers" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\views\kontrol_spt" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\views" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\sistem_kp\assets\js\demo" />
-      <recent name="C:\xampp\htdocs\sistem_kp\assets\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -250,14 +251,11 @@
       <workItem from="1575516359933" duration="124000" />
       <workItem from="1575522254732" duration="189000" />
       <workItem from="1575548129252" duration="10227000" />
-      <workItem from="1575571756275" duration="244000" />
-    </task>
-    <task id="LOCAL-00011" summary="update model">
-      <created>1573638391923</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1573638391923</updated>
+      <workItem from="1575571756275" duration="336000" />
+      <workItem from="1575640325649" duration="109000" />
+      <workItem from="1575648816025" duration="105000" />
+      <workItem from="1575650690821" duration="993000" />
+      <workItem from="1575652294873" duration="477000" />
     </task>
     <task id="LOCAL-00012" summary="update model">
       <created>1573719679140</created>
@@ -595,7 +593,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575571807753</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="tidak bisa input surat selain extensi PDF">
+      <created>1575572067331</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1575572067331</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
