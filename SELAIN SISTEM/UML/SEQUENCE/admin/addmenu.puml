@@ -42,7 +42,7 @@ alt isValid() case
 
 else isInvalid() case
     
-    Menu_E --> Menu_C: isValid()
+    Menu_E --> Menu_C: isInValid()
     Menu_C --> AddMenu_V: load->view()
     AddMenu_V --> Admin: Halaman Add Menu
 

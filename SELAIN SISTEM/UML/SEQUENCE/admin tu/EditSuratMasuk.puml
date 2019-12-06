@@ -42,7 +42,7 @@ alt isValid() case
 
 else isInvalid() case
     
-    SuratMasuk_E --> SuratMasuk_C: isValid()
+    SuratMasuk_E --> SuratMasuk_C: isInValid()
     SuratMasuk_C --> EditSuratMasuk_V: load->view()
     EditSuratMasuk_V --> AdminTU: Halaman Edit Surat Masuk
 

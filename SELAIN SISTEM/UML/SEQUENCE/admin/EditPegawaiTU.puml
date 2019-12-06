@@ -42,7 +42,7 @@ alt isValid() case
 
 else isInvalid() case
     
-    Pegawai_E --> Pegawai_C: isValid()
+    Pegawai_E --> Pegawai_C: isInValid()
     Pegawai_C --> EditPegawaiTU_V: load->view()
     EditPegawaiTU_V --> Admin: Halaman Add Pegawai TU
 

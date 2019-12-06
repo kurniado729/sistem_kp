@@ -45,8 +45,8 @@ alt isValid() case
 
 else isInvalid() case
     
-    SuratDisposisi_E --> BKA_C: isValid()
-    SuratPerintahTugas_E --> BKA_C: isValid()
+    SuratDisposisi_E --> BKA_C: isInValid()
+    SuratPerintahTugas_E --> BKA_C: isInValid()
     BKA_C --> AddSPTBKA_V: load->view()
     AddSPTBKA_V --> AdminBKA: Halaman Add SPT BKA
 

@@ -42,7 +42,7 @@ alt isValid() case
 
 else isInvalid() case
     
-    Pegawai_E --> Pehawai_C: isValid()
+    Pegawai_E --> Pehawai_C: isInValid()
     Pehawai_C --> AddPegawaiBKD_V: load->view()
     AddPegawaiBKD_V --> Admin: Halaman Add Pegawai BKD
 

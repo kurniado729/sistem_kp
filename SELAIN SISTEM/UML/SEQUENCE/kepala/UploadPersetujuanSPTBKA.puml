@@ -42,7 +42,7 @@ alt isValid() case
 
 else isInvalid() case
     
-    SuratPerintahTugas_E --> SuratPerintahTugas_C: isValid()
+    SuratPerintahTugas_E --> SuratPerintahTugas_C: isInValid()
     SuratPerintahTugas_C --> UploadSPTBKA_V: load->view()
     UploadSPTBKA_V --> Kepala: Halaman Upload SPT BKA
 end

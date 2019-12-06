@@ -42,7 +42,7 @@ alt isValid() case
 
 else isInvalid() case
     
-    SuratDisposisi_E --> SuratDisposisi_C: isValid()
+    SuratDisposisi_E --> SuratDisposisi_C: isInValid()
     SuratDisposisi_C --> UploadDisposisiBKA_V: load->view()
     UploadDisposisiBKA_V --> Kepala: Halaman Upload Disposisi BKA
 
