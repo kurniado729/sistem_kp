@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/LAPORAN/laporan kp 2.docx" beforeDir="false" afterPath="$PROJECT_DIR$/SELAIN SISTEM/LAPORAN/laporan kp 2.docx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -258,13 +257,8 @@
       <workItem from="1575652294873" duration="719000" />
       <workItem from="1575653104265" duration="34000" />
       <workItem from="1575656632533" duration="712000" />
-    </task>
-    <task id="LOCAL-00014" summary="update model">
-      <created>1573719930632</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1573719930632</updated>
+      <workItem from="1575662708831" duration="276000" />
+      <workItem from="1575693151782" duration="134000" />
     </task>
     <task id="LOCAL-00015" summary="sweet alert">
       <created>1573728424655</created>
@@ -602,7 +596,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575656694040</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="perbaiki laporan">
+      <created>1575662935862</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1575662935862</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -637,13 +638,13 @@
     <MESSAGE value="tambah prototype" />
     <MESSAGE value="perbaiki dashboard" />
     <MESSAGE value="masukkan sequence di laporan" />
-    <MESSAGE value="perbaiki laporan" />
     <MESSAGE value="masukkan prototype di laporan" />
     <MESSAGE value="fix laporan" />
     <MESSAGE value="laporan paling fix" />
     <MESSAGE value="Perbaikan nip dan no surat" />
     <MESSAGE value="tidak bisa input surat selain extensi PDF" />
     <MESSAGE value="perbaiki tombol logout" />
-    <option name="LAST_COMMIT_MESSAGE" value="perbaiki tombol logout" />
+    <MESSAGE value="perbaiki laporan" />
+    <option name="LAST_COMMIT_MESSAGE" value="perbaiki laporan" />
   </component>
 </project>
