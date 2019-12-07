@@ -100,62 +100,62 @@
 				<div class="card-body">
 					<div class="row text-center">
 						<div class="col">
-							<i class="fas fa-tachometer-alt"></i> <br/>
-							fas fa-fw fa-tachometer-alt
+							<div class="icon-1"><i class="fas fa-tachometer-alt" style="font-size: 25px;"></i></div>
+							<div id="target-1"><p>fas fa-fw fas fa-tachometer-alt</p></div>
 						</div>
 						<div class="col">
-							<i class="fas fa-users"></i> <br/>
-							fas fa-fw fa-users
-						</div>
-					</div>
-					<div class="row text-center mt-3">
-						<div class="col">
-							<i class="fas fa-user-tie"></i> <br/>
-							fas fa-fw fa-user-tie
-						</div>
-						<div class="col">
-							<i class="fas fa-user-edit"></i> <br/>
-							fas fa-fw fa-user-edit
+							<div class="icon-2"><i class="fas fa-users" style="font-size: 25px;"></i></div>
+							<div id="target-2"><p>fas fa-fw fa-users</p></div>
 						</div>
 					</div>
-					<div class="row text-center mt-3">
+					<div class="row text-center mt-2">
 						<div class="col">
-							<i class="fas fa-trash"></i> <br/>
-							fas fa-fw fa-trash
+							<div class="icon-3"><i class="fas fa-user-tie" style="font-size: 25px;"></i></div>
+							<div id="target-3"><p>fas fa-fw fa-user-tie</p></div>
 						</div>
 						<div class="col">
-							<i class="fas fa-key"></i> <br/>
-							fas fa-fw fa-key
-						</div>
-					</div>
-					<div class="row text-center mt-3">
-						<div class="col">
-							<i class="fas fa-folder"></i> <br/>
-							fas fa-fw fa-folder
-						</div>
-						<div class="col">
-							<i class="fas fa-folder-open"></i> <br/>
-							fas fa-fw fa-folder-open
+							<div class="icon-4"><i class="fas fa-user-edit" style="font-size: 25px;"></i></div>
+							<div id="target-4"><p>fas fa-fw fa-user-edit</p></div>
 						</div>
 					</div>
-					<div class="row text-center mt-3">
+					<div class="row text-center mt-2">
 						<div class="col">
-							<i class="fas fa-male"></i> <br/>
-							fas fa-fw fa-male
+							<div class="icon-5"><i class="fas fa-trash" style="font-size: 25px;"></i></div>
+							<div id="target-5"><p>fas fa-fw fa-trash</p></div>
 						</div>
 						<div class="col">
-							<i class="fas fa-child"></i> <br/>
-							fas fa-fw fa-child
+							<div class="icon-6"><i class="fas fa-key" style="font-size: 25px;"></i></div>
+							<div id="target-6"><p>fas fa-fw fa-key</p></div>
 						</div>
 					</div>
-					<div class="row text-center mt-3">
+					<div class="row text-center mt-2">
 						<div class="col">
-							<i class="fas fa-envelope-open-text"></i> <br/>
-							fas fa-fw fa-envelope-open-text
+							<div class="icon-7"><i class="fas fa-folder" style="font-size: 25px;"></i></div>
+							<div id="target-7"><p>fas fa-fw fa-folder</p></div>
 						</div>
 						<div class="col">
-							<i class="fas fa-envelope"></i> <br/>
-							fas fa-fw fa-envelope
+							<div class="icon-8"><i class="fas fa-folder-open" style="font-size: 25px;"></i></div>
+							<div id="target-8"><p>fas fa-fw fa-folder-open</p></div>
+						</div>
+					</div>
+					<div class="row text-center mt-2">
+						<div class="col">
+							<div class="icon-9"><i class="fas fa-male" style="font-size: 25px;"></i></div>
+							<div id="target-9"><p>fas fa-fw fa-male</p></div>
+						</div>
+						<div class="col">
+							<div class="icon-10"><i class="fas fa-child" style="font-size: 25px;"></i></div>
+							<div id="target-10"><p>fas fa-fw fa-child</p></div>
+						</div>
+					</div>
+					<div class="row text-center mt-2">
+						<div class="col">
+							<div class="icon-11"><i class="fas fa-envelope-open-text" style="font-size: 25px;"></i></div>
+							<div id="target-11"><p>fas fa-fw fa-envelope-open-text</p></div>
+						</div>
+						<div class="col">
+							<div class="icon-12"><i class="fas fa-envelope" style="font-size: 25px;"></i></div>
+							<div id="target-12"><p>fas fa-fw fa-envelope</p></div>
 						</div>
 					</div>
 				</div>

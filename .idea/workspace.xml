@@ -3,13 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/LAPORAN/~$poran kp 2.docx" beforeDir="false" afterPath="$PROJECT_DIR$/SELAIN SISTEM/LAPORAN/~$poran kp 2.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/LAPORAN/~$poran kp 2.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/menu/addsubmenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/menu/addsubmenu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/menu/editsubmenu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/menu/editsubmenu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_disposisi/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_disposisi/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_masuk/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_masuk/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/templates/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/templates/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/templates/sidebar.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/templates/sidebar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/templates/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/templates/footer.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -266,14 +262,7 @@
       <workItem from="1575656632533" duration="712000" />
       <workItem from="1575662708831" duration="276000" />
       <workItem from="1575693151782" duration="134000" />
-      <workItem from="1575733678648" duration="4606000" />
-    </task>
-    <task id="LOCAL-00016" summary="sweet alert">
-      <created>1573728489639</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1573728489639</updated>
+      <workItem from="1575733678648" duration="8146000" />
     </task>
     <task id="LOCAL-00017" summary="sweet alert">
       <created>1573810025987</created>
@@ -611,7 +600,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575733851937</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="perbaiki submenu">
+      <created>1575738567023</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1575738567023</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -654,6 +650,7 @@
     <MESSAGE value="perbaiki tombol logout" />
     <MESSAGE value="perbaiki laporan" />
     <MESSAGE value="tambah lampiran" />
-    <option name="LAST_COMMIT_MESSAGE" value="tambah lampiran" />
+    <MESSAGE value="perbaiki submenu" />
+    <option name="LAST_COMMIT_MESSAGE" value="perbaiki submenu" />
   </component>
 </project>

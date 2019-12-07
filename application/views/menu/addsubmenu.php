@@ -6,10 +6,10 @@
 
 	<div class="row">
 		<div class="col-lg-6">
-			<?php if (validation_errors()) :?>
-			<div class="alert alert-danger" role="alert">
-				<?= validation_errors() ?>
-			</div>
+			<?php if (validation_errors()) : ?>
+				<div class="alert alert-danger" role="alert">
+					<?= validation_errors() ?>
+				</div>
 			<?php endif; ?>
 			<div class="card">
 				<div class="card-header">
@@ -19,26 +19,30 @@
 					<blockquote class="blockquote mb-0">
 						<form method="post" action="<?= base_url('menu/addsubmenu'); ?>">
 							<div class="form-group">
-								<input type="text" class="form-control" id="title" name="title" placeholder="Submenu title" value="<?= set_value('title')?>">
+								<input type="text" class="form-control" id="title" name="title"
+									   placeholder="Submenu title" value="<?= set_value('title') ?>">
 							</div>
 							<div class="form-group">
 								<select name="menu_id" id="menu_id" class="form-control">
 									<option value="">Select Menu</option>
 									<?php foreach ($menu as $m) : ?>
-									<option value="<?= $m['id']; ?>"><?= $m['menu']; ?></option>
-									<?php endforeach;?>
+										<option value="<?= $m['id']; ?>"><?= $m['menu']; ?></option>
+									<?php endforeach; ?>
 								</select>
 
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" id="url" name="url" placeholder="Submenu url" value="<?= set_value('url')?>">
+								<input type="text" class="form-control" id="url" name="url" placeholder="Submenu url"
+									   value="<?= set_value('url') ?>">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" id="icon" name="icon" placeholder="Submenu icon" value="<?= set_value('icon')?>">
+								<input type="text" class="form-control" id="icon" name="icon" placeholder="Submenu icon"
+									   value="<?= set_value('icon') ?>">
 							</div>
 							<div class="form-group">
 								<div class="form-check">
-									<input class="form-check-input" type="checkbox" value="1" id="is_active" name="is_active" checked>
+									<input class="form-check-input" type="checkbox" value="1" id="is_active"
+										   name="is_active" checked>
 									<label class="form-check-label" for="is_active">
 										Active?
 									</label>
@@ -71,62 +75,62 @@
 				<div class="card-body">
 					<div class="row text-center">
 						<div class="col">
-							<i class="fas fa-tachometer-alt"></i> <br/>
-							fas fa-fw fa-tachometer-alt
+							<div class="icon-1"><i class="fas fa-tachometer-alt" style="font-size: 25px;"></i></div>
+							<div id="target-1"><p>fas fa-fw fas fa-tachometer-alt</p></div>
 						</div>
 						<div class="col">
-							<i class="fas fa-users"></i> <br/>
-							fas fa-fw fa-users
-						</div>
-					</div>
-					<div class="row text-center mt-3">
-						<div class="col">
-							<i class="fas fa-user-tie"></i> <br/>
-							fas fa-fw fa-user-tie
-						</div>
-						<div class="col">
-							<i class="fas fa-user-edit"></i> <br/>
-							fas fa-fw fa-user-edit
+							<div class="icon-2"><i class="fas fa-users" style="font-size: 25px;"></i></div>
+							<div id="target-2"><p>fas fa-fw fa-users</p></div>
 						</div>
 					</div>
-					<div class="row text-center mt-3">
+					<div class="row text-center mt-2">
 						<div class="col">
-							<i class="fas fa-trash"></i> <br/>
-							fas fa-fw fa-trash
+							<div class="icon-3"><i class="fas fa-user-tie" style="font-size: 25px;"></i></div>
+							<div id="target-3"><p>fas fa-fw fa-user-tie</p></div>
 						</div>
 						<div class="col">
-							<i class="fas fa-key"></i> <br/>
-							fas fa-fw fa-key
-						</div>
-					</div>
-					<div class="row text-center mt-3">
-						<div class="col">
-							<i class="fas fa-folder"></i> <br/>
-							fas fa-fw fa-folder
-						</div>
-						<div class="col">
-							<i class="fas fa-folder-open"></i> <br/>
-							fas fa-fw fa-folder-open
+							<div class="icon-4"><i class="fas fa-user-edit" style="font-size: 25px;"></i></div>
+							<div id="target-4"><p>fas fa-fw fa-user-edit</p></div>
 						</div>
 					</div>
-					<div class="row text-center mt-3">
+					<div class="row text-center mt-2">
 						<div class="col">
-							<i class="fas fa-male"></i> <br/>
-							fas fa-fw fa-male
+							<div class="icon-5"><i class="fas fa-trash" style="font-size: 25px;"></i></div>
+							<div id="target-5"><p>fas fa-fw fa-trash</p></div>
 						</div>
 						<div class="col">
-							<i class="fas fa-child"></i> <br/>
-							fas fa-fw fa-child
+							<div class="icon-6"><i class="fas fa-key" style="font-size: 25px;"></i></div>
+							<div id="target-6"><p>fas fa-fw fa-key</p></div>
 						</div>
 					</div>
-					<div class="row text-center mt-3">
+					<div class="row text-center mt-2">
 						<div class="col">
-							<i class="fas fa-envelope-open-text"></i> <br/>
-							fas fa-fw fa-envelope-open-text
+							<div class="icon-7"><i class="fas fa-folder" style="font-size: 25px;"></i></div>
+							<div id="target-7"><p>fas fa-fw fa-folder</p></div>
 						</div>
 						<div class="col">
-							<i class="fas fa-envelope"></i> <br/>
-							fas fa-fw fa-envelope
+							<div class="icon-8"><i class="fas fa-folder-open" style="font-size: 25px;"></i></div>
+							<div id="target-8"><p>fas fa-fw fa-folder-open</p></div>
+						</div>
+					</div>
+					<div class="row text-center mt-2">
+						<div class="col">
+							<div class="icon-9"><i class="fas fa-male" style="font-size: 25px;"></i></div>
+							<div id="target-9"><p>fas fa-fw fa-male</p></div>
+						</div>
+						<div class="col">
+							<div class="icon-10"><i class="fas fa-child" style="font-size: 25px;"></i></div>
+							<div id="target-10"><p>fas fa-fw fa-child</p></div>
+						</div>
+					</div>
+					<div class="row text-center mt-2">
+						<div class="col">
+							<div class="icon-11"><i class="fas fa-envelope-open-text" style="font-size: 25px;"></i></div>
+							<div id="target-11"><p>fas fa-fw fa-envelope-open-text</p></div>
+						</div>
+						<div class="col">
+							<div class="icon-12"><i class="fas fa-envelope" style="font-size: 25px;"></i></div>
+							<div id="target-12"><p>fas fa-fw fa-envelope</p></div>
 						</div>
 					</div>
 				</div>
@@ -140,7 +144,8 @@
 <!-- End of Main Content -->
 
 <!-- Modal -->
-<div class="modal fade" id="newmenumodal" tabindex="-1" role="dialog" aria-labelledby="newmenumodalLabel" aria-hidden="true">
+<div class="modal fade" id="newmenumodal" tabindex="-1" role="dialog" aria-labelledby="newmenumodalLabel"
+	 aria-hidden="true">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">

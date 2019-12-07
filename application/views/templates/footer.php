@@ -817,4 +817,61 @@
         },
     });
 </script>
+
+<script>
+    function selectText(node) {
+        node = document.getElementById(node);
+
+        if (document.body.createTextRange) {
+            const range = document.body.createTextRange();
+            range.moveToElementText(node);
+            range.select();
+        } else if (window.getSelection) {
+            const selection = window.getSelection();
+            const range = document.createRange();
+            range.selectNodeContents(node);
+            selection.removeAllRanges();
+            selection.addRange(range);
+        } else {
+            console.warn("Could not select text in node: Unsupported browser.");
+        }
+    }
+
+    const clickable = document.querySelector('.icon-1');
+    clickable.addEventListener('click', () => selectText('target-1'));
+
+    const clickable2 = document.querySelector('.icon-2');
+    clickable2.addEventListener('click', () => selectText('target-2'));
+
+    const clickable3 = document.querySelector('.icon-3');
+    clickable3.addEventListener('click', () => selectText('target-3'));
+
+    const clickable4 = document.querySelector('.icon-4');
+    clickable4.addEventListener('click', () => selectText('target-4'));
+
+    const clickable5 = document.querySelector('.icon-5');
+    clickable5.addEventListener('click', () => selectText('target-5'));
+
+    const clickable6 = document.querySelector('.icon-6');
+    clickable6.addEventListener('click', () => selectText('target-6'));
+
+    const clickable7 = document.querySelector('.icon-7');
+    clickable7.addEventListener('click', () => selectText('target-7'));
+
+    const clickable8 = document.querySelector('.icon-8');
+    clickable8.addEventListener('click', () => selectText('target-8'));
+
+    const clickable9 = document.querySelector('.icon-9');
+    clickable9.addEventListener('click', () => selectText('target-9'));
+
+    const clickable10 = document.querySelector('.icon-10');
+    clickable10.addEventListener('click', () => selectText('target-10'));
+
+    const clickable11 = document.querySelector('.icon-11');
+    clickable11.addEventListener('click', () => selectText('target-11'));
+
+    const clickable12 = document.querySelector('.icon-12');
+    clickable12.addEventListener('click', () => selectText('target-12'));
+</script>
+
 </html>
