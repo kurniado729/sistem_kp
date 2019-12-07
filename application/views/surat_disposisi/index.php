@@ -69,10 +69,10 @@
 <!--								<a href="--><?//= base_url('surat_disposisi/disposisimailbka/' . $sd['id_surat_disposisi']); ?><!--"-->
 <!--								   class="badge badge-warning" onclick="return confirm('Disposisi ke BKA?')">Disposisi ke BKA</a>-->
 								<a href="<?= base_url('surat_disposisi/disposisimailbkd/' . $sd['id_surat_disposisi']); ?>" class="btn btn-warning btn-circle tombol-disposisi-bkd" data-toggle="tooltip" data-placement="top" title="Disposisi ke BKD">
-									<i class="fas fa-arrow-alt-circle-right"></i>
+									<i class="fas fa-blind"></i>
 								</a>
 								<a href="<?= base_url('surat_disposisi/disposisimailbka/' . $sd['id_surat_disposisi']); ?>" class="btn btn-warning btn-circle tombol-disposisi-bka" data-toggle="tooltip" data-placement="top" title="Disposisi ke BKA">
-									<i class="fas fa-arrow-alt-circle-right"></i>
+									<i class="fas fa-child"></i>
 								</a>
 							<?php else: ?>
 									<i class="fas fa-check"> sudah didisposisi</i>

@@ -3,8 +3,8 @@
 
 	<!-- Sidebar - Brand -->
 	<a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-		<div class="sidebar-brand-icon rotate-n-15">
-			<i class="fas fa-feather-alt"></i>
+		<div class="sidebar-brand-icon">
+			<img src="<?= base_url('assets'); ?>/logo/logo-bapas.png" style="height: 40px"; width="40px">
 		</div>
 		<div class="sidebar-brand-text mx-1">Balai Pemasyarakatan</div>
 	</a>

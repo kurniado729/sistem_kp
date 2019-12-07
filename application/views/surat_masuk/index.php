@@ -74,7 +74,7 @@
 									<i class="fas fa-paper-plane"></i>
 								</a>
 							<?php else: ?>
-								<i class="fas fa-check"> sudah dibuat</i>
+								<i class="fas fa-check"> sudah didisposisi</i>
 							<?php endif; ?>
 
 						</td>

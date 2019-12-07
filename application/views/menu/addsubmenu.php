@@ -62,8 +62,77 @@
 				</div>
 			</div>
 		</div>
-	</div>
 
+		<div class="col-lg-5">
+			<div class="card">
+				<div class="card-header">
+					Daftar Icon
+				</div>
+				<div class="card-body">
+					<div class="row text-center">
+						<div class="col">
+							<i class="fas fa-tachometer-alt"></i> <br/>
+							fas fa-fw fa-tachometer-alt
+						</div>
+						<div class="col">
+							<i class="fas fa-users"></i> <br/>
+							fas fa-fw fa-users
+						</div>
+					</div>
+					<div class="row text-center mt-3">
+						<div class="col">
+							<i class="fas fa-user-tie"></i> <br/>
+							fas fa-fw fa-user-tie
+						</div>
+						<div class="col">
+							<i class="fas fa-user-edit"></i> <br/>
+							fas fa-fw fa-user-edit
+						</div>
+					</div>
+					<div class="row text-center mt-3">
+						<div class="col">
+							<i class="fas fa-trash"></i> <br/>
+							fas fa-fw fa-trash
+						</div>
+						<div class="col">
+							<i class="fas fa-key"></i> <br/>
+							fas fa-fw fa-key
+						</div>
+					</div>
+					<div class="row text-center mt-3">
+						<div class="col">
+							<i class="fas fa-folder"></i> <br/>
+							fas fa-fw fa-folder
+						</div>
+						<div class="col">
+							<i class="fas fa-folder-open"></i> <br/>
+							fas fa-fw fa-folder-open
+						</div>
+					</div>
+					<div class="row text-center mt-3">
+						<div class="col">
+							<i class="fas fa-male"></i> <br/>
+							fas fa-fw fa-male
+						</div>
+						<div class="col">
+							<i class="fas fa-child"></i> <br/>
+							fas fa-fw fa-child
+						</div>
+					</div>
+					<div class="row text-center mt-3">
+						<div class="col">
+							<i class="fas fa-envelope-open-text"></i> <br/>
+							fas fa-fw fa-envelope-open-text
+						</div>
+						<div class="col">
+							<i class="fas fa-envelope"></i> <br/>
+							fas fa-fw fa-envelope
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- /.container-fluid -->
 

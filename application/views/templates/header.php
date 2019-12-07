@@ -9,6 +9,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
+	<link rel="shortcut icon" href="<?= base_url('assets'); ?>/logo/logo-bapas.png">
 	<title><?= $title; ?></title>
 
 	<!-- Custom fonts for this template-->
