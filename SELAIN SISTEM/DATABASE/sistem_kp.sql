@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 30, 2019 at 08:39 AM
+-- Generation Time: Dec 09, 2019 at 07:24 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
 
@@ -46,9 +46,12 @@ CREATE TABLE `pegawai` (
 --
 
 INSERT INTO `pegawai` (`id_pegawai`, `nip`, `nama_pegawai`, `jenis_kelamin`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `bagian`, `jabatan`, `hapus`) VALUES
-(37, '1231', 'naum1', 'perempuan', 'tapung1', '01-11-2019', 'panam1', 'TU', 'jabatan1', '1'),
-(38, '3211', 'een1', 'laki-laki', 'tapung1', '01-10-2019', 'panam1', 'BKD', 'jabatan4', '0'),
-(40, '3210', 'asdf', 'laki-laki', 'tapung1', '29-10-2019', 'panam1', 'BKA', 'jabatan3', '0');
+(56, '196501011986031002', 'Sudirman ,S.Sos', 'laki-laki', 'pekanbaru', '24-12-2019', 'pekanbaru', 'TU', 'Pengadministrasian Umum', '0'),
+(57, '198508052008012003', 'Wessy Agustin', 'perempuan', 'indragiri hilir', '26-12-2019', 'panam', 'TU', 'Bendahara Pengeluaran', '0'),
+(58, '196709271993032001', 'Dermi Sitanggang, SH', 'laki-laki', 'indragiri hulu', '15-12-2019', 'sudirman', 'BKD', 'PK Muda', '0'),
+(59, '199005282009122001', 'Meila Khatami, SH', 'perempuan', 'pekanbaru', '24-11-2019', 'pekanbaru', 'BKD', 'PK Pertama', '0'),
+(60, '198412022009121008', 'Arif Sugianto,SH', 'laki-laki', 'pekanbaru', '25-11-2019', 'panam', 'BKA', 'PK Pertama', '0'),
+(61, '198602052015032003', 'Lina Yati Manullang,SH', 'perempuan', 'pekanbaru', '06-12-2019', 'pekanbaru', 'BKA', 'PK Muda', '0');
 
 -- --------------------------------------------------------
 
@@ -62,6 +65,7 @@ CREATE TABLE `surat_disposisi` (
   `no_surat_masuk` varchar(128) NOT NULL,
   `tgl_surat_masuk` varchar(128) NOT NULL,
   `ringkasan` varchar(128) NOT NULL,
+  `file_surat_masuk` varchar(128) NOT NULL,
   `tujuan` enum('BKD','BKA') DEFAULT NULL,
   `file_disposisi_sudah_disetujui` varchar(128) DEFAULT NULL,
   `status` enum('0','1') DEFAULT NULL,
@@ -72,31 +76,10 @@ CREATE TABLE `surat_disposisi` (
 -- Dumping data for table `surat_disposisi`
 --
 
-INSERT INTO `surat_disposisi` (`id_surat_disposisi`, `pengirim`, `no_surat_masuk`, `tgl_surat_masuk`, `ringkasan`, `tujuan`, `file_disposisi_sudah_disetujui`, `status`, `status_spt`) VALUES
-(56, 'lapas indragirihilir', 'W4.PAS.1', '01-11-2019', 'penelitian masyarakat an. ilham sauly', 'BKD', 'persetujuan_disposisi.pdf', '1', '1'),
-(57, 'lapas indragirihulu', 'W4.PAS.2', '20-11-2019', 'penelitian masyarakat an. reza purnomo', 'BKA', 'persetujuan_disposisi1.pdf', '1', '1'),
-(58, 'lapas pekanbaru', '23434', '14-11-2019', 'penelitian masyarakat an. suwantono', 'BKD', 'transaksi.pdf', '1', '1'),
-(59, 'asdf', 'sdf', '01-11-2019', 'fda', 'BKD', 'transaksi1.pdf', '1', '1'),
-(60, 'surat masuk', '1341', '29-11-2019', 'ini surat masuk', 'BKA', 'transaksi2.pdf', '1', '1'),
-(61, 'bka', '134', '22-11-2019', 'bka', 'BKA', 'transaksi3.pdf', '1', '1'),
-(62, 'aaa', 'aaa', '31-10-2019', 'aaa', 'BKD', 'transaksi4.pdf', '1', '1'),
-(63, 'bbbb', '134', '30-10-2019', 'bbb', 'BKA', 'transaksi5.pdf', '1', '1'),
-(64, 'surat baru', '313413', '30-10-2019', 'surat', 'BKD', 'transaksi6.pdf', '1', '1'),
-(65, 'surat si kuning ', '134341', '05-11-2019', 'efsd', 'BKA', 'transaksi7.pdf', '1', '1'),
-(66, 'aa', 'a', '07-11-2019', 'a', 'BKD', 'transaksi8.pdf', '1', '1'),
-(67, 'bb', 'bbb', '06-11-2019', 'bb', 'BKA', 'transaksi9.pdf', '1', '1'),
-(68, 'cccc', '1314', '30-10-2019', 'cccc', 'BKD', '2-converted.pdf', '1', '1'),
-(69, 'ini surat masuk', '123432', '07-11-2019', 'ini surat masuk', 'BKD', '2-converted1.pdf', '1', '1'),
-(70, 'zzzz', 'qerewq', '14-11-2019', 'zzzz', 'BKD', 'BAB_II.pdf', '1', '1'),
-(71, 'asasasa', 'sasasa', '07-11-2019', 'sasa', 'BKD', 'jbptunikompp-gdl-muhammadsy-35135-3-unikom_m-i.pdf', '1', '1'),
-(72, 'riyan', '237377', '31-10-2019', 'riyan', 'BKD', 'jbptunikompp-gdl-muhammadsy-35135-3-unikom_m-i1.pdf', '1', '1'),
-(73, 'ujang', '14', '12-11-2019', 'ujang', 'BKD', 'BAB_III.pdf', '1', '1'),
-(74, 'adfdsa', '134', '06-11-2019', 'asdf', 'BKD', 'BAB_III1.pdf', '1', '1'),
-(75, 'adf', '14', '29-10-2019', 'adsf', 'BKD', 'jbptunikompp-gdl-muhammadsy-35135-3-unikom_m-i2.pdf', '1', '1'),
-(76, 'zcxczx', '14', '07-11-2019', 'daf', 'BKD', 'jbptppolban-gdl-sarrinoorf-4117-3-bab2--7.pdf', '1', '1'),
-(77, 'tfgyy', '134', '06-11-2019', 'qwewqe', 'BKD', 'BAB_III2.pdf', '1', '1'),
-(78, 'sdf', 'sfg', '29-10-2019', 'sf', 'BKD', NULL, NULL, '0'),
-(79, 'df', '123', '30-10-2019', 'asdf', 'BKA', 'jbptppolban-gdl-sarrinoorf-4117-3-bab2--71.pdf', '1', '0');
+INSERT INTO `surat_disposisi` (`id_surat_disposisi`, `pengirim`, `no_surat_masuk`, `tgl_surat_masuk`, `ringkasan`, `file_surat_masuk`, `tujuan`, `file_disposisi_sudah_disetujui`, `status`, `status_spt`) VALUES
+(96, 'lapas indragiri hilir', 'W4-PS-12', '27-11-2019', 'penelitian masyarakat an. ilham sauly', 'data_pengawas2.pdf', 'BKD', 'transaksi16.pdf', '1', '1'),
+(97, 'lapas indragiri hulu', 'W4.PAS.2', '05-12-2019', 'penelitian masyarakat an. reza purnomo', 'data_pengawas3.pdf', 'BKA', 'data_pengawas1.pdf', '0', '0'),
+(98, 'lapas bengkalis', 'W4-PS-121', '28-11-2019', 'penelitian masyarakat an. fauzan', 'data_pengawas5.pdf', 'BKA', 'data_pengawas2.pdf', '1', '1');
 
 -- --------------------------------------------------------
 
@@ -120,30 +103,11 @@ CREATE TABLE `surat_masuk` (
 --
 
 INSERT INTO `surat_masuk` (`id_surat_masuk`, `file_surat_masuk`, `pengirim`, `no_surat_masuk`, `tgl_surat_masuk`, `ringkasan`, `disposisi`, `hapus`) VALUES
-(73, 'data_pengawas.pdf', 'lapas indragirihilir', 'W4.PAS.1', '01-11-2019', 'penelitian masyarakat an. ilham sauly', '1', '0'),
-(74, 'transaksi.pdf', 'lapas indragirihulu', 'W4.PAS.2', '20-11-2019', 'penelitian masyarakat an. reza purnomo', '1', '0'),
-(75, 'transaksi1.pdf', 'lapas pekanbaru', '23434', '14-11-2019', 'penelitian masyarakat an. suwantono', '1', '0'),
-(76, 'transaksi2.pdf', 'asdf', 'sdf', '01-11-2019', 'fda', '1', '0'),
-(77, 'transaksi3.pdf', 'surat masuk', '1341', '29-11-2019', 'ini surat masuk', '1', '0'),
-(78, 'transaksi4.pdf', 'bka', '134', '22-11-2019', 'bka', '1', '0'),
-(79, 'transaksi5.pdf', 'aaa', 'aaa', '31-10-2019', 'aaa', '1', '0'),
-(80, 'transaksi6.pdf', 'bbbb', '134', '30-10-2019', 'bbb', '1', '0'),
-(81, 'transaksi7.pdf', 'surat baru', '313413', '30-10-2019', 'surat', '1', '0'),
-(82, 'transaksi8.pdf', 'surat si kuning ', '134341', '05-11-2019', 'efsd', '1', '0'),
-(83, 'Dok_baru_2019-10-30_00_14.pdf', 'aa', 'a', '07-11-2019', 'a', '1', '0'),
-(84, 'transaksi9.pdf', 'bb', 'bbb', '06-11-2019', 'bb', '1', '0'),
-(85, '2-converted.pdf', 'cccc', '1314', '30-10-2019', 'cccc', '1', '0'),
-(86, '2-converted1.pdf', 'ini surat masuk', '123432', '07-11-2019', 'ini surat masuk', '1', '0'),
-(87, 'BAB_III.pdf', 'zzzz', 'qerewq', '14-11-2019', 'zzzz', '1', '0'),
-(88, 'jbptunikompp-gdl-muhammadsy-35135-3-unikom_m-i.pdf', 'asasasa', 'sasasa', '07-11-2019', 'sasa', '1', '1'),
-(89, 'BAB_III1.pdf', 'riyan', '237377', '31-10-2019', 'riyan', '1', '1'),
-(91, 'BAB_II.pdf', 'ujang', '14', '12-11-2019', 'ujang', '1', '0'),
-(92, 'BAB_II1.pdf', 'adfdsa', '134', '06-11-2019', 'asdf', '1', '0'),
-(93, 'jbptppolban-gdl-sarrinoorf-4117-3-bab2--7.pdf', 'adf', '14', '29-10-2019', 'adsf', '1', '0'),
-(94, 'jbptunikompp-gdl-muhammadsy-35135-3-unikom_m-i1.pdf', 'zcxczx', '14', '07-11-2019', 'daf', '1', '0'),
-(95, 'BAB_III3.pdf', 'tfgyy', '134', '06-11-2019', 'qwewqe', '1', '0'),
-(96, 'jbptppolban-gdl-sarrinoorf-4117-3-bab2--71.pdf', 'sdf', 'sfg', '29-10-2019', 'sf', '1', '0'),
-(97, 'jbptunikompp-gdl-muhammadsy-35135-3-unikom_m-i2.pdf', 'df', '123', '30-10-2019', 'asdf', '1', '0');
+(114, 'data_pengawas2.pdf', 'lapas indragiri hilir', 'W4-PS-12', '27-11-2019', 'penelitian masyarakat an. ilham sauly', '1', '0'),
+(115, 'data_pengawas3.pdf', 'lapas indragiri hulu', 'W4.PAS.2', '05-12-2019', 'penelitian masyarakat an. reza purnomo', '1', '0'),
+(116, 'data_pengawas4.pdf', 'lapas bengkalis', 'W4.PAS.1', '05-12-2019', 'peninjauan napi an. riyan setiawan', '0', '0'),
+(117, 'transaksi18.pdf', 'lapas indragiri hilir', 'W4.PAS.11', '28-11-2019', 'penelitian masyarakat an. merry', '0', '1'),
+(118, 'data_pengawas5.pdf', 'lapas bengkalis', 'W4-PS-121', '28-11-2019', 'penelitian masyarakat an. fauzan', '1', '0');
 
 -- --------------------------------------------------------
 
@@ -174,28 +138,8 @@ CREATE TABLE `surat_spt` (
 --
 
 INSERT INTO `surat_spt` (`id_surat_spt`, `pengirim`, `no_surat_masuk`, `tgl_surat_masuk`, `tgl_akhir_spt`, `ringkasan`, `nama_pegawai`, `nip_pegawai`, `jabatan`, `bagian`, `status_pengajuan`, `status`, `file_spt_sudah_disetujui`, `file_spt_lengkap`, `status_telat`) VALUES
-(20, 'lapas indragirihilir', 'W4.PAS.1', '01-11-2019', '20-11-2019', 'penelitian masyarakat an. ilham sauly', 'mariana', '11', 'jabatan 2', 'BKD', '1', '1', 'persetujuan_disposisi.pdf', 'BAB_III.pdf', '1'),
-(21, 'lapas indragirihulu', 'W4.PAS.2', '20-11-2019', '20-11-2019', 'penelitian masyarakat an. reza purnomo', 'surya', '12', 'jabatan 6', 'BKA', '1', '1', 'persetujuan_disposisi1.pdf', 'jbptunikompp-gdl-muhammadsy-35135-3-unikom_m-i1.pdf', '0'),
-(22, 'lapas pekanbaru', '23434', '14-11-2019', '27-11-2019', 'penelitian masyarakat an. suwantono', 'riyan bngst', '27', 'jabatan1', 'BKD', '1', '1', 'transaksi.pdf', 'transaksi.pdf', '0'),
-(23, 'surat masuk', '1341', '29-11-2019', '24-11-2019', 'ini surat masuk', 'pegawai bka edit', '21', '', 'BKA', '1', '1', 'transaksi3.pdf', NULL, '0'),
-(24, 'asdf', 'sdf', '01-11-2019', '28-11-2019', 'fda', 'pegawai bkd edit', '19', '', 'BKD', '1', '1', 'transaksi1.pdf', 'BAB_II.pdf', '0'),
-(25, 'bka', '134', '22-11-2019', '24-11-2019', 'bka', 'silvia', '2', 'jabatan 3', 'BKA', '1', '1', 'jbptppolban-gdl-sarrinoorf-4117-3-bab2--7.pdf', NULL, '0'),
-(26, 'aaa', 'aaa', '31-10-2019', '28-11-2019', 'aaa', 'mariana', '11', 'jabatan 2', 'BKD', '0', NULL, NULL, NULL, NULL),
-(27, 'bbbb', '134', '30-10-2019', '24-11-2019', 'bbb', 'pegawai bka edit', '21', '', 'BKA', '1', NULL, NULL, NULL, NULL),
-(28, 'surat baru', '313413', '30-10-2019', '28-11-2019', 'surat', 'pegawai bkd', '3210', 'jabatan2', 'BKD', '0', NULL, NULL, NULL, NULL),
-(29, 'surat si kuning ', '134341', '05-11-2019', '24-11-2019', 'efsd', 'pegawai bka', '4321', 'jabatan3', 'BKA', '1', NULL, NULL, NULL, NULL),
-(30, 'aa', 'a', '07-11-2019', '29-11-2019', 'a', 'pegawai bkd', '3210', 'jabatan2', 'BKD', '1', NULL, 'transaksi2.pdf', NULL, NULL),
-(31, 'bb', 'bbb', '06-11-2019', '25-11-2019', 'bb', 'pegawai bka', '', '', 'BKA', '1', NULL, NULL, NULL, NULL),
-(32, 'cccc', '1314', '30-10-2019', '24-11-2019', 'cccc', 'een1', '3211', 'jabatan4', 'BKD', '1', '1', '2-converted.pdf', 'BAB_II1.pdf', '1'),
-(33, 'ini surat masuk', '123432', '07-11-2019', '24-11-2019', 'ini surat masuk', 'een1', '3211', 'jabatan4', 'BKD', '1', '1', '2-converted1.pdf', '2-converted.pdf', '0'),
-(34, 'zzzz', 'qerewq', '14-11-2019', '04-12-2019', 'zzzz', 'een1', '3211', 'jabatan4', 'BKD', '1', NULL, NULL, NULL, NULL),
-(35, 'adf', '14', '29-10-2019', '04-12-2019', 'adsf', 'een1', '3211', 'jabatan4', 'BKD', '1', NULL, NULL, NULL, NULL),
-(36, 'ujang', '14', '12-11-2019', '04-12-2019', 'ujang', 'een1', '3211', 'jabatan4', 'BKD', '1', '1', 'BAB_III.pdf', 'jbptunikompp-gdl-muhammadsy-35135-3-unikom_m-i.pdf', '0'),
-(37, 'riyan', '237377', '31-10-2019', '04-12-2019', 'riyan', 'een1', '3211', 'jabatan4', 'BKD', '1', NULL, NULL, NULL, NULL),
-(38, 'asasasa', 'sasasa', '07-11-2019', '04-12-2019', 'sasa', 'een1', '3211', 'jabatan4', 'BKD', '1', '1', 'BAB_II.pdf', NULL, NULL),
-(39, 'zcxczx', '14', '07-11-2019', '05-12-2019', 'daf', 'een1', '3211', 'jabatan4', 'BKD', '1', NULL, NULL, NULL, NULL),
-(40, 'adfdsa', '134', '06-11-2019', '05-12-2019', 'asdf', 'een1', '3211', 'jabatan4', 'BKD', '1', NULL, NULL, NULL, NULL),
-(41, 'tfgyy', '134', '06-11-2019', '06-12-2019', 'qwewqe', 'een1', '3211', 'jabatan4', 'BKD', '1', NULL, NULL, NULL, NULL);
+(56, 'lapas indragiri hilir', 'W4-PS-12', '27-11-2019', '16-12-2019', 'penelitian masyarakat an. ilham sauly', 'Meila Khatami, SH', '199005282009122001', 'PK Pertama', 'BKD', '1', '1', 'transaksi7.pdf', NULL, NULL),
+(57, 'lapas bengkalis', 'W4-PS-121', '28-11-2019', '12-12-2019', 'penelitian masyarakat an. fauzan', 'Arif Sugianto,SH', '198412022009121008', 'PK Pertama', 'BKA', '1', '1', 'transaksi8.pdf', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -220,7 +164,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `name`, `email`, `image`, `password`, `role_id`, `is_active`, `date_created`, `hapus`) VALUES
-(5, 'admin', 'admin@gmail.com', 'yandayanda7.jpg', '$2y$10$GQqx57xSYwweXknlxNLiZ.WF5ohSYavlv1elk3g71xmmN6ZmYZeDi', 1, 1, 1568817562, '0'),
+(5, 'admin', 'admin@gmail.com', 'default1.jpg', '$2y$10$GQqx57xSYwweXknlxNLiZ.WF5ohSYavlv1elk3g71xmmN6ZmYZeDi', 1, 1, 1568817562, '0'),
 (12, 'Admin TU', 'admintu@gmail.com', 'default.jpg', '$2y$10$GQqx57xSYwweXknlxNLiZ.WF5ohSYavlv1elk3g71xmmN6ZmYZeDi', 3, 1, 1569952744, '0'),
 (13, 'Admin BKD', 'adminbkd@gmail.com', 'default.jpg', '$2y$10$GQqx57xSYwweXknlxNLiZ.WF5ohSYavlv1elk3g71xmmN6ZmYZeDi', 4, 1, 1569952744, '0'),
 (14, 'Admin BKA', 'adminbka@gmail.com', 'default.jpg', '$2y$10$GQqx57xSYwweXknlxNLiZ.WF5ohSYavlv1elk3g71xmmN6ZmYZeDi', 5, 1, 1569952744, '0'),
@@ -264,16 +208,10 @@ INSERT INTO `user_access_menu` (`id`, `role_id`, `menu_id`) VALUES
 (498, 11, 3),
 (499, 12, 2),
 (504, 3, 66),
-(505, 1, 2),
 (506, 1, 3),
 (507, 1, 1),
 (508, 1, 16),
-(531, 1, 17),
-(532, 1, 19),
-(533, 1, 20),
-(534, 1, 23),
-(535, 1, 24),
-(536, 1, 66);
+(546, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -319,13 +257,10 @@ CREATE TABLE `user_role` (
 
 INSERT INTO `user_role` (`id`, `role`) VALUES
 (1, 'Administrator'),
-(2, 'Member'),
 (3, 'Admin TU'),
 (4, 'Admin BKD'),
 (5, 'Admin BKA'),
-(6, 'Kepala'),
-(18, 'aa'),
-(19, 'v');
+(6, 'Kepala');
 
 -- --------------------------------------------------------
 
@@ -472,25 +407,25 @@ ALTER TABLE `user_token`
 -- AUTO_INCREMENT for table `pegawai`
 --
 ALTER TABLE `pegawai`
-  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `id_pegawai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT for table `surat_disposisi`
 --
 ALTER TABLE `surat_disposisi`
-  MODIFY `id_surat_disposisi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
+  MODIFY `id_surat_disposisi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
 
 --
 -- AUTO_INCREMENT for table `surat_masuk`
 --
 ALTER TABLE `surat_masuk`
-  MODIFY `id_surat_masuk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
+  MODIFY `id_surat_masuk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=119;
 
 --
 -- AUTO_INCREMENT for table `surat_spt`
 --
 ALTER TABLE `surat_spt`
-  MODIFY `id_surat_spt` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id_surat_spt` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `user`
@@ -502,25 +437,25 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `user_access_menu`
 --
 ALTER TABLE `user_access_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=537;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=574;
 
 --
 -- AUTO_INCREMENT for table `user_menu`
 --
 ALTER TABLE `user_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT for table `user_role`
 --
 ALTER TABLE `user_role`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `user_sub_menu`
 --
 ALTER TABLE `user_sub_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `user_token`
