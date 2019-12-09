@@ -50,11 +50,11 @@
 							<div class="form-group">
 <!--								<label for="exampleFormControlSelect1">Jabatan</label>-->
 								<select class="form-control" id="jabatan" name="jabatan">
-									<option value="jabatan1">jabatan1</option>
-									<option value="jabatan2">jabatan2</option>
-									<option value="jabatan3">jabatan3</option>
-									<option value="jabatan4">jabatan4</option>
-									<option value="jabatan5">jabatan5</option>
+									<option value="Pengadministrasian Umum">Pengadministrasian Umum</option>
+									<option value="Pengelola Kepegawaian">Pengelola Kepegawaian</option>
+									<option value="Bendahara Pengeluaran">Bendahara Pengeluaran</option>
+									<option value="Pengelola BMN">Pengelola BMN</option>
+									<option value="engelola Keuangan">Pengelola Keuangan</option>
 								</select>
 							</div>
 							<div class="form-group">

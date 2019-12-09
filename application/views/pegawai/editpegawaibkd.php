@@ -5,7 +5,7 @@
 	<h1 class="h3 mb-4 text-gray-800"><?= $title ?></h1>
 
 	<div class="row">
-		<div class="col-lg-6">
+		<div class="col-lg-9">
 
 			<?= form_error ('nama_pegawai', '<div class="alert alert-danger" role="alert">', '</div>'); ?>
 
@@ -64,36 +64,36 @@
 								<label for="jabatan" class="col-sm-2 col-form-label">jabatan</label>
 								<div class="col-sm-10">
 									<select class="form-control" id="jabatan" name="jabatan">
-										<?php if($pegawai['jabatan'] == 'jabatan1') : ?>
+										<?php if($pegawai['jabatan'] == 'PK Muda') : ?>
 											<option value="<?= $pegawai['jabatan'] ?>"><?=$pegawai['jabatan'] ?></option>
-											<option value="jabatan2">jabatan2</option>
-											<option value="jabatan3">jabatan3</option>
-											<option value="jabatan4">jabatan4</option>
-											<option value="jabatan5">jabatan5</option>
-										<?php elseif($pegawai['jabatan'] == 'jabatan2') : ?>
+											<option value="PK Pertama">PK Pertama</option>
+											<option value="APK Penyelia">APK Penyelia</option>
+											<option value="APK Mahir">APK Mahir</option>
+											<option value="APK Terampil">APK Terampil</option>
+										<?php elseif($pegawai['jabatan'] == 'PK Pertama') : ?>
 											<option value="<?= $pegawai['jabatan'] ?>"><?=$pegawai['jabatan'] ?></option>
-											<option value="jabatan1">jabatan1</option>
-											<option value="jabatan3">jabatan3</option>
-											<option value="jabatan4">jabatan4</option>
-											<option value="jabatan5">jabatan5</option>
-										<?php elseif($pegawai['jabatan'] == 'jabatan3') : ?>
+											<option value="PK Muda">PK Muda</option>
+											<option value="APK Penyelia">APK Penyelia</option>
+											<option value="APK Mahir">APK Mahir</option>
+											<option value="APK Terampil">APK Terampil</option>
+										<?php elseif($pegawai['jabatan'] == 'APK Penyelia') : ?>
 											<option value="<?= $pegawai['jabatan'] ?>"><?=$pegawai['jabatan'] ?></option>
-											<option value="jabatan1">jabatan1</option>
-											<option value="jabatan2">jabatan2</option>
-											<option value="jabatan4">jabatan4</option>
-											<option value="jabatan5">jabatan5</option>
-										<?php elseif($pegawai['jabatan'] == 'jabatan4') : ?>
+											<option value="PK Muda">PK Muda</option>
+											<option value="PK Pertama">PK Pertama</option>
+											<option value="APK Mahir">APK Mahir</option>
+											<option value="APK Terampil">APK Terampil</option>
+										<?php elseif($pegawai['jabatan'] == 'APK Mahir') : ?>
 											<option value="<?= $pegawai['jabatan'] ?>"><?=$pegawai['jabatan'] ?></option>
-											<option value="jabatan1">jabatan1</option>
-											<option value="jabatan2">jabatan2</option>
-											<option value="jabatan3">jabatan3</option>
-											<option value="jabatan5">jabatan5</option>
+											<option value="PK Muda">PK Muda</option>
+											<option value="PK Pertama">PK Pertama</option>
+											<option value="APK Penyelia">APK Penyelia</option>
+											<option value="APK Terampil">APK Terampil</option>
 										<?php else : ?>
 											<option value="<?= $pegawai['jabatan'] ?>"><?=$pegawai['jabatan'] ?></option>
-											<option value="jabatan1">jabatan1</option>
-											<option value="jabatan2">jabatan2</option>
-											<option value="jabatan3">jabatan3</option>
-											<option value="jabatan4">jabatan4</option>
+											<option value="PK Muda">PK Muda</option>
+											<option value="PK Pertama">PK Pertama</option>
+											<option value="APK Penyelia">APK Penyelia</option>
+											<option value="APK Mahir">APK Mahir</option>
 										<?php endif; ?>
 									</select>
 								</div>
