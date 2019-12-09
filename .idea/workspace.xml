@@ -1,20 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/LAPORAN/laporan kp 2.docx" beforeDir="false" afterPath="$PROJECT_DIR$/SELAIN SISTEM/LAPORAN/laporan kp 2.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/UML/SEQUENCE/kepala/UploadPersetujuanSPTBKA.puml" beforeDir="false" afterPath="$PROJECT_DIR$/SELAIN SISTEM/UML/SEQUENCE/kepala/UploadPersetujuanSPTBKA.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Surat_Disposisi.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Surat_Disposisi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/Surat_Masuk.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Surat_Masuk.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Surat_Disposisi_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Surat_Disposisi_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/models/Surat_Masuk_model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/models/Surat_Masuk_model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/bka/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/bka/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_disposisi/disposisi.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_disposisi/disposisi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_disposisi/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_disposisi/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/surat_masuk/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_masuk/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/css/sb-admin-2.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/css/sb-admin-2.min.css" afterDir="false" />
-    </list>
+    <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -278,14 +265,7 @@
       <workItem from="1575802870783" duration="29000" />
       <workItem from="1575828484294" duration="100000" />
       <workItem from="1575869119978" duration="610000" />
-      <workItem from="1575878600194" duration="6191000" />
-    </task>
-    <task id="LOCAL-00020" summary="sweet alert">
-      <created>1573835720592</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1573835720592</updated>
+      <workItem from="1575878600194" duration="6292000" />
     </task>
     <task id="LOCAL-00021" summary="sweet alert">
       <created>1573924120398</created>
@@ -623,7 +603,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575828518772</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="tambah ppt">
+      <created>1575884956041</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1575884956041</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
