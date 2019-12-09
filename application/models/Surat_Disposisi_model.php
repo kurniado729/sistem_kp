@@ -192,6 +192,17 @@ class Surat_Disposisi_model extends CI_Model
 		$this->pdf->load_view('surat_disposisi/disposisi', $data);
 	}
 
+	public function viewmail($id){
+		$data['surat_disposisi'] = $this->surat_disposisi->getdetailsuratdisposisi($id);
+
+		$file = $data['surat_disposisi']['file_surat_masuk'];
+
+		$filename = "./assets/upload/suratmasuk/".$file;
+		header("Content-type: application/pdf");
+		header("Content-Length: " . filesize($filename));
+		readfile($filename);
+	}
+
 	public function uploaddisposisibkd($id){
 		$config ['upload_path'] = './assets/upload/disposisi';
 		$config ['allowed_types'] = 'pdf';

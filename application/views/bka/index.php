@@ -58,7 +58,7 @@
 						<td><?= $b['tgl_surat_masuk'] ?></td>
 						<td><?= $b['ringkasan'] ?></td>
 						<td>
-							<a href="<?= base_url('bka/viewpersetujuandisposisi/' . $b['id_surat_disposisi']); ?>" class="btn btn-info btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat Disposisi">
+							<a href="<?= base_url('bka/viewpersetujuandisposisi/' . $b['id_surat_disposisi']); ?>" class="btn btn-info btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat Persetujuan Disposisi">
 								<i class="fas fa-envelope-open"></i></a>
 						</td>
 						<td>

@@ -221,14 +221,15 @@ class Surat_Masuk_model extends CI_Model
 		$no_surat_masuk = $data['surat_masuk']['no_surat_masuk'];
 		$tgl_surat_masuk = $data['surat_masuk']['tgl_surat_masuk'];
 		$ringkasan = $data['surat_masuk']['ringkasan'];
+		$file_surat_masuk = $data['surat_masuk']['file_surat_masuk'];
 
 		$this->db->insert('surat_disposisi', [
 			'pengirim' => $pengirim,
 			'no_surat_masuk' => $no_surat_masuk,
 			'tgl_surat_masuk' => $tgl_surat_masuk,
 			'ringkasan' => $ringkasan,
+			'file_surat_masuk' => $file_surat_masuk,
 			'tujuan' => NULL
-
 		]);
 
 		$this->db->set('disposisi', '1');

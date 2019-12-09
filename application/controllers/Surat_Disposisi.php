@@ -193,6 +193,18 @@ class Surat_Disposisi extends CI_Controller
 		redirect('surat_disposisi');
 	}
 
+	public function getsuratmasuk()
+	{
+		$data['title'] = 'Surat Disposisi';
+		$this->surat_disposisi->getsuratmasuk();
+	}
+
+	public function viewmail($id)
+	{
+		$data['title'] = 'Surat Disposisi';
+		$this->surat_disposisi->viewmail($id);
+	}
+
 	public function viewdisposisimail($id)
 	{
 		$this->surat_disposisi->viewdisposisimail($id);

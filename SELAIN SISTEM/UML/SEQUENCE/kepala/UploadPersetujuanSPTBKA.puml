@@ -2,7 +2,7 @@
 
 autonumber
 hide footbox
-title Melihat Persetujuan SPT BKA
+title Mengupload Persetujuan SPT BKA
 
 Actor Kepala
 boundary Dashboard_V
@@ -29,7 +29,7 @@ UploadSPTBKA_V --> Kepala: Halaman Upload File Persetujuan SPT BKA
 
 Kepala --> UploadSPTBKA_V: Mengisi Inputan dan klik tombol upload
     note right of Kepala
-        Inputan file SPT BKD lengkap
+        Inputan file SPT BKA lengkap
             end note
 UploadSPTBKA_V --> SuratPerintahTugas_C: uploadsptbka()
 SuratPerintahTugas_C --> SuratPerintahTugas_E:

@@ -330,7 +330,6 @@ class Surat_Masuk extends CI_Controller
 	public function viewmail($id)
 	{
 		$data['title'] = 'Surat Masuk';
-
 		$this->surat_masuk->viewmail($id);
 	}
 

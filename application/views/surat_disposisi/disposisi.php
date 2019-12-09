@@ -136,10 +136,10 @@
 			Paraf
 		</td>
 	</tr>
-	<tr>
-		<td  rowspan="18"></td>
-		<td colspan="2" rowspan="18"></td>
-		<td rowspan="18"></td>
+	<tr style="margin-bottom: 50px;">
+		<td rowspan="16">TINDAK LANJUTI</td>
+		<td colspan="2" rowspan="16">SAUDARA KAUR <?= $surat_disposisi['tujuan'];?></td>
+		<td rowspan="16"></td>
 	</tr><tr>
 	</tr><tr>
 	</tr><tr>
@@ -155,11 +155,6 @@
 	</tr><tr>
 	</tr><tr>
 	</tr><tr>
-	</tr><tr>
-	</tr><tr>
-
-
-
 	</tr>
 
 	</tbody>

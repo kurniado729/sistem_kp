@@ -66,8 +66,8 @@
 						<td><?= $sm['ringkasan'] ?></td>
 <!--						<td>--><?//= $sm['file_surat_masuk'] ?><!--</td>-->
 						<td>
-								<a href="<?= base_url('surat_masuk/viewmail/' . $sm['id_surat_masuk']); ?>" class="btn btn-info btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat Surat Masuk">
-									<i class="fas fa-envelope-open"></i>
+								<a href="<?= base_url('surat_masuk/viewmail/' . $sm['id_surat_masuk']); ?>" class="btn btn-primary btn-circle" data-toggle="tooltip" data-placement="top" title="Lihat Surat Masuk">
+									<i class="fas fa-envelope-open-text"></i>
 								</a>
 							<?php if ($sm['disposisi'] == '0'): ?>
 								<a href="<?= base_url('surat_masuk/disposisimail/' . $sm['id_surat_masuk']); ?>" class="btn btn-warning btn-circle tombol-disposisi" data-toggle="tooltip" data-placement="top" title="Buat Disposisi">
