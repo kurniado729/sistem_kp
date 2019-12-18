@@ -21,7 +21,6 @@
 				</div>
 				<div class="card-body">
 					<blockquote class="blockquote mb-0">
-<!--						<form method="post" action="--><?//= base_url('surat_masuk/addmail')?><!--" enctype="multipart/form-data">-->
 							<?php echo form_open_multipart() ?>
 							<div class="form-group">
 								<input type="text" class="form-control" id="pengirim" name="pengirim" placeholder="Pengirim" value="<?= set_value('pengirim')?>">

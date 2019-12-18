@@ -1,5 +1,5 @@
 @startuml
-scale 2
+scale 10
 
 
 class user_access_menu {
@@ -271,9 +271,9 @@ class surat_spt {
 
 }
 
-' user -- user_role
-' user_access_menu -- user_role
-' user_access_menu -- user_menu
-' user_sub_menu -- user_menu
+user -- user_role
+user_access_menu -- user_role
+user_access_menu -- user_menu
+user_sub_menu -- user_menu
 
 @enduml

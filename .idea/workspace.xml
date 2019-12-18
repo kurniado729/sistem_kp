@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="BISMILLAH">
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/DATABASE/sistem_kp.sql" beforeDir="false" afterPath="$PROJECT_DIR$/SELAIN SISTEM/DATABASE/sistem_kp.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/SURAT BAPAS/Contoh Persetujuan Disposisi.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/SELAIN SISTEM/SURAT BAPAS/Contoh Persetujuan Disposisi.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/SURAT BAPAS/Contoh Persetujuan SPT.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/SELAIN SISTEM/SURAT BAPAS/Contoh Persetujuan SPT.pdf" afterDir="false" />
+    <list default="true" id="d4f6af07-7fc6-4606-a17a-b22c071e229b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SELAIN SISTEM/LAPORAN/ppt KP.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/SELAIN SISTEM/LAPORAN/ppt KP.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/surat_masuk/addmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/surat_masuk/addmail.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,16 +92,16 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\sistem_kp\assets\js\demo" />
+      <recent name="C:\xampp\htdocs\sistem_kp\assets\js" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\sistem_kp\application\views\pengguna" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\models" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\controllers" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\views\kontrol_spt" />
       <recent name="C:\xampp\htdocs\sistem_kp\application\views" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\sistem_kp\assets\js\demo" />
-      <recent name="C:\xampp\htdocs\sistem_kp\assets\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -270,14 +270,23 @@
       <workItem from="1575828484294" duration="100000" />
       <workItem from="1575869119978" duration="610000" />
       <workItem from="1575878600194" duration="6292000" />
-      <workItem from="1575912926408" duration="3115000" />
-    </task>
-    <task id="LOCAL-00024" summary="tambah pesan di topbar">
-      <created>1574272302369</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1574272302369</updated>
+      <workItem from="1575912926408" duration="3174000" />
+      <workItem from="1575965089160" duration="165000" />
+      <workItem from="1575991436910" duration="103000" />
+      <workItem from="1575995445544" duration="89000" />
+      <workItem from="1575995862684" duration="31000" />
+      <workItem from="1575996706890" duration="50000" />
+      <workItem from="1575997227921" duration="623000" />
+      <workItem from="1576001793009" duration="220000" />
+      <workItem from="1576003544765" duration="83000" />
+      <workItem from="1576003722961" duration="605000" />
+      <workItem from="1576125312679" duration="34000" />
+      <workItem from="1576138987251" duration="101000" />
+      <workItem from="1576140028581" duration="692000" />
+      <workItem from="1576150088608" duration="34000" />
+      <workItem from="1576155549790" duration="46000" />
+      <workItem from="1576191951309" duration="108000" />
+      <workItem from="1576246134633" duration="154000" />
     </task>
     <task id="LOCAL-00025" summary="tambah pesan di topbar">
       <created>1574315367770</created>
@@ -615,7 +624,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575916035768</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="BISMILLAH">
+      <created>1575916076767</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1575916076767</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
