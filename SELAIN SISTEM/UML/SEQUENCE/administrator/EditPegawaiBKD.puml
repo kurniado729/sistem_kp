@@ -1,0 +1,50 @@
+@startuml
+
+autonumber
+hide footbox
+title Mengubah Pegawai BKD
+
+Actor Administrator
+boundary Dashboard_V
+boundary PegawaiBKD_V
+boundary EditPegawaiBKD_V
+control Admin_C
+control Pegawai_C
+Entity Pegawai_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> Administrator: Halaman Dashboard
+Administrator --> Dashboard_V: klik menu Pegawai BKD
+Dashboard_V --> Pegawai_C: pegawaibkd()
+Pegawai_C --> Pegawai_E:
+    
+    Pegawai_E --> Pegawai_C:
+    Pegawai_C --> PegawaiBKD_V: load->view()
+    PegawaiBKD_V --> Administrator: Halaman Pegawai BKD
+
+Administrator --> PegawaiBKD_V: klik tombol Edit Pegawai TU
+PegawaiBKD_V --> Pegawai_C: editpegawaibkd()
+Pegawai_C --> EditPegawaiBKD_V: load->view()
+EditPegawaiBKD_V --> Administrator: Halaman Edit Pegawai BKD
+
+Administrator --> EditPegawaiBKD_V: Mengisi Inputan dan klik tombol Edit
+    note right of Administrator
+        Inputan Nama, NIP, Jenis Kelamin, tempat lahir, tanggal lahir, alamat dan jabatan
+            end note
+EditPegawaiBKD_V --> Pegawai_C: editpegawaibkd()
+Pegawai_C --> Pegawai_E:
+
+alt isValid() case
+    
+    Pegawai_E --> Pegawai_C: isValid()
+    Pegawai_C --> PegawaiBKD_V: load->view()
+    PegawaiBKD_V --> Administrator: Halaman Pegawai BKD
+
+else isInvalid() case
+    
+    Pegawai_E --> Pegawai_C: isInValid()
+    Pegawai_C --> EditPegawaiBKD_V: load->view()
+    EditPegawaiBKD_V --> Administrator: Halaman Add Pegawai BKD
+
+end
+@enduml

@@ -1,0 +1,32 @@
+@startuml
+
+autonumber
+hide footbox
+title Mengembalikan Surat Masuk
+
+Actor AdministratorTU
+boundary Dashboard_V
+boundary Trash_V
+control Admin_C
+control SuratMasuk_C
+Entity SuratMasuk_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> AdministratorTU: Halaman Dashboard
+AdministratorTU --> Dashboard_V: klik menu Trash Surat Masuk
+Dashboard_V --> SuratMasuk_C: trash()
+SuratMasuk_C --> SuratMasuk_E:
+    
+    SuratMasuk_E --> SuratMasuk_C:
+    SuratMasuk_C --> Trash_V: load->view()
+    Trash_V --> AdministratorTU: Halaman Trash Surat Masuk
+
+AdministratorTU --> Trash_V: klik tombol Restore Surat Masuk
+Trash_V --> SuratMasuk_C: restoremail()
+SuratMasuk_C --> SuratMasuk_E:
+   
+    SuratMasuk_E --> SuratMasuk_C:
+    SuratMasuk_C --> Trash_V: load->view()
+    Trash_V --> AdministratorTU: Halaman Trash Surat Masuk
+
+@enduml

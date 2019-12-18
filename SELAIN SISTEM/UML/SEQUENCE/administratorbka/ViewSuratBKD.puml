@@ -1,0 +1,24 @@
+@startuml
+
+autonumber
+hide footbox
+title Melihat Surat BKA 
+
+Actor AdministratorBKA
+boundary Dashboard_V
+boundary SuratBKA_V
+control Admin_C
+control BKA_C
+Entity SuratDisposisi_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> AdministratorBKA: Halaman Dashboard
+AdministratorBKA --> Dashboard_V: klik menu Surat BKA 
+Dashboard_V --> BKA_C: index()
+BKA_C --> SuratDisposisi_E:
+    
+    SuratDisposisi_E --> BKA_C:
+    BKA_C --> SuratBKA_V: load->view()
+    SuratBKA_V --> AdministratorBKA: Halaman Surat BKA 
+
+@enduml

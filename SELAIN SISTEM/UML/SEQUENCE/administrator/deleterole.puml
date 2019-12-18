@@ -1,0 +1,31 @@
+@startuml
+
+autonumber
+hide footbox
+title Menghapus Role
+
+Actor Administrator
+boundary Dashboard_V
+boundary Role_V
+control Admin_C
+Entity Role_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> Administrator: Halaman Dashboard
+Administrator --> Dashboard_V: klik menu Role
+Dashboard_V --> Admin_C: Role()
+Admin_C --> Role_E:
+    
+    Role_E --> Admin_C:
+    Admin_C --> Role_V: load->view()
+    Role_V --> Administrator: Halaman Role
+
+Administrator --> Role_V: klik tombol deleterole
+Role_V --> Admin_C: deleterole()
+Admin_C --> Role_E:
+  
+    Role_E --> Admin_C:
+    Admin_C --> Role_V: load->view()
+    Role_V --> Administrator: Halaman Role
+
+@enduml

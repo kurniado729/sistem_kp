@@ -1,0 +1,33 @@
+@startuml
+
+autonumber
+hide footbox
+title Melihat File SPT BKD
+
+Actor AdministratorTU
+boundary Dashboard_V
+boundary KontrolSPTBKD_V
+boundary PDF_V
+control Admin_C
+control KontrolSPT_C
+Entity SuratPerintahTugas_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> AdministratorTU: Halaman Dashboard
+AdministratorTU --> Dashboard_V: klik menu SPT BKD
+Dashboard_V --> KontrolSPT_C: index()
+KontrolSPT_C --> SuratPerintahTugas_E:
+    
+    SuratPerintahTugas_E --> KontrolSPT_C:
+    KontrolSPT_C --> KontrolSPTBKD_V: load->view()
+    KontrolSPTBKD_V --> AdministratorTU: Halaman SPT BKD
+
+AdministratorTU --> KontrolSPTBKD_V: klik tombol Lihat File SPT BKD
+KontrolSPTBKD_V --> KontrolSPT_C: viewspt()
+KontrolSPT_C --> SuratPerintahTugas_E:
+   
+    SuratPerintahTugas_E --> KontrolSPT_C:
+    KontrolSPT_C --> PDF_V: load->view()
+    PDF_V --> AdministratorTU: Tampilan file SPT
+
+@enduml

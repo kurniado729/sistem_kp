@@ -1,0 +1,32 @@
+@startuml
+
+autonumber
+hide footbox
+title Menghapus Pegawai BKD
+
+Actor Administrator
+boundary Dashboard_V
+boundary PegawaiBKD_V
+control Admin_C
+control Pegawai_C
+Entity Pegawai_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> Administrator: Halaman Dashboard
+Administrator --> Dashboard_V: klik menu Pegawai BKD
+Dashboard_V --> Pegawai_C: index()
+Pegawai_C --> Pegawai_E:
+    
+    Pegawai_E --> Pegawai_C:
+    Pegawai_C --> PegawaiBKD_V: load->view()
+    PegawaiBKD_V --> Administrator: Halaman Pegawai BKD
+
+Administrator --> PegawaiBKD_V: klik tombol Delete Pegawai BKD
+PegawaiBKD_V --> Pegawai_C: deletepegawaibkd()
+Pegawai_C --> Pegawai_E:
+   
+    Pegawai_E --> Pegawai_C:
+    Pegawai_C --> PegawaiBKD_V: load->view()
+    PegawaiBKD_V --> Administrator: Halaman Pegawai BKD
+
+@enduml

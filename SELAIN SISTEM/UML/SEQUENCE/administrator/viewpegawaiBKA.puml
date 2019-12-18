@@ -1,0 +1,24 @@
+@startuml
+
+autonumber
+hide footbox
+title Melihat Pegawai BKA
+
+Actor Administrator
+boundary Dashborad_V
+boundary PegawaiBKA_V
+control Admin_C
+control Pegawai_C
+Entity Pegawai_E
+
+Admin_C --> Dashborad_V: load->view()
+Dashborad_V --> Administrator: Halaman Dashborad
+Administrator --> Dashborad_V: klik Menu Pegawai BKA
+Dashborad_V --> Pegawai_C: pegawaibka()
+Pegawai_C --> Pegawai_E:
+    
+    Pegawai_E --> Pegawai_C:
+    Pegawai_C --> PegawaiBKA_V: load->view()
+    PegawaiBKA_V --> Administrator: Halaman Pegawai BKA
+
+@enduml

@@ -1,0 +1,49 @@
+@startuml
+
+autonumber
+hide footbox
+title Mengupload SPT BKD
+
+Actor AdministratorTU
+boundary Dashboard_V
+boundary KontrolSPTBKD_V
+boundary UploadSPTBKD_V
+control Admin_C
+control KontrolSPT_C
+Entity SuratPerintahTugas_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> AdministratorTU: Halaman Dashboard
+AdministratorTU --> Dashboard_V: klik menu SPT BKD
+Dashboard_V --> KontrolSPT_C: index()
+KontrolSPT_C --> SuratPerintahTugas_E:
+    
+    SuratPerintahTugas_E --> KontrolSPT_C:
+    KontrolSPT_C --> KontrolSPTBKD_V: load->view()
+    KontrolSPTBKD_V --> AdministratorTU: Halaman SPT BKD
+
+AdministratorTU --> KontrolSPTBKD_V: klik tombol Upload SPT BKD
+KontrolSPTBKD_V --> KontrolSPT_C: uploadsptbkdlengkap()
+KontrolSPT_C --> UploadSPTBKD_V: load->view()
+UploadSPTBKD_V --> AdministratorTU: Halaman Upload File Lengkap SPT BKD
+
+AdministratorTU --> UploadSPTBKD_V: Mengisi Inputan dan klik tombol upload
+    note right of AdministratorTU
+        Inputan file spt bkd lengkap
+            end note
+UploadSPTBKD_V --> KontrolSPT_C: uploadsptbkdlengkap()
+KontrolSPT_C --> SuratPerintahTugas_E:
+
+alt isValid() case
+    
+    SuratPerintahTugas_E --> KontrolSPT_C: isValid()
+    KontrolSPT_C --> KontrolSPTBKD_V: load->view()
+    KontrolSPTBKD_V --> AdministratorTU: Halaman Kontrol SPT BKD
+
+else isInvalid() case
+    
+    SuratPerintahTugas_E --> KontrolSPT_C: isInValid()
+    KontrolSPT_C --> UploadSPTBKD_V: load->view()
+    UploadSPTBKD_V --> AdministratorTU: Halaman Upload SPT BKD
+end
+@enduml

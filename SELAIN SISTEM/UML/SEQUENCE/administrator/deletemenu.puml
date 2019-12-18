@@ -1,0 +1,32 @@
+@startuml
+
+autonumber
+hide footbox
+title Menghapus Menu
+
+Actor Administrator
+boundary Dashborad_V
+boundary Menu_V
+control Admin_C
+control Menu_C
+Entity Menu_E
+
+Admin_C --> Dashborad_V: load->view()
+Dashborad_V --> Administrator: Halaman Dashborad_V
+Administrator --> Dashborad_V: klik Menu Menu management
+Dashborad_V --> Menu_C: index()
+Menu_C --> Menu_E:
+    
+    Menu_E --> Menu_C:
+    Menu_C --> Menu_V: load->view()
+    Menu_V --> Administrator: Halaman Menu management
+
+Administrator --> Menu_V: klik tombol deletemenu
+Menu_V --> Menu_C: deletemenu()
+Menu_C --> Menu_E:
+  
+    Menu_E --> Menu_C:
+    Menu_C --> Menu_V: load->view()
+    Menu_V --> Administrator: Halaman Menu
+
+@enduml

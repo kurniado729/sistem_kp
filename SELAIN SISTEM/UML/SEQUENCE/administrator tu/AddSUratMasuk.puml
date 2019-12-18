@@ -1,0 +1,50 @@
+@startuml
+
+autonumber
+hide footbox
+title Menambah Surat Masuk
+
+Actor AdministratorTU
+boundary Dashboard_V
+boundary SuratMasuk_V
+boundary AddSuratMasuk_V
+control Admin_C
+control SuratMasuk_C
+Entity SuratMasuk_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> AdministratorTU: Halaman Dashboard
+AdministratorTU --> Dashboard_V: klik menu Surat Masuk
+Dashboard_V --> SuratMasuk_C: index()
+SuratMasuk_C --> SuratMasuk_E:
+    
+    SuratMasuk_E --> SuratMasuk_C:
+    SuratMasuk_C --> SuratMasuk_V: load->view()
+    SuratMasuk_V --> AdministratorTU: Halaman Surat Masuk
+
+AdministratorTU --> SuratMasuk_V: klik tombol Add Surat Masuk
+SuratMasuk_V --> SuratMasuk_C: addmail()
+SuratMasuk_C --> AddSuratMasuk_V: load->view()
+AddSuratMasuk_V --> AdministratorTU: Halaman Add Surat Masuk
+
+AdministratorTU --> AddSuratMasuk_V: Mengisi Inputan dan klik tombol add
+    note right of AdministratorTU
+        Inputan Pengirim, no surat, tanggal surat masuk, ringkasan, file surat masuk
+            end note
+AddSuratMasuk_V --> SuratMasuk_C: addmail()
+SuratMasuk_C --> SuratMasuk_E:
+
+alt isValid() case
+    
+    SuratMasuk_E --> SuratMasuk_C: isValid()
+    SuratMasuk_C --> SuratMasuk_V: load->view()
+    SuratMasuk_V --> AdministratorTU: Halaman Surat Masuk
+
+else isInvalid() case
+    
+    SuratMasuk_E --> SuratMasuk_C: isInValid()
+    SuratMasuk_C --> AddSuratMasuk_V: load->view()
+    AddSuratMasuk_V --> AdministratorTU: Halaman Add Surat Masuk 
+
+end
+@enduml

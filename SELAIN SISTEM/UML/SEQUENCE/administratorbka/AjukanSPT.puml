@@ -1,0 +1,32 @@
+@startuml
+
+autonumber
+hide footbox
+title Mengajukan SPT 
+
+Actor AdministratorBKA
+boundary Dashboard_V
+boundary SPT_V
+control Admin_C
+control BKA_C
+Entity SuratPerintahTugas_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> AdministratorBKA: Halaman Dashboard
+AdministratorBKA --> Dashboard_V: klik menu Surat Perintah Tugas
+Dashboard_V --> BKA_C: spt()
+BKA_C --> SuratPerintahTugas_E:
+    
+    SuratPerintahTugas_E --> BKA_C:
+    BKA_C --> SPT_V: load->view()
+    SPT_V --> AdministratorBKA: Halaman Surat Perintah Tugas
+
+AdministratorBKA --> SPT_V: klik tombol Ajukan SPT 
+SPT_V --> BKA_C: ajukanspt()
+BKA_C --> SuratPerintahTugas_E:
+   
+    SuratPerintahTugas_E --> BKA_C:
+    BKA_C --> SPT_V: load->view()
+    SPT_V --> AdministratorBKA: Halaman Surat Perintah Tugas
+
+@enduml

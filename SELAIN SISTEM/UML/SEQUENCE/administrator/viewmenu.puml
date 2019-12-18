@@ -1,0 +1,24 @@
+@startuml
+
+autonumber
+hide footbox
+title Melihat Menu
+
+Actor Administrator
+boundary Dashborad_V
+boundary Menu_V
+control Admin_C
+control Menu_C
+Entity Menu_E
+
+Admin_C --> Dashborad_V: load->view()
+Dashborad_V --> Administrator: Halaman Dashborad
+Administrator --> Dashborad_V: klik Menu Menu management
+Dashborad_V --> Menu_C: index()
+Menu_C --> Menu_E:
+    
+    Menu_E --> Menu_C:
+    Menu_C --> Menu_V: load->view()
+    Menu_V --> Administrator: Halaman Menu management
+
+@enduml

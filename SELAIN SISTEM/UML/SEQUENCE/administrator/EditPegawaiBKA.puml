@@ -1,0 +1,50 @@
+@startuml
+
+autonumber
+hide footbox
+title Menambah Pegawai BKA
+
+Actor Administrator
+boundary Dashboard_V
+boundary PegawaiBKA_V
+boundary EditPegawaiBKA_V
+control Admin_C
+control Pegawai_C
+Entity Pegawai_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> Administrator: Halaman Dashboard
+Administrator --> Dashboard_V: klik menu Pegawai BKA
+Dashboard_V --> Pegawai_C: pegawaibka()
+Pegawai_C --> Pegawai_E:
+    
+    Pegawai_E --> Pegawai_C:
+    Pegawai_C --> PegawaiBKA_V: load->view()
+    PegawaiBKA_V --> Administrator: Halaman Pegawai BKA
+
+Administrator --> PegawaiBKA_V: klik tombol Edit Pegawai TA
+PegawaiBKA_V --> Pegawai_C: editpegawaibka()
+Pegawai_C --> EditPegawaiBKA_V: load->view()
+EditPegawaiBKA_V --> Administrator: Halaman Edit Pegawai BKA
+
+Administrator --> EditPegawaiBKA_V: Mengisi Inputan dan klik tombol Edit
+    note right of Administrator
+        Inputan Nama, NIP, Jenis Kelamin, tempat lahir, tanggal lahir, alamat dan jabatan
+            end note
+EditPegawaiBKA_V --> Pegawai_C: editpegawaibka()
+Pegawai_C --> Pegawai_E:
+
+alt isValid() case
+    
+    Pegawai_E --> Pegawai_C: isValid()
+    Pegawai_C --> PegawaiBKA_V: load->view()
+    PegawaiBKA_V --> Administrator: Halaman Pegawai BKA
+
+else isInvalid() case
+    
+    Pegawai_E --> Pegawai_C: isInValid()
+    Pegawai_C --> EditPegawaiBKA_V: load->view()
+    EditPegawaiBKA_V --> Administrator: Halaman Add Pegawai BKA
+
+end
+@enduml

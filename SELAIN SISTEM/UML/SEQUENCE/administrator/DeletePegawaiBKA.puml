@@ -1,0 +1,32 @@
+@startuml
+
+autonumber
+hide footbox
+title Menghapus Pegawai BKA
+
+Actor Administrator
+boundary Dashboard_V
+boundary PegawaiBKA_V
+control Admin_C
+control Pegawai_C
+Entity Pegawai_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> Administrator: Halaman Dashboard
+Administrator --> Dashboard_V: klik menu Pegawai BKA
+Dashboard_V --> Pegawai_C: index()
+Pegawai_C --> Pegawai_E:
+    
+    Pegawai_E --> Pegawai_C:
+    Pegawai_C --> PegawaiBKA_V: load->view()
+    PegawaiBKA_V --> Administrator: Halaman Pegawai BKA
+
+Administrator --> PegawaiBKA_V: klik tombol Delete Pegawai BKA
+PegawaiBKA_V --> Pegawai_C: deletepegawaibka()
+Pegawai_C --> Pegawai_E:
+   
+    Pegawai_E --> Pegawai_C:
+    Pegawai_C --> PegawaiBKA_V: load->view()
+    PegawaiBKA_V --> Administrator: Halaman Pegawai BKA
+
+@enduml

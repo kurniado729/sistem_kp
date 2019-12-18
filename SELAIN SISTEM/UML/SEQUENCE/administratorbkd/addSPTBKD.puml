@@ -1,0 +1,54 @@
+@startuml
+
+autonumber
+hide footbox
+title Menambah SPT BKD
+
+Actor AdministratorBKD
+boundary Dashboard_V
+boundary SuratBKD_V
+boundary AddSPTBKD_V
+control Admin_C
+control BKD_C
+Entity SuratDisposisi_E
+Entity SuratPerintahTugas_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> AdministratorBKD: Halaman Dashboard
+AdministratorBKD --> Dashboard_V: klik menu Surat BKD
+Dashboard_V --> BKD_C: index()
+BKD_C --> SuratDisposisi_E:
+    
+    SuratDisposisi_E --> BKD_C:
+    BKD_C --> SuratBKD_V: load->view()
+    SuratBKD_V --> AdministratorBKD: Halaman Surat BKD
+
+AdministratorBKD --> SuratBKD_V: klik tombol Add Surat SPT
+SuratBKD_V --> BKD_C: addsuratperintahjalan()
+BKD_C --> AddSPTBKD_V: load->view()
+AddSPTBKD_V --> AdministratorBKD: Halaman Add SPT BKD
+
+AdministratorBKD --> AddSPTBKD_V: Mengisi Inputan dan klik tombol add
+    note right of AdministratorBKD
+        Inputan Pengirim, no surat, tanggal surat, ringkasan, tanggal akhir spt, nama pegawai, nip dan jabatan
+            end note
+AddSPTBKD_V --> BKD_C: addsuratperintahjalan()
+BKD_C --> SuratDisposisi_E:
+BKD_C --> SuratPerintahTugas_E:
+
+alt isValid() case
+    
+    SuratDisposisi_E --> BKD_C: isValid()
+    SuratPerintahTugas_E --> BKD_C: isValid()
+    BKD_C --> SuratBKD_V: load->view()
+    SuratBKD_V --> AdministratorBKD: Halaman Surat BKD
+
+else isInvalid() case
+    
+    SuratDisposisi_E --> BKD_C: isInValid()
+    SuratPerintahTugas_E --> BKD_C: isInValid()
+    BKD_C --> AddSPTBKD_V: load->view()
+    AddSPTBKD_V --> AdministratorBKD: Halaman Add SPT BKD
+
+end
+@enduml

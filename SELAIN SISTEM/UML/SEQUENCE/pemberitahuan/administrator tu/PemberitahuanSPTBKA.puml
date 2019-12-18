@@ -1,0 +1,24 @@
+@startuml
+
+autonumber
+hide footbox
+title Pemberitahuan SPT BKA
+
+Actor AdministratorTU
+boundary Dashborad_V
+boundary SPTBKA_V
+control Admin_C
+control KontrolSPT_C
+Entity SuratPerintahTugas_E
+
+Admin_C --> Dashborad_V: load->view()
+Dashborad_V --> AdministratorTU: Halaman Dashborad
+AdministratorTU --> Dashborad_V: klik tombol pemberitahuan
+Dashborad_V --> KontrolSPT_C: index()
+KontrolSPT_C --> SuratPerintahTugas_E:
+    
+    SuratPerintahTugas_E --> KontrolSPT_C:
+    KontrolSPT_C --> SPTBKA_V: load->view()
+    SPTBKA_V --> AdministratorTU: Halaman SPT BKA
+
+@enduml

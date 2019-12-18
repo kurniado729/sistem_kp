@@ -1,0 +1,24 @@
+@startuml
+
+autonumber
+hide footbox
+title Melihat SPT BKA 
+
+Actor AdministratorBKA
+boundary Dashboard_V
+boundary SPT_V
+control Admin_C
+control BKA_C
+Entity SuratPerintahTugas_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> AdministratorBKA: Halaman ashboard
+AdministratorBKA --> Dashboard_V: klik menu Surat h Tugas 
+Dashboard_V --> BKA_C: spt()
+BKA_C --> SuratPerintahTugas_E:
+    
+    SuratPerintahTugas_E --> BKA_C:
+    BKA_C --> SPT_V: load->view()
+    SPT_V --> AdministratorBKA: Halaman Surat h Tugas 
+
+@enduml

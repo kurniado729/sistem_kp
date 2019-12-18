@@ -1,0 +1,33 @@
+@startuml
+
+autonumber
+hide footbox
+title Melihat File Persetujuan Disposisi BKD
+
+Actor AdministratorBKD
+boundary Dashboard_V
+boundary SuratBKD_V
+boundary PDF_V
+control Admin_C
+control BKD_C
+Entity SuratDisposisi_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> AdministratorBKD: Halaman Dashboard
+AdministratorBKD --> Dashboard_V: klik menu Surat BKD
+Dashboard_V --> BKD_C: index()
+BKD_C --> SuratDisposisi_E:
+    
+    SuratDisposisi_E --> BKD_C:
+    BKD_C --> SuratBKD_V: load->view()
+    SuratBKD_V --> AdministratorBKD: Halaman Surat BKD
+
+AdministratorBKD --> SuratBKD_V: klik tombol Lihat Persetujuan disposisi
+SuratBKD_V --> BKD_C: viewpersetujuandisposisi()
+BKD_C --> SuratDisposisi_E:
+   
+    SuratDisposisi_E --> BKD_C:
+    BKD_C --> PDF_V: load->view()
+    PDF_V --> AdministratorBKD: Tampilan Persetujuan Disposisi
+
+@enduml

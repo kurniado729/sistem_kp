@@ -1,0 +1,24 @@
+@startuml
+
+autonumber
+hide footbox
+title Mencari Trash Surat Masuk
+
+Actor AdministratorBKA
+boundary Dashborad_V
+boundary Trash_V
+control Admin_C
+control SuratMasuk_C
+Entity SuratMasuk_E
+
+Admin_C --> Dashborad_V: load->view()
+Dashborad_V --> AdministratorBKA: Halaman Dashborad
+AdministratorBKA --> Dashborad_V: tulis keyword yang ingin dicari pada form pencarian
+Dashborad_V --> SuratMasuk_C: searchtrash()
+SuratMasuk_C --> SuratMasuk_E:
+    
+    SuratMasuk_E --> SuratMasuk_C:
+    SuratMasuk_C --> Trash_V: load->view()
+    Trash_V --> AdministratorBKA: Halaman Trash Surat Masuk
+
+@enduml

@@ -1,0 +1,50 @@
+@startuml
+
+autonumber
+hide footbox
+title Menambah Pegawai BKD
+
+Actor Administrator
+boundary Dashboard_V
+boundary PegawaiBKD_V
+boundary AddPegawaiBKD_V
+control Admin_C
+control Pehawai_C
+Entity Pegawai_E
+
+Admin_C --> Dashboard_V: load->view()
+Dashboard_V --> Administrator: Halaman Dashboard
+Administrator --> Dashboard_V: klik menu Pegawai BKD
+Dashboard_V --> Pehawai_C: pegawaibkd()
+Pehawai_C --> Pegawai_E:
+    
+    Pegawai_E --> Pehawai_C:
+    Pehawai_C --> PegawaiBKD_V: load->view()
+    PegawaiBKD_V --> Administrator: Halaman Pegawai BKD
+
+Administrator --> PegawaiBKD_V: klik tombol Add Pegawai TU
+PegawaiBKD_V --> Pehawai_C: addpegawaibkd()
+Pehawai_C --> AddPegawaiBKD_V: load->view()
+AddPegawaiBKD_V --> Administrator: Halaman Add Pegawai BKD
+
+Administrator --> AddPegawaiBKD_V: Mengisi Inputan dan klik tombol add
+    note right of Administrator
+        Inputan Nama, NIP, Jenis Kelamin, tempat lahir, tanggal lahir, alamat dan jabatan
+            end note
+AddPegawaiBKD_V --> Pehawai_C: addpegawaibkd()
+Pehawai_C --> Pegawai_E:
+
+alt isValid() case
+    
+    Pegawai_E --> Pehawai_C: isValid()
+    Pehawai_C --> PegawaiBKD_V: load->view()
+    PegawaiBKD_V --> Administrator: Halaman Pegawai BKD
+
+else isInvalid() case
+    
+    Pegawai_E --> Pehawai_C: isInValid()
+    Pehawai_C --> AddPegawaiBKD_V: load->view()
+    AddPegawaiBKD_V --> Administrator: Halaman Add Pegawai BKD
+
+end
+@enduml

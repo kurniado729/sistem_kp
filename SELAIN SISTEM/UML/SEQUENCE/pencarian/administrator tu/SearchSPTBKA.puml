@@ -1,0 +1,24 @@
+@startuml
+
+autonumber
+hide footbox
+title Mencari SPT BKA
+
+Actor AdministratorBKA
+boundary Dashborad_V
+boundary SPTBKA_V
+control Admin_C
+control KontrolSPT_C
+Entity SuratPerintahTugas_E
+
+Admin_C --> Dashborad_V: load->view()
+Dashborad_V --> AdministratorBKA: Halaman Dashborad
+AdministratorBKA --> Dashborad_V: tulis keyword yang ingin dicari pada form pencarian
+Dashborad_V --> KontrolSPT_C: searchkontrolsptbka()
+KontrolSPT_C --> SuratPerintahTugas_E:
+    
+    SuratPerintahTugas_E --> KontrolSPT_C:
+    KontrolSPT_C --> SPTBKA_V: load->view()
+    SPTBKA_V --> AdministratorBKA: Halaman SPT BKA
+
+@enduml
