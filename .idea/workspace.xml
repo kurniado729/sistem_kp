@@ -284,20 +284,7 @@
       <workItem from="1576191951309" duration="108000" />
       <workItem from="1576246134633" duration="154000" />
       <workItem from="1576681541453" duration="110000" />
-    </task>
-    <task id="LOCAL-00026" summary="tambah pesan di topbar">
-      <created>1574352198533</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1574352198533</updated>
-    </task>
-    <task id="LOCAL-00027" summary="tambah pesan di topbar">
-      <created>1574352254183</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1574352254183</updated>
+      <workItem from="1576692472809" duration="170000" />
     </task>
     <task id="LOCAL-00028" summary="tambah pesan di topbar">
       <created>1574428395917</created>
@@ -628,7 +615,21 @@
       <option name="project" value="LOCAL" />
       <updated>1576681621592</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="ubah sequence">
+      <created>1576692541148</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1576692541148</updated>
+    </task>
+    <task id="LOCAL-00076" summary="ubah sequence">
+      <created>1576692616030</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1576692616030</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -648,7 +649,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="sweet alert" />
     <MESSAGE value="tambah pesan di topbar" />
     <MESSAGE value="perbaiki pegawai" />
     <MESSAGE value="uml" />
@@ -673,6 +673,7 @@
     <MESSAGE value="BESOK SEMINAR" />
     <MESSAGE value="BISMILLAH" />
     <MESSAGE value="revisi laporan" />
-    <option name="LAST_COMMIT_MESSAGE" value="revisi laporan" />
+    <MESSAGE value="ubah sequence" />
+    <option name="LAST_COMMIT_MESSAGE" value="ubah sequence" />
   </component>
 </project>
