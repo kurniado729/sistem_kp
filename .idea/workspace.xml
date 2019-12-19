@@ -285,13 +285,7 @@
       <workItem from="1576246134633" duration="154000" />
       <workItem from="1576681541453" duration="110000" />
       <workItem from="1576692472809" duration="170000" />
-    </task>
-    <task id="LOCAL-00028" summary="tambah pesan di topbar">
-      <created>1574428395917</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1574428395917</updated>
+      <workItem from="1576730250518" duration="148000" />
     </task>
     <task id="LOCAL-00029" summary="perbaiki pegawai">
       <created>1574533908690</created>
@@ -629,7 +623,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576692616030</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="ubah sequence">
+      <created>1576730354837</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1576730354847</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
