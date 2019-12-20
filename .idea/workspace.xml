@@ -286,13 +286,7 @@
       <workItem from="1576681541453" duration="110000" />
       <workItem from="1576692472809" duration="170000" />
       <workItem from="1576730250518" duration="148000" />
-    </task>
-    <task id="LOCAL-00029" summary="perbaiki pegawai">
-      <created>1574533908690</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1574533908690</updated>
+      <workItem from="1576778270883" duration="95000" />
     </task>
     <task id="LOCAL-00030" summary="perbaiki pegawai">
       <created>1574589281979</created>
@@ -630,7 +624,14 @@
       <option name="project" value="LOCAL" />
       <updated>1576730354847</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="ubah tabel descripsi">
+      <created>1576778355131</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1576778355131</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -650,7 +651,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="tambah pesan di topbar" />
     <MESSAGE value="perbaiki pegawai" />
     <MESSAGE value="uml" />
     <MESSAGE value="uml-sequence" />
@@ -675,6 +675,7 @@
     <MESSAGE value="BISMILLAH" />
     <MESSAGE value="revisi laporan" />
     <MESSAGE value="ubah sequence" />
-    <option name="LAST_COMMIT_MESSAGE" value="ubah sequence" />
+    <MESSAGE value="ubah tabel descripsi" />
+    <option name="LAST_COMMIT_MESSAGE" value="ubah tabel descripsi" />
   </component>
 </project>
